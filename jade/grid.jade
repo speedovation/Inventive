@@ -2,23 +2,24 @@
 html
   head
     title my jade good
+
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')
+
     link(rel='stylesheet', href='../css/normalize.css', type='text/css' )
+    link(rel='stylesheet', href='../css/base.css', type='text/css' )
+
     link(rel='stylesheet', href='../css/grid/grid.css', type='text/css' )
     link(rel='stylesheet', href='../css/grid/grid-12.css', type='text/css' )
 
     link(rel='stylesheet', href='../css/grid/demo.css', type='text/css' )
       
   body
-    h1 Hello #{name}
-
-    #content
-      .block
-      input#bar.foo1.foo2
-
+   
     .grid
       .row  
         .desktop-12.tablet-6.mobile-3.example
-       
+          
+          h1.welcome Welcome in Superactive . Relax , We've already done it for you 
           .grid
           
 
@@ -30,7 +31,7 @@ html
               span.span_m mobile #{m}
 
           
-            h1 Asymmetrical 
+            h2 Asymmetrical 
             .row
               .desktop-4.tablet-2.mobile-1
                 +span_text('4','2','1')
@@ -38,7 +39,7 @@ html
               .desktop-8.tablet-4.mobile-3
                 +span_text('8','4','3')
 
-            h1 Symmetrical
+            h2 Symmetrical
             .row
               .desktop-3.tablet-3.mobile-3
                 +span_text('3','3','3')
@@ -52,7 +53,7 @@ html
               .desktop-3.tablet-3.mobile-3
                 +span_text('3','3','3')
 
-            h1 Column
+            h2 Column
 
             .row
               .desktop-4.tablet-2.mobile-1
@@ -64,7 +65,7 @@ html
               .desktop-4.tablet-2.mobile-1
                 +span_text('4','2','1')
             
-            h1 Push
+            h2 Push
 
             .row
               .desktop-4.desktop-push-4.tablet-2.tablet-push-2.mobile-2.mobile-push-1
@@ -80,6 +81,27 @@ html
             .row
               .desktop-12.tablet-6.mobile-3
                 +span_text('12','6','3')
+
+
+            h2 Padded
+
+            .row
+              .desktop-4.tablet-2.mobile-1.padded
+                +span_text('4','2','1')
+
+              .desktop-8.tablet-4.mobile-2.padded
+                +span_text('8','4','2')
+            
+            h2 Contained
+
+            .row
+              .desktop-4.tablet-2.mobile-1.contained
+                +span_text('4','2','1')
+        
+              .desktop-8.tablet-4.mobile-2.contained
+                +span_text('8','4','2')
+
+    
 
           
   
