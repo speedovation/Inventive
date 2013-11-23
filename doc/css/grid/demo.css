@@ -1,0 +1,47 @@
+.example .grid {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.example .grid [class*="desktop-"] {
+  background: none repeat scroll 0 0 #CCCCCC;
+  border-radius: 2px;
+  color: #FFFFFF;
+  margin-bottom: 1.8%;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+.example .grid .row .row [class*="desktop-"] {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.25);
+  margin-bottom: 0;
+}
+.example .grid .row:hover [class*="desktop-"] {
+  background: none repeat scroll 0 0 #999999;
+}
+.example .grid .row:hover [class*="desktop-"] [class*="desktop-"] {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.25);
+  margin-bottom: 0;
+}
+.example .span_d {
+  display: block;
+}
+.example .span_t,
+.example .span_m {
+  display: none;
+}
+@media screen and (max-width: 979px) {
+  .example .span_d {
+    display: none;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 979px) {
+  .example .span_t {
+    display: block;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 739px) {
+  .example .span_m {
+    display: block;
+  }
+}

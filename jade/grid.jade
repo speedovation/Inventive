@@ -1,0 +1,85 @@
+!!! 5
+html
+  head
+    title my jade good
+    link(rel='stylesheet', href='../css/normalize.css', type='text/css' )
+    link(rel='stylesheet', href='../css/grid/grid.css', type='text/css' )
+    link(rel='stylesheet', href='../css/grid/grid-12.css', type='text/css' )
+
+    link(rel='stylesheet', href='../css/grid/demo.css', type='text/css' )
+      
+  body
+    h1 Hello #{name}
+
+    #content
+      .block
+      input#bar.foo1.foo2
+
+    .grid
+      .row  
+        .desktop-12.tablet-6.mobile-3.example
+       
+          .grid
+          
+
+            //demo 1
+
+            mixin span_text(d,t,m)
+              span.span_d desktop #{d}
+              span.span_t tablet #{t}
+              span.span_m mobile #{m}
+
+          
+            h1 Asymmetrical 
+            .row
+              .desktop-4.tablet-2.mobile-1
+                +span_text('4','2','1')
+              
+              .desktop-8.tablet-4.mobile-3
+                +span_text('8','4','3')
+
+            h1 Symmetrical
+            .row
+              .desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3')
+              
+              .desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3')
+
+              .desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3')
+
+              .desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3')
+
+            h1 Column
+
+            .row
+              .desktop-4.tablet-2.mobile-1
+                +span_text('4','2','1')
+
+              .desktop-4.tablet-2.mobile-1
+                +span_text('4','2','1')
+
+              .desktop-4.tablet-2.mobile-1
+                +span_text('4','2','1')
+            
+            h1 Push
+
+            .row
+              .desktop-4.desktop-push-4.tablet-2.tablet-push-2.mobile-2.mobile-push-1
+                +span_text('push 4','push 2','push 1')
+
+            .row
+              .desktop-4.desktop-push-2.tablet-2.tablet-push-1.mobile-1
+                +span_text('push 2','push 1','1')
+
+              .desktop-4.tablet-2.mobile-1
+                +span_text('4','2','1')
+
+            .row
+              .desktop-12.tablet-6.mobile-3
+                +span_text('12','6','3')
+
+          
+  
