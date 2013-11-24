@@ -1,0 +1,18 @@
+﻿border-radius(radius) 
+    -webkit-border-radius: radius
+    -moz-border-radius: radius
+    border-radius: radius
+
+
+box-shadow(props) 
+    -webkit-box-shadow: props
+    -moz-box-shadow: props
+    box-shadow: props
+
+
+grad(top, bottom= darken(top, 10%)) 
+    background-color: top
+    background-image: -moz-linear-gradient(top, top, bottom) // firefox
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, top),color-stop(1, bottom)) // chrome, safari
+    background-image: linear-gradient(top, top, bottom) // standard
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')" // ie6+

@@ -1,159 +1,179 @@
-.button,
-button
-  display: inline-block
-  padding: 0.4em
-  margin: 1px
-  width: auto
-  font-weight: normal
-  font-size: 1em
-  font-family: Verdana, sans-serif
-  text-decoration: none
-  text-align: center
-  line-height: normal
-  letter-spacing: -0.01em
-  -moz-appearance: button
-  -moz-box-sizing: content-box
-  cursor: pointer
-  outline: none
-  color: #1a1a1a
-  text-shadow: 0 1px #fff
-  border: 1px solid #a2a2a2
-  -webkit-border-radius: 0.3em
-  -moz-border-radius: 0.3em
-  border-radius: 0.3em
-  -webkit-box-shadow: inset 0 1px 0 white
-  -moz-box-shadow: inset 0 1px 0 white
-  box-shadow: inset 0 1px 0 white
-  background-color: #e6e6e6
-  background-image: linear-gradient(top, #e6e6e6, #d4d4d4)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#e6e6e6', EndColorStr='#d4d4d4')"
+import "mixins"
 
-.button:hover, .button:focus, button:hover, button:focus
-   color: #333
-   border: 1px solid #bbb
-   text-shadow: 0 1px #fff
-   background-color: white
-   background-image: linear-gradient(top, white, #eeeeee)
-   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#eeeeee')"
 
-.button.default,  button.default
-  color: #00334d
-  border: 1px solid #327495
-  text-shadow: 0 1px #cceeff
-  background-color: #97d0ed
-  background-image: linear-gradient(top, #97d0ed, #78bcdd)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#97d0ed', EndColorStr='#78bcdd')"
-  -webkit-box-shadow: inset 0 1px 0 #cceeff
-  -moz-box-shadow: inset 0 1px 0 #cceeff
-  box-shadow: inset 0 1px 0 #cceeff
 
-.button.default:hover, .button.default:focus,  button.default:hover,  button.default:focus
-  color: #005580
-  border: 1px solid #327495
-  text-shadow: 0 1px #cceeff
-  background-color: #c2e4f4
-  background-image: linear-gradient(top, #c2e4f4, #a1d0e8)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#c2e4f4', EndColorStr='#a1d0e8')"
-  -webkit-box-shadow: inset 0 1px 0 white
-  -moz-box-shadow: inset 0 1px 0 white
-  box-shadow: inset 0 1px 0 white
+/* Colored button mixin 
+ * 
+ * Apply this with the color of your choice
+ * to get a consistent styling of buttons.
+ */
 
-.button.negative, button.negative
-  color: #4d0600
-  border: 1px solid #953a32
-  text-shadow: none
-  background-color: #ed9e97
-  background-image: linear-gradient(top, #ed9e97, #dd8178)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ed9e97', EndColorStr='#dd8178')"
-  -webkit-box-shadow: inset 0 1px 0 #ffd0cc
-  -moz-box-shadow: inset 0 1px 0 #ffd0cc
-  box-shadow: inset 0 1px 0 #ffd0cc
+button(hval, val= 0) 
+    
+    
 
-.button.negative:hover, .button.negative:focus, button.negative:hover,  button.negative:focus
-  color: #800b00
-  border: 1px solid #953a32
-  text-shadow: 0 1px #ffd0cc
-  background-color: #f4c6c2
-  background-image: linear-gradient(top, #f4c6c2, #e8a7a1)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f4c6c2', EndColorStr='#e8a7a1')"
-  -webkit-box-shadow: inset 0 1px 0 white
-  -moz-box-shadow: inset 0 1px 0 white
-  box-shadow: inset 0 1px 0 white
+    color= hsla(hval, 100, 15,0.5)
 
-.button.positive,  button.positive  color: #264d00
-  border: 1px solid #639532
-  text-shadow: 0 1px #e6ffcc
-  background-color: #c2ed97
-  background-image: linear-gradient(top, #c2ed97, #abdd78)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#c2ed97', EndColorStr='#abdd78')"
-  -webkit-box-shadow: inset 0 1px 0 #e6ffcc
-  -moz-box-shadow: inset 0 1px 0 #e6ffcc
-  box-shadow: inset 0 1px 0 #e6ffcc
+    
+    if val >= 0  
+        color= lighten(color, val) 
+    else  
+        color= darken(color, val * -1) 
+    
+    border: 1px solid hsla(hval, 50, 39,0.5)
+    text-shadow: 0 1px hsla(hval, 100, 90,0.5)
+    
+    top= hsla(hval, 70, 76,0.5)
+    if val >= 0  
+        top= lighten(top, val) 
+    else  
+        top= darken(top, val * -1) 
+    
+    bottom= hsla(hval, 60, 67,0.5)
+    if val >= 0  
+        bottom= lighten(bottom, val) 
+    else  
+        bottom= darken(bottom, val * -1) 
+    
+    grad(top, bottom)
+    
+    shadow= hsla(hval, 100, 90,0.5)
+    if val >= 0  
+        shadow= lighten(shadow, val) 
+    else  
+        shadow= darken(shadow, val * -1) 
+    
+    box-shadow(inset 0 1px 0 shadow)
 
-.button.positive:hover, .button.positive:focus,    button.positive:hover,    button.positive:focus
-  color: #408000
-  border: 1px solid #639532
-  text-shadow: 0 1px #e6ffcc
-  background-color: #dbf4c2
-  background-image: linear-gradient(top, #dbf4c2, #c4e8a1)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#dbf4c2', EndColorStr='#c4e8a1')"
-  -webkit-box-shadow: inset 0 1px 0 white
-  -moz-box-shadow: inset 0 1px 0 white
-  box-shadow: inset 0 1px 0 white
 
-.button.dark,  button.dark
-  color: #333333
-  border: 1px solid #636363
-  text-shadow: 0 1px #e6e6e6
-  background-color: #c2c2c2
-  background-image: linear-gradient(top, #c2c2c2, #ababab)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#c2c2c2', EndColorStr='#ababab')"
-  -webkit-box-shadow: inset 0 1px 0 #e6e6e6
-  -moz-box-shadow: inset 0 1px 0 #e6e6e6
-  box-shadow: inset 0 1px 0 #e6e6e6
 
-.button.dark:hover, .button.dark:focus,    button.dark:hover,    button.dark:focus
-  background-color: #dbdbdb
-  background-image: linear-gradient(top, #dbdbdb, #c4c4c4)
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#dbdbdb', EndColorStr='#c4c4c4')"
+/* generic button */
 
-.button.left,  button.left
-  -webkit-border-radius: 0.3em 0 0 0.3em
-  -moz-border-radius: 0.3em 0 0 0.3em
-  border-radius: 0.3em 0 0 0.3em
-  margin-right: -4px !important
-  border-right: none
+.button, button 
+    // box model
+    display: inline-block
+    padding: 0.4em
+    margin: 1px
+    width: auto
+    
+    // typography
+    font-weight: normal
+    font-size: 1em
+    font-family: Verdana, sans-serif
+    text-decoration: none
+    text-align: center
+    line-height: normal
+    letter-spacing: -0.01em
+    
+    // layout
+    -moz-appearance: button
+    -moz-box-sizing: content-box
+    
+    // other
+    cursor: pointer
+    outline: none
+    
+    // text
+    color: darken(#333, 10)
+    text-shadow: 0 1px #fff
+    
+    // border
+    border: 1px solid darken(#bbb, 10)
+    border-radius(0.3em)
+    box-shadow(inset 0 1px 0 #fff)
+    
+    // fill
+    grad(darken(#fff, 10), darken(#eee, 10))
+    
+    // default hover/focus
+    &:hover,&:focus 
+        color: #333
+        border: 1px solid #bbb
+        text-shadow: 0 1px #fff
+        grad(#fff, #eee)
+    
+    
+    // some built-in color-styles
 
-.button.middle,  button.middle
-  -webkit-border-radius: 0
-  -moz-border-radius: 0
-  border-radius: 0
-  margin-left: 0
-  margin-right: -4px
-  border-right: none
+    &.default 
+        button(200)
+        
+        &:hover, &:focus 
+            button(200, 10)
+        
+    
+    
+    &.negative 
+        button(5)
+        text-shadow: none
+        
+        &:hover, &:focus 
+            button(5, 10)
+        
+    
+    
+    &.positive 
+        button(90)
+        
+        &:hover,&:focus 
+            button(90, 10)
+        
+    
 
-.button.right,  button.right
-  -webkit-border-radius: 0 0.3em 0.3em 0
-  -moz-border-radius: 0 0.3em 0.3em 0
-  border-radius: 0 0.3em 0.3em 0
-  margin-left: 0 !important
+    &.dark 
+        color: hsla(0, 0, 20)
+        border: 1px solid hsla(0, 0, 39)
+        text-shadow: 0 1px hsla(0, 0, 90)
+        grad(hsla(0, 0, 76), hsla(0, 0, 67))
+        box-shadow(inset 0 1px 0 hsla(0, 0, 90))
+        
+        &:hover, &:focus 
+            grad(hsla(0, 0, 86), hsla(0, 0, 77))
+        
+    
+    
+    // default layout options
+    
+    &.left 
+        border-radius(0.3em 0 0 0.3em)
+        margin-right: -4px !important
+        border-right: none
+    
 
-.button.pill,  button.pill
-  -webkit-border-radius: 1em
-  -moz-border-radius: 1em
-  border-radius: 1em
-  padding-left: 0.9em
-  padding-right: 0.9em
+    &.middle 
+        border-radius(0)
+        margin-left: 0
+        margin-right: -4px
+        border-right: none
+    
 
-.button.disabled, .button[disabled],  button.disabled,  button[disabled]
-  background-image: none !important
-  filter: "alpha(opacity=50)"
-  text-shadow: none
-  -webkit-box-shadow: none
-  -moz-box-shadow: none
-  box-shadow: none
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
-  -moz-opacity: 0.5
-  opacity: 0.5
-  cursor: default
-
+    &.right 
+        border-radius(0 0.3em 0.3em 0)
+        margin-left: 0 !important
+    
+    
+    &.pill 
+        border-radius(1em)
+        padding-left: 0.9em
+        padding-right: 0.9em
+    
+    
+    // default disabled
+    &.disabled,&[disabled] 
+        // remove gradient
+        background-image: none !important
+        filter: none !important
+        
+        // remove shadows
+        text-shadow: none
+        box-shadow(none)
+        
+        // reduce opacity
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+        filter: alpha(opacity=50)
+        -moz-opacity: 0.5
+        opacity: 0.5
+        
+        // remove pointer
+        cursor: default
+    
