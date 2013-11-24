@@ -1,52 +1,6 @@
 import "mixins"
 
 
-
-/* Colored button mixin 
- * 
- * Apply this with the color of your choice
- * to get a consistent styling of buttons.
- */
-
-button(hval, val= 0) 
-    
-    
-
-    color= hsla(hval, 100, 15,0.5)
-
-    
-    if val >= 0  
-        color= lighten(color, val) 
-    else  
-        color= darken(color, val * -1) 
-    
-    border: 1px solid hsla(hval, 50, 39,0.5)
-    text-shadow: 0 1px hsla(hval, 100, 90,0.5)
-    
-    top= hsla(hval, 70, 76,0.5)
-    if val >= 0  
-        top= lighten(top, val) 
-    else  
-        top= darken(top, val * -1) 
-    
-    bottom= hsla(hval, 60, 67,0.5)
-    if val >= 0  
-        bottom= lighten(bottom, val) 
-    else  
-        bottom= darken(bottom, val * -1) 
-    
-    grad(top, bottom)
-    
-    shadow= hsla(hval, 100, 90,0.5)
-    if val >= 0  
-        shadow= lighten(shadow, val) 
-    else  
-        shadow= darken(shadow, val * -1) 
-    
-    box-shadow(inset 0 1px 0 shadow)
-
-
-
 /* generic button */
 
 .button, button 
@@ -96,39 +50,39 @@ button(hval, val= 0)
     // some built-in color-styles
 
     &.default 
-        button(200)
+        mybutton(hval: 200)
         
         &:hover, &:focus 
-            button(200, 10)
+            mybutton(200, 10)
         
     
     
     &.negative 
-        button(5)
+        mybutton(5)
         text-shadow: none
         
         &:hover, &:focus 
-            button(5, 10)
+            mybutton(5, 10)
         
     
     
     &.positive 
-        button(90)
+        mybutton(90)
         
         &:hover,&:focus 
-            button(90, 10)
+            mybutton(90, 10)
         
     
 
     &.dark 
-        color: hsla(0, 0, 20)
-        border: 1px solid hsla(0, 0, 39)
-        text-shadow: 0 1px hsla(0, 0, 90)
-        grad(hsla(0, 0, 76), hsla(0, 0, 67))
-        box-shadow(inset 0 1px 0 hsla(0, 0, 90))
+        color: rbg(0, 0, 20)
+        border: 1px solid rgb(0, 0, 39)
+        text-shadow: 0 1px rgb(0, 0, 90)
+        grad(rgb(0, 0, 76), rgb(0, 0, 67))
+        box-shadow(inset 0 1px 0 rgb(0, 0, 90))
         
         &:hover, &:focus 
-            grad(hsla(0, 0, 86), hsla(0, 0, 77))
+            grad(rgb(0, 0, 86), rgb(0, 0, 77))
         
     
     
@@ -170,7 +124,7 @@ button(hval, val= 0)
         
         // reduce opacity
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
-        filter: alpha(opacity=50)
+        //filter: alpha(opacity=50)
         -moz-opacity: 0.5
         opacity: 0.5
         

@@ -1,0 +1,10 @@
+border-radius(radius) {
+  -webkit-border-radius: radius;
+  -moz-border-radius: radius;
+  border-radius: radius;
+}
+/* Colored button mixin 
+ * 
+ * Apply this with the color of your choice
+ * to get a consistent styling of buttons.
+ */
