@@ -1,4 +1,4 @@
-@charset "UTF-8";
+$charset "UTF-8";
 /*
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -47,7 +47,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	25%, 75% {opacity: 0;}
 }
 
-@keyframes flash {
+$keyframes flash {
 	0%, 50%, 100% {opacity: 1;}
 	25%, 75% {opacity: 0;}
 }
@@ -76,7 +76,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
 }
 
-@keyframes shake {
+$keyframes shake {
 	0%, 100% {transform: translateX(0);}
 	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
 	20%, 40%, 60%, 80% {transform: translateX(10px);}
@@ -105,7 +105,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	40% {-o-transform: translateY(-30px);}
 	60% {-o-transform: translateY(-15px);}
 }
-@keyframes bounce {
+$keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
 	40% {transform: translateY(-30px);}
 	60% {transform: translateY(-15px);}
@@ -141,7 +141,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% {-o-transform: scale(1) rotate(0);}
 }
 
-@keyframes tada {
+$keyframes tada {
 	0% {transform: scale(1);}
 	10%, 20% {transform: scale(0.9) rotate(-3deg);}
 	30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
@@ -180,7 +180,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% { -o-transform: rotate(0deg); }
 }
 
-@keyframes swing {
+$keyframes swing {
 	20% { transform: rotate(15deg); }
 	40% { transform: rotate(-10deg); }
 	60% { transform: rotate(5deg); }
@@ -230,7 +230,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
   100% { -o-transform: translateX(0%); }
 }
 
-@keyframes wobble {
+$keyframes wobble {
   0% { transform: translateX(0%); }
   15% { transform: translateX(-25%) rotate(-5deg); }
   30% { transform: translateX(20%) rotate(3deg); }
@@ -263,7 +263,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	50% { -o-transform: scale(1.1); }
     100% { -o-transform: scale(1); }
 }
-@keyframes pulse {
+$keyframes pulse {
     0% { transform: scale(1); }
 	50% { transform: scale(1.1); }
     100% { transform: scale(1); }
@@ -341,7 +341,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 		-o-animation-timing-function: ease-in;
 	}
 }
-@keyframes flip {
+$keyframes flip {
 	0% {
 		transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
 		animation-timing-function: ease-out;
@@ -431,7 +431,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
         opacity: 1;
     }
 }
-@keyframes flipInX {
+$keyframes flipInX {
     0% {
         transform: perspective(400px) rotateX(90deg);
         opacity: 0;
@@ -494,7 +494,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
     }
 }
 
-@keyframes flipOutX {
+$keyframes flipOutX {
     0% {
         transform: perspective(400px) rotateX(0deg);
         opacity: 1;
@@ -572,7 +572,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
         opacity: 1;
     }
 }
-@keyframes flipInY {
+$keyframes flipInY {
     0% {
         transform: perspective(400px) rotateY(90deg);
         opacity: 0;
@@ -632,7 +632,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
         opacity: 0;
     }
 }
-@keyframes flipOutY {
+$keyframes flipOutY {
     0% {
         transform: perspective(400px) rotateY(0deg);
         opacity: 1;
@@ -668,7 +668,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% {opacity: 1;}
 }
 
-@keyframes fadeIn {
+$keyframes fadeIn {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
@@ -715,7 +715,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeInUp {
+$keyframes fadeInUp {
 	0% {
 		opacity: 0;
 		transform: translateY(20px);
@@ -769,7 +769,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeInDown {
+$keyframes fadeInDown {
 	0% {
 		opacity: 0;
 		transform: translateY(-20px);
@@ -823,7 +823,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeInLeft {
+$keyframes fadeInLeft {
 	0% {
 		opacity: 0;
 		transform: translateX(-20px);
@@ -877,7 +877,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeInRight {
+$keyframes fadeInRight {
 	0% {
 		opacity: 0;
 		transform: translateX(20px);
@@ -931,7 +931,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeInUpBig {
+$keyframes fadeInUpBig {
 	0% {
 		opacity: 0;
 		transform: translateY(2000px);
@@ -985,7 +985,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeInDownBig {
+$keyframes fadeInDownBig {
 	0% {
 		opacity: 0;
 		transform: translateY(-2000px);
@@ -1036,7 +1036,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 		-o-transform: translateX(0);
 	}
 }
-@keyframes fadeInLeftBig {
+$keyframes fadeInLeftBig {
 	0% {
 		opacity: 0;
 		transform: translateX(-2000px);
@@ -1090,7 +1090,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeInRightBig {
+$keyframes fadeInRightBig {
 	0% {
 		opacity: 0;
 		transform: translateX(2000px);
@@ -1123,7 +1123,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% {opacity: 0;}
 }
 
-@keyframes fadeOut {
+$keyframes fadeOut {
 	0% {opacity: 1;}
 	100% {opacity: 0;}
 }
@@ -1167,7 +1167,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 		-o-transform: translateY(-20px);
 	}
 }
-@keyframes fadeOutUp {
+$keyframes fadeOutUp {
 	0% {
 		opacity: 1;
 		transform: translateY(0);
@@ -1221,7 +1221,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeOutDown {
+$keyframes fadeOutDown {
 	0% {
 		opacity: 1;
 		transform: translateY(0);
@@ -1275,7 +1275,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeOutLeft {
+$keyframes fadeOutLeft {
 	0% {
 		opacity: 1;
 		transform: translateX(0);
@@ -1329,7 +1329,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeOutRight {
+$keyframes fadeOutRight {
 	0% {
 		opacity: 1;
 		transform: translateX(0);
@@ -1383,7 +1383,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeOutUpBig {
+$keyframes fadeOutUpBig {
 	0% {
 		opacity: 1;
 		transform: translateY(0);
@@ -1437,7 +1437,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeOutDownBig {
+$keyframes fadeOutDownBig {
 	0% {
 		opacity: 1;
 		transform: translateY(0);
@@ -1491,7 +1491,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes fadeOutLeftBig {
+$keyframes fadeOutLeftBig {
 	0% {
 		opacity: 1;
 		transform: translateX(0);
@@ -1542,7 +1542,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 		-o-transform: translateX(2000px);
 	}
 }
-@keyframes fadeOutRightBig {
+$keyframes fadeOutRightBig {
 	0% {
 		opacity: 1;
 		transform: translateX(0);
@@ -1620,7 +1620,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceIn {
+$keyframes bounceIn {
 	0% {
 		opacity: 0;
 		transform: scale(.3);
@@ -1673,7 +1673,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes slideInDown {
+$keyframes slideInDown {
 	0% {
 		opacity: 0;
 		transform: translateY(-2000px);
@@ -1724,7 +1724,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes slideInLeft {
+$keyframes slideInLeft {
 	0% {
 		opacity: 0;
 		transform: translateX(-2000px);
@@ -1775,7 +1775,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes slideInRight {
+$keyframes slideInRight {
 	0% {
 		opacity: 0;
 		transform: translateX(2000px);
@@ -1826,7 +1826,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes slideOutLeft {
+$keyframes slideOutLeft {
 	0% {
 		transform: translateX(0);
 	}
@@ -1877,7 +1877,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes slideOutRight {
+$keyframes slideOutRight {
 	0% {
 		transform: translateX(0);
 	}
@@ -1928,7 +1928,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes slideOutUp {
+$keyframes slideOutUp {
 	0% {
 		transform: translateY(0);
 	}
@@ -2011,7 +2011,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceInUp {
+$keyframes bounceInUp {
 	0% {
 		opacity: 0;
 		transform: translateY(2000px);
@@ -2097,7 +2097,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceInDown {
+$keyframes bounceInDown {
 	0% {
 		opacity: 0;
 		transform: translateY(-2000px);
@@ -2183,7 +2183,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceInLeft {
+$keyframes bounceInLeft {
 	0% {
 		opacity: 0;
 		transform: translateX(-2000px);
@@ -2269,7 +2269,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceInRight {
+$keyframes bounceInRight {
 	0% {
 		opacity: 0;
 		transform: translateX(2000px);
@@ -2355,7 +2355,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceOut {
+$keyframes bounceOut {
 	0% {
 		transform: scale(1);
 	}
@@ -2429,7 +2429,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceOutUp {
+$keyframes bounceOutUp {
 	0% {
 		transform: translateY(0);
 	}
@@ -2499,7 +2499,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceOutDown {
+$keyframes bounceOutDown {
 	0% {
 		transform: translateY(0);
 	}
@@ -2569,7 +2569,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceOutLeft {
+$keyframes bounceOutLeft {
 	0% {
 		transform: translateX(0);
 	}
@@ -2639,7 +2639,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes bounceOutRight {
+$keyframes bounceOutRight {
 	0% {
 		transform: translateX(0);
 	}
@@ -2700,7 +2700,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 		opacity: 1;
 	}
 }
-@keyframes rotateIn {
+$keyframes rotateIn {
 	0% {
 		transform-origin: center center;
 		transform: rotate(-200deg);
@@ -2762,7 +2762,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateInUpLeft {
+$keyframes rotateInUpLeft {
 	0% {
 		transform-origin: left bottom;
 		transform: rotate(90deg);
@@ -2824,7 +2824,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateInDownLeft {
+$keyframes rotateInDownLeft {
 	0% {
 		transform-origin: left bottom;
 		transform: rotate(-90deg);
@@ -2886,7 +2886,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateInUpRight {
+$keyframes rotateInUpRight {
 	0% {
 		transform-origin: right bottom;
 		transform: rotate(-90deg);
@@ -2948,7 +2948,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateInDownRight {
+$keyframes rotateInDownRight {
 	0% {
 		transform-origin: right bottom;
 		transform: rotate(90deg);
@@ -3010,7 +3010,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateOut {
+$keyframes rotateOut {
 	0% {
 		transform-origin: center center;
 		transform: rotate(0);
@@ -3072,7 +3072,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateOutUpLeft {
+$keyframes rotateOutUpLeft {
 	0% {
 		transform-origin: left bottom;
 		transform: rotate(0);
@@ -3134,7 +3134,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateOutDownLeft {
+$keyframes rotateOutDownLeft {
 	0% {
 		transform-origin: left bottom;
 		transform: rotate(0);
@@ -3196,7 +3196,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateOutUpRight {
+$keyframes rotateOutUpRight {
 	0% {
 		transform-origin: right bottom;
 		transform: rotate(0);
@@ -3258,7 +3258,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rotateOutDownRight {
+$keyframes rotateOutDownRight {
 	0% {
 		transform-origin: right bottom;
 		transform: rotate(0);
@@ -3302,7 +3302,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% { -o-transform: translateY(700px); opacity: 0; }
 }
 
-@keyframes hinge {
+$keyframes hinge {
 	0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }
 	20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }
 	40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; }
@@ -3333,7 +3333,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% { opacity: 1; -o-transform: translateX(0px) rotate(0deg); }
 }
 
-@keyframes rollIn {
+$keyframes rollIn {
 	0% { opacity: 0; transform: translateX(-100%) rotate(-120deg); }
 	100% { opacity: 1; transform: translateX(0px) rotate(0deg); }
 }
@@ -3382,7 +3382,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
 }
 
-@keyframes rollOut {
+$keyframes rollOut {
     0% {
 		opacity: 1;
 		transform: translateX(0px) rotate(0deg);
@@ -3424,7 +3424,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% { -o-transform: translateX(0%) skewX(0deg); opacity: 1; }
 }
 
-@keyframes lightSpeedIn {
+$keyframes lightSpeedIn {
 	0% { transform: translateX(100%) skewX(-30deg); opacity: 0; }
 	60% { transform: translateX(-20%) skewX(30deg); opacity: 1; }
 	80% { transform: translateX(0%) skewX(-15deg); opacity: 1; }
@@ -3444,10 +3444,10 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 }
 
 .animated.lightSpeedIn {
-    -webkit-animation-duration: 0.5s;
-    -moz-animation-duration: 0.5s;
-    -o-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration.5 s;
+    -moz-animation-duration.5 s;
+    -o-animation-duration.5 s;
+    animation-duration.5 s;
 }
 
 /* originally authored by Angelo Rohit - https://github.com/angelorohit */
@@ -3467,7 +3467,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	100% { -o-transform: translateX(100%) skewX(-30deg); opacity: 0; }
 }
 
-@keyframes lightSpeedOut {
+$keyframes lightSpeedOut {
 	0% { transform: translateX(0%) skewX(0deg); opacity: 1; }
 	100% { transform: translateX(100%) skewX(-30deg); opacity: 0; }
 }
@@ -3485,8 +3485,8 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 }
 
 .animated.lightSpeedOut {
-    -webkit-animation-duration: 0.25s;
-    -moz-animation-duration: 0.25s;
-    -o-animation-duration: 0.25s;
-    animation-duration: 0.25s;
+    -webkit-animation-duration.5 s;
+    -moz-animation-duration.5 s;
+    -o-animation-duration.5 s;
+    animation-duration.5 s;
 }

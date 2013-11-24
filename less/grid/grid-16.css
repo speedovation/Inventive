@@ -1,22 +1,4 @@
-.grid .row {
-  /* !Tablet, 8 column, 720 (min 740) */
-
-  /* !Desktop, 16 column, 960 (min 980) */
-
-  /* !Desktop, Max, 12 column, 1200 (min 1220) */
-
-}
-@media screen and (min-width: 740px) {
-  .grid .row {
-    /* Cells */
-  
-    /* Push */
-  
-    /* Contained */
-  
-    /* Contained Push */
-  
-  }
+@media $tablet {
   .grid .row .tablet-1 {
     width: 10.416666666667%;
   }
@@ -108,17 +90,7 @@
     margin-left: 87.5%;
   }
 }
-@media screen and (min-width: 980px) {
-  .grid .row {
-    /* Cells */
-  
-    /* Push */
-  
-    /* Contained */
-  
-    /* Contained Push */
-  
-  }
+@media $desktop {
   .grid .row .desktop-1 {
     width: 4.166666666667%;
   }
@@ -306,15 +278,7 @@
     margin-left: 93.75%;
   }
 }
-@media screen and (min-width: 1220px) {
-  .grid .row {
-    /* Push Cells */
-  
-    /* Contained */
-  
-    /* Contained Push */
-  
-  }
+@media $bigscreen {
   .grid .row .max-1 {
     width: 4.166666666667%;
   }
