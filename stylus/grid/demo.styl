@@ -1,18 +1,18 @@
-@import "variables";
+@import "variables"
 
 .welcome 
-{
-    margin-bottom:50px;
-}
-.example 
-{
 
-    .grid {
+    margin-bottom:50px;
+
+.example 
+
+
+    .grid 
         margin-bottom: 30px;
         margin-top: 0;
     
         [class*="desktop-"] 
-        {
+        
             background: none repeat scroll 0 0 #ddd;
             border-radius: 3px;
             color: #555;
@@ -26,48 +26,48 @@
             -moz-transition: background-color 2s ease-out;
             -o-transition: background-color 2s ease-out;
             transition: background-color 2s ease-out;
-        }
+        
        .row 
-        {
-            .row [class*="desktop-"] {
+        
+            .row [class*="desktop-"] 
                 background: none repeat scroll 0 0 rgba(255, 255, 255, 0.25);
                 margin-bottom: 0;
 
-            }
             
-            &:hover [class*="desktop-"] {
+            
+            &:hover [class*="desktop-"] 
                 background: none repeat scroll 0 0 #aaa;
 
-            }
             
-            &:hover [class*="desktop-"] [class*="desktop-"] {
+            
+            &:hover [class*="desktop-"] [class*="desktop-"] 
                 background: none repeat scroll 0 0 rgba(255, 255, 255, 0.25);
                 margin-bottom: 0;
-            }
-        }
+            
+        
     
-    }
     
-    .span_d {
+    
+    .span_d 
         display: block;
-    }
-    .span_t, .span_m {
+    
+    .span_t, .span_m 
         display: none;
-    }
+    
 
-    @media screen and (max-width: 979px) {
-        .span_d {
+    @media screen and (max-width: 979px) 
+        .span_d 
             display: none;
-        }
-    }
-    @media screen and (min-width: 740px) and (max-width: 979px) {
-        .span_t {
+        
+    
+    @media screen and (min-width: 740px) and (max-width: 979px) 
+        .span_t 
             display: block;
-        }
-    }
-    @media screen and (min-width: 0px) and (max-width: 739px) {
-        .span_m {
+        
+    
+    @media screen and (min-width: 0px) and (max-width: 739px) 
+        .span_m 
             display: block;
-        }
-    }
-}
+        
+    
+

@@ -1,4 +1,4 @@
-@media $untiltablet {
+@media screen and (min-width: 740px) and (max-width: 980px)  {
   .grid .row .tablet-1 {
     width: 14.583333333333334%;
   }
@@ -33,40 +33,40 @@
     margin-left: 84.375%;
   }
   .grid .row .contained.tablet-1 {
-    width: $push2;
+    width: 16.66666666666667%;
   }
   .grid .row .contained.tablet-2 {
-    width: $33;
+    width: 33;
   }
   .grid .row .contained.tablet-3 {
-    width: $50;
+    width: 50;
   }
   .grid .row .contained.tablet-4 {
-    width: $push8;
+    width: 66.66666666666673%;
   }
   .grid .row .contained.tablet-5 {
-    width: $push10;
+    width: 83.33333333333333%;
   }
   .grid .row .contained.tablet-6 {
-    width: $100;
+    width: 100;
   }
   .grid .row .contained.tablet-push-1 {
-    margin-left: $push2;
+    margin-left: 16.66666666666667%;
   }
   .grid .row .contained.tablet-push-2 {
-    margin-left: $33;
+    margin-left: 33;
   }
   .grid .row .contained.tablet-push-3 {
-    margin-left: $50;
+    margin-left: 50;
   }
   .grid .row .contained.tablet-push-4 {
-    margin-left: $push8;
+    margin-left: 66.66666666666673%;
   }
   .grid .row .contained.tablet-push-5 {
-    margin-left: $push10;
+    margin-left: 83.33333333333333%;
   }
 }
-@media $desktop {
+@media screen and (min-width: 980px) {
   .grid .row .desktop-1 {
     width: 6.25%;
   }
@@ -137,76 +137,76 @@
     margin-left: 92.7083333333335%;
   }
   .grid .row .contained.desktop-1 {
-    width: $push1;
+    width: 8.333333333333332%;
   }
   .grid .row .contained.desktop-2 {
-    width: $push2;
+    width: 16.66666666666667%;
   }
   .grid .row .contained.desktop-3 {
-    width: $25;
+    width: 25;
   }
   .grid .row .contained.desktop-4 {
-    width: $33;
+    width: 33;
   }
   .grid .row .contained.desktop-5 {
-    width: $push5;
+    width: 41.66666666666667%;
   }
   .grid .row .contained.desktop-6 {
-    width: $50;
+    width: 50;
   }
   .grid .row .contained.desktop-7 {
-    width: $push7;
+    width: 58.33333333333333%;
   }
   .grid .row .contained.desktop-8 {
-    width: $push8;
+    width: 66.66666666666673%;
   }
   .grid .row .contained.desktop-9 {
-    width: $75;
+    width: 75;
   }
   .grid .row .contained.desktop-10 {
-    width: $push10;
+    width: 83.33333333333333%;
   }
   .grid .row .contained.desktop-11 {
-    width: $push11;
+    width: 91.66666666666683%;
   }
   .grid .row .contained.desktop-12 {
-    width: $100;
+    width: 100;
   }
   .grid .row .contained.desktop-push-1 {
-    margin-left: $push1;
+    margin-left: 8.333333333333332%;
   }
   .grid .row .contained.desktop-push-2 {
-    margin-left: $push2;
+    margin-left: 16.66666666666667%;
   }
   .grid .row .contained.desktop-push-3 {
-    margin-left: $25;
+    margin-left: 25;
   }
   .grid .row .contained.desktop-push-4 {
-    margin-left: $33;
+    margin-left: 33;
   }
   .grid .row .contained.desktop-push-5 {
-    margin-left: $push5;
+    margin-left: 41.66666666666667%;
   }
   .grid .row .contained.desktop-push-6 {
-    margin-left: $50;
+    margin-left: 50;
   }
   .grid .row .contained.desktop-push-7 {
-    margin-left: $push7;
+    margin-left: 58.33333333333333%;
   }
   .grid .row .contained.desktop-push-8 {
-    margin-left: $push8;
+    margin-left: 66.66666666666673%;
   }
   .grid .row .contained.desktop-push-9 {
-    margin-left: $75;
+    margin-left: 75;
   }
   .grid .row .contained.desktop-push-10 {
-    margin-left: $push10;
+    margin-left: 83.33333333333333%;
   }
   .grid .row .contained.desktop-push-11 {
-    margin-left: $push11;
+    margin-left: 91.66666666666683%;
   }
 }
-@media $bigscreen {
+@media screen and (min-width: 1220px) {
   .grid .row .max-1 {
     width: 6.25%;
   }
@@ -280,72 +280,72 @@
     margin-left: 92.7083333333335%;
   }
   .grid .row .contained.max-1 {
-    width: $push1;
+    width: 8.333333333333332%;
   }
   .grid .row .contained.max-2 {
-    width: $push2;
+    width: 16.66666666666667%;
   }
   .grid .row .contained.max-3 {
-    width: $25;
+    width: 25;
   }
   .grid .row .contained.max-4 {
-    width: $33;
+    width: 33;
   }
   .grid .row .contained.max-5 {
-    width: $push5;
+    width: 41.66666666666667%;
   }
   .grid .row .contained.max-6 {
-    width: $50;
+    width: 50;
   }
   .grid .row .contained.max-7 {
-    width: $push7;
+    width: 58.33333333333333%;
   }
   .grid .row .contained.max-8 {
-    width: $push8;
+    width: 66.66666666666673%;
   }
   .grid .row .contained.max-9 {
-    width: $75;
+    width: 75;
   }
   .grid .row .contained.max-10 {
-    width: $push10;
+    width: 83.33333333333333%;
   }
   .grid .row .contained.max-11 {
-    width: $push11;
+    width: 91.66666666666683%;
   }
   .grid .row .contained.max-12 {
-    width: $100;
+    width: 100;
   }
   .grid .row .contained.max-push-1 {
-    margin-left: $push1;
+    margin-left: 8.333333333333332%;
   }
   .grid .row .contained.max-push-2 {
-    margin-left: $push2;
+    margin-left: 16.66666666666667%;
   }
   .grid .row .contained.max-push-3 {
-    margin-left: $25;
+    margin-left: 25;
   }
   .grid .row .contained.max-push-4 {
-    margin-left: $33;
+    margin-left: 33;
   }
   .grid .row .contained.max-push-5 {
-    margin-left: $push5;
+    margin-left: 41.66666666666667%;
   }
   .grid .row .contained.max-push-6 {
-    margin-left: $50;
+    margin-left: 50;
   }
   .grid .row .contained.max-push-7 {
-    margin-left: $push7;
+    margin-left: 58.33333333333333%;
   }
   .grid .row .contained.max-push-8 {
-    margin-left: $push8;
+    margin-left: 66.66666666666673%;
   }
   .grid .row .contained.max-push-9 {
-    margin-left: $75;
+    margin-left: 75;
   }
   .grid .row .contained.max-push-10 {
-    margin-left: $push10;
+    margin-left: 83.33333333333333%;
   }
   .grid .row .contained.max-push-11 {
-    margin-left: $push11;
+    margin-left: 91.66666666666683%;
   }
 }

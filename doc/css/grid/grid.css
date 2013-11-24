@@ -79,26 +79,66 @@
   }
 }
 @media screen and (max-width: 740px) {
-  .grid .row .mobile-1  width: 31.25%,
-  .grid .row .mobile-2  width: 64.5833333333333333%,
-  .grid .row .mobile-3  width: 97.9166666666666667%,
-  .grid .row .mobile-push-1  margin-left: 34.375%,
-  .grid .row .mobile-push-2  margin-left: 67.7083333333334%,
-  .grid .row .mobile-fourth  width: 22.91666666666666%,
-  .grid .row .mobile-third   width: 31.25%,
-  .grid .row .mobile-half    width: 47.9166666666666667%,
-  .grid .row .mobile-full    width: 97.9166666666666667%,
-  .grid .row .mobile-push-third  margin-left: 34.375%,
-  .grid .row .mobile-push-half   margin-left: 51.0416666666666667%,
-  .grid .row .contained.mobile-1  width: 33.3333333333333333%,
-  .grid .row .contained.mobile-2  width: 66.6666666666666667%,
-  .grid .row .contained.mobile-3  width: full,
-  .grid .row .contained.push.mobile-1  margin-left: 33.3333333333333333%,
-  .grid .row .contained.push.mobile-2  margin-left: 66.6666666666666667%,
-  .grid .row .contained.mobile-fourth  width: fourth,
-  .grid .row .contained.mobile-third   width: third,
-  .grid .row .contained.mobile-half    width: half,
-  .grid .row .contained.mobile-full    width: full,
+  .grid .row .mobile-1 {
+    width: 31.25%;
+  }
+  .grid .row .mobile-2 {
+    width: 64.58333333333333%;
+  }
+  .grid .row .mobile-3 {
+    width: 97.91666666666667%;
+  }
+  .grid .row .mobile-push-1 {
+    margin-left: 34.375%;
+  }
+  .grid .row .mobile-push-2 {
+    margin-left: 67.7083333333334%;
+  }
+  .grid .row .mobile-fourth {
+    width: 22.91666666666666%;
+  }
+  .grid .row .mobile-third {
+    width: 31.25%;
+  }
+  .grid .row .mobile-half {
+    width: 47.916666666666664%;
+  }
+  .grid .row .mobile-full {
+    width: 97.91666666666667%;
+  }
+  .grid .row .mobile-push-third {
+    margin-left: 34.375%;
+  }
+  .grid .row .mobile-push-half {
+    margin-left: 51.041666666666664%;
+  }
+  .grid .row .contained.mobile-1 {
+    width: 33.333333333333336%;
+  }
+  .grid .row .contained.mobile-2 {
+    width: 66.66666666666667%;
+  }
+  .grid .row .contained.mobile-3 {
+    width: 100%;
+  }
+  .grid .row .contained.push.mobile-1 {
+    margin-left: 33.333333333333336%;
+  }
+  .grid .row .contained.push.mobile-2 {
+    margin-left: 66.66666666666667%;
+  }
+  .grid .row .contained.mobile-fourth {
+    width: 25%;
+  }
+  .grid .row .contained.mobile-third {
+    width: 33.33333333333333%;
+  }
+  .grid .row .contained.mobile-half {
+    width: 50%;
+  }
+  .grid .row .contained.mobile-full {
+    width: 100%;
+  }
   .grid .row .contained.mobile-push-third {
     margin-left: 33.33333333333333%;
   }
@@ -111,66 +151,150 @@
   }
 }
 @media  screen and (max-width: 500px) {
-  .grid .row .min-full  width: 97.9166666666666667%,
-  .grid .row .contained.min-third  width: third,
-  .grid .row .contained.min-half   width: half,
-  .grid .row .contained.min-full   width: full,
-  .grid .row .contained.min-push-third  margin-left: third,
-  .grid .row .contained.min-push-half   margin-left: half,
+  .grid .row .min-full {
+    width: 97.91666666666667%;
+  }
+  .grid .row .contained.min-third {
+    width: 33.33333333333333%;
+  }
+  .grid .row .contained.min-half {
+    width: 50%;
+  }
+  .grid .row .contained.min-full {
+    width: 100%;
+  }
+  .grid .row .contained.min-push-third {
+    margin-left: 33.33333333333333%;
+  }
+  .grid .row .contained.min-push-half {
+    margin-left: 50%;
+  }
   .grid .row [class*="min-"].center {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 740px) and (max-width: 980px) {
-  .grid .row .tablet-fourth  width: 22.91666666666666%,
-  .grid .row .tablet-third   width: 31.25%,
-  .grid .row .tablet-half    width: 47.9166666666666667%,
-  .grid .row .tablet-full    width: 97.9166666666666667%,
-  .grid .row .tablet-push-third  margin-left: 34.375%,
-  .grid .row .tablet-push-half   margin-left: 51.0416666666666667%,
-  .grid .row .contained.tablet-fourth  width: fourth,
-  .grid .row .contained.tablet-third   width: third,
-  .grid .row .contained.tablet-half    width: half,
-  .grid .row .contained.tablet-full    width: full,
-  .grid .row .contained.tablet-push-third  margin-left: third,
-  .grid .row .contained.tablet-push-half   margin-left: half,
+  .grid .row .tablet-fourth {
+    width: 22.91666666666666%;
+  }
+  .grid .row .tablet-third {
+    width: 31.25%;
+  }
+  .grid .row .tablet-half {
+    width: 47.916666666666664%;
+  }
+  .grid .row .tablet-full {
+    width: 97.91666666666667%;
+  }
+  .grid .row .tablet-push-third {
+    margin-left: 34.375%;
+  }
+  .grid .row .tablet-push-half {
+    margin-left: 51.041666666666664%;
+  }
+  .grid .row .contained.tablet-fourth {
+    width: 25%;
+  }
+  .grid .row .contained.tablet-third {
+    width: 33.33333333333333%;
+  }
+  .grid .row .contained.tablet-half {
+    width: 50%;
+  }
+  .grid .row .contained.tablet-full {
+    width: 100%;
+  }
+  .grid .row .contained.tablet-push-third {
+    margin-left: 33.33333333333333%;
+  }
+  .grid .row .contained.tablet-push-half {
+    margin-left: 50%;
+  }
   .grid .row [class*="tablet-"].center {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 980px) {
-  .grid .row .desktop-fourth  width: 22.91666666666666%,
-  .grid .row .desktop-third   width: 31.25%,
-  .grid .row .desktop-half    width: 47.9166666666666667%,
-  .grid .row .desktop-full    width: 97.9166666666666667%,
-  .grid .row .desktop-push-third  margin-left: 34.375%,
-  .grid .row .desktop-push-half   margin-left: 51.0416666666666667%,
-  .grid .row .contained.desktop-fourth  width: fourth,
-  .grid .row .contained.desktop-third  width: third,
-  .grid .row .contained.desktop-half   width: half,
-  .grid .row .contained.desktop-full   width: full,
-  .grid .row .contained.desktop-push-third  margin-left: third,
-  .grid .row .contained.desktop-push-half   margin-left: half,
+  .grid .row .desktop-fourth {
+    width: 22.91666666666666%;
+  }
+  .grid .row .desktop-third {
+    width: 31.25%;
+  }
+  .grid .row .desktop-half {
+    width: 47.916666666666664%;
+  }
+  .grid .row .desktop-full {
+    width: 97.91666666666667%;
+  }
+  .grid .row .desktop-push-third {
+    margin-left: 34.375%;
+  }
+  .grid .row .desktop-push-half {
+    margin-left: 51.041666666666664%;
+  }
+  .grid .row .contained.desktop-fourth {
+    width: 25%;
+  }
+  .grid .row .contained.desktop-third {
+    width: 33.33333333333333%;
+  }
+  .grid .row .contained.desktop-half {
+    width: 50%;
+  }
+  .grid .row .contained.desktop-full {
+    width: 100%;
+  }
+  .grid .row .contained.desktop-push-third {
+    margin-left: 33.33333333333333%;
+  }
+  .grid .row .contained.desktop-push-half {
+    margin-left: 50%;
+  }
   .grid .row [class*="desktop-"].center {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 1220px) {
-  .grid .row .max-fourth  width: 22.91666666666666%,
-  .grid .row .max-third   width: 31.25%,
-  .grid .row .max-half    width: 47.9166666666666667%,
-  .grid .row .max-full    width: 97.9166666666666667%,
-  .grid .row .max-push-third  margin-left: 34.375%,
-  .grid .row .max-push-half   margin-left: 51.0416666666666667%,
-  .grid .row .contained.max-fourth  width: fourth,
-  .grid .row .contained.max-third  width: third,
-  .grid .row .contained.max-half   width: half,
-  .grid .row .contained.max-full   width: full,
-  .grid .row .contained.max-push-third  margin-left: third,
-  .grid .row .contained.max-push-half   margin-left: half,
+  .grid .row .max-fourth {
+    width: 22.91666666666666%;
+  }
+  .grid .row .max-third {
+    width: 31.25%;
+  }
+  .grid .row .max-half {
+    width: 47.916666666666664%;
+  }
+  .grid .row .max-full {
+    width: 97.91666666666667%;
+  }
+  .grid .row .max-push-third {
+    margin-left: 34.375%;
+  }
+  .grid .row .max-push-half {
+    margin-left: 51.041666666666664%;
+  }
+  .grid .row .contained.max-fourth {
+    width: 25%;
+  }
+  .grid .row .contained.max-third {
+    width: 33.33333333333333%;
+  }
+  .grid .row .contained.max-half {
+    width: 50%;
+  }
+  .grid .row .contained.max-full {
+    width: 100%;
+  }
+  .grid .row .contained.max-push-third {
+    margin-left: 33.33333333333333%;
+  }
+  .grid .row .contained.max-push-half {
+    margin-left: 50%;
+  }
   .grid .row [class*="max-"].center {
     margin-left: auto;
     margin-right: auto;
