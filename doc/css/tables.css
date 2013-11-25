@@ -12,15 +12,15 @@
   font-size: 14px;
   font-weight: normal;
   padding: 10px 8px;
-  color: #039;
-  border-bottom: 2px solid #6678b1;
+  color: #444;
+  border-bottom: 2px solid #666;
 }
 #hor-minimalist-a td {
-  color: #669;
+  color: #444;
   padding: 9px 8px 0px 8px;
 }
 #hor-minimalist-a tbody tr:hover td {
-  color: #009;
+  color: #777;
 }
 #hor-minimalist-b {
   background: #fff;
@@ -32,16 +32,16 @@
   font-size: 14px;
   font-weight: normal;
   padding: 10px 8px;
-  color: #039;
-  border-bottom: 2px solid #6678b1;
+  color: #444;
+  border-bottom: 2px solid #666;
 }
 #hor-minimalist-b td {
   border-bottom: 1px solid #ccc;
-  color: #669;
+  color: #444;
   padding: 6px 8px;
 }
 #hor-minimalist-b tbody tr:hover td {
-  color: #009;
+  color: #777;
 }
 #ver-minimalist {
   background: #fff;
@@ -53,8 +53,8 @@
   font-size: 14px;
   font-weight: normal;
   padding: 8px 2px;
-  color: #039;
-  border-bottom: 2px solid #6678b1;
+  color: #444;
+  border-bottom: 2px solid #666;
   border-right: 30px solid #fff;
   border-left: 30px solid #fff;
 }
@@ -62,7 +62,7 @@
   padding: 12px 2px 0px 2px;
   border-right: 30px solid #fff;
   border-left: 30px solid #fff;
-  color: #669;
+  color: #444;
 }
 #box-table-a {
   background: #fff;
@@ -74,16 +74,16 @@
   font-size: 14px;
   font-weight: normal;
   padding: 8px;
-  color: #039;
-  background: #b9c9fe;
-  border-top: 4px solid #aabcfe;
+  color: #444;
+  background: #ddd;
+  border-top: 4px solid #666;
   border-bottom: 1px solid #fff;
 }
 #box-table-a td {
   padding: 8px;
-  background: #e8edff;
+  background: #eee;
   border-bottom: 1px solid #fff;
-  color: #669;
+  color: #444;
   border-top: 1px solid transparent;
 }
 #box-table-a tr:hover td {
@@ -96,24 +96,24 @@
   border-collapse: collapse;
   text-align: left;
   text-align: center;
-  border-top: 7px solid #9baff1;
-  border-bottom: 7px solid #9baff1;
+  border-top: 7px solid #666;
+  border-bottom: 7px solid #666;
 }
 #box-table-b th {
   font-size: 14px;
   font-weight: normal;
   padding: 8px;
-  color: #039;
-  background: #e8edff;
-  border-right: 1px solid #9baff1;
-  border-left: 1px solid #9baff1;
+  color: #444;
+  background: #eee;
+  border-right: 1px solid #666;
+  border-left: 1px solid #666;
 }
 #box-table-b td {
   padding: 8px;
-  background: #e8edff;
-  border-right: 1px solid #aabcfe;
-  border-left: 1px solid #aabcfe;
-  color: #669;
+  background: #eee;
+  border-right: 1px solid #666;
+  border-left: 1px solid #666;
+  color: #444;
 }
 #hor-zebra {
   background: #fff;
@@ -125,14 +125,17 @@
   font-size: 14px;
   font-weight: normal;
   padding: 10px 8px;
-  color: #039;
+  color: #444;
 }
 #hor-zebra td {
   padding: 8px;
-  color: #669;
+  color: #444;
+}
+#hor-zebra tbody tr:nth-child(odd) {
+  background-color: #ccc;
 }
 #hor-zebra .odd {
-  background: #e8edff;
+  background: #eee;
 }
 #ver-zebra {
   background: #fff;
@@ -144,7 +147,7 @@
   font-size: 14px;
   font-weight: normal;
   padding: 12px 15px;
-  color: #039;
+  color: #444;
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
 }
@@ -152,23 +155,23 @@
   padding: 8px 15px;
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
-  color: #669;
+  color: #444;
 }
 .vzebra-odd {
   background: #eff2ff;
 }
 .vzebra-even {
-  background: #e8edff;
+  background: #eee;
 }
 #ver-zebra #vzebra-adventure,
 #ver-zebra #vzebra-children {
   background: #d0dafd;
-  border-bottom: 1px solid #c8d4fd;
+  border-bottom: 1px solid #666;
 }
 #ver-zebra #vzebra-comedy,
 #ver-zebra #vzebra-action {
   background: #dce4ff;
-  border-bottom: 1px solid #d6dfff;
+  border-bottom: 1px solid #666;
 }
 #one-column-emphasis {
   background: #fff;
@@ -180,12 +183,12 @@
   font-size: 14px;
   font-weight: normal;
   padding: 12px 15px;
-  color: #039;
+  color: #444;
 }
 #one-column-emphasis td {
   padding: 10px 15px;
-  color: #669;
-  border-top: 1px solid #e8edff;
+  color: #444;
+  border-top: 1px solid #eee;
 }
 .oce-first {
   background: #d0dafd;
@@ -201,18 +204,18 @@
   width: 90%;
   border-collapse: collapse;
   text-align: left;
-  border: 1px solid #69c;
+  border: 1px solid #666;
 }
 #newspaper-a th {
   font-size: 14px;
   font-weight: normal;
   padding: 12px 17px 12px 17px;
-  color: #039;
-  border-bottom: 1px dashed #69c;
+  color: #444;
+  border-bottom: 1px dashed #666;
 }
 #newspaper-a td {
   padding: 7px 17px 7px 17px;
-  color: #669;
+  color: #444;
 }
 #newspaper-a tbody tr:hover td {
   color: #339;
@@ -223,20 +226,20 @@
   width: 90%;
   border-collapse: collapse;
   text-align: left;
-  border: 1px solid #69c;
+  border: 1px solid #666;
 }
 #newspaper-b th {
   font-size: 14px;
   font-weight: normal;
   padding: 15px 10px 10px 10px;
-  color: #039;
+  color: #444;
 }
 #newspaper-b tbody {
-  background: #e8edff;
+  background: #eee;
 }
 #newspaper-b td {
   padding: 10px;
-  color: #669;
+  color: #444;
   border-top: 1px dashed #fff;
 }
 #newspaper-b tbody tr:hover td {
@@ -248,23 +251,23 @@
   width: 90%;
   border-collapse: collapse;
   text-align: left;
-  border: 1px solid #69c;
+  border: 1px solid #666;
 }
 #newspaper-c th {
   font-size: 14px;
   font-weight: normal;
   padding: 20px;
-  color: #039;
+  color: #444;
   text-transform: uppercase;
-  border-right: 1px solid #0865c2;
-  border-top: 1px solid #0865c2;
-  border-left: 1px solid #0865c2;
+  border-right: 1px solid #666;
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
   border-bottom: 1px solid #fff;
 }
 #newspaper-c td {
   padding: 10px 20px;
-  color: #669;
-  border-right: 1px dashed #6cf;
+  color: #444;
+  border-right: 1px dashed #666;
 }
 #rounded-corner {
   background: #fff;
@@ -273,29 +276,29 @@
   text-align: left;
 }
 #rounded-corner thead th.rounded-company {
-  background: #b9c9fe url("table-images/left.png") left -1px no-repeat;
+  background: #ddd url("table-images/left.png") left -1px no-repeat;
 }
 #rounded-corner thead th.rounded-q4 {
-  background: #b9c9fe url("table-images/right.png") right -1px no-repeat;
+  background: #ddd url("table-images/right.png") right -1px no-repeat;
 }
 #rounded-corner th {
   font-size: 14px;
   font-weight: normal;
   padding: 8px;
-  color: #039;
-  background: #b9c9fe;
+  color: #444;
+  background: #ddd;
 }
 #rounded-corner td {
   padding: 8px;
-  background: #e8edff;
+  background: #eee;
   border-top: 1px solid #fff;
-  color: #669;
+  color: #444;
 }
 #rounded-corner tfoot td.rounded-foot-left {
-  background: #e8edff url("table-images/botleft.png") left bottom no-repeat;
+  background: #eee url("table-images/botleft.png") left bottom no-repeat;
 }
 #rounded-corner tfoot td.rounded-foot-right {
-  background: #e8edff url("table-images/botright.png") right bottom no-repeat;
+  background: #eee url("table-images/botright.png") right bottom no-repeat;
 }
 #rounded-corner tbody tr:hover td {
   background: #d0dafd;
@@ -311,12 +314,12 @@
   font-size: 14px;
   font-weight: normal;
   padding: 8px;
-  color: #039;
+  color: #444;
   color: #339;
 }
 #background-image td {
   padding: 9px 12px;
-  color: #669;
+  color: #444;
   border-top: 1px solid #fff;
 }
 #background-image tfoot td {
@@ -343,20 +346,20 @@
   font-size: 14px;
   font-weight: normal;
   padding: 8px;
-  color: #039;
-  background: #b9c9fe url("table-images/gradhead.png") repeat-x;
-  border-top: 2px solid #d3ddff;
-  border-bottom: 1px solid #fff;
+  color: #444;
+  background: #ddd url("table-images/gradhead.png") repeat-x;
+  border-top: 2px solid #666;
+  border-bottom: 1px solid #666;
 }
 #gradient-style td {
   padding: 8px;
   border-bottom: 1px solid #fff;
-  color: #669;
+  color: #444;
   border-top: 1px solid #fff;
-  background: #e8edff url("table-images/gradback.png") repeat-x;
+  background: #eee url("table-images/gradback.png") repeat-x;
 }
 #gradient-style tfoot tr td {
-  background: #e8edff;
+  background: #eee;
   font-size: 12px;
   color: #99c;
 }
@@ -378,13 +381,13 @@
   font-size: 14px;
   font-weight: normal;
   padding: 8px;
-  color: #039;
+  color: #444;
   border-bottom: 1px solid #fff;
 }
 #pattern-style-a td {
   padding: 8px;
   border-bottom: 1px solid #fff;
-  color: #669;
+  color: #444;
   border-top: 1px solid transparent;
 }
 #pattern-style-a tbody tr:hover td {
@@ -405,13 +408,13 @@
   font-size: 14px;
   font-weight: normal;
   padding: 8px;
-  color: #039;
+  color: #444;
   border-bottom: 1px solid #fff;
 }
 #pattern-style-b td {
   padding: 8px;
   border-bottom: 1px solid #fff;
-  color: #669;
+  color: #444;
   border-top: 1px solid transparent;
 }
 #pattern-style-b tbody tr:hover td {

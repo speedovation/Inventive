@@ -10,6 +10,7 @@ html
 
     link(rel='stylesheet', href='../css/normalize.css', type='text/css' )
     link(rel='stylesheet', href='../css/base.css', type='text/css' )
+    link(rel='stylesheet', href='../css/table.css', type='text/css' )
     link(rel='stylesheet', href='../css/tables.css', type='text/css' )
 
     link(rel='stylesheet', href='../css/grid/grid.css', type='text/css' )
@@ -40,6 +41,19 @@ body
             - var th_cols = [ 'Comedy','Adventure','Action','Children' ]
             - var td_rows = [ ['Scary Movie', 'Indiana Jones', 'The Punisher' ,'Wall-E'], ['Epic Movie', 'Star Wars', 'Bad Boys' ,'Madagascar'], ['Spartan', 'LOTR', 'Die Hard' ,'Finding Nemo'], ['Dr. Dolittle', 'The Mummy', '300' ,'A Bug\'s Life']  ]
                          
+
+            h3 Highlighted rows, borders
+            table(class="bordered")
+                +table(th_cols,td_rows)
+
+            h3 Zebra stripes, footer
+            table(class="zebra")
+                +table(th_cols,td_rows)
+
+            h3 Highlighted rows with Zebra stripes
+            table(class="zebra bordered")
+                +table(th_cols,td_rows)    
+               
 
             h2 Horizontal Minimalist
             h3 Horizontal Minimalist  

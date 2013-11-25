@@ -2,7 +2,7 @@
  Style - This is what you want
 ------------------------------------------------------------------ */
 
-table
+.default-table
     
     border-collapse: separate
     color:#666;
@@ -115,3 +115,156 @@ table
         background: #f2f2f2
         background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0))
         background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0)   
+
+table 
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;    
+
+
+.bordered 
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+
+
+    tr:hover 
+        background: #fbf8e9 !important;
+        -o-transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;     
+    
+    
+    td, th 
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;    
+
+
+    th 
+        background-color: #dce9f9;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+        background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+        -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+        -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+        box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+        border-top: none;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+
+
+    td:first-child,    th:first-child 
+        border-left: none;
+
+
+    th:first-child 
+        -moz-border-radius: 6px 0 0 0;
+        -webkit-border-radius: 6px 0 0 0;
+        border-radius: 6px 0 0 0;
+
+
+    th:last-child 
+        -moz-border-radius: 0 6px 0 0;
+        -webkit-border-radius: 0 6px 0 0;
+        border-radius: 0 6px 0 0;
+
+
+    th:only-child
+        -moz-border-radius: 6px 6px 0 0;
+        -webkit-border-radius: 6px 6px 0 0;
+        border-radius: 6px 6px 0 0;
+
+
+    tr:last-child td:first-child 
+        -moz-border-radius: 0 0 0 6px;
+        -webkit-border-radius: 0 0 0 6px;
+        border-radius: 0 0 0 6px;
+
+
+    tr:last-child td:last-child 
+        -moz-border-radius: 0 0 6px 0;
+        -webkit-border-radius: 0 0 6px 0;
+        border-radius: 0 0 6px 0;
+
+
+
+
+/*----------------------*/
+
+.zebra
+    td, th
+        padding: 10px;
+        border-bottom: 1px solid #f2f2f2;    
+
+
+    tbody tr:nth-child(even) 
+        background: #f5f5f5;
+        -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+        -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+        box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+
+
+    th 
+        text-align: left;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+        border-bottom: 1px solid #ccc;
+        background-color: #eee;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+        background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+        background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+        background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+        background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+        background-image:         linear-gradient(top, #f5f5f5, #eee);
+
+
+    th:first-child 
+        -moz-border-radius: 6px 0 0 0;
+        -webkit-border-radius: 6px 0 0 0;
+        border-radius: 6px 0 0 0;  
+
+
+    th:last-child 
+        -moz-border-radius: 0 6px 0 0;
+        -webkit-border-radius: 0 6px 0 0;
+        border-radius: 0 6px 0 0;
+
+
+    th:only-child
+        -moz-border-radius: 6px 6px 0 0;
+        -webkit-border-radius: 6px 6px 0 0;
+        border-radius: 6px 6px 0 0;
+
+
+    tfoot td 
+        border-bottom: 0;
+        border-top: 1px solid #fff;
+        background-color: #f1f1f1;  
+
+
+    tfoot td:first-child 
+        -moz-border-radius: 0 0 0 6px;
+        -webkit-border-radius: 0 0 0 6px;
+        border-radius: 0 0 0 6px;
+
+
+    tfoot td:last-child 
+        -moz-border-radius: 0 0 6px 0;
+        -webkit-border-radius: 0 0 6px 0;
+        border-radius: 0 0 6px 0;
+
+
+    tfoot td:only-child
+        -moz-border-radius: 0 0 6px 6px;
+        -webkit-border-radius: 0 0 6px 6px
+        border-radius: 0 0 6px 6px
+            

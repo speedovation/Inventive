@@ -3,9 +3,26 @@
    ------------------   
    */
 
+
+//default blue
+
 td-color = #669 
 th-color = #039
 bg-color = #e8edff
+th-border-color = #6678b1
+th-bg-color = #b9c9fe
+td-hover-color = #009
+
+
+//gray theme
+td-color = #444
+th-color = #444
+bg-color = #eee
+th-border-color = #666
+th-bg-color = #ddd
+
+td-hover-color = #777
+
 
 
 table(border-color = false)
@@ -30,7 +47,7 @@ th(padding = false)
    
 #hor-minimalist-a th
     th(10px 8px)
-    border-bottom: 2px solid #6678b1
+    border-bottom: 2px solid th-border-color
 
 #hor-minimalist-a td
 
@@ -38,7 +55,7 @@ th(padding = false)
     padding: 9px 8px 0px 8px
 
 #hor-minimalist-a tbody tr:hover td
-    color: #009
+    color: td-hover-color
 
 
 
@@ -47,7 +64,7 @@ th(padding = false)
 
 #hor-minimalist-b th    
     th(10px 8px)
-    border-bottom: 2px solid #6678b1
+    border-bottom: 2px solid th-border-color
 
 #hor-minimalist-b td
     border-bottom: 1px solid #ccc
@@ -55,7 +72,7 @@ th(padding = false)
     padding: 6px 8px
 
 #hor-minimalist-b tbody tr:hover td
-    color: #009
+    color: td-hover-color
 
 
 
@@ -64,7 +81,7 @@ th(padding = false)
 
 #ver-minimalist th
     th(8px 2px)   
-    border-bottom: 2px solid #6678b1
+    border-bottom: 2px solid th-border-color
     border-right: 30px solid #fff
     border-left: 30px solid #fff
    
@@ -82,8 +99,8 @@ th(padding = false)
 
 #box-table-a th
     th(8px)
-    background: #b9c9fe
-    border-top: 4px solid #aabcfe
+    background: th-bg-color
+    border-top: 4px solid th-border-color
     border-bottom: 1px solid #fff
     
 
@@ -103,21 +120,21 @@ th(padding = false)
 #box-table-b
     table()
     text-align: center
-    border-top: 7px solid #9baff1
-    border-bottom: 7px solid #9baff1
+    border-top: 7px solid th-border-color
+    border-bottom: 7px solid th-border-color
 
 #box-table-b th
     th(8px)
     background: bg-color
-    border-right: 1px solid #9baff1
-    border-left: 1px solid #9baff1
+    border-right: 1px solid th-border-color
+    border-left: 1px solid th-border-color
     
 
 #box-table-b td
     padding: 8px
     background: bg-color 
-    border-right: 1px solid #aabcfe
-    border-left: 1px solid #aabcfe
+    border-right: 1px solid th-border-color
+    border-left: 1px solid th-border-color
     color: td-color
 
 
@@ -131,6 +148,10 @@ th(padding = false)
 #hor-zebra td
     padding: 8px
     color: td-color
+
+#hor-zebra tbody tr:nth-child(odd)
+   background-color: #ccc;
+    
 
 #hor-zebra .odd
     background: bg-color 
@@ -161,11 +182,11 @@ th(padding = false)
 
 #ver-zebra #vzebra-adventure, #ver-zebra #vzebra-children
     background: #d0dafd
-    border-bottom: 1px solid #c8d4fd
+    border-bottom: 1px solid th-border-color
 
 #ver-zebra #vzebra-comedy, #ver-zebra #vzebra-action
     background: #dce4ff
-    border-bottom: 1px solid #d6dfff
+    border-bottom: 1px solid th-border-color
 
 
 
@@ -192,12 +213,12 @@ th(padding = false)
 
 
 #newspaper-a
-    table(border-color: #69c)
+    table(border-color: th-border-color)
     
 
 #newspaper-a th
     th(12px 17px 12px 17px)    
-    border-bottom: 1px dashed #69c
+    border-bottom: 1px dashed th-border-color
 
 #newspaper-a td
     padding: 7px 17px 7px 17px
@@ -210,7 +231,7 @@ th(padding = false)
 
 
 #newspaper-b
-    table(border-color: #69c)
+    table(border-color: th-border-color)
 
 
 #newspaper-b th
@@ -232,21 +253,21 @@ th(padding = false)
 
 
 #newspaper-c
-    table(border-color: #69c)
+    table(border-color: th-border-color)
 
 
 #newspaper-c th
     th(20px)    
     text-transform: uppercase
-    border-right: 1px solid #0865c2
-    border-top: 1px solid #0865c2
-    border-left: 1px solid #0865c2
+    border-right: 1px solid th-border-color
+    border-top: 1px solid th-border-color
+    border-left: 1px solid th-border-color
     border-bottom: 1px solid #fff
 
 #newspaper-c td
     padding: 10px 20px
     color: td-color
-    border-right: 1px dashed #6cf
+    border-right: 1px dashed th-border-color
 
 
 
@@ -254,14 +275,14 @@ th(padding = false)
     table()
 
 #rounded-corner thead th.rounded-company
-    background: #b9c9fe url('table-images/left.png') left -1px no-repeat
+    background: th-bg-color url('table-images/left.png') left -1px no-repeat
 
 #rounded-corner thead th.rounded-q4
-    background: #b9c9fe url('table-images/right.png') right -1px no-repeat
+    background: th-bg-color url('table-images/right.png') right -1px no-repeat
 
 #rounded-corner th
     th(8px)
-    background: #b9c9fe
+    background: th-bg-color
 
 #rounded-corner td
     padding: 8px
@@ -313,9 +334,9 @@ th(padding = false)
 
 #gradient-style th
     th(8px)
-    background: #b9c9fe url('table-images/gradhead.png') repeat-x
-    border-top: 2px solid #d3ddff
-    border-bottom: 1px solid #fff
+    background: th-bg-color url('table-images/gradhead.png') repeat-x
+    border-top: 2px solid th-border-color
+    border-bottom: 1px solid th-border-color
     
 
 #gradient-style td
