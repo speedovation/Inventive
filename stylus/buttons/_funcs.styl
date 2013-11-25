@@ -1,13 +1,16 @@
-﻿border-radius(radius) 
-    -webkit-border-radius radius
-    -moz-border-radius radius
-    border-radius radius
-
+﻿dummy(col)
+  colors: col;
 
 box-shadow(props) 
     -webkit-box-shadow: props
     -moz-box-shadow: props
     box-shadow: props
+
+border-radius(radius) 
+    p(radius)
+    -webkit-border-radius: radius
+    -moz-border-radius: radius
+    border-radius: radius
 
 
 grad(top, bottom= darken(top, 10%)) 
@@ -26,7 +29,7 @@ grad(top, bottom= darken(top, 10%))
 
 mybutton(hval, val= 0) 
 
-    color = rgb(hval, 100, 15)
+    color = hsl(hval, 100, 15)
 
     
     if val >= 0  
@@ -34,16 +37,16 @@ mybutton(hval, val= 0)
     else  
         color= darken(color, val * -1) 
     
-    border: 1px solid rgb(hval, 50, 39,0.5)
-    text-shadow: 0 1px rgb(hval, 100, 90,0.5)
+    border: 1px solid hsl(hval, 50, 39)
+    text-shadow: 0 1px hsl(hval, 100, 90)
     
-    top= rgb(hval, 70, 76,0.5)
+    top= hsl(hval, 70, 76)
     if val >= 0  
         top= lighten(top, val) 
     else  
         top= darken(top, val * -1) 
     
-    bottom= rgb(hval, 60, 67,0.5)
+    bottom= hsl(hval, 60, 67)
     if val >= 0  
         bottom= lighten(bottom, val) 
     else  
@@ -51,7 +54,7 @@ mybutton(hval, val= 0)
     
     grad(top, bottom)
     
-    shadow= rgb(hval, 100, 90,0.5)
+    shadow= hsl(hval, 100, 90)
     if val >= 0  
         shadow= lighten(shadow, val) 
     else  

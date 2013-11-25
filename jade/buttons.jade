@@ -6,10 +6,11 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     //link(rel="icon", href="/img/favicon1.png")
 
-    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')
+    //link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')
 
     link(rel='stylesheet', href='../css/normalize.css', type='text/css' )
     link(rel='stylesheet', href='../css/base.css', type='text/css' )
+    link(rel='stylesheet', href='../css/table.css', type='text/css' )
 
     link(rel='stylesheet', href='../css/grid/grid.css', type='text/css' )
     link(rel='stylesheet', href='../css/grid/grid-12.css', type='text/css' )
@@ -27,11 +28,70 @@ html
       
           h2 Buttons Demo
           p  Simple CSS3 buttons to give your application a smooth feel.
+
+          table
+            thead
+              tr
+                th Button
+                th
+                th Description
+            tbody
+              tr
+                td
+                  button(href="#" ,class="button") Default
+                td
+                 code btn
+                td Standard gray button with gradient
+              
+              tr
+                td
+                 button(href="#" ,class="button primary") Primary
+                td
+                 code btn btn-primary
+                td Provides extra visual weight and identifies the primary action in a set of buttons
+              
+              tr
+                td
+                 button(href="#" ,class="button btn-info") Info
+                td
+                 code btn btn-info
+                td Used as an alternative to the default styles
+              
+              tr
+                td
+                 button(href="#" ,class="button positive") Success
+                td
+                 code btn btn-success
+                td Indicates a successful or positive action
+              
+              tr
+                td
+                 button(href="#" ,class="btn btn-warning") Warning
+                td
+                 code btn btn-warning
+                td Indicates caution should be taken with this action
+              
+              tr
+                td
+                 button(href="#" ,class="btn btn-danger") Danger
+                td
+                 code btn btn-danger
+                td Indicates a dangerous or potentially negative action
+              
+              tr
+                td
+                 button(href="#" ,class="btn btn-inverse") Inverse 
+                td
+                 code btn btn-inverse
+                td Alternate dark gray button, not tied to a semantic action or use
+              
+
             
           .demo-button  
             h3 Regular
             a(href="#" ,class="button") Normal button
-        
+
+          
           .demo-button
             h3 Positive      
             a(href="#",class="button positive") Create something

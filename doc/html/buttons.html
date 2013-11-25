@@ -4,9 +4,10 @@
     <title>Buttons Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link(rel="icon", href="/img/favicon1.png")-->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+    <!--link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/table.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
     <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
@@ -18,6 +19,66 @@
           <h1 class="welcome">Welcome in Superactive . Relax , We've already done it for you </h1>
           <h2>Buttons Demo</h2>
           <p> Simple CSS3 buttons to give your application a smooth feel.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th></th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button href="#" class="button">Default</button>
+                </td>
+                <td><code>btn</code></td>
+                <td>Standard gray button with gradient</td>
+              </tr>
+              <tr>
+                <td>
+                  <button href="#" class="button primary">Primary</button>
+                </td>
+                <td><code>btn btn-primary</code></td>
+                <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+              </tr>
+              <tr>
+                <td>
+                  <button href="#" class="button btn-info">Info</button>
+                </td>
+                <td><code>btn btn-info</code></td>
+                <td>Used as an alternative to the default styles</td>
+              </tr>
+              <tr>
+                <td>
+                  <button href="#" class="button positive">Success</button>
+                </td>
+                <td><code>btn btn-success</code></td>
+                <td>Indicates a successful or positive action</td>
+              </tr>
+              <tr>
+                <td>
+                  <button href="#" class="btn btn-warning">Warning</button>
+                </td>
+                <td><code>btn btn-warning</code></td>
+                <td>Indicates caution should be taken with this action</td>
+              </tr>
+              <tr>
+                <td>
+                  <button href="#" class="btn btn-danger">Danger</button>
+                </td>
+                <td><code>btn btn-danger</code></td>
+                <td>Indicates a dangerous or potentially negative action</td>
+              </tr>
+              <tr>
+                <td>
+                  <button href="#" class="btn btn-inverse">Inverse </button>
+                </td>
+                <td><code>btn btn-inverse</code></td>
+                <td>Alternate dark gray button, not tied to a semantic action or use</td>
+              </tr>
+            </tbody>
+          </table>
           <div class="demo-button"> 
             <h3>Regular</h3><a href="#" class="button">Normal button</a>
           </div>

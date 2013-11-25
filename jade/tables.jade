@@ -1,0 +1,592 @@
+!!! 5
+html
+  head
+    title Tables Demo
+
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //link(rel="icon", href="/img/favicon1.png")
+
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')
+
+    link(rel='stylesheet', href='../css/normalize.css', type='text/css' )
+    link(rel='stylesheet', href='../css/base.css', type='text/css' )
+    link(rel='stylesheet', href='../css/tables.css', type='text/css' )
+
+    link(rel='stylesheet', href='../css/grid/grid.css', type='text/css' )
+    link(rel='stylesheet', href='../css/grid/grid-12.css', type='text/css' )
+
+    link(rel='stylesheet', href='../css/buttons/buttons.css', type='text/css' )
+
+      
+body
+
+    
+    mixin table(thead_ths,tbody_trs)
+       
+      thead
+        tr
+          for th in thead_ths
+            th(scope="col")= th
+
+      tbody
+        for tr in tbody_trs
+          tr 
+            for td in tr
+              td= td
+
+
+    - var th_cols = [ 'Comedy','Adventure','Action','Children' ]
+    - var td_rows = [ ['Scary Movie', 'Indiana Jones', 'The Punisher' ,'Wall-E'], ['Epic Movie', 'Star Wars', 'Bad Boys' ,'Madagascar'], ['Spartan', 'LOTR', 'Die Hard' ,'Finding Nemo'], ['Dr. Dolittle', 'The Mummy', '300' ,'A Bug\'s Life']  ]
+                 
+
+    table( id="hor-minimalist-a" summary="Employee Pay Sheet")
+        +table(th_cols,td_rows)
+                
+            
+    table( id="hor-minimalist-b" summary="Employee Pay Sheet")
+        +table(th_cols,td_rows)
+            
+
+    table( id="ver-minimalist" summary="Most Favorite Movies")
+        +table(th_cols,td_rows)
+            
+        
+
+
+    table( id="box-table-a" summary="Employee Pay Sheet")
+        thead
+            tr
+                th(scope="col") Employee
+                th(scope="col") Salary
+                th(scope="col") Bonus
+                th(scope="col") Supervisor
+            
+        
+        tbody
+            tr
+                td Stephen C. Cox
+                td $300
+                td $50
+                td Bob
+            
+            tr
+                td Josephin Tan
+                td $150
+                td -
+                td Annie
+            
+            tr
+                td Joyce Ming
+                td $200
+                td $35
+                td Andy
+            
+            tr
+                td James A. Pentel
+                td $175
+                td $25
+                td Annie
+            
+        
+
+
+
+    table( id="box-table-b" summary="Most Favorit Movies")
+        thead
+            tr
+                th(scope="col") Comedy
+                th(scope="col") Adventure
+                th(scope="col") Action
+                th(scope="col") Children
+            
+        
+        tbody
+            tr
+                td Scary Movie
+                td Indiana Jones
+                td The Punisher
+                td Wall-E
+            
+            tr
+                td Epic Movie
+                td Star Wars
+                td Bad Boys
+                td Madagascar
+            
+            tr
+                td Spartan
+                td LOTR
+                td Die Hard
+                td Finding Nemo
+            
+            tr
+                td Dr. Dolittle
+                td The Mummy
+                td 300
+                td A Bug's Life
+            
+        
+
+
+
+    table( id="hor-zebra" summary="Employee Pay Sheet")
+        thead
+            tr
+                th(scope="col") Employee
+                th(scope="col") Salary
+                th(scope="col") Bonus
+                th(scope="col") Supervisor
+            
+        
+        tbody
+            tr( class="odd")
+                td Stephen C. Cox
+                td $300
+                td $50
+                td Bob
+            
+            tr
+                td Josephin Tan
+                td $150
+                td -
+                td Annie
+            
+            tr( class="odd")
+                td Joyce Ming
+                td $200
+                td $35
+                td Andy
+            
+            tr
+                td James A. Pentel
+                td $175
+                td $25
+                td Annie
+            
+        
+
+
+
+    table( id="ver-zebra" summary="Most Favorite Movies")
+        colgroup
+            col( class="vzebra-odd" )
+            col( class="vzebra-even" )
+            col( class="vzebra-odd" )
+            col( class="vzebra-even" )
+        
+        thead
+            tr
+                th( scope="col" id="vzebra-comedy") Comedy
+                th( scope="col" id="vzebra-adventure") Adventure
+                th( scope="col" id="vzebra-action") Action
+                th( scope="col" id="vzebra-children") Children
+            
+        
+        tbody
+            tr
+                td Scary Movie
+                td Indiana Jones
+                td The Punisher
+                td Wall-E
+            
+            tr
+                td Epic Movie
+                td Star Wars
+                td Bad Boys
+                td Madagascar
+            
+            tr
+                td Spartan
+                td LOTR
+                td Die Hard
+                td Finding Nemo
+            
+            tr
+                td Dr. Dolittle
+                td The Mummy
+                td 300
+                td A Bug's Life
+            
+        
+
+
+    table( id="one-column-emphasis" summary="2007 Major IT Companies' Profit")
+        colgroup
+            col( class="oce-first" )
+        
+        thead
+            tr
+                th(scope="col") Company
+                th(scope="col") Q1
+                th(scope="col") Q2
+                th(scope="col") Q3
+                th(scope="col") Q4
+            
+        
+        tbody
+            tr
+                td Microsoft
+                td 20.3
+                td 30.5
+                td 23.5
+                td 40.3
+            
+            tr
+                td Google
+                td 50.2
+                td 40.63
+                td 45.23
+                td 39.3
+            
+            tr
+                td Apple
+                td 25.4
+                td 30.2
+                td 33.3
+                td 36.7
+            
+            tr
+                td IBM
+                td 20.4
+                td 15.6
+                td 22.3
+                td 29.3
+            
+        
+
+
+
+    table( id="newspaper-a" summary="2007 Major IT Companies' Profit")
+        thead
+            tr
+                th(scope="col") Company
+                th(scope="col") Q1
+                th(scope="col") Q2
+                th(scope="col") Q3
+                th(scope="col") Q4
+            
+        
+        tbody
+            tr
+                td Microsoft
+                td 20.3
+                td 30.5
+                td 23.5
+                td 40.3
+            
+            tr
+                td Google
+                td 50.2
+                td 40.63
+                td 45.23
+                td 39.3
+            
+            tr
+                td Apple
+                td 25.4
+                td 30.2
+                td 33.3
+                td 36.7
+            
+            tr
+                td IBM
+                td 20.4
+                td 15.6
+                td 22.3
+                td 29.3
+            
+        
+
+
+
+    table( id="newspaper-b" summary="2007 Major IT Companies' Profit")
+        thead
+            tr
+                th(scope="col") Company
+                th(scope="col") Q1
+                th(scope="col") Q2
+                th(scope="col") Q3
+                th(scope="col") Q4
+            
+        
+            tfoot
+                tr
+                    td(colspan="5")
+                        em
+                            The above data were fictional and made up, please do not sue me
+            
+        
+        tbody
+            tr
+                td Microsoft
+                td 20.3
+                td 30.5
+                td 23.5
+                td 40.3
+            
+            tr
+                td Google
+                td 50.2
+                td 40.63
+                td 45.23
+                td 39.3
+            
+            tr
+                td Apple
+                td 25.4
+                td 30.2
+                td 33.3
+                td 36.7
+            
+            tr
+                td IBM
+                td 20.4
+                td 15.6
+                td 22.3
+                td 29.3
+            
+        
+
+
+    table( id="newspaper-c" summary="Personal Movie Rating")
+        thead
+            tr
+                th(scope="col") Favorite
+                th(scope="col") Great
+                th(scope="col") Nice
+                th(scope="col") Bad
+            
+        
+        tbody
+            tr
+                td Passion of the Christ
+                td Bourne Ultimatum
+                td Shoot 'Em Up
+                td Ali
+            
+            tr
+                td The Big Fish
+                td The Mummy
+                td Apocalypto
+                td Monster
+            
+            tr
+                td Shawshank Redemption
+                td Cold Mountain
+                td Indiana Jones
+                td Dead or Alive
+            
+            tr
+                td Greatest Story Ever Told
+                td I Am Legend
+                td Star Wars
+                td Saw 3
+            
+        
+
+
+
+    table(id="rounded-corner" summary="2007 Major IT Companies' Profit")
+        thead
+            tr
+                th( scope="col" class="rounded-company") Company
+                th( scope="col" class="rounded-q1") Q1
+                th( scope="col" class="rounded-q2") Q2
+                th( scope="col" class="rounded-q3") Q3
+                th( scope="col" class="rounded-q4") Q4
+            
+        
+            tfoot
+                tr
+                    td(colspan="4" class="rounded-foot-left") 
+                        em
+                            The above data were fictional and made up, please do not sue me
+                    td(class="rounded-foot-right") &nbsp;
+            
+        
+        tbody
+            tr
+                td Microsoft
+                td 20.3
+                td 30.5
+                td 23.5
+                td 40.3
+            
+            tr
+                td Google
+                td 50.2
+                td 40.63
+                td 45.23
+                td 39.3
+            
+            tr
+                td Apple
+                td 25.4
+                td 30.2
+                td 33.3
+                td 36.7
+            
+            tr
+                td IBM
+                td 20.4
+                td 15.6
+                td 22.3
+                td 29.3
+            
+        
+
+
+    table( id="background-image" summary="Meeting Results")
+        thead
+            tr
+                th(scope="col") Employee
+                th(scope="col") Division
+                th(scope="col") Suggestions
+            
+        
+        tfoot
+            tr
+                td( colspan="4") IE 6 users won't see the transparent background if the hack is not applied
+            
+        
+        tbody
+            tr
+                td Stephen C. Cox
+                td Marketing
+                td Make discount offers
+            
+            tr
+                td Josephin Tan
+                td Advertising
+                td Give bonuses
+            
+            tr
+                td Joyce Ming
+                td Marketing
+                td New designs
+            
+            tr
+                td James A. Pentel
+                td Marketing
+                td Better Packaging
+            
+        
+
+
+
+    table(id="gradient-style" summary="Meeting Results")
+        thead
+            tr
+                th(scope="col") Employee
+                th(scope="col") Division
+                th(scope="col") Suggestions
+                th(scope="col") Rating
+            
+        
+        tfoot
+            tr
+                td(colspan="4") Give background color to the table cells to achieve seamless transition
+            
+        
+        tbody
+            tr 
+                td Stephen C. Cox
+                td Marketing
+                td Make discount offers
+                td 3/10
+            
+            tr
+                td Josephin Tan
+                td Advertising
+                td Give bonuses
+                td 5/10
+            
+            tr
+                td Joyce Ming
+                td Marketing
+                td New designs
+                td 8/10
+            
+            tr
+                td James A. Pentel
+                td Marketing
+                td Better Packaging
+                td 8/10
+            
+        
+
+
+
+    table( id="pattern-style-a" summary="Meeting Results")
+       thead
+            tr
+                th(scope="col") Employee
+                th(scope="col") Salary
+                th(scope="col") Bonus
+                th(scope="col") Supervisor
+            
+      
+        tbody
+            tr
+                td Stephen C. Cox
+                td $300
+                td $50
+                td Bob
+            
+            tr
+                td Josephin Tan
+                td $150
+                td -
+                td Annie
+            
+            tr
+                td Joyce Ming
+                td $200
+                td $35
+                td Andy
+            
+            tr
+                td James A. Pentel
+                td $175
+                td $25
+                td Annie
+            
+        
+
+
+    table( id="pattern-style-b" summary="Meeting Results")
+        thead
+            tr
+                th(scope="col") Nation
+                th(scope="col") Capital
+                th(scope="col") Language
+                th(scope="col") Unique
+            
+        
+        tbody
+            tr
+                td Japan
+                td Tokyo
+                td Japanese
+                td Karate
+            
+            tr
+                td South Korea
+                td Seoul
+                td Korean
+                td Ginseng
+            
+            tr
+                td China
+                td Beijing
+                td Mandarin
+                td Kung-Fu
+            
+            tr
+                td Indonesia
+                td Jakarta
+                td Indonesian
+                td Batik
+            
+        
+
