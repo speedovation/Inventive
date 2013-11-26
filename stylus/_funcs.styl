@@ -6,20 +6,28 @@ box-shadow(props)
     -moz-box-shadow: props
     box-shadow: props
 
+
 border-radius(radius) 
-    p(radius)
     -webkit-border-radius: radius
     -moz-border-radius: radius
     border-radius: radius
 
-
 grad(top, bottom= darken(top, 10%)) 
     background-color: top
-    background-image: -moz-linear-gradient(top, top, bottom) // firefox
     background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, top),color-stop(1, bottom)) // chrome, safari
-    background-image: linear-gradient(top, top, bottom) // standard
+    background-image: -webkit-linear-gradient(top, top, bottom);
+    background-image:    -moz-linear-gradient(top, top, bottom) // firefox
+    background-image:     -ms-linear-gradient(top, top, bottom);
+    background-image:      -o-linear-gradient(top, top, bottom); 
+    background-image:         linear-gradient(top, top, bottom) // standard
     filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')" // ie6+
 
+transition(props)
+    -o-transition: props
+    -webkit-transition: props
+    -moz-transition: props
+    -ms-transition: props
+    transition: props
 
 /* Colored button mixin 
  * 
