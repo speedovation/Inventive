@@ -10,8 +10,12 @@ html
 
       
   body
+
+    include nav
     
     .grid
+      //pre
+      //  code Some text and some code here
       
       form.row
           .field
@@ -30,9 +34,7 @@ html
               textarea( class="input  textarea desktop-12" placeholder="Textarea")
 
       form.row
-        .field
-            input(class="input desktop-12" type="text" placeholder="Text input")
-
+        
         .field
             input(class="input desktop-6" type="text" placeholder="Text input")
             input(class="input desktop-6" type="text" placeholder="Text input")  
@@ -41,10 +43,24 @@ html
             input(class="input desktop-4" type="text" placeholder="Text input")
             input(class="input desktop-4" type="text" placeholder="Text input")  
             input(class="input desktop-4" type="text" placeholder="Text input")      
-  
-        
+      
         .field
+            label(for="text1" class="inline desktop-4") Label 1
+            input(class="input desktop-8" type="text" placeholder="Text input")
+
+        .field
+            label(for="text1" class="inline desktop-4") Label 2
+            input(class="input desktop-8" type="text" placeholder="Text input")
+
+        fieldset
+          legend Fieldset with legend
+        
+          .field
+            label( for="text1" class="inline") Label 1
             input( class="input desktop-12" type="email" placeholder="Email input")
-           
+          
+          .field
+            input( class="input desktop-12" type="email" placeholder="Email input")
+             
          
            

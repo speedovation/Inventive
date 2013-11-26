@@ -80,7 +80,7 @@ dummy(col) {
 }
 #box-table-a td {
   padding: 8px;
-  background: #f7f9fe;
+  background: #eee;
   border-bottom: 1px solid #fff;
   color: #444;
   border-top: 1px solid transparent;
@@ -103,13 +103,13 @@ dummy(col) {
   font-weight: normal;
   padding: 8px;
   color: #444;
-  background: #f7f9fe;
+  background: #eee;
   border-right: 1px solid #666;
   border-left: 1px solid #666;
 }
 #box-table-b td {
   padding: 8px;
-  background: #f7f9fe;
+  background: #eee;
   border-right: 1px solid #666;
   border-left: 1px solid #666;
   color: #444;
@@ -134,7 +134,7 @@ dummy(col) {
   background-color: #ccc;
 }
 #hor-zebra .odd {
-  background: #f7f9fe;
+  background: #eee;
 }
 #ver-zebra {
   background: #fff;
@@ -160,7 +160,7 @@ dummy(col) {
   background: #eff2ff;
 }
 .vzebra-even {
-  background: #f7f9fe;
+  background: #eee;
 }
 #ver-zebra #vzebra-adventure,
 #ver-zebra #vzebra-children {
@@ -187,7 +187,7 @@ dummy(col) {
 #one-column-emphasis td {
   padding: 10px 15px;
   color: #444;
-  border-top: 1px solid #f7f9fe;
+  border-top: 1px solid #eee;
 }
 .oce-first {
   background: #d0dafd;
@@ -234,7 +234,7 @@ dummy(col) {
   color: #444;
 }
 #newspaper-b tbody {
-  background: #f7f9fe;
+  background: #eee;
 }
 #newspaper-b td {
   padding: 10px;
@@ -289,15 +289,15 @@ dummy(col) {
 }
 #rounded-corner td {
   padding: 8px;
-  background: #f7f9fe;
+  background: #eee;
   border-top: 1px solid #fff;
   color: #444;
 }
 #rounded-corner tfoot td.rounded-foot-left {
-  background: #f7f9fe url("table-images/botleft.png") left bottom no-repeat;
+  background: #eee url("table-images/botleft.png") left bottom no-repeat;
 }
 #rounded-corner tfoot td.rounded-foot-right {
-  background: #f7f9fe url("table-images/botright.png") right bottom no-repeat;
+  background: #eee url("table-images/botright.png") right bottom no-repeat;
 }
 #rounded-corner tbody tr:hover td {
   background: #d0dafd;
@@ -355,10 +355,10 @@ dummy(col) {
   border-bottom: 1px solid #fff;
   color: #444;
   border-top: 1px solid #fff;
-  background: #f7f9fe url("table-images/linear-gradientback.png") repeat-x;
+  background: #eee url("table-images/linear-gradientback.png") repeat-x;
 }
 #linear-gradientient-style tfoot tr td {
-  background: #f7f9fe;
+  background: #eee;
   font-size: 12px;
   color: #99c;
 }

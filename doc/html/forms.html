@@ -3,16 +3,36 @@
   <head>
     <title>Buttons Demo</title>
     <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/nav/nav.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <script text="text/javascript" src="../js/nav.js"></script>
     <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
     <link rel="stylesheet" href="../css/forms/form.css" type="text/css">
   </head>
   <body>
     <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <nav class="nav-1 nav-collapse">
+            <ul>
+              <li><a href="grid.html">grid</a></li>
+              <li><a href="forms.html">forms</a></li>
+              <li><a href="buttons.html">buttons</a></li>
+              <li><a href="tables.html">tables</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">var navigation1 = responsiveNav(".nav-collapse");</script>
+    <div class="grid">
+      <!--pre-->
+      <!--  code Some text and some code here-->
       <form class="row">
         <div class="field">
           <input type="text" placeholder="Text input" class="input desktop-12">
@@ -32,9 +52,6 @@
       </form>
       <form class="row">
         <div class="field">
-          <input type="text" placeholder="Text input" class="input desktop-12">
-        </div>
-        <div class="field">
           <input type="text" placeholder="Text input" class="input desktop-6">
           <input type="text" placeholder="Text input" class="input desktop-6">
         </div>
@@ -44,8 +61,23 @@
           <input type="text" placeholder="Text input" class="input desktop-4">
         </div>
         <div class="field">
-          <input type="email" placeholder="Email input" class="input desktop-12">
+          <label for="text1" class="inline desktop-4">Label 1</label>
+          <input type="text" placeholder="Text input" class="input desktop-8">
         </div>
+        <div class="field">
+          <label for="text1" class="inline desktop-4">Label 2</label>
+          <input type="text" placeholder="Text input" class="input desktop-8">
+        </div>
+        <fieldset>
+          <legend>Fieldset with legend</legend>
+          <div class="field">
+            <label for="text1" class="inline">Label 1</label>
+            <input type="email" placeholder="Email input" class="input desktop-12">
+          </div>
+          <div class="field">
+            <input type="email" placeholder="Email input" class="input desktop-12">
+          </div>
+        </fieldset>
       </form>
     </div>
   </body>

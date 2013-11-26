@@ -154,13 +154,13 @@ table {
   text-align: left;
 }
 .bordered th {
-  background-color: #ebf3fc;
-  background-image: -webkit-gradient(linear, left #ebf3fc, left #dce9f9, color-stop(0, #ebf3fc), color-stop(1, #dce9f9));
-  background-image: -webkit-linear-gradient(#ebf3fc, #ebf3fc, #dce9f9);
-  background-image: -moz-linear-gradient(#ebf3fc, #ebf3fc, #dce9f9);
-  background-image: -ms-linear-gradient(#ebf3fc, #ebf3fc, #dce9f9);
-  background-image: -o-linear-gradient(#ebf3fc, #ebf3fc, #dce9f9);
-  background-image: linear-gradient(#ebf3fc, #ebf3fc, #dce9f9);
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left #eee, left #e4e4e4, color-stop(0, #eee), color-stop(1, #e4e4e4));
+  background-image: -webkit-linear-gradient(#eee, #eee, #e4e4e4);
+  background-image: -moz-linear-gradient(#eee, #eee, #e4e4e4);
+  background-image: -ms-linear-gradient(#eee, #eee, #e4e4e4);
+  background-image: -o-linear-gradient(#eee, #eee, #e4e4e4);
+  background-image: linear-gradient(#eee, #eee, #e4e4e4);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
@@ -204,27 +204,27 @@ table {
   border-radius: 4px;
 }
 .rounded-table th:first-child {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .rounded-table th:last-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
 }
 .rounded-table th:only-child {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 .rounded-table tr:last-child td:first-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
 }
 .rounded-table tr:last-child td:last-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
 }

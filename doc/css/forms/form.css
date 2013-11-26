@@ -6,7 +6,7 @@ form label {
   display: block;
   font-size: 1rem;
   line-height: 1.625em;
-  margin-bottom: 9px;
+  margin: 0 0 0 9px !important;
 }
 form label.inline {
   display: inline-block;
@@ -62,6 +62,9 @@ form.row {
   padding: 0;
   resize: none;
   width: 100%;
+}
+.field input:last-child {
+  margin-right: 0 !important;
 }
 .field .input {
   background: none repeat scroll 0 0 #fff;
