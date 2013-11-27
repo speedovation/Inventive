@@ -12,11 +12,27 @@ html
   body
 
     include nav
+
+    mixin select()
+      div(class=" select-style desktop-4")
+          select
+            option( value="volvo") VolvO
+            option( value="saab") Saab
+            option( value="mercedes") Mercedes
+            option( value="audi") Audi
+
     
     .grid
       //pre
       //  code Some text and some code here
       
+      .row
+        +select()
+        +select()
+        +select()
+        
+
+
       form.row
           .field
               input(class="input desktop-12" type="text" placeholder="Text input")
