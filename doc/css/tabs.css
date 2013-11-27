@@ -1,0 +1,65 @@
+tabs,
+body {
+  background: none repeat scroll 0 0 #f5f5f5;
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.mainContainer {
+  margin: 60px auto 0;
+  width: 600px;
+}
+.topNav {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 960px;
+}
+.tabs li {
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  display: block;
+  height: 32px;
+  line-height: 3px;
+  margin: 0;
+  padding: 19px 0;
+  width: 109px;
+}
+.tabs li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.tabs li a {
+  color: #666;
+  cursor: pointer;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  padding: 28px;
+  text-transform: uppercase;
+}
+.tabs .tab-current {
+  background: none repeat scroll 0 0 #fff;
+  border-bottom: 0 none;
+  margin: 0;
+  padding: 13px 38px 9px;
+}
+.tabsContent {
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 5px #ccc;
+  color: #666;
+  display: none;
+  min-height: 600px;
+  padding: 20px;
+}
+ul.tabs {
+  margin: 0 0 11px 20px;
+}
+@-moz-document url-prefix("") {
+  ul.tabs {
+    display: block;
+    float: left;
+    margin-left: -149px;
+    margin-top: 16px;
+  }
+}

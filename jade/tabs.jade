@@ -1,75 +1,72 @@
+!!! 5
 html
   head
-    title EasyTabs Demo
+    title Cutting Deals
     
     include header
-
-    script(src='../js/jquery.js', type='text/javascript')
-    //script(src='../vendor/jquery.hashchange.min.js', type='text/javascript')
-    script(src='../js/easytabs.js', type='text/javascript')
-    style
-      /* Example Styles for Demo */
-      .etabs { margin: 0; padding: 0; }
-      .tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
-      .tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
-      .tab a:hover { text-decoration: underline; }
-      .tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
-      .tab a.active { font-weight: bold; }
-      .tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
-      .panel-container { margin-bottom: 10px; }
-    script(type='text/javascript')
-      $(document).ready( function() {
-        $('#tab-container').easytabs({animation:false});
-      });
+    
+    link(href='../css/tabs.css', rel='stylesheet', type='text/css', media='screen')
+    
   body
-    h2
-      a(href='http://os.alfajango.com/easytabs') View more demos and docs
-    #tab-container.tab-container
-      ul.etabs
-        li.tab
-          a(href='#tabs1-html') HTML Markup
-        li.tab
-          a(href='#tabs1-js') Required JS
-        li.tab
-          a(href='#tabs1-css') Example CSS
-      .panel-container
-        #tabs1-html
-          h2 HTML Markup for these tabs
-          pre.
-            \n                
-                          
-          p
-            | The HTML markup for your tabs and content can be arranged however you want. At the minimum, you need a container, a collection of links for your tabs (an unordered list by default), and matching divs for your tabbed content. Make sure the tab
-            code href
-            | attributes match the
-            code id
-            | of the target panel. This is standard semantic markup for in-page anchors.
-          p
-            | The class names above are just to make it easy to style. You can make them whatever you want, there's no magic here.
-        #tabs1-js
-          h2 JS for these tabs
-          pre.
-            \n                
-                          
-          p
-            | Optionally include the jquery
-            a(href='http://benalman.com/projects/jquery-hashchange-plugin/') hashchange plugin
-            | (recommended) or
-            a(href='http://www.asual.com/jquery/address/docs/') address plugin
-            | to enable forward-
-            | and back-button functionality.
-          pre.
-            \n                
-                          
-        #tabs1-css
-          h2 CSS Styles for these tabs
-          code
-            pre.
-              \n.etabs { margin: 0; padding: 0; }
-              .tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
-              .tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
-              .tab a:hover { text-decoration: underline; }
-              .tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
-              .tab a.active { font-weight: bold; }
-              .tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
-                                
+
+    include nav
+        
+    .mainContainer
+      .htmltabs
+        The tabs 
+        ul.tabs
+          li.tab1
+            a.tab1.tab
+              | Home
+          li.tab2
+            a.tab2.tab
+              | About
+          li.tab3
+            a.tab3.tab
+              | Blog
+          li.tab4
+            a.tab4.tab
+              | Career
+          li.tab5
+            a.tab5.tab
+              | Contact
+          li.tab6
+            a.tab6.tab
+              | News
+          li.tab7
+            a.tab7.tab
+              | Events
+        // tab 1 
+        .tab1.tabsContent
+          div Home content goes here!
+        // end of t1 
+        // tab 2 
+        .tab2.tabsContent
+          div About content goes here!
+        // end of t2 
+        // tab 3 
+        .tab3.tabsContent
+          div Blog content goes here!
+        // end of t3 
+        // tab 4 
+        .tab4.tabsContent
+          div Career content goes here!
+        // end of t4 
+        // tab 5 
+        .tab5.tabsContent
+          div Contact content goes here!
+        // end of t5 
+        // tab 6 
+        .tab6.tabsContent
+          div News content goes here!
+        // end of t6 
+        // tab 7 
+        .tab7.tabsContent
+          div Events content goes here!
+        // end of t7 
+      // tabbed ends here
+    // mainContainer ends here
+    // Javascript files 
+    script(type='text/javascript', src='../js/jquery.js')
+    script(type='text/javascript', src='../js/tabs.js')
+    // Javascript files ends from here 
