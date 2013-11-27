@@ -11,6 +11,10 @@ $(document).ready(function()
 		$('div.htmltabs div.tabsContent').hide();// It will hide all the tab content
 		$('div.' + thisClass).show(); // It will show the current content of the user selected tab
 		$('div.htmltabs ul.tabs li a').removeClass('tab-current');// It will remove the tab-current class from the previous tab to remove the active style
+		
+		//remove northtabs..top tabs
+		$('div.htmltabs ul.northtabs li a').removeClass('tab-current');
+
 		$(this).addClass('tab-current'); //It will add the tab-current class to the user selected tab
 	});
 });
