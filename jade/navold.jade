@@ -1,0 +1,19 @@
+.grid
+  .row
+   .desktop-12.tablet-6.mobile-3
+    nav(class="nav-1 nav-collapse")
+      ul
+        
+        for li in ['grid','forms','buttons','tables']
+          li
+            a(href="#{li}.html") #{li}
+        
+        li Multi
+          ul 
+            li Nav     
+        
+    
+
+script(type="text/javascript")
+
+  var navigation1 = responsiveNav(".nav-collapse");

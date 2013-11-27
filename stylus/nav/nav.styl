@@ -1,159 +1,204 @@
 @import "../_funcs"
-/*! responsive-nav.js 1.0.23 by @viljamis */
 
-//Wall nav 
-.nav-collapse
-  //border-radius: 5px
+//http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
 
-.nav-collapse ul 
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
-  list-style: none;
+#nav
+  width 90%
 
-.nav-collapse li 
-  width: 100%;
-  display: block;
+  //font-family 'Open Sans', sans-serif
+  //font-weight 400
+  //position absolute
+  //top 25%
+  //left 50%
+  //margin-left -30em
+  & > a
+    display none
+  li
+    position relative
+    margin 0
+    a
+      color #fff
+      display block
+      text-decoration none
+      font-size 15px
+      &:active
+        background-color #c00 !important
 
+  span
+    &:after
+      width 0
+      height 0
+      // border 0.313em solid transparent
+      // border-bottom none
+      // bordercolor #efa585
+      // content ''
+      // vertical-align middle
+      // display inline-block
+      // position relative
+      // right -0.313em
 
-.nav-collapse ul li:first-child
-  border-radius(5px 0 0 5px) 
+      top 45%
+      right 3%
+      border solid transparent
+      content " "
 
-.nav-collapse ul li:last-child
-  border-radius(0 5px 5px 0)
-
-
-.js .nav-collapse 
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-
-
-.nav-collapse.opened 
-  max-height: 9999px;
-
-
-.nav-toggle 
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-
-
-@media screen and (min-width: 40em) 
-  .js .nav-collapse 
-    position: relative;
-  
-  .js .nav-collapse.closed 
-    max-height: none;
-  
-  .nav-toggle 
-    display: none;
+      position absolute
+      pointer-events none
+      border-color rgba(213, 202, 196, 0)
+      border-top-color #efa585
+      border-width 9px
+      margin-left -30px
 
 
 
-.nav-collapse,.nav-collapse *
 
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  //First level
+  & > ul
+    height 3.75em
+    background-color #e15a1f
+    border-radius(4px)
+    & > li
+      width 25%
+      height 100%
+      float left
+      margin 0
+      & > a
+        height 100%
+        font-size 1.5em
+        line-height 2.5em
+        text-align center
 
 
-.nav-collapse,.nav-collapse ul
+  & > ul > li:not( :last-child ) > a
+    border-right: 1px solid #cc470d;
 
-    list-style: none;
+  & > ul > li:hover > a,  & > ul:not( :hover ) > li.active > a
+    background-color: #cc470d;
+
+
+
+  //Second level 
+
+  li
+    ul
+      background-color #cc470d
+      display none
+      position absolute
+      top 100%
+      margin 0
+      padding 0
+      border-radius(0 0 4px 4px)
+      z-index 1000
+      a
+        font-size 1.25emszraQZXW
+        border-top 1px solid #e15a1f
+        padding 0.75em
+        padding-left 2em
+        &:hover, 
+        &.active
+            background-color #e15a1f
+
+    &:hover
+      ul
+        display block
+        left 0
+        right 0
+    &:not(:first-child):hover ul
+        left -1px
+
+    & ul li:last-child a:hover
+        border-radius(0 0 4px 4px)
+
+    //& ul li a:hover,
+    //& ul:not( :hover ) li.active a
+    //background-color #e15a1f
+
+
+
+
+@media only screen and ( max-width: 62.5em ) /* 1000 */
+  #nav
     width: 100%;
-    float: left;
+    position: static;
+    margin: 0;
 
 
-.nav-collapse li
-
-    float: left;
-    width: 100%;
-
-
-@media screen and (min-width:40em)
-
-  .nav-collapse li
-  
-          width: 150px;
-          //*width: 24.9%;
-          //_width: 19%;
-  
+@media only screen and ( max-width: 40em ) /* 640 */
+  html
+    font-size: 75%; /* 12 */
 
 
+  #nav
+    position relative
+    top auto
+    left auto
+    & > a
+      width 3.125em
+      height 3.125em
+      text-align left
+      text-indent -9999px
+      background-color #e15a1f
+      position relative
+      &:after
+        top 60%
 
-.nav-collapse a
-
-    color: #333;
-    text-decoration: none;
-    width: 100%;
-    background: #ccc;
-    border-bottom: 1px solid #ddd;
-    padding: .7em 1em;
-    float: left;
-
-
-@media screen and (min-width:40em)
-
-  .nav-collapse a
-  
-          margin: 0;
-          padding: 1em;
-          float: left;
-          text-align: center;
-          border-bottom: 0;
-          border-right: 1px solid #ddd;
-  
-
-  .nav-collapse ul ul a
-
-    background: #ca3716;
-    padding-left: 2em;
-
-
-@media screen and (min-width:40em)
-
-    .nav-collapse ul ul a
-    
-            display: none;
-    
-
-.nav-toggle
-
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 70px;
-    height: 55px;
-    float: right;
-    text-indent: -9999px;
-    overflow: hidden;
-    background: #f4421a url("../../img/hamburger.gif") no-repeat 50% 33%;
-
-
-@media screen and (-webkit-min-device-pixel-ratio:1.3),screen and (min--moz-device-pixel-ratio:1.3),screen and (-o-min-device-pixel-ratio:2 / 1),screen and (min-device-pixel-ratio:1.3),screen and (min-resolution:192dpi),screen and (min-resolution:2dppx)
-
-  .nav-toggle
-  
-          background-image: url("../../img/hamburger-retina.gif");
-          -webkit-background-size: 100px 100px;
-          -moz-background-size: 100px 100px;
-          -o-background-size: 100px 100px;
-          background-size: 100px 100px;
-  
+  #nav > a:before,
+  #nav > a:after
+    position absolute
+    border 2px solid #fff
+    top 35%
+    left 25%
+    right 25%
+    content ''
 
 
 
+  #nav:not( :target ) > a:first-of-type,
+  #nav:target > a:last-of-type
+    display: block;
 
-  
+
+
+  /* first level */
+
+  #nav
+    & > ul
+      height auto
+      display none
+      position absolute
+      left 0
+      right 0
+      & > li
+        width 100%
+        float none
+        & > a
+          height auto
+          text-align left
+          padding 0 0.833em
+    &:target
+      & > ul
+        display block
+
+  #nav > ul > li:not( :last-child ) > a
+    border-right: none;
+    border-bottom: 1px solid #cc470d;
+
+
+
+  /* second level */
+
+  #nav
+    li
+      ul
+        position static
+        padding 1.25em
+        padding-top 0
+
+// .clearfix:after 
+//     clear: both;
+//     content: " ";
+//     display: block;
+//     font-size: 0;
+//     height: 0;
+//     visibility: hidden;
 
