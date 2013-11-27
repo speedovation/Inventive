@@ -1,0 +1,49 @@
+nav#nav(role='navigation')
+    a(href='#nav', title='Show navigation') Show navigation
+      a(href='#', title='Hide navigation') Hide navigation
+      ul.clearfix
+        li
+          a(href='?home') Home
+        li
+          a(href='?blog')
+            span Blog
+          ul
+            li
+              a(href='?design') Design
+            li
+              a(href='?html') HTML
+            li
+              a(href='?css') CSS
+            li
+              a(href='?javascript') JavaScript
+        li
+          a(href='?work')
+            span Work
+          ul
+            li
+              a(href='?webdesign') Web Design
+            li
+              a(href='?typography') Typography
+            li
+              a(href='?frontend') Front-End
+        li
+          a(href='?about') About
+    script(src='../js/jquery.js')
+    script(src='../js/doubletaptogo.js')
+    script
+
+        /*
+            VIEWPORT BUG FIX
+            iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+        */
+
+        ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+
+
+
+        $( function()
+        {
+            $( '#nav li:has(ul)' ).doubleTapToGo();
+        });
+
+
