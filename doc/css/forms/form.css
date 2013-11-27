@@ -1,3 +1,240 @@
+dummy(col) {
+  colors: col;
+}
+.select-style {
+  padding: 0;
+  margin: 0 19.5px 0 0 !important;
+  border: 1px solid #ccc;
+  width: 120px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff url("../../img/arrowdown.gif") no-repeat 95% 50%;
+}
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0 0 0px;
+  max-width: inherit;
+}
+.select-style select:focus {
+  outline: none;
+}
+fieldset {
+  margin: 1em;
+  padding: 20px;
+}
+fieldset p {
+  display: block;
+  position: relative;
+}
+fieldset input[type=text],
+fieldset input[type=email] {
+  border: 1px solid #ccc;
+  line-height: 20px;
+  padding: 3px;
+  width: 200px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+label + p,
+input + p {
+  margin-top: 20px;
+}
+p > input {
+  padding: 0;
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  float: left;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+p > label {
+  line-height: 16px;
+  color: #333;
+  padding: 0 0 0 22px;
+}
+fieldset[dir=rtl] p > label {
+  padding: 0 18px 0 0;
+}
+p:not(#foo) > input + label {
+  background: url("../../img/gr_custom-inputs.png") 0 -1px no-repeat;
+  height: 16px;
+  line-height: inherit;
+}
+p:not(#foo) > input[type=radio] + label {
+  background-position: 0 -161px;
+}
+p:not(#foo) > input[type=radio]:checked + label {
+  background-position: 0 -241px;
+}
+p:not(#foo) > input[type=checkbox]:checked + label {
+  background-position: 0 -81px;
+}
+p:not(#foo) > input[type=checkbox]:hover:checked + label,
+p:not(#foo) > input[type=checkbox]:focus:checked + label,
+p:not(#foo) > input[type=checkbox]:checked + label:hover,
+p:not(#foo) > input[type=checkbox]:focus:checked + label {
+  background-position: 0 -101px;
+}
+p:not(#foo) > input[type=radio]:hover:checked + label,
+p:not(#foo) > input[type=radio]:focus:checked + label,
+p:not(#foo) > input[type=radio]:checked + label:hover,
+p:not(#foo) > input[type=radio]:focus:checked + label {
+  background-position: 0 -261px;
+}
+p:not(#foo) > input[type=checkbox]:hover + label,
+p:not(#foo) > input[type=checkbox]:focus + label,
+p:not(#foo) > input[type=checkbox] + label:hover {
+  background-position: 0 -21px;
+}
+p:not(#foo) > input[type=radio]:hover + label,
+p:not(#foo) > input[type=radio]:focus + label,
+p:not(#foo) > input[type=radio] + label:hover {
+  background-position: 0 -181px;
+}
+p:not(#foo) > input[type=checkbox]:active + label,
+p:not(#foo) > input[type=checkbox] + label:hover:active {
+  background-position: 0 -41px;
+}
+p:not(#foo) > input[type=radio]:active + label,
+p:not(#foo) > input[type=radio] + label:hover:active {
+  background-position: 0 -201px;
+}
+p:not(#foo) > input[type=checkbox]:active:checked + label,
+p:not(#foo) > input[type=checkbox]:checked + label:hover:active {
+  background-position: 0 -121px;
+}
+p:not(#foo) > input[type=radio]:active:checked + label,
+p:not(#foo) > input[type=radio]:checked + label:hover:active {
+  background-position: 0 -281px;
+}
+p:not(#foo) > input[type=checkbox]:disabled + label,
+p:not(#foo) > input[type=checkbox]:hover:disabled + label,
+p:not(#foo) > input[type=checkbox]:focus:disabled + label,
+p:not(#foo) > input[type=checkbox]:disabled + label:hover,
+p:not(#foo) > input[type=checkbox]:disabled + label:hover:active {
+  background-position: 0 -61px;
+}
+p:not(#foo) > input[type=radio]:disabled + label,
+p:not(#foo) > input[type=radio]:hover:disabled + label,
+p:not(#foo) > input[type=radio]:focus:disabled + label,
+p:not(#foo) > input[type=radio]:disabled + label:hover,
+p:not(#foo) > input[type=radio]:disabled + label:hover:active {
+  background-position: 0 -221px;
+}
+p:not(#foo) > input[type=checkbox]:disabled:checked + label,
+p:not(#foo) > input[type=checkbox]:hover:disabled:checked + label,
+p:not(#foo) > input[type=checkbox]:focus:disabled:checked + label,
+p:not(#foo) > input[type=checkbox]:disabled:checked + label:hover,
+p:not(#foo) > input[type=checkbox]:disabled:checked + label:hover:active {
+  background-position: 0 -141px;
+}
+p:not(#foo) > input[type=radio]:disabled:checked + label,
+p:not(#foo) > input[type=radio]:hover:disabled:checked + label,
+p:not(#foo) > input[type=radio]:focus:disabled:checked + label,
+p:not(#foo) > input[type=radio]:disabled:checked + label:hover,
+p:not(#foo) > input[type=radio]:disabled:checked + label:hover:active {
+  background-position: 0 -301px;
+}
+fieldset[dir=rtl] p > input {
+  left: auto;
+  right: 0;
+}
+fieldset[dir=rtl] p:not(#foo) > input + label {
+  background-position: 100% -161px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio] + label {
+  background-position: 100% -161px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:checked + label {
+  background-position: 100% -241px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:checked + label {
+  background-position: 100% -81px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:hover:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:focus:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:checked + label:hover,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:focus:checked + label {
+  background-position: 100% -101px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:hover:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:focus:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:checked + label:hover,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:focus:checked + label {
+  background-position: 100% -261px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:hover + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:focus + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox] + label:hover {
+  background-position: 100% -21px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:hover + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:focus + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio] + label:hover {
+  background-position: 100% -181px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:active + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox] + label:hover:active {
+  background-position: 100% -41px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:active + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio] + label:hover:active {
+  background-position: 100% -201px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:active:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:checked + label:hover:active {
+  background-position: 100% -121px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:active:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:checked + label:hover:active {
+  background-position: 100% -281px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:disabled + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:hover:disabled + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:focus:disabled + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:disabled + label:hover,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:disabled + label:hover:active {
+  background-position: 100% -61px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:disabled + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:hover:disabled + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:focus:disabled + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:disabled + label:hover,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:disabled + label:hover:active {
+  background-position: 100% -221px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:disabled:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:hover:disabled:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:focus:disabled:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:disabled:checked + label:hover,
+fieldset[dir=rtl] p:not(#foo) > input[type=checkbox]:disabled:checked + label:hover:active {
+  background-position: 100% -141px;
+}
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:disabled:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:hover:disabled:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:focus:disabled:checked + label,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:disabled:checked + label:hover,
+fieldset[dir=rtl] p:not(#foo) > input[type=radio]:disabled:checked + label:hover:active {
+  background-position: 100% -301px;
+}
 form {
   margin: 0 0 18px;
 }
@@ -46,14 +283,13 @@ form.row {
 }
 .field.metro,
 .field .metro {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
 }
 .field input,
 .field input[type="*"],
 .field textarea {
-  border: medium none;
-  box-shadow: none;
-  font-family: "Open Sans";
   font-size: 1rem;
   font-weight: 300;
   margin: 0 24px 0 0 !important;
@@ -62,6 +298,15 @@ form.row {
   padding: 0;
   resize: none;
   width: 100%;
+  background: #fff;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.09) inset;
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.09) inset;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.09) inset;
+  color: #333;
 }
 .field input:last-child {
   margin-right: 0 !important;
@@ -69,6 +314,8 @@ form.row {
 .field .input {
   background: none repeat scroll 0 0 #fff;
   border: 1px solid #d8d8d8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
   font-size: 1rem;
   height: 36px;
@@ -77,6 +324,8 @@ form.row {
   position: relative;
 }
 .field .input.search {
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
   border-radius: 1000px;
   height: 36px;
   line-height: 34px;
@@ -165,20 +414,30 @@ form.row {
 }
 .field.prepend input,
 .field.prepend .input {
-  border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .field.append input,
 .field.append .input {
-  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .field.prepend.append input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
 }
 .field.prepend.append input:first-child {
-  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .field.prepend.append input:last-child {
-  border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   margin-left: -1px;
 }
 .field.prepend .adjoined,
@@ -211,7 +470,9 @@ form.row {
   padding: 0 10px;
 }
 .field.prepend *:first-child {
-  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .field.prepend input:first-child {
   margin-right: 0;
@@ -228,7 +489,9 @@ form.row {
   margin-left: -1px;
 }
 .field.append *:last-child {
-  border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .field.append button,
 .field.prepend button {
@@ -382,30 +645,4 @@ form.row {
 .field .picker.success select,
 .field .picker.success:after {
   color: #58c026;
-}
-.select-style {
-  padding: 0;
-  margin: 0 19.5px 0 0 !important;
-  border: 1px solid #ccc;
-  width: 120px;
-  border-radius: 3px;
-  overflow: hidden;
-  background-color: #fff;
-  background: #fff url("../../img/arrowdown.gif") no-repeat 95% 50%;
-}
-.select-style select {
-  padding: 5px 8px;
-  width: 130%;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-  background-image: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0 0 0px;
-  max-width: inherit;
-}
-.select-style select:focus {
-  outline: none;
 }

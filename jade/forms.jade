@@ -78,5 +78,127 @@ html
           .field
             input( class="input desktop-12" type="email" placeholder="Email input")
              
-         
+        
+        form
+          fieldset
+            legend Some information about you
+            
+            label( for="fullname") Name:
+            input( type="text" id="fullname" )
+            
+            p Gender:
+            p 
+              input( type="radio" value="male" id="male" name="gender" ) 
+              label( for="male") Male
+            p 
+              input( type="radio" value="Female" id="female" name="gender" ) 
+              label( for="female") Female
+            
+            pStuff you like:
+            p 
+              input( type="checkbox" value="CSS3" id="css3" ) 
+              label( for="css3") CSS3
+            p 
+              input( type="checkbox" value="HTML5" id="html5" )
+              label( for="html5") HTML5
+            p 
+              input( type="checkbox" value="JavaScript" id="javascript" ) 
+              label( for="javascript") JavaScript
+            p 
+              input( type="checkbox" value="Other" id="other" ) 
+              label( for="other") Other
+            
+          
+          
+          fieldset
+            legend What happens when I specify disabled or checked attributes?
+            
+            p Disabling and checking radio inputs:
+            p 
+              input( type="radio" value="disabled" id="disabled" name="disabled" disabled )
+              label( for="disabled") This is disabled
+            
+            p 
+              input( type="radio" value="check5" id="check5" name="check5" checked="" disabled=""  )
+              label( for="check5") This is disabled and checked
+
+            p 
+              input( type="radio" value="check" id="check" name="check" checked )
+              label( for="check") This is checked
+            
+            p Disabling and checking checkbox inputs:
+            p 
+              input( type="checkbox" value="disabled" id="disabled2" disabled ) 
+              label( for="disabled2") This is disabled
+            p 
+              input( type="checkbox" value="check" id="check2" checked ) 
+              label( for="check2") This is checked
+            p 
+              input( type="checkbox" value="Stop" id="disablecheck" disabled checked ) 
+              label( for="disablecheck") This is checked and disabled
+            p 
+              input( type="checkbox" value="Other" id="other2" ) 
+              label( for="other2") Other
+            
+          
+          
+          fieldset
+            legend Contact info
+            
+            label Email:
+             input( type="email" )
+            
+            p Subscribe to newsletter:
+            p 
+              input( type="radio" value="yes" id="yes" name="subscribe" ) 
+              label( for="yes") Yes
+            p 
+              input( type="radio" value="no" id="no" name="subscribe" ) 
+              label( for="no") No
+            
+            p Tick the information you would like to hear about:
+            p 
+              input( type="checkbox" value="Rich" id="rich" ) 
+              label( for="rich") I would like to here about the how the CSS Ninja can make me rich
+            p 
+              input( type="checkbox" value="Poor" id="poor" ) 
+              label( for="poor") How the CSS Ninja can make me poor
+            p 
+              input( type="checkbox" value="Stop" id="stop" ) 
+              label( for="stop") Please make the CSS Ninja stop from trying to make me rich or poor
+            p 
+              input( type="checkbox" value="Other" id="other3" ) 
+              label( for="other3") Other
+            
+          
+          
+          fieldset(lang="he" dir="rtl")
+            legend Change direction for international text
+            
+            p Gender:
+            p 
+              input( type="radio" value="male" id="male2" name="gender2" ) 
+              label( for="male2") Male
+            p 
+              input( type="radio" value="Female" id="female2" name="gender2" ) 
+              label( for="female2") Female
+            
+            p Stuff you like:
+            p 
+              input( type="checkbox" value="CSS3" id="css32" ) 
+              label( for="css32") CSS3
+            p 
+              input( type="checkbox" value="HTML5" id="html52" ) 
+              label( for="html52") HTML5
+            p 
+              input( type="checkbox" value="JavaScript" id="javascript2" ) 
+              label( for="javascript2") JavaScript
+            p 
+              input( type="checkbox" value="Other" id="other2" ) 
+              label( for="other2") Other
+            
+          
+          
+          
+
            

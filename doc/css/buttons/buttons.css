@@ -5,6 +5,7 @@ dummy(col) {
 button {
   display: inline-block;
   padding: 0.4em 0.9em 0.25em;
+  padding: 0.5em 1em;
   margin: 1px;
   width: auto;
   font-weight: normal;
@@ -231,4 +232,54 @@ button[disabled] {
   -moz-opacity: 0.5;
   opacity: 0.5;
   cursor: default;
+}
+.button.success,
+button.success {
+  background-color: #7fbf4d;
+  background-image: -webkit-gradient(linear, left #7fbf4d, left #63a62f, color-stop(0, #7fbf4d), color-stop(1, #63a62f));
+  background-image: -webkit-linear-gradient(#7fbf4d, #7fbf4d, #63a62f);
+  background-image: -moz-linear-gradient(#7fbf4d, #7fbf4d, #63a62f);
+  background-image: -ms-linear-gradient(#7fbf4d, #7fbf4d, #63a62f);
+  background-image: -o-linear-gradient(#7fbf4d, #7fbf4d, #63a62f);
+  background-image: linear-gradient(#7fbf4d, #7fbf4d, #63a62f);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
+  border-color: #63a62f #63a62f #5b992b;
+  border-image: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-shadow: 0 1px 0 0 #96ca6d inset;
+  -moz-box-shadow: 0 1px 0 0 #96ca6d inset;
+  box-shadow: 0 1px 0 0 #96ca6d inset;
+  color: #fff;
+  margin-right: 20px;
+  text-align: center;
+  text-shadow: 0 -1px 0 #4c9021;
+}
+.button.success:hover,
+button.success:hover {
+  background-color: #76b347;
+  background-image: -webkit-gradient(linear, left #76b347, left #5e9e2e, color-stop(0, #76b347), color-stop(1, #5e9e2e));
+  background-image: -webkit-linear-gradient(#76b347, #76b347, #5e9e2e);
+  background-image: -moz-linear-gradient(#76b347, #76b347, #5e9e2e);
+  background-image: -ms-linear-gradient(#76b347, #76b347, #5e9e2e);
+  background-image: -o-linear-gradient(#76b347, #76b347, #5e9e2e);
+  background-image: linear-gradient(#76b347, #76b347, #5e9e2e);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
+  -webkit-box-shadow: 0 1px 0 0 #8dbf67 inset;
+  -moz-box-shadow: 0 1px 0 0 #8dbf67 inset;
+  box-shadow: 0 1px 0 0 #8dbf67 inset;
+  cursor: pointer;
+}
+.button.success:active,
+button.success:active {
+  border-color: #5b992b #5b992b #538c27;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-shadow: 0 0 8px 4px #548c29 inset;
+  -moz-box-shadow: 0 0 8px 4px #548c29 inset;
+  box-shadow: 0 0 8px 4px #548c29 inset;
 }

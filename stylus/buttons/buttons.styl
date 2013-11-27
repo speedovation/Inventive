@@ -5,6 +5,7 @@
     // box model
     display: inline-block
     padding: 0.4em 0.9em 0.25em
+    padding: 0.5em 1em
     margin: 1px
     width: auto
     
@@ -130,8 +131,35 @@
         cursor: default
 
 
+    &.success
+        grad(#7FBF4D, #63A62F);
+        border-color: #63A62F #63A62F #5B992B;
+        border-image: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow(0 1px 0 0 #96CA6D inset)
+        color: #FFFFFF; 
+        margin-right: 20px;
+        //padding: 10px 20px 13px;
+        text-align: center;
+        text-shadow: 0 -1px 0 #4C9021;
+        //text-transform: uppercase;
+
+        &:hover 
+            grad(#76B347, #5E9E2E);
+            box-shadow(0 1px 0 0 #8DBF67 inset)
+            cursor: pointer
+
+        &:active 
+            border-color: #5B992B #5B992B #538C27
+            border-image: none
+            border-style: solid
+            border-width: 1px
+            box-shadow(0 0 8px 4px #548C29 inset, 0 1px 0 0 #EEEEEE)
 
 
+//        font: 600 1.4em/1.8 'Dosis','Helvetica Neue',Helvetica,Arial,sans-serif;
 // .hdefault {
 //     background-color: #EAEAEA;
 //     background-image: linear-gradient(center top , #F6F6F6, #EAEAEA);
