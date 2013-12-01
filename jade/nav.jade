@@ -1,58 +1,20 @@
-.grid
-  .row
-    .desktop-12.tablet-6.mobile-3
-        nav#nav(role='navigation')
-            a(href='#nav', title='Show navigation') Show navigation
-              a(href='#', title='Hide navigation') Hide navigation
-              ul.clearfix
-                li
-                  a(href='?home') Home
-                li
-                  a(href='')
-                    span UI
-                  ul
-                    li
-                      a(href='grid.html') Grid
-                    li
-                      a(href='tables.html') Tables
-                    li
-                      a(href='forms.html') Forms
-                    li
-                      a(href='buttons.html') Buttons
-                    li
-                      a(href='navigation.html') Navigation
-                    li
-                      a(href='tabs.html') Tabs
-                    li
-                      a(href='accordions.html') Accordions      
-                li
-                  a(href='?work')
-                    span Work
-                  ul
-                    li
-                      a(href='?webdesign') Web Design
-                    li
-                      a(href='?typography') Typography
-                    li
-                      a(href='?frontend') Front-End
-                li
-                  a(href='?about') About
-            script(src='../js/jquery.js')
-            script(src='../js/doubletaptogo.js')
-            script
+!!! 5
+html
+  head
+    title Cutting Deals
+    
+    include header
 
-                /*
-                    VIEWPORT BUG FIX
-                    iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
-                */
+    style
 
-                ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+    
+  body
 
+    include _nav
 
+    .grid
+      .row
+        .desktop-12.tablet-6.mobile-3
+          h2 The above menu is live demo of Nav 
 
-                $( function()
-                {
-                    $( '#nav li:has(ul)' ).doubleTapToGo();
-                });
-
-
+          

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Cutting Deals</title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+    <title>Easy Responsive Tabs to Accordion</title>
+    <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
@@ -11,8 +12,39 @@
     <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <script text="text/javascript" src="../js/jquery.js">	</script>
     <script text="text/javascript" src="../js/nav.js"></script>
-    <link href="../css/tabs.css" rel="stylesheet" type="text/css" media="screen">
+    <link type="text/css" rel="stylesheet" href="../css/stabs.css">
+    <script src="../js/stabs.js" type="text/javascript"></script>
+    <style type="text/css">
+      .demo {
+      width: 980px;
+      margin: 0px auto;
+      }
+      .demo h1 {
+      margin:33px 0 25px;
+      }
+      .demo h3 {
+      margin: 10px 0;
+      }
+      pre {
+      background: #fff;
+      }
+      @media only screen and (max-width: 780px) {
+      .demo {
+      margin: 5%;
+      width: 90%;
+      }
+      .how-use {
+      float: left;
+      width: 300px;
+      display: none;
+      }
+      }
+      #tabInfo {
+      display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="grid">
@@ -27,9 +59,10 @@
                     <li><a href="tables.html">Tables</a></li>
                     <li><a href="forms.html">Forms</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
-                    <li><a href="navigation.html">Navigation</a></li>
-                    <li><a href="tabs.html">Tabs</a></li>
-                    <li><a href="accordions.html">Accordions      </a></li>
+                    <li><a href="nav.html">Navigation</a></li>
+                    <li><a href="tabs.html">Tabs & Accordions</a></li>
+                    <li><a href="tooltips.html">Tooltips  </a></li>
+                    <li><a href="accordions.html">DateTime Picker</a></li>
                   </ul>
                 </li>
                 <li><a href="?work"><span>Work</span></a>
@@ -41,7 +74,6 @@
                 </li>
                 <li><a href="?about">About</a></li>
               </ul></a>
-            <script src="../js/jquery.js"></script>
             <script src="../js/doubletaptogo.js"></script>
             <script>
               /*
@@ -64,106 +96,122 @@
         </div>
       </div>
     </div>
-    <div class="mainContainer">
-      <div class="htmltabs"> 
-        <h2>West or RightSide Tabs </h2>
-        <ul class="tabs">
-          <li class="tab1"><a class="tab1 tab"> Home</a></li>
-          <li class="tab2"><a class="tab2 tab"> About</a></li>
-          <li class="tab3"><a class="tab3 tab">Blog</a></li>
-          <li class="tab4"><a class="tab4 tab">Career</a></li>
-          <li class="tab5"><a class="tab5 tab">Contact</a></li>
-          <li class="tab6"><a class="tab6 tab">News</a></li>
-          <li class="tab7"><a class="tab7 tab">Events</a></li>
-        </ul>
-        <!-- tab 1 -->
-        <div class="tab1 tabsContent">
-          <div>Home content goes here!</div>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <div>
+            <h1>Responsive Tabs to Accordion</h1>
+            <h3>Features</h3>
+            <ul>
+              <li>Horizontal / Vertical Tabs to Accordion</li>
+              <li>Tabs and accordion are created entirely with jQuery</li>
+              <li>Supports multiple sets of tabs on same page</li>
+              <li>Cross browser compatibility (IE7+, Chrome, Firefox, Safari and Opera)</li>
+              <li>Multi device support (Web, Tablets & Mobile)</li>
+            </ul>
+          </div>
+          <h2>Demo</h2>
+          <p><b>Note:</b>Media query breakpoint is set<b>768px</b>. Please resize the window to see "Tabs" to "Accordion"</p>
+          <h3>Horizontal Tab</h3>
+          <div id="horizontalTab">
+            <ul class="resp-tabs-list">
+              <li>Responsive Tab-1</li>
+              <li>Responsive Tab-2</li>
+              <li>Responsive Tab-3</li>
+            </ul>
+            <div class="resp-tabs-container">
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
+              </div>
+              <div>
+                <p>This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit. Vestibulum nibh urna,  Vestibulum nibh urna,it.</p>
+              </div>
+              <div>
+                <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
+              </div>
+            </div>
+          </div><br>
+          <div id="tabInfo">Selected tab:<span class="tabName"></span></div><br><br>
+          <h3>Vertical Tabs</h3>
+          <div id="verticalTab">
+            <ul class="resp-tabs-list">
+              <li>Responsive Tab 1</li>
+              <li>Responsive Tab 2</li>
+              <li>Responsive Tab 3</li>
+              <li>Long name Responsive Tab 4</li>
+            </ul>
+            <div class="resp-tabs-container">
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
+              </div>
+              <div>
+                <p>This tab has icon in it.</p>
+              </div>
+              <div>
+                <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
+              </div>
+              <div>
+                <p>d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.</p>
+              </div>
+            </div>
+          </div>
+          <h3>Pure Accordion          </h3>
+          <div id="accordions">
+            <ul class="resp-tabs-list">
+              <li>Responsive Tab 1</li>
+              <li>Responsive Tab 2</li>
+              <li>Responsive Tab 3</li>
+              <li>Long name Responsive Tab 4</li>
+            </ul>
+            <div class="resp-tabs-container">
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
+              </div>
+              <div>
+                <p>This tab has icon in it.</p>
+              </div>
+              <div>
+                <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
+              </div>
+              <div>
+                <p>d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- end of t1 -->
-        <!-- tab 2 -->
-        <div class="tab2 tabsContent">
-          <div>About content goes here!</div>
-        </div>
-        <!-- end of t2 -->
-        <!-- tab 3 -->
-        <div class="tab3 tabsContent">
-          <div>Blog content goes here!</div>
-        </div>
-        <!-- end of t3 -->
-        <!-- tab 4 -->
-        <div class="tab4 tabsContent">
-          <div>Career content goes here!</div>
-        </div>
-        <!-- end of t4 -->
-        <!-- tab 5 -->
-        <div class="tab5 tabsContent">
-          <div>Contact content goes here!</div>
-        </div>
-        <!-- end of t5 -->
-        <!-- tab 6 -->
-        <div class="tab6 tabsContent">
-          <div>News content goes here!</div>
-        </div>
-        <!-- end of t6 -->
-        <!-- tab 7 -->
-        <div class="tab7 tabsContent">
-          <div>Events content goes here!</div>
-        </div>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+              type: 'default', //Types: default, vertical, accordion
+              width: 'auto', //auto or any width like 600px
+              fit: true,   // 100% fit in a container
+              closed: 'accordion', // Start closed if in accordion view
+              activate: function(event) { // Callback function if tab is switched
+              var $tab = $(this);
+              var $info = $('#tabInfo');
+              var $name = $('span', $info);
+              $name.text($tab.text());
+              $info.show();
+              }
+            });
+            
+            $('#verticalTab').easyResponsiveTabs({
+              type: 'vertical',
+              width: 'auto',
+              fit: true
+            });
+            
+            $('#accordions').easyResponsiveTabs({
+              type: 'accordion',
+              width: 'auto',
+              fit: true
+            });
+            
+            
+            
+          });
+        </script>
       </div>
-      <div class="htmltabs"> 
-        <h2>North or Top tabs </h2>
-        <ul class="northtabs">
-          <li class="tab1"><a class="tab1 tab"> Home</a></li>
-          <li class="tab2"><a class="tab2 tab"> About</a></li>
-          <li class="tab3"><a class="tab3 tab">Blog</a></li>
-          <li class="tab4"><a class="tab4 tab">Career</a></li>
-          <li class="tab5"><a class="tab5 tab">Contact</a></li>
-          <li class="tab6"><a class="tab6 tab">News</a></li>
-          <li class="tab7"><a class="tab7 tab">Events</a></li>
-        </ul>
-        <!-- tab 1 -->
-        <div class="tab1 tabsContent">
-          <div>Home content goes here!</div>
-        </div>
-        <!-- end of t1 -->
-        <!-- tab 2 -->
-        <div class="tab2 tabsContent">
-          <div>About content goes here!</div>
-        </div>
-        <!-- end of t2 -->
-        <!-- tab 3 -->
-        <div class="tab3 tabsContent">
-          <div>Blog content goes here!</div>
-        </div>
-        <!-- end of t3 -->
-        <!-- tab 4 -->
-        <div class="tab4 tabsContent">
-          <div>Career content goes here!</div>
-        </div>
-        <!-- end of t4 -->
-        <!-- tab 5 -->
-        <div class="tab5 tabsContent">
-          <div>Contact content goes here!</div>
-        </div>
-        <!-- end of t5 -->
-        <!-- tab 6 -->
-        <div class="tab6 tabsContent">
-          <div>News content goes here!</div>
-        </div>
-        <!-- end of t6 -->
-        <!-- tab 7 -->
-        <div class="tab7 tabsContent">
-          <div>Events content goes here!    </div>
-        </div>
-        <!-- end of t7 -->
-      </div>
-      <!-- tabbed ends here-->
     </div>
-    <!-- mainContainer ends here-->
-    <!-- Javascript files -->
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/tabs.js"></script>
-    <!-- Javascript files ends from here -->
   </body>
 </html>

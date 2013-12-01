@@ -1,122 +1,163 @@
 !!! 5
-html
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
   head
-    title Cutting Deals
     
+    title Easy Responsive Tabs to Accordion
+
     include header
     
-    link(href='../css/tabs.css', rel='stylesheet', type='text/css', media='screen')
+    link(type='text/css', rel='stylesheet', href='../css/stabs.css')  
+    script(src='../js/stabs.js', type='text/javascript')
     
+    style(type='text/css')
+      .demo {
+      width: 980px;
+      margin: 0px auto;
+      }
+      .demo h1 {
+      margin:33px 0 25px;
+      }
+      .demo h3 {
+      margin: 10px 0;
+      }
+      pre {
+      background: #fff;
+      }
+      @media only screen and (max-width: 780px) {
+      .demo {
+      margin: 5%;
+      width: 90%;
+      }
+      .how-use {
+      float: left;
+      width: 300px;
+      display: none;
+      }
+      }
+      #tabInfo {
+      display: none;
+      }
   body
 
-    include nav
+    include _nav
 
-    .mainContainer
-      .htmltabs 
-        h2 West or RightSide Tabs 
-        ul.tabs
-          li.tab1
-            a.tab1.tab  Home
-          li.tab2
-            a.tab2.tab  About
-          li.tab3
-            a.tab3.tab
-              | Blog
-          li.tab4
-            a.tab4.tab
-              | Career
-          li.tab5
-            a.tab5.tab
-              | Contact
-          li.tab6
-            a.tab6.tab
-              | News
-          li.tab7
-            a.tab7.tab
-              | Events
-        // tab 1 
-        .tab1.tabsContent
-          div Home content goes here!
-        // end of t1 
-        // tab 2 
-        .tab2.tabsContent
-          div About content goes here!
-        // end of t2 
-        // tab 3 
-        .tab3.tabsContent
-          div Blog content goes here!
-        // end of t3 
-        // tab 4 
-        .tab4.tabsContent
-          div Career content goes here!
-        // end of t4 
-        // tab 5 
-        .tab5.tabsContent
-          div Contact content goes here!
-        // end of t5 
-        // tab 6 
-        .tab6.tabsContent
-          div News content goes here!
-        // end of t6 
-        // tab 7 
-        .tab7.tabsContent
-          div Events content goes here!
+    .grid
+      .row
+        .desktop-12.tablet-6.mobile-3
+          div
+            h1 Responsive Tabs to Accordion
+            
+            h3 Features
+            ul
+              li Horizontal / Vertical Tabs to Accordion
+              li Tabs and accordion are created entirely with jQuery
+              li Supports multiple sets of tabs on same page
+              li Cross browser compatibility (IE7+, Chrome, Firefox, Safari and Opera)
+              li Multi device support (Web, Tablets & Mobile)
+          
+          h2 Demo
+          
+          p
+            b Note:
+            | Media query breakpoint is set
+            b 768px
+            | . Please resize the window to see "Tabs" to "Accordion"
+          
+
+          h3 Horizontal Tab
+          #horizontalTab
+            ul.resp-tabs-list
+              li Responsive Tab-1
+              li Responsive Tab-2
+              li Responsive Tab-3
+            .resp-tabs-container
+              div
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+              div
+                p
+                  | This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit. Vestibulum nibh urna,  Vestibulum nibh urna,it.
+              div
+                p
+                  | Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
+          br
+          #tabInfo
+            | Selected tab:
+            span.tabName
+          br
+          br
+          h3 Vertical Tabs
+          #verticalTab
+            ul.resp-tabs-list
+              li Responsive Tab 1
+              li Responsive Tab 2
+              li Responsive Tab 3
+              li Long name Responsive Tab 4
+            .resp-tabs-container
+              div
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+              div
+                p This tab has icon in it.
+              div
+                p
+                  | Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
+              div
+                p
+                  | d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.
+          
+          h3 Pure Accordion          
+          #accordions
+            ul.resp-tabs-list
+              li Responsive Tab 1
+              li Responsive Tab 2
+              li Responsive Tab 3
+              li Long name Responsive Tab 4
+            .resp-tabs-container
+              div
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+              div
+                p This tab has icon in it.
+              div
+                p
+                  | Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
+              div
+                p
+                  | d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.
+          
 
 
 
-      .htmltabs 
-        h2 North or Top tabs 
-        ul.northtabs
-          li.tab1
-            a.tab1.tab  Home
-          li.tab2
-            a.tab2.tab  About
-          li.tab3
-            a.tab3.tab
-              | Blog
-          li.tab4
-            a.tab4.tab
-              | Career
-          li.tab5
-            a.tab5.tab
-              | Contact
-          li.tab6
-            a.tab6.tab
-              | News
-          li.tab7
-            a.tab7.tab
-              | Events
-        // tab 1 
-        .tab1.tabsContent
-          div Home content goes here!
-        // end of t1 
-        // tab 2 
-        .tab2.tabsContent
-          div About content goes here!
-        // end of t2 
-        // tab 3 
-        .tab3.tabsContent
-          div Blog content goes here!
-        // end of t3 
-        // tab 4 
-        .tab4.tabsContent
-          div Career content goes here!
-        // end of t4 
-        // tab 5 
-        .tab5.tabsContent
-          div Contact content goes here!
-        // end of t5 
-        // tab 6 
-        .tab6.tabsContent
-          div News content goes here!
-        // end of t6 
-        // tab 7 
-        .tab7.tabsContent
-          div Events content goes here!    
-        // end of t7 
-      // tabbed ends here
-    // mainContainer ends here
-    // Javascript files 
-    script(type='text/javascript', src='../js/jquery.js')
-    script(type='text/javascript', src='../js/tabs.js')
-    // Javascript files ends from here 
+        script(type='text/javascript')
+          
+          $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+              type: 'default', //Types: default, vertical, accordion
+              width: 'auto', //auto or any width like 600px
+              fit: true,   // 100% fit in a container
+              closed: 'accordion', // Start closed if in accordion view
+              activate: function(event) { // Callback function if tab is switched
+              var $tab = $(this);
+              var $info = $('#tabInfo');
+              var $name = $('span', $info);
+              $name.text($tab.text());
+              $info.show();
+              }
+            });
+            
+            $('#verticalTab').easyResponsiveTabs({
+              type: 'vertical',
+              width: 'auto',
+              fit: true
+            });
+
+            $('#accordions').easyResponsiveTabs({
+              type: 'accordion',
+              width: 'auto',
+              fit: true
+            });
+
+
+
+          });
