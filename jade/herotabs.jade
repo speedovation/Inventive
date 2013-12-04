@@ -1,0 +1,144 @@
+!!! 5
+html
+  head
+    title Hero Tabs
+    include header
+    
+    link(rel='stylesheet', type='text/css', href='../css/herotabs.css')
+    script(text = 'text/javascript', src="../js/herotabs.js")  
+
+  body
+
+    include _nav
+
+    h1 jQuery Herotabs examples
+    p
+      | Check
+      a(href='http://github.com/simonsmith/jquery.herotabs') the GitHub page
+      | for documentation
+    hr
+    h2 Example 1
+    p Uses a delay and fade effect. Will pause tab cycling whilst hovered or focused.
+    .tabs.tabs-horiz
+      ul.tab-nav.js-nav
+        li.tab-nav-item.js-nav-item
+          a(href='#ex1-tab1') First tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex1-tab2') Second tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex1-tab3') Third tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex1-tab4') Fourth tab
+      #ex1-tab1.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/sports/2', alt='')
+        .tab-info
+          p
+            | Some info about this item.
+            a(href='#') A link to focus
+      #ex1-tab2.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/fashion/2', alt='')
+      #ex1-tab3.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/transport/1', alt='')
+        .tab-info
+          p
+            | Some info about this item
+            a(href='#') A link to focus
+      #ex1-tab4.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/nature/2', alt='')
+    hr
+    h2 Example 2
+    p Uses hover to switch tabs
+    .tabs.tabs-vert
+      ul.tab-nav.js-nav
+        li.tab-nav-item.js-nav-item
+          a(href='#ex2-tab1') First tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex2-tab2') Second tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex2-tab3') Third tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex2-tab4') Fourth tab
+      #ex2-tab1.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/sports/2', alt='')
+        .tab-info
+          p
+            | Some info about this item.
+            a(href='#') A link
+      #ex2-tab2.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/fashion/2', alt='')
+        .tab-info
+          p
+            | Some info about this item
+            a(href='#') A link
+      #ex2-tab3.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/transport/1', alt='')
+        .tab-info
+          p Some info about this item
+      #ex2-tab4.tab-pane.js-tab
+        img(src='http://lorempixel.com/600/250/nature/2', alt='')
+    hr
+    h2 Example 3
+    p A more traditional tabbed navigation between content items
+    .tabs.tabs-standard
+      ul.tab-nav.js-nav
+        li.tab-nav-item.js-nav-item
+          a(href='#ex3-tab1') First tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex3-tab2') Second tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex3-tab3') Third tab
+        li.tab-nav-item.js-nav-item
+          a(href='#ex3-tab4') Fourth tab
+      div
+        #ex3-tab1.tab-pane.js-tab
+          p
+            | Nullam faucibus rutrum nibh, nec lobortis ligula suscipit ac.
+            a(href='#') Aliquam sagittis odio pharetra
+            | dolor pulvinar varius. Nunc nisi justo, ornare non congue in, vulputate sed turpis.
+            | Integer placerat bibendum libero vel varius. Aenean pellentesque blandit magna ut tempor. Sed eleifend viverra nunc. Vestibulum metus velit, gravida at feugiat eu,
+            | pretium id mauris. Fusce ullamcorper nisi
+            a(href='#') id purus laoreet nec consectetur leo
+            | condimentum. Vestibulum tempor lobortis hendrerit. Nam porta tincidunt
+            | nisi non fringilla. Aenean quis massa eu diam accumsan aliquet.
+      #ex3-tab2.tab-pane.js-tab
+        p
+          | Sed elit velit, pharetra vel sodales nec,
+          a(href='#') vehicula sit amet arcu
+          | . Vestibulum consequat consectetur tincidunt. Fusce eget erat sit amet odio rhoncus commodo a eu purus
+      #ex3-tab3.tab-pane.js-tab
+        p
+          | Vivamus consequat euismod ante ut semper.
+          a(href='#') Pellentesque fringilla faucibus
+          | ipsum ullamcorper dapibus. Aliquam tempor vulputate aliquet. Quisque sed commodo dolor. Curabitur ut orci at dolor lobortis faucibus
+          | quis eu augue. Aenean laoreet
+          a(href='#') suscipit erat ac vehicula.
+          | Proin bibendum porttitor ante, ut accumsan turpis tempus nec.
+      #ex3-tab4.tab-pane.js-tab
+        p
+          | Vivamus consequat euismod ante ut semper.
+          a(href='#') Pellentesque fringilla faucibus
+          | ipsum ullamcorper dapibus. Aliquam tempor vulputate aliquet. Quisque sed commodo dolor. Curabitur ut orci at dolor lobortis faucibus
+          | quis eu augue. Aenean laoreet
+          a(href='#') suscipit erat ac vehicula.
+          | Proin bibendum porttitor ante, ut accumsan turpis tempus nec.
+        p
+          | Vivamus consequat euismod ante ut semper.
+          a(href='#') Pellentesque fringilla faucibus
+          | ipsum ullamcorper dapibus. Aliquam tempor vulputate aliquet. Quisque sed commodo dolor. Curabitur ut orci at dolor lobortis faucibus
+          | quis eu augue. Aenean laoreet
+          a(href='#') suscipit erat ac vehicula.
+          | Proin bibendum porttitor ante, ut accumsan turpis tempus nec.
+    p some content
+    
+    script
+      
+      $('.tabs-horiz').herotabs({
+        duration: 400,
+        delay: 3000
+      });
+      
+      $('.tabs-vert').herotabs({
+        interactEvent: 'hover'
+      });
+      
+      $('.tabs-standard').herotabs();
