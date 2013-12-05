@@ -49,7 +49,8 @@
 */
 body {
   background: #fff;
-  font: 14px/16px "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: #444;
   -webkit-font-smoothing: antialiased;
 /* Fix for webkit rendering */
@@ -75,14 +76,14 @@ h6 a {
   font-weight: inherit;
 }
 h1 {
-  font-size: 46px;
-  line-height: 50px;
+  font-size: 3rem;
+  line-height: 3.1rem;
   margin-bottom: 14px;
   letter-spacing: -3px;
 }
 h2 {
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 2.1rem;
+  line-height: 2.7rem;
   margin-bottom: 10px;
 }
 h3 {
@@ -343,6 +344,72 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #4d4d4d;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+pre {
+  background: #fcfcfc;
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  color: #1486cc;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+}
+del {
+  opacity: 0.75;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ins {
+  background-color: rgba(239,237,82,0.75);
+  padding: 2px 4px;
+  text-decoration: none;
+}
+kbd {
+  color: #4d4d4d;
+  background-color: #e9e9e9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e9e9e9), color-stop(100%, #fff));
+  background-image: -webkit-linear-gradient(top, #e9e9e9, #fff);
+  background-image: linear-gradient(to bottom, #e9e9e9, #fff);
+  border: 1px solid #a5a5a5;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #fff, inset 0 -2px 0 0 #d9d9d9;
+  font-family: "Droid Sans", Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+pre {
+  color: #707070;
+  padding-left: 15px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+sup,
+sub {
+  font-size: 75%;
+}
+sup {
+  vertical-align: super;
+}
+sub {
+  vertical-align: sub;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
 }
 /* #Forms
 ================================================== */
