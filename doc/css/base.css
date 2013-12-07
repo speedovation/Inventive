@@ -1,52 +1,168 @@
-/*
-* Skeleton V1.2
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 6/20/2012
-*/
-/* Table of Content
-==================================================
-    #Reset & Basics
-    #Basic Styles
-    #Site Styles
-    #Typography
-    #Links
-    #Lists
-    #Images
-    #Buttons
-    #Forms
-    #Misc */
-/* #Reset & Basics (Inspired by E. Meyers)
-================================================== 
-    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
-        margin: 0
-        padding: 0
-        border: 0
-        font-size: 100%
-        font: inherit
-        vertical-align: baseline 
-    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
-        display: block 
-    body 
-        line-height: 1 
-    ol, ul 
-        list-style: none 
-    blockquote, q 
-        quotes: none 
-    blockquote:before, blockquote:after, 
-    q:before, q:after 
-        content: ''
-        content: none 
-    table 
-        border-collapse: collapse
-        border-spacing: 0 
-        
-*/
-/* #Basic Styles
-================================================== 
-*/
+-webkit-viewport {
+  width: device-width;
+  zoom: 1;
+}
+-moz-viewport {
+  width: device-width;
+  zoom: 1;
+}
+-ms-viewport {
+  width: device-width;
+  zoom: 1;
+}
+-o-viewport {
+  width: device-width;
+  zoom: 1;
+}
+viewport {
+  width: device-width;
+  zoom: 1;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+button,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+[hidden],
+template {
+  display: none;
+  visibility: hidden;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+a:focus,
+button:focus {
+  outline: thin dotted;
+  outline: 0.3125em auto -webkit-focus-ring-color;
+  outline-offset: -0.15625em;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
 body {
   background: #fff;
   font-size: 100%;
@@ -55,17 +171,29 @@ body {
   -webkit-font-smoothing: antialiased;
 /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
+  line-height: 1.5rem;
 }
-/* #Typography
-================================================== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #181818;
-  font-weight: normal;
+  font-weight: 300;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-size: 60%;
+  line-height: 0;
 }
 h1 a,
 h2 a,
@@ -75,37 +203,78 @@ h5 a,
 h6 a {
   font-weight: inherit;
 }
-h1 {
-  font-size: 3rem;
-  line-height: 3.1rem;
-  margin-bottom: 14px;
-  letter-spacing: -3px;
+.giga {
+  font-size: 2.4rem;
 }
-h2 {
+.mega {
   font-size: 2.1rem;
-  line-height: 2.7rem;
-  margin-bottom: 10px;
 }
-h3 {
-  font-size: 28px;
-  line-height: 34px;
-  margin-bottom: 8px;
+.kilo {
+  font-size: 1.95rem;
 }
-h4 {
-  font-size: 21px;
-  line-height: 30px;
-  margin-bottom: 4px;
+h1,
+.h1,
+.alpha {
+  font-size: 1.88889rem;
 }
-h5 {
-  font-size: 17px;
-  line-height: 24px;
+h2,
+.h2,
+.beta {
+  font-size: 1.5rem;
 }
-h6 {
-  font-size: 14px;
-  line-height: 21px;
+h3,
+h3,
+.gamma {
+  font-size: 1.22222rem;
+}
+h4,
+.h4,
+.delta {
+  font-size: 1rem;
+}
+h5,
+h5,
+.epsilon {
+  font-size: 1rem;
+}
+h6,
+h6,
+.zeta {
+  font-size: 1rem;
 }
 .subheader {
-  color: #777;
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: 300;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.11111rem 0 1.05556rem;
+  height: 0;
+}
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+small,
+.milli {
+  font-size: 60%;
+  line-height: inherit;
+}
+code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  font-weight: bold;
+  color: #bb240d;
 }
 p {
   margin: 0 0 20px 0;
@@ -128,7 +297,6 @@ strong {
 small {
   font-size: 80%;
 }
-/*  Blockquotes  */
 blockquote,
 blockquote p {
   font-size: 17px;
@@ -174,8 +342,12 @@ hr {
   margin: 10px 0 30px;
   height: 0;
 }
-/* #Links
-================================================== */
+.divide-section {
+  border-bottom: 4px double #bfbfbf;
+  border-top: 1px solid #bfbfbf;
+  margin: 30px 0;
+  padding: 10px 15px;
+}
 a,
 a:visited {
   color: #333;
@@ -186,12 +358,16 @@ a:hover,
 a:focus {
   color: #000;
 }
+a:hover img {
+  border: none;
+  background: none;
+  opacity: 0.8;
+  filter: "alpha(opacity=80)";
+}
 p a,
 p a:visited {
   line-height: inherit;
 }
-/* #Lists
-================================================== */
 ul,
 ol {
   margin-bottom: 20px;
@@ -239,6 +415,58 @@ ul.large li {
 }
 li p {
   line-height: 21px;
+}
+.text-small {
+  font-size: 0.9375rem;
+}
+.text-tall {
+  font-size: 1.1875rem;
+  line-height: 1.4;
+}
+.text-muted {
+  color: #808080;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.float-left {
+  float: left;
+}
+.float-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.float-right {
+  float: right;
+}
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+.no-space-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.no-space-top {
+  margin-top: 0;
+  padding-top: 0;
+}
+.space-bottom {
+  margin-bottom: 2rem;
+}
+.space-bottom-small {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+}
+.space-top {
+  padding-top: 0.8125rem;
 }
 /* #Images
 ================================================== */

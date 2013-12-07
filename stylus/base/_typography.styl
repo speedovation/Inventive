@@ -1,0 +1,289 @@
+body
+    background: #fff
+    //font: 14px/16px "Open Sans", Helvetica, Arial, sans-serif
+    font-size: 100%
+    font-family: "Open Sans", Helvetica, Arial, sans-serif
+    color: #444
+    -webkit-font-smoothing: antialiased/* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%
+    line-height: 1.5rem
+
+
+/* Typography ================================================== */
+
+// Default header styles 
+h1, h2, h3, h4, h5, h6 
+    font-weight: 300
+    font-style: normal
+    text-rendering: optimizeLegibility
+    margin-top: 0.2rem
+    margin-bottom: 0.5rem
+    line-height: 1.4 
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small 
+    font-size: 60%
+    line-height: 0   
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+    font-weight: inherit
+
+//color: #222222
+//color: #6f6f6f
+// h1
+//     font-size: 3rem
+//     line-height: 3.1rem
+//     margin-bottom: 14px
+//     letter-spacing: -3px
+
+
+// h2
+
+//     font-size: 2.1rem
+//     line-height: 2.7rem
+//     margin-bottom: 10px
+
+
+// h3
+
+//     font-size: 28px
+//     line-height: 34px
+//     margin-bottom: 8px
+
+
+// h4
+
+//     font-size: 21px
+//     line-height: 30px
+//     margin-bottom: 4px
+
+
+// h5
+
+//     font-size: 17px
+//     line-height: 24px
+
+
+// h6
+
+//     font-size: 14px
+//     line-height: 21px
+
+.giga
+    font-size: 2.4rem 
+.mega
+    font-size: 2.1rem
+.kilo
+    font-size: 1.95rem
+
+h1, .h1, .alpha
+  font-size: 1.88889rem 
+
+h2, .h2 , .beta 
+  font-size: 1.5rem 
+
+h3, h3, .gamma 
+  font-size: 1.22222rem 
+
+h4, .h4 , .delta
+  font-size: 1rem 
+
+h5, h5, .epsilon 
+  font-size: 1rem 
+
+h6, h6, .zeta 
+  font-size: 1rem 
+
+.subheader 
+  line-height: 1.4
+  color: #6f6f6f
+  font-weight: 300
+  margin-top: 0.2rem
+  margin-bottom: 0.5rem 
+
+hr 
+  border: solid #dddddd
+  border-width: 1px 0 0
+  clear: both
+  margin: 1.11111rem 0 1.05556rem
+  height: 0 
+
+/* Helpful Typography Defaults */
+em, i 
+  font-style: italic
+  line-height: inherit 
+
+strong, b 
+  font-weight: bold
+  line-height: inherit 
+
+small, .milli 
+  font-size: 60%
+  line-height: inherit 
+
+code 
+  font-family: Consolas, 'Liberation Mono', Courier, monospace
+  font-weight: bold
+  color: #bb240d     
+
+
+p
+    margin: 0 0 20px 0
+
+
+p img
+
+    margin: 0
+
+
+p.lead
+
+    font-size: 21px
+    line-height: 27px
+    color: #777
+
+
+em
+
+    font-style: italic
+
+
+strong
+
+    font-weight: bold
+    color: #333
+
+
+small
+
+    font-size: 80%
+
+
+/*  Blockquotes  */
+blockquote, blockquote p
+
+    font-size: 17px
+    line-height: 24px
+    color: #777
+    font-style: italic
+
+
+//TODO we will see if this required or not 
+//for now let it be here
+pre
+    word-break: break-all /* webkit */
+    word-wrap: break-word
+    white-space: pre
+    white-space: -moz-pre-wrap /* fennec */
+    white-space: pre-wrap
+    white-space: pre\9 /* IE7+ */
+    white-space: -pre-wrap 
+    white-space: -o-pre-wrap 
+  
+
+blockquote
+    margin: 0 0 20px
+    padding: 9px 20px 0 19px
+    border-left: 1px solid #ddd
+
+
+blockquote cite
+    display: block
+    font-size: 12px
+    color: #555
+
+
+blockquote cite:before
+    content: "\2014 \0020"
+
+
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited
+    color: #555
+
+
+hr
+    border: solid #ddd
+    border-width: 1px 0 0
+    clear: both
+    margin: 10px 0 30px
+    height: 0
+
+.divide-section
+    border-bottom: 4px double #BFBFBF;
+    border-top: 1px solid #BFBFBF;
+    margin: 30px 0;
+    padding: 10px 15px;
+
+
+/* #Links
+================================================== */
+a, a:visited
+    color: #333
+    text-decoration: underline
+    outline: 0
+
+
+a:hover, a:focus
+    color: #000
+
+// Prevents border/background on linked image hover.
+// Adds slight opacity.
+a:hover img 
+  border: none
+  background: none
+  opacity: 0.8
+  filter: "alpha(opacity=80)"
+
+
+p a, p a:visited
+    line-height: inherit
+
+
+/* #Lists
+================================================== */
+ul, ol
+    margin-bottom: 20px
+
+
+ul
+    list-style: none outside
+
+
+ol
+    list-style: decimal
+
+
+ol, ul.square, ul.circle, ul.disc
+    margin-left: 30px
+
+
+ul.square
+    list-style: square outside
+
+
+ul.circle
+    list-style: circle outside
+
+
+ul.disc
+    list-style: disc outside
+
+
+ul ul, ul ol, ol ol, ol ul
+    margin: 4px 0 5px 30px
+    font-size: 90%
+
+
+ul ul li, ul ol li, ol ol li, ol ul li
+    margin-bottom: 6px
+
+li
+    line-height: 18px
+    margin-bottom: 12px
+
+
+ul.large li
+    line-height: 21px
+
+
+li p
+    line-height: 21px

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>my jade good</title>
+    <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/nav/nav.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <script text="text/javascript" src="../js/jquery.js">	</script>
+    <script text="text/javascript" src="../js/nav.js"></script>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <nav id="nav" role="navigation"><a href="#nav" title="Show navigation">Show navigation<a href="#" title="Hide navigation">Hide navigation</a>
+              <ul class="clearfix">
+                <li><a href="?home">Home</a></li>
+                <li><a href=""><span>UI</span></a>
+                  <ul>
+                    <li><a href="base.html">Typography</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="tables.html">Tables</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="nav.html">Navigation</a></li>
+                    <li><a href="tabs.html">Tabs & Accordions</a></li>
+                    <li><a href="herotabs.html">Hero Tabs & Sliders </a></li>
+                    <li><a href="tooltips.html">Tooltips  </a></li>
+                    <li><a href="accordions.html">DateTime Picker</a></li>
+                  </ul>
+                </li>
+                <li><a href="?work"><span>Work</span></a>
+                  <ul>
+                    <li><a href="?webdesign">Web Design</a></li>
+                    <li><a href="?typography">Typography</a></li>
+                    <li><a href="?frontend">Front-End</a></li>
+                  </ul>
+                </li>
+                <li><a href="?about">About</a></li>
+              </ul></a>
+            <script src="../js/doubletaptogo.js"></script>
+            <script>
+              /*
+                  VIEWPORT BUG FIX
+                  iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+              */
+              
+              ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+              
+              
+              
+              $( function()
+              {
+                  $( '#nav li:has(ul)' ).doubleTapToGo();
+              });
+              
+              
+            </script>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="row"> 
+        <div class="desktop-12 tablet-6 mobile-3 example">
+          <h2 class="divide-section">Typography</h2>
+          <p>CodeName uses relative sizing (ems and %, not pixels) for everything.</p>
+          <p>
+             
+            The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. 
+            All other sizes are in rems. Changing the code font-size on the <code>body</code> element will adjust the typographical 
+            scale for the entire site.
+          </p>
+          <p><span class="label"> New to relative sizing? </span><a href="http://gomakethings.com/working-with-relative-sizing/">Learn more.</a></p>
+          <p>The <code>font-family</code>  on the <code>body</code> is <code>"Helvetica Neue", Arial, sans-serif</code> . This sets the typeface for the entire site. Adjust as needed.</p>
+          <h2 class="divide-section">Text Basics</h2>
+          <p> Default text. <br><span class="text-muted">Muted text. </span><br><span class="text-small">Small text. </span><br><span class="text-tall">Tall text. </span><br><a href="#">Hyperlinks. </a><br><strong>Bold </strong> and <em>italics</em>.</p>
+          <h2 class="divide-section">Lists</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="desktop-4">
+          <h3>Ordered</h3>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ol>
+        </div>
+        <div class="desktop-4">
+          <h3>Unordered Simple</h3>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+        <div class="desktop-4"> 
+          <h3>Unordered Disc</h3>
+          <ul class="disc">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="desktop-4">   
+          <h3>Unordered Circle</h3>
+          <ul class="circle">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+        <div class="desktop-4">
+          <h3>Unordered Square</h3>
+          <ul class="square">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+        <div class="desktop-4">   
+          <dl>
+            <dt>Definition List</dt>
+            <dd>
+              Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to 
+              display metadata (a list of key-value pairs).
+              
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row">
+        <div class="desktop-12">
+          <h2 class="divide-section">Headings</h2>
+          <h1>h1. Heading 1</h1>
+          <h2>h2. Heading 2</h2>
+          <h3>h3. Heading 3</h3>
+          <h4>h4. Heading 4</h4>
+          <h5>h5. Heading 5</h5>
+          <h6>h6. Heading 6</h6>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

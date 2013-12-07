@@ -1,0 +1,118 @@
+!!! 5
+html
+  head
+    title my jade good
+
+    include header
+
+  body
+
+    include _nav
+   
+    .grid
+      .row  
+        .desktop-12.tablet-6.mobile-3.example
+          
+          h2.divide-section Typography
+          p CodeName uses relative sizing (ems and %, not pixels) for everything.
+          p 
+            | The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. 
+            | All other sizes are in rems. Changing the code font-size on the <code>body</code> element will adjust the typographical 
+            | scale for the entire site.
+          
+          p
+            span.label  New to relative sizing? 
+            a(href='http://gomakethings.com/working-with-relative-sizing/') Learn more.
+          
+          p
+            | The 
+            code font-family
+            |   on the 
+            code body
+            |  is 
+            code "Helvetica Neue", Arial, sans-serif
+            |  . This sets the typeface for the entire site. Adjust as needed.
+          
+          h2.divide-section Text Basics
+          
+          p
+            |  Default text. 
+            br
+            span.text-muted Muted text. 
+            br 
+            span.text-small Small text. 
+            br 
+            span.text-tall Tall text. 
+            br 
+            a(href='#') Hyperlinks. 
+            br
+            strong Bold 
+            |  and 
+            em italics
+            | .
+
+          h2.divide-section Lists
+
+      .row
+        .desktop-4
+          
+          
+          h3 Ordered
+          ol
+            li Item 1
+            li Item 2
+            li Item 3
+          
+        
+        .desktop-4
+          h3 Unordered Simple
+
+          ul
+            li Item 1
+            li Item 2
+            li Item 3
+        
+        .desktop-4  
+          h3 Unordered Disc
+          ul.disc
+            li Item 1
+            li Item 2
+            li Item 3
+      
+      .row
+
+        .desktop-4    
+          h3 Unordered Circle
+          ul.circle
+            li Item 1
+            li Item 2
+            li Item 3
+      
+        .desktop-4
+          h3 Unordered Square
+          ul.square
+            li Item 1
+            li Item 2
+            li Item 3
+        .desktop-4    
+          dl
+            dt Definition List
+            dd.
+               Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to 
+               display metadata (a list of key-value pairs).
+
+      .row
+        .desktop-12
+          h2.divide-section Headings
+
+          h1 h1. Heading 1
+          h2 h2. Heading 2
+          h3 h3. Heading 3
+          h4 h4. Heading 4
+          h5 h5. Heading 5
+          h6 h6. Heading 6
+         
+
+    
+    
+              
