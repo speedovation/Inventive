@@ -1,9 +1,10 @@
 !!! 5
 html
   head
-    title my jade good
+    title Typography
 
     include header
+    
 
   body
 
@@ -111,6 +112,137 @@ html
           h4 h4. Heading 4
           h5 h5. Heading 5
           h6 h6. Heading 6
+
+          h2.divide-section Blockquote
+
+          blockquote.
+            Someone once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.
+
+          | You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
+
+          h2.divide-section Code
+
+          p Here's some code that's within a sentence: the <code>.js</code> file is very important
+
+          p Here's some preformatted text:
+            pre
+              code.
+                .js {
+                      color: #272727;
+                      background: #ffffff;
+                    }
+          
+          h2.divide-section Lines
+
+          p= "Add lines to your markup using the <hr> element."
+
+          <hr>
+
+        
+          h2.divide-section Alignment, Spacing & Visibility
+          
+          p You can adjust text alignment and spacing using a few simple CSS classes.
+          
+          h3 Text Alignment
+          
+          table.table
+            thead
+              tr
+                th Alignment
+                th Class
+            tbody
+              tr
+                td Left
+                td
+                  code .text-left
+              tr
+                td Centered
+                td
+                  code .text-center
+              tr
+                td Right
+                td
+                  code .text-right
+          
+          h3 Floats
+          
+          table.table
+            thead
+              tr
+                th Float
+                th Class
+            tbody
+              tr
+                td Left
+                td
+                  code .float-left
+              tr
+                td Centered
+                td
+                  code .float-center
+              tr
+                td Right
+                td
+                  code .float-right
+          p
+            span.label Pro Tip
+            | Clear floats by wrapping floated content in a
+            code <div>
+            | with the
+            code .group
+            | class.
+          
+            
+          h3 Spacing
+          table.table
+            thead
+              tr
+                th Top
+                th Bottom
+                th Class
+            tbody
+              tr
+                td 0
+                td 0
+                td
+                  code .no-space
+              tr
+                td Default
+                td 0
+                td
+                  code .no-space-bottom
+              tr
+                td 0
+                td Default
+                td
+                  code .no-space-top
+              tr
+                td Default
+                td 2em
+                td
+                  code .space-bottom
+              tr
+                td Default
+                td .5em
+                td
+                  code .space-bottom-small
+              tr
+                td .8125em
+                td Default
+                td
+                  code .space-top
+          
+          h3 Screen Readers
+          
+          p
+            | If you have text that you don't want displayed on screen, but that should still be in the markup for screen readers 
+            | (for example, a search form label), simply apply the 
+            code .screen-reader
+            |  class. This will shift content off-screen, but screen readers can still read it.
+    
+      
+  
+    
          
 
     

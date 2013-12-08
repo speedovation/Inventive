@@ -1,44 +1,63 @@
 dummy(col) {
   colors: col;
 }
-.default-table {
+.table {
   border-collapse: separate;
   color: #666;
   text-shadow: 1px 1px 0px #fff;
   background: #eaebec;
-  margin: 20px;
   border: #ccc 1px solid;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.default-table a:link {
+.table a:link {
   color: #666;
   font-weight: bold;
   text-decoration: none;
 }
-.default-table a:visited {
+.table a:visited {
   color: #999;
   font-weight: bold;
   text-decoration: none;
 }
-.default-table a:active,
-.default-table a:hover {
+.table a:active,
+.table a:hover {
   color: #bd5a35;
   text-decoration: underline;
   color: #666;
   text-shadow: 1px 1px 0px #fff;
   background: #eaebec;
-  margin: 20px;
   border: #ccc 1px solid;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.default-table th {
-  padding: 21px 25px 22px 25px;
+.table tr:nth-child(2n) td {
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left #fff, left #fff, color-stop(0, #fff), color-stop(1, #fff));
+  background-image: -webkit-linear-gradient(#fff, #fff, #fff);
+  background-image: -moz-linear-gradient(#fff, #fff, #fff);
+  background-image: -ms-linear-gradient(#fff, #fff, #fff);
+  background-image: -o-linear-gradient(#fff, #fff, #fff);
+  background-image: linear-gradient(#fff, #fff, #fff);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, left #f8f8f8, left #f6f6f6, color-stop(0, #f8f8f8), color-stop(1, #f6f6f6));
+  background-image: -webkit-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
+  background-image: -moz-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
+  background-image: -ms-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
+  background-image: -o-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
+  background-image: linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
+}
+.table th {
+  padding: 7px 0;
   border-top: 1px solid #fafafa;
   border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  padding-left: 20px;
+  border-left: 1px solid #e0e0e0;
   background-color: #ededed;
   background-image: -webkit-gradient(linear, left #ededed, left #ebebeb, color-stop(0, #ededed), color-stop(1, #ebebeb));
   background-image: -webkit-linear-gradient(#ededed, #ededed, #ebebeb);
@@ -48,31 +67,26 @@ dummy(col) {
   background-image: linear-gradient(#ededed, #ededed, #ebebeb);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
-.default-table th:first-child {
-  text-align: left;
-  padding-left: 20px;
+.table th:first-child {
+  border-left: 0px solid #e0e0e0;
 }
-.default-table tr:first-child th:first-child {
+.table tr:first-child th:first-child {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
 }
-.default-table tr:first-child th:last-child {
+.table tr:first-child th:last-child {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-.default-table tr {
-  text-align: center;
-  padding-left: 20px;
-}
-.default-table td:first-child {
+.table td:first-child {
   text-align: left;
   padding-left: 20px;
   border-left: 0;
 }
-.default-table td {
-  padding: 18px;
+.table td {
+  padding: 10px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #e0e0e0;
   border-left: 1px solid #e0e0e0;
@@ -85,37 +99,27 @@ dummy(col) {
   background-image: linear-gradient(#fbfbfb, #fbfbfb, #fafafa);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
-.default-table tr.even td {
-  background-color: #f8f8f8;
-  background-image: -webkit-gradient(linear, left #f8f8f8, left #f6f6f6, color-stop(0, #f8f8f8), color-stop(1, #f6f6f6));
-  background-image: -webkit-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
-  background-image: -moz-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
-  background-image: -ms-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
-  background-image: -o-linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
-  background-image: linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
-}
-.default-table tr:last-child td {
+.table tr:last-child td {
   border-bottom: 0;
 }
-.default-table tr:last-child td:first-child {
+.table tr:last-child td:first-child {
   -moz-border-radius-bottomleft: 3px;
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-.default-table tr:last-child td:last-child {
+.table tr:last-child td:last-child {
   -moz-border-radius-bottomright: 3px;
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-.default-table tr:hover td {
-  background-color: #f2f2f2;
-  background-image: -webkit-gradient(linear, left #f2f2f2, left #f0f0f0, color-stop(0, #f2f2f2), color-stop(1, #f0f0f0));
-  background-image: -webkit-linear-gradient(#f2f2f2, #f2f2f2, #f0f0f0);
-  background-image: -moz-linear-gradient(#f2f2f2, #f2f2f2, #f0f0f0);
-  background-image: -ms-linear-gradient(#f2f2f2, #f2f2f2, #f0f0f0);
-  background-image: -o-linear-gradient(#f2f2f2, #f2f2f2, #f0f0f0);
-  background-image: linear-gradient(#f2f2f2, #f2f2f2, #f0f0f0);
+.table tr:hover td {
+  background-color: #fefefe;
+  background-image: -webkit-gradient(linear, left #fefefe, left #fefefe, color-stop(0, #fefefe), color-stop(1, #fefefe));
+  background-image: -webkit-linear-gradient(#fefefe, #fefefe, #fefefe);
+  background-image: -moz-linear-gradient(#fefefe, #fefefe, #fefefe);
+  background-image: -ms-linear-gradient(#fefefe, #fefefe, #fefefe);
+  background-image: -o-linear-gradient(#fefefe, #fefefe, #fefefe);
+  background-image: linear-gradient(#fefefe, #fefefe, #fefefe);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
 table {

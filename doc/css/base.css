@@ -166,12 +166,12 @@ a:active {
 body {
   background: #fff;
   font-size: 100%;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  color: #444;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
-  line-height: 1.5rem;
+  line-height: 1.5;
+  color: #272727;
 }
 h1,
 h2,
@@ -185,6 +185,10 @@ h6 {
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.4;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 1em;
+  padding-top: 1em;
 }
 h1 small,
 h2 small,
@@ -277,7 +281,7 @@ code {
   color: #bb240d;
 }
 p {
-  margin: 0 0 20px 0;
+  margin-bottom: 1.5625em;
 }
 p img {
   margin: 0;

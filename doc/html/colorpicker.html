@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ColorPicker</title>
+    <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/nav/nav.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <script text="text/javascript" src="../js/jquery.js">	</script>
+    <script text="text/javascript" src="../js/nav.js"></script>
+    <link rel="stylesheet" href="../css/forms/form.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
+    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
+    <script src="../js/components/colorpicker.js"></script>
+    <link rel="stylesheet" href="../css/components/colorpicker.css">
+    <script>
+      $(document).ready( function() {
+      $('.demo').each( function() {
+      //
+      // Dear reader, it's actually very easy to initialize MiniColors. For example:
+      //
+      //  $(selector).minicolors();
+      //
+      // The way I've done it below is just for the demo, so don't get confused
+      // by it. Also, data- attributes aren't supported at this time. Again,
+      // they're only used for the purposes of this demo.
+      //
+      $(this).minicolors({
+        control: $(this).attr('data-control') || 'hue',
+        defaultValue: $(this).attr('data-defaultValue') || '',
+        inline: $(this).attr('data-inline') === 'true',
+        letterCase: $(this).attr('data-letterCase') || 'lowercase',
+        opacity: $(this).attr('data-opacity'),
+        position: $(this).attr('data-position') || 'bottom left',
+        change: function(hex, opacity) {
+          var log;
+          try {
+          
+            log = hex ? hex : 'transparent';
+            
+            if( opacity ) log += ', ' + opacity;
+              console.log(log);
+            } 
+            catch(e) {}
+          },
+          theme: 'default'
+          });
+          
+        });
+      });
+      
+    </script>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <nav id="nav" role="navigation"><a href="#nav" title="Show navigation">Show navigation<a href="#" title="Hide navigation">Hide navigation</a>
+              <ul class="clearfix">
+                <li><a href="?home">Home</a></li>
+                <li><a href="?work"><span>Basic</span></a>
+                  <ul>
+                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="?webdesign">Web Design</a></li>
+                    <li><a href="?typography">Typography</a></li>
+                    <li><a href="?frontend">Front-End</a></li>
+                  </ul>
+                </li>
+                <li><a href=""><span>UI</span></a>
+                  <ul>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="tables.html">Tables</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="nav.html">Navigation</a></li>
+                    <li><a href="tabs.html">Tabs & Accordions</a></li>
+                    <li><a href="herotabs.html">Hero Tabs & Sliders </a></li>
+                    <li><a href="tooltips.html">Tooltips  </a></li>
+                    <li><a href="accordions.html">DateTime Picker</a></li>
+                  </ul>
+                </li>
+                <li><a href="?work"><span>Components</span></a>
+                  <ul>
+                    <li><a href="colorpicker.html">ColorPicker</a></li>
+                    <li><a href="?webdesign">Web Design</a></li>
+                    <li><a href="?typography">Typography</a></li>
+                    <li><a href="?frontend">Front-End</a></li>
+                  </ul>
+                </li>
+                <li><a href="?about">About</a></li>
+              </ul></a>
+            <script src="../js/doubletaptogo.js"></script>
+            <script>
+              /*
+                  VIEWPORT BUG FIX
+                  iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+              */
+              
+              ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+              
+              
+              
+              $( function()
+              {
+                  $( '#nav li:has(ul)' ).doubleTapToGo();
+              });
+              
+              
+            </script>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="row"> 
+        <div class="desktop-12 tablet-6 mobile-3 example"></div>
+        <h1 class="divider-section">ColorPicker </h1>
+        <h2>Control Types</h2>
+        <div class="field">
+          <label for="hue-demo">Hue (default)</label>
+          <input id="hue-demo" type="text" data-control="hue" value="#ff6161" class="demo">
+        </div>
+        <div class="field">
+          <label for="saturation-demo">Saturation</label>
+          <input id="saturation-demo" type="text" data-control="saturation" value="#0088cc" class="demo">
+        </div>
+        <div class="field">
+          <label for="brightness-demo">Brightness</label>
+          <input id="brightness-demo" type="text" data-control="brightness" value="#00ffff" class="demo">
+        </div>
+        <div class="field">
+          <label for="wheel-demo">Wheel</label>
+          <input id="wheel-demo" type="text" data-control="wheel" value="#ff99ee" class="demo">
+        </div>
+        <!-- Input modes-->
+        <h2>Input Modes</h2>
+        <div class="field">
+          <label for="text-field">Text field</label><br>
+          <input id="text-field" type="text" value="#70c24a" class="demo">
+        </div>
+        <div class="field">
+          <label for="hidden-input">Hidden Input</label><br>
+          <input id="hidden-input" type="hidden" value="#db913d" class="demo">
+        </div>
+        <div class="field">
+          <label for="inline">Inline</label><br>
+          <input id="inline" type="text" data-inline="true" value="#4fc8db" class="demo">
+        </div>
+        <!-- Positions-->
+        <h3>Positions</h3>
+        <div class="field">
+          <label for="position-bottom-left">bottom left (default)</label>
+          <input id="position-bottom-left" type="text" data-position="bottom left" value="#0088cc" class="demo">
+        </div>
+        <div class="field">
+          <label for="position-top-left">top left</label>
+          <input id="position-top-left" type="text" data-position="top left" value="#0088cc" class="demo">
+        </div>
+        <div class="field">
+          <label for="position-bottom-right">bottom right</label>
+          <input id="position-bottom-right" type="text" data-position="bottom right" value="#0088cc" class="demo">
+        </div>
+        <div class="field">
+          <label for="position-top-right">top right</label>
+          <input id="position-top-right" type="text" data-position="top right" value="#0088cc" class="demo">
+        </div>
+        <!-- and more-->
+        <h3>…and more!</h3>
+        <div class="field">
+          <label for="opacity">Opacity</label><br>
+          <input id="opacity" type="text" data-opacity=".5" value="#766fa8" class="demo">
+        </div>
+        <div class="field">
+          <label for="default-value">Default Value</label><br>
+          <input id="default-value" type="text" data-defaultvalue="#ff6600" class="demo">
+        </div>
+        <div class="field">
+          <label for="letter-case">Letter Case</label><br>
+          <input id="letter-case" type="text" data-lettercase="uppercase" class="demo">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

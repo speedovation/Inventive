@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>my jade good</title>
+    <title>Typography</title>
     <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
     <script text="text/javascript" src="../js/jquery.js">	</script>
-    <script text="text/javascript" src="../js/nav.js"></script>
+    <script text="text/javascript" src="../js/nav.js">	</script>
+    <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
+    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
   </head>
   <body>
     <div class="grid">
@@ -22,9 +25,16 @@
           <nav id="nav" role="navigation"><a href="#nav" title="Show navigation">Show navigation<a href="#" title="Hide navigation">Hide navigation</a>
               <ul class="clearfix">
                 <li><a href="?home">Home</a></li>
+                <li><a href="?work"><span>Basic</span></a>
+                  <ul>
+                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="?webdesign">Web Design</a></li>
+                    <li><a href="?typography">Typography</a></li>
+                    <li><a href="?frontend">Front-End</a></li>
+                  </ul>
+                </li>
                 <li><a href=""><span>UI</span></a>
                   <ul>
-                    <li><a href="base.html">Typography</a></li>
                     <li><a href="grid.html">Grid</a></li>
                     <li><a href="tables.html">Tables</a></li>
                     <li><a href="forms.html">Forms</a></li>
@@ -36,9 +46,10 @@
                     <li><a href="accordions.html">DateTime Picker</a></li>
                   </ul>
                 </li>
-                <li><a href="?work"><span>Work</span></a>
+                <li><a href="?work"><span>Components</span></a>
                   <ul>
-                    <li><a href="?webdesign">Web Design</a></li>
+                    <li><a href="colorpicker.html">ColorPicker</a></li>
+                    <li><a href="slider.html">Slider</a></li>
                     <li><a href="?typography">Typography</a></li>
                     <li><a href="?frontend">Front-End</a></li>
                   </ul>
@@ -148,6 +159,119 @@
           <h4>h4. Heading 4</h4>
           <h5>h5. Heading 5</h5>
           <h6>h6. Heading 6</h6>
+          <h2 class="divide-section">Blockquote</h2>
+          <blockquote>
+            Someone once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.
+            
+          </blockquote>You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
+          <h2 class="divide-section">Code</h2>
+          <p>Here's some code that's within a sentence: the <code>.js</code> file is very important</p>
+          <p>Here's some preformatted text:
+            <pre><code>
+                .js {
+                      color: #272727;
+                      background: #ffffff;
+                }
+                </code></pre>
+          </p>
+          <h2 class="divide-section">Lines</h2>
+          <p>Add lines to your markup using the &lt;hr&gt; element.</p><hr>
+          <h2 class="divide-section">Alignment, Spacing & Visibility</h2>
+          <p>You can adjust text alignment and spacing using a few simple CSS classes.</p>
+          <h3>Text Alignment</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Alignment</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Left</td>
+                <td><code>.text-left</code></td>
+              </tr>
+              <tr>
+                <td>Centered</td>
+                <td><code>.text-center</code></td>
+              </tr>
+              <tr>
+                <td>Right</td>
+                <td><code>.text-right</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Floats</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Float</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Left</td>
+                <td><code>.float-left</code></td>
+              </tr>
+              <tr>
+                <td>Centered</td>
+                <td><code>.float-center</code></td>
+              </tr>
+              <tr>
+                <td>Right</td>
+                <td><code>.float-right</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <p><span class="label">Pro Tip</span>Clear floats by wrapping floated content in a<code><div></code>with the<code>.group</code>class.</p>
+          <h3>Spacing</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Top</th>
+                <th>Bottom</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td><code>.no-space</code></td>
+              </tr>
+              <tr>
+                <td>Default</td>
+                <td>0</td>
+                <td><code>.no-space-bottom</code></td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>Default</td>
+                <td><code>.no-space-top</code></td>
+              </tr>
+              <tr>
+                <td>Default</td>
+                <td>2em</td>
+                <td><code>.space-bottom</code></td>
+              </tr>
+              <tr>
+                <td>Default</td>
+                <td>.5em</td>
+                <td><code>.space-bottom-small</code></td>
+              </tr>
+              <tr>
+                <td>.8125em</td>
+                <td>Default</td>
+                <td><code>.space-top</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Screen Readers</h3>
+          <p>
+            If you have text that you don't want displayed on screen, but that should still be in the markup for screen readers 
+            (for example, a search form label), simply apply the <code>.screen-reader</code> class. This will shift content off-screen, but screen readers can still read it.
+          </p>
         </div>
       </div>
     </div>
