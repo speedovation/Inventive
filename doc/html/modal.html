@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cutting Deals</title>
+    <title>ColorPicker</title>
     <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,7 +17,22 @@
     <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
     <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
     <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
-    <link href="../css/tabs.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/forms/form.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
+    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
+    <script src="../js/components/modal.js"></script>
+    <link rel="stylesheet" href="../css/components/modal.css">
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css">
+      .clear {
+      zoom: 1;
+      display: block;
+      }
+      
+    </style>
+    <![endif]-->
   </head>
   <body>
     <div class="grid">
@@ -74,106 +89,42 @@
         </div>
       </div>
     </div>
-    <div class="mainContainer">
-      <div class="htmltabs"> 
-        <h2>West or RightSide Tabs </h2>
-        <ul class="tabs">
-          <li class="tab1"><a class="tab1 tab"> Home</a></li>
-          <li class="tab2"><a class="tab2 tab"> About</a></li>
-          <li class="tab3"><a class="tab3 tab">Blog</a></li>
-          <li class="tab4"><a class="tab4 tab">Career</a></li>
-          <li class="tab5"><a class="tab5 tab">Contact</a></li>
-          <li class="tab6"><a class="tab6 tab">News</a></li>
-          <li class="tab7"><a class="tab7 tab">Events</a></li>
-        </ul>
-        <!-- tab 1 -->
-        <div class="tab1 tabsContent">
-          <div>Home content goes here!</div>
-        </div>
-        <!-- end of t1 -->
-        <!-- tab 2 -->
-        <div class="tab2 tabsContent">
-          <div>About content goes here!</div>
-        </div>
-        <!-- end of t2 -->
-        <!-- tab 3 -->
-        <div class="tab3 tabsContent">
-          <div>Blog content goes here!</div>
-        </div>
-        <!-- end of t3 -->
-        <!-- tab 4 -->
-        <div class="tab4 tabsContent">
-          <div>Career content goes here!</div>
-        </div>
-        <!-- end of t4 -->
-        <!-- tab 5 -->
-        <div class="tab5 tabsContent">
-          <div>Contact content goes here!</div>
-        </div>
-        <!-- end of t5 -->
-        <!-- tab 6 -->
-        <div class="tab6 tabsContent">
-          <div>News content goes here!</div>
-        </div>
-        <!-- end of t6 -->
-        <!-- tab 7 -->
-        <div class="tab7 tabsContent">
-          <div>Events content goes here!</div>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <h2 class="divide-section">Pop Easy Demo</h2><a href="#modal1" class="modalLink">Click Me</a>
+          <p>Thanks for downloading Pop Easy</p>
+          <div class="overlay"></div>
+          <div id="modal1" class="modal">
+            <p class="closeBtn">Close</p>
+            <h2>Your Content Here</h2>
+          </div>
         </div>
       </div>
-      <div class="htmltabs"> 
-        <h2>North or Top tabs </h2>
-        <ul class="northtabs">
-          <li class="tab1"><a class="tab1 tab"> Home</a></li>
-          <li class="tab2"><a class="tab2 tab"> About</a></li>
-          <li class="tab3"><a class="tab3 tab">Blog</a></li>
-          <li class="tab4"><a class="tab4 tab">Career</a></li>
-          <li class="tab5"><a class="tab5 tab">Contact</a></li>
-          <li class="tab6"><a class="tab6 tab">News</a></li>
-          <li class="tab7"><a class="tab7 tab">Events</a></li>
-        </ul>
-        <!-- tab 1 -->
-        <div class="tab1 tabsContent">
-          <div>Home content goes here!</div>
-        </div>
-        <!-- end of t1 -->
-        <!-- tab 2 -->
-        <div class="tab2 tabsContent">
-          <div>About content goes here!</div>
-        </div>
-        <!-- end of t2 -->
-        <!-- tab 3 -->
-        <div class="tab3 tabsContent">
-          <div>Blog content goes here!</div>
-        </div>
-        <!-- end of t3 -->
-        <!-- tab 4 -->
-        <div class="tab4 tabsContent">
-          <div>Career content goes here!</div>
-        </div>
-        <!-- end of t4 -->
-        <!-- tab 5 -->
-        <div class="tab5 tabsContent">
-          <div>Contact content goes here!</div>
-        </div>
-        <!-- end of t5 -->
-        <!-- tab 6 -->
-        <div class="tab6 tabsContent">
-          <div>News content goes here!</div>
-        </div>
-        <!-- end of t6 -->
-        <!-- tab 7 -->
-        <div class="tab7 tabsContent">
-          <div>Events content goes here!    </div>
-        </div>
-        <!-- end of t7 -->
-      </div>
-      <!-- tabbed ends here-->
     </div>
-    <!-- mainContainer ends here-->
-    <!-- Javascript files -->
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/tabs.js"></script>
-    <!-- Javascript files ends from here -->
+    <script>
+      $(document).ready(function(){
+      
+        $('.modalLink').modal({
+            trigger: '.modalLink',          // id or class of link or button to trigger modal
+            olay:'div.overlay',             // id or class of overlay
+            modals:'div.modal',             // id or class of modal
+            animationEffect: 'slideDown',   // overlay effect | slideDown or fadeIn | default=fadeIn
+            animationSpeed: 400,            // speed of overlay in milliseconds | default=400
+            moveModalSpeed: 'slow',         // speed of modal movement when window is resized | slow or fast | default=false
+            background: 'a2d3cd',           // hexidecimal color code - DONT USE #
+            opacity: 0.7,                   // opacity of modal |  0 - 1 | default = 0.8
+            openOnLoad: false,              // open modal on page load | true or false | default=false
+            docClose: true,                 // click document to close | true or false | default=true    
+            closeByEscape: true,            // close modal by escape key | true or false | default=true
+            moveOnScroll: true,             // move modal when window is scrolled | true or false | default=false
+            resizeWindow: true,             // move modal when window is resized | true or false | default=false
+            video: 'http://player.vimeo.com/video/2355334?color=eb5a3d',    // enter the url of the video
+            videoClass:'video',             // class of video element(s)
+            close:'.closeBtn'               // id or class of close button
+        });
+      });  
+      
+    </script>
   </body>
 </html>
