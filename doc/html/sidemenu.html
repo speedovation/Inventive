@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SideMenu</title>
+    <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/nav/nav.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <script text="text/javascript" src="../js/jquery.js">	</script>
+    <script text="text/javascript" src="../js/nav.js">	</script>
+    <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
+    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
+    <link rel="stylesheet" href="../css/forms/form.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
+    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
+    <script src="../js/components/sidemenu.js"></script>
+    <link rel="stylesheet" href="../css/components/sidemenu.css">
+  </head>
+  <body>
+    <nav id="menu" role="navigation" class="panel">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">The Ballad of El Goodo</a></li>
+        <li><a href="#">Thirteen</a></li>
+        <li><a href="#">September Gurls</a></li>
+        <li><a href="#">What's Going Ahn</a></li>
+      </ul>
+    </nav>
+    <div class="wrap push">
+      <div class="grid">
+        <div class="row">
+          <div class="desktop-12 tablet-6 mobile-3">
+            <nav id="nav" role="navigation"><a href="#nav" title="Show navigation">Show navigation<a href="#" title="Hide navigation">Hide navigation</a>
+                <ul class="clearfix">
+                  <li><a href="typography.html">Home</a></li>
+                  <li><a href="typography.html"><span>Design</span></a>
+                    <ul>
+                      <li><a href="typography.html">Typography</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="grid.html"><span>UI</span></a>
+                    <ul>
+                      <li><a href="grid.html">Grid</a></li>
+                      <li><a href="tables.html">Tables</a></li>
+                      <li><a href="forms.html">Forms</a></li>
+                      <li><a href="buttons.html">Buttons</a></li>
+                      <li><a href="nav.html">Navigation</a></li>
+                      <li><a href="tabs.html">Tabs & Accordions</a></li>
+                      <li><a href="herotabs.html">Hero Tabs & Sliders </a></li>
+                      <li><a href="tooltips.html">Tooltips </a></li>
+                    </ul>
+                  </li>
+                  <li><a href="sliders.html"><span>Components</span></a>
+                    <ul>
+                      <li><a href="sliders.html">Sliders</a></li>
+                      <li><a href="sidemenu.html">SideMenu   </a></li>
+                      <li><a href="colorpicker.html">ColorPicker</a></li>
+                      <li><a href="modal.html">Modal</a></li>
+                      <li><a href="datetime.html">DateTime Picker</a></li>
+                    </ul>
+                  </li>
+                </ul></a>
+              <script src="../js/doubletaptogo.js"></script>
+              <script>
+                /*
+                    VIEWPORT BUG FIX
+                    iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+                */
+                
+                ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+                
+                
+                
+                $( function()
+                {
+                    $( '#nav li:has(ul)' ).doubleTapToGo();
+                });
+                
+                
+              </script>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="row">
+          <div class="desktop-12 tablet-6 mobile-3"><a href="#menu" class="menu-link">☰</a>
+            <h1>Big Slide</h1>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <p>Chilton habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+          </div>
+          <script>
+            $(document).ready(function() {
+              $('.menu-link').bigSlide();
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
