@@ -91,7 +91,7 @@
                     <li><a href="sidemenu.html">SideMenu   </a></li>
                     <li><a href="colorpicker.html">ColorPicker</a></li>
                     <li><a href="modal.html">Modal</a></li>
-                    <li><a href="datetime.html">DateTime Picker</a></li>
+                    <li><a href="datepicker.html">DateTime Picker</a></li>
                   </ul>
                 </li>
               </ul></a>
@@ -119,70 +119,83 @@
     </div>
     <div class="grid">
       <div class="row"> 
-        <div class="desktop-12 tablet-6 mobile-3 example"></div>
-        <h1 class="divider-section">ColorPicker </h1>
-        <h2>Control Types</h2>
-        <div class="field">
-          <label for="hue-demo">Hue (default)</label>
-          <input id="hue-demo" type="text" data-control="hue" value="#ff6161" class="demo">
+        <div class="desktop-12 tablet-6 mobile-3 example">
+          <h2 class="divide-section">ColorPicker </h2>
         </div>
-        <div class="field">
-          <label for="saturation-demo">Saturation</label>
-          <input id="saturation-demo" type="text" data-control="saturation" value="#0088cc" class="demo">
+      </div>
+      <div class="row">
+        <div class="desktop-4"> 
+          <h3>Control Types</h3>
+          <div class="field">
+            <label for="hue-demo">Hue (default)</label>
+            <input id="hue-demo" type="text" data-control="hue" value="#ff6161" class="demo">
+          </div>
+          <div class="field">
+            <label for="saturation-demo">Saturation</label>
+            <input id="saturation-demo" type="text" data-control="saturation" value="#0088cc" class="demo">
+          </div>
+          <div class="field">
+            <label for="brightness-demo">Brightness</label>
+            <input id="brightness-demo" type="text" data-control="brightness" value="#00ffff" class="demo">
+          </div>
+          <div class="field">
+            <label for="wheel-demo">Wheel</label>
+            <input id="wheel-demo" type="text" data-control="wheel" value="#ff99ee" class="demo">
+          </div>
+          <!-- Input modes-->
         </div>
-        <div class="field">
-          <label for="brightness-demo">Brightness</label>
-          <input id="brightness-demo" type="text" data-control="brightness" value="#00ffff" class="demo">
+        <div class="desktop-4">
+          <h3>Input Modes</h3>
+          <div class="field">
+            <label for="text-field">Text field</label><br>
+            <input id="text-field" type="text" value="#70c24a" class="demo">
+          </div>
+          <div class="field">
+            <label for="hidden-input">Hidden Input</label><br>
+            <input id="hidden-input" type="hidden" value="#db913d" class="demo">
+          </div>
+          <div class="field">
+            <label for="inline">Inline</label><br>
+            <input id="inline" type="text" data-inline="true" value="#4fc8db" class="demo">
+          </div>
+          <!-- Positions-->
         </div>
-        <div class="field">
-          <label for="wheel-demo">Wheel</label>
-          <input id="wheel-demo" type="text" data-control="wheel" value="#ff99ee" class="demo">
+        <div class="desktop-4">
+          <h3>Positions</h3>
+          <div class="field">
+            <label for="position-bottom-left">bottom left (default)</label>
+            <input id="position-bottom-left" type="text" data-position="bottom left" value="#0088cc" class="demo">
+          </div>
+          <div class="field">
+            <label for="position-top-left">top left</label>
+            <input id="position-top-left" type="text" data-position="top left" value="#0088cc" class="demo">
+          </div>
+          <div class="field">
+            <label for="position-bottom-right">bottom right</label>
+            <input id="position-bottom-right" type="text" data-position="bottom right" value="#0088cc" class="demo">
+          </div>
+          <div class="field">
+            <label for="position-top-right">top right</label>
+            <input id="position-top-right" type="text" data-position="top right" value="#0088cc" class="demo">
+          </div>
+          <!-- and more-->
         </div>
-        <!-- Input modes-->
-        <h2>Input Modes</h2>
-        <div class="field">
-          <label for="text-field">Text field</label><br>
-          <input id="text-field" type="text" value="#70c24a" class="demo">
-        </div>
-        <div class="field">
-          <label for="hidden-input">Hidden Input</label><br>
-          <input id="hidden-input" type="hidden" value="#db913d" class="demo">
-        </div>
-        <div class="field">
-          <label for="inline">Inline</label><br>
-          <input id="inline" type="text" data-inline="true" value="#4fc8db" class="demo">
-        </div>
-        <!-- Positions-->
-        <h3>Positions</h3>
-        <div class="field">
-          <label for="position-bottom-left">bottom left (default)</label>
-          <input id="position-bottom-left" type="text" data-position="bottom left" value="#0088cc" class="demo">
-        </div>
-        <div class="field">
-          <label for="position-top-left">top left</label>
-          <input id="position-top-left" type="text" data-position="top left" value="#0088cc" class="demo">
-        </div>
-        <div class="field">
-          <label for="position-bottom-right">bottom right</label>
-          <input id="position-bottom-right" type="text" data-position="bottom right" value="#0088cc" class="demo">
-        </div>
-        <div class="field">
-          <label for="position-top-right">top right</label>
-          <input id="position-top-right" type="text" data-position="top right" value="#0088cc" class="demo">
-        </div>
-        <!-- and more-->
-        <h3>…and more!</h3>
-        <div class="field">
-          <label for="opacity">Opacity</label><br>
-          <input id="opacity" type="text" data-opacity=".5" value="#766fa8" class="demo">
-        </div>
-        <div class="field">
-          <label for="default-value">Default Value</label><br>
-          <input id="default-value" type="text" data-defaultvalue="#ff6600" class="demo">
-        </div>
-        <div class="field">
-          <label for="letter-case">Letter Case</label><br>
-          <input id="letter-case" type="text" data-lettercase="uppercase" class="demo">
+      </div>
+      <div class="row">
+        <div class="desktop-12 mobile-12 tablet-12">
+          <h3>…and more!</h3>
+          <div class="field">
+            <label for="opacity">Opacity</label><br>
+            <input id="opacity" type="text" data-opacity=".5" value="#766fa8" class="demo">
+          </div>
+          <div class="field">
+            <label for="default-value">Default Value</label><br>
+            <input id="default-value" type="text" data-defaultvalue="#ff6600" class="demo">
+          </div>
+          <div class="field">
+            <label for="letter-case">Letter Case</label><br>
+            <input id="letter-case" type="text" data-lettercase="uppercase" class="demo">
+          </div>
         </div>
       </div>
     </div>

@@ -58,62 +58,68 @@ html
     .grid
       .row  
         .desktop-12.tablet-6.mobile-3.example
-    
-        h1.divider-section ColorPicker 
-        
+      
+          h2.divide-section ColorPicker 
+          
 
-        h2 Control Types
-        .field
-          label(for='hue-demo') Hue (default)
-          input#hue-demo.demo(type='text', data-control='hue', value='#ff6161')
-        .field
-          label(for='saturation-demo') Saturation
-          input#saturation-demo.demo(type='text', data-control='saturation', value='#0088cc')
-        .field
-          label(for='brightness-demo') Brightness
-          input#brightness-demo.demo(type='text', data-control='brightness', value='#00ffff')
-        .field
-          label(for='wheel-demo') Wheel
-          input#wheel-demo.demo(type='text', data-control='wheel', value='#ff99ee')
-        // Input modes
-        h2 Input Modes
-        .field
-          label(for='text-field') Text field
-          br
-          input#text-field.demo(type='text', value='#70c24a')
-        .field
-          label(for='hidden-input') Hidden Input
-          br
-          input#hidden-input.demo(type='hidden', value='#db913d')
-        .field
-          label(for='inline') Inline
-          br
-          input#inline.demo(type='text', data-inline='true', value='#4fc8db')
-        // Positions
-        h3 Positions
-        .field
-          label(for='position-bottom-left') bottom left (default)
-          input#position-bottom-left.demo(type='text', data-position='bottom left', value='#0088cc')
-        .field
-          label(for='position-top-left') top left
-          input#position-top-left.demo(type='text', data-position='top left', value='#0088cc')
-        .field
-          label(for='position-bottom-right') bottom right
-          input#position-bottom-right.demo(type='text', data-position='bottom right', value='#0088cc')
-        .field
-          label(for='position-top-right') top right
-          input#position-top-right.demo(type='text', data-position='top right', value='#0088cc')
-        // and more
-        h3 …and more!
-        .field
-          label(for='opacity') Opacity
-          br
-          input#opacity.demo(type='text', data-opacity='.5', value='#766fa8')
-        .field
-          label(for='default-value') Default Value
-          br
-          input#default-value.demo(type='text', data-defaultvalue='#ff6600')
-        .field
-          label(for='letter-case') Letter Case
-          br
-          input#letter-case.demo(type='text', data-lettercase='uppercase')
+      .row
+        .desktop-4  
+          h3 Control Types
+          .field
+            label(for='hue-demo') Hue (default)
+            input#hue-demo.demo(type='text', data-control='hue', value='#ff6161')
+          .field
+            label(for='saturation-demo') Saturation
+            input#saturation-demo.demo(type='text', data-control='saturation', value='#0088cc')
+          .field
+            label(for='brightness-demo') Brightness
+            input#brightness-demo.demo(type='text', data-control='brightness', value='#00ffff')
+          .field
+            label(for='wheel-demo') Wheel
+            input#wheel-demo.demo(type='text', data-control='wheel', value='#ff99ee')
+          // Input modes
+        .desktop-4
+          h3 Input Modes
+          .field
+            label(for='text-field') Text field
+            br
+            input#text-field.demo(type='text', value='#70c24a')
+          .field
+            label(for='hidden-input') Hidden Input
+            br
+            input#hidden-input.demo(type='hidden', value='#db913d')
+          .field
+            label(for='inline') Inline
+            br
+            input#inline.demo(type='text', data-inline='true', value='#4fc8db')
+          // Positions
+        .desktop-4
+          h3 Positions
+          .field
+            label(for='position-bottom-left') bottom left (default)
+            input#position-bottom-left.demo(type='text', data-position='bottom left', value='#0088cc')
+          .field
+            label(for='position-top-left') top left
+            input#position-top-left.demo(type='text', data-position='top left', value='#0088cc')
+          .field
+            label(for='position-bottom-right') bottom right
+            input#position-bottom-right.demo(type='text', data-position='bottom right', value='#0088cc')
+          .field
+            label(for='position-top-right') top right
+            input#position-top-right.demo(type='text', data-position='top right', value='#0088cc')
+          // and more
+      .row
+        .desktop-12.mobile-12.tablet-12
+          h3 …and more!
+          .field
+            label(for='opacity') Opacity
+            br
+            input#opacity.demo(type='text', data-opacity='.5', value='#766fa8')
+          .field
+            label(for='default-value') Default Value
+            br
+            input#default-value.demo(type='text', data-defaultvalue='#ff6600')
+          .field
+            label(for='letter-case') Letter Case
+            br
+            input#letter-case.demo(type='text', data-lettercase='uppercase')

@@ -5,23 +5,7 @@
 # * https://github.com/simonsmith/jquery.herotabs/
 # * @blinkdesign
 # 
-
-# not (root, factory) ->
-#   if typeof define is "function" and define.amd
-#     define ["jquery"], factory
-#   else
-#     factory root.jQuery
-
-
-
-
-# Reference jQuery
-$ = jQuery
-
-# Adds plugin object to jQuery
-$.fn.extend
-  # Change pluginName to your plugin's name.
-  easyResponsiveTabs: (options) ->
+(($) ->
   "use strict"
   instanceId = 0
   defaults =
@@ -385,3 +369,4 @@ $.fn.extend
 
   $.fn.herotabs.defaults = defaults
   $.fn.herotabs.Herotabs = Herotabs
+) jQuery

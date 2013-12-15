@@ -350,7 +350,7 @@ hr {
   border-bottom: 4px double #bfbfbf;
   border-top: 1px solid #bfbfbf;
   margin: 30px 0;
-  padding: 10px 15px;
+  padding: 12px 0px;
 }
 a,
 a:visited {
@@ -419,6 +419,19 @@ ul.large li {
 }
 li p {
   line-height: 21px;
+}
+dl {
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 20px;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 10px;
 }
 .text-small {
   font-size: 0.9375rem;
