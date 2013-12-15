@@ -1,7 +1,14 @@
 # Easy Responsive Tabs Plugin
 # Author: Samson.Onna <Email : samson3d@gmail.com>
-(($) ->
-  $.fn.extend easyResponsiveTabs: (options) ->
+
+
+# Reference jQuery
+$ = jQuery
+
+# Adds plugin object to jQuery
+$.fn.extend
+  # Change pluginName to your plugin's name.
+  easyResponsiveTabs: (options) ->
     
     #Set the default values, use comma to separate the settings, example:
     defaults =
@@ -153,4 +160,3 @@
 
 
 
-) jQuery

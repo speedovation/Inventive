@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sticky</title>
+    <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/nav/nav.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
+    <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <script text="text/javascript" src="../js/jquery.js">	</script>
+    <script text="text/javascript" src="../js/nav.js">	</script>
+    <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
+    <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
+    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
+    <script type="text/javascript" src="../js/sticky.js"></script>
+    <script>
+      $(window).load(function(){
+      
+        $("#header").sticky({ topSpacing: 0 });
+        $("#sticker").sticky({ topSpacing: 0, center:true, className:"hey" });
+        $("#stickerright").sticky({ topSpacing: 50 });
+        
+        
+      });
+      
+    </script>
+    <style>
+      body {
+        height: 10000px;
+        padding: 0;
+        margin: 0;
+      }
+      #header {
+        background: #bada55;
+        color: white;
+        //- font-family: Droid Sans;
+        //- font-size: 18px;
+        //- line-height: 1.6em;
+        //- font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        width:400px;
+        box-sizing:border-box;
+      }
+      
+      #sticker {
+        background: #bada55;
+        color: white;
+        width: 300px;
+        //- font-family: Droid Sans;
+        //- font-size: 40px;
+        //- line-height: 1.6em;
+        //- font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        border-radius: 50px;
+      }
+      
+      #stickerright {
+          background: #bada55;
+          color: white;
+          width: 300px;
+          //font-family: Droid Sans;
+          //font-size: 40px;
+          //line-height: 1.6em;
+          //font-weight: bold;
+          text-align: center;
+          padding: 20px;
+          text-shadow: 0 1px 1px rgba(0,0,0,.2);
+          border-radius: 50px;
+          float:right;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <nav id="nav" role="navigation"><a href="#nav" title="Show navigation">Show navigation<a href="#" title="Hide navigation">Hide navigation</a>
+              <ul class="clearfix">
+                <li><a href="typography.html">Home</a></li>
+                <li><a href="typography.html"><span>Design</span></a>
+                  <ul>
+                    <li><a href="typography.html">Typography</a></li>
+                  </ul>
+                </li>
+                <li><a href="grid.html"><span>UI</span></a>
+                  <ul>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="tables.html">Tables</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="nav.html">Navigation</a></li>
+                    <li><a href="tabs.html">Tabs & Accordions</a></li>
+                    <li><a href="herotabs.html">Hero Tabs & Sliders </a></li>
+                    <li><a href="tooltips.html">Tooltips </a></li>
+                  </ul>
+                </li>
+                <li><a href="sliders.html"><span>Components</span></a>
+                  <ul>
+                    <li><a href="sliders.html">Sliders</a></li>
+                    <li><a href="sidemenu.html">SideMenu   </a></li>
+                    <li><a href="colorpicker.html">ColorPicker</a></li>
+                    <li><a href="modal.html">Modal</a></li>
+                    <li><a href="datetime.html">DateTime Picker</a></li>
+                  </ul>
+                </li>
+              </ul></a>
+            <script src="../js/doubletaptogo.js"></script>
+            <script>
+              /*
+                  VIEWPORT BUG FIX
+                  iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+              */
+              
+              ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+              
+              
+              
+              $( function()
+              {
+                  $( '#nav li:has(ul)' ).doubleTapToGo();
+              });
+              
+              
+            </script>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <p>This is test this is text this is text at the top.</p>
+          <div id="header">
+            <p>This is the sticky thingy that is really cool.</p>
+          </div>
+          <div id="sticker">
+            <p>This is the sticky thingy that is really cool </p>
+          </div>
+          <div id="stickerright">
+            <p>This is the sticky with top space of 50 that is really cool    </p>
+          </div>
+          <p>This is test this is text this is text at the bottom.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+!!! 5
+html
+  head
+    title Sticky
+    
+    include header
+
+    script(type='text/javascript', src='../js/sticky.js')
+    script
+      $(window).load(function(){
+        
+        $("#header").sticky({ topSpacing: 0 });
+        $("#sticker").sticky({ topSpacing: 0, center:true, className:"hey" });
+        $("#stickerright").sticky({ topSpacing: 50 });
+
+
+      });
+    
+    style
+      body {
+        height: 10000px;
+        padding: 0;
+        margin: 0;
+      }
+      #header {
+        background: #bada55;
+        color: white;
+        //- font-family: Droid Sans;
+        //- font-size: 18px;
+        //- line-height: 1.6em;
+        //- font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        width:400px;
+        box-sizing:border-box;
+      }
+
+      #sticker {
+        background: #bada55;
+        color: white;
+        width: 300px;
+        //- font-family: Droid Sans;
+        //- font-size: 40px;
+        //- line-height: 1.6em;
+        //- font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        border-radius: 50px;
+      }
+
+      #stickerright {
+          background: #bada55;
+          color: white;
+          width: 300px;
+          //font-family: Droid Sans;
+          //font-size: 40px;
+          //line-height: 1.6em;
+          //font-weight: bold;
+          text-align: center;
+          padding: 20px;
+          text-shadow: 0 1px 1px rgba(0,0,0,.2);
+          border-radius: 50px;
+          float:right;
+      }
+
+    
+  body
+
+    include _nav
+
+    .grid
+      .row
+        .desktop-12.tablet-6.mobile-3
+ 
+    
+
+          p This is test this is text this is text at the top.
+          
+          #header
+            p This is the sticky thingy that is really cool.
+
+          #sticker
+            p This is the sticky thingy that is really cool 
+
+          #stickerright
+            p This is the sticky with top space of 50 that is really cool    
+          
+
+          p This is test this is text this is text at the bottom.

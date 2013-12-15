@@ -15,7 +15,13 @@
 
 
 
-($) ->
+# Reference jQuery
+$ = jQuery
+
+# Adds plugin object to jQuery
+$.fn.extend
+  # Change pluginName to your plugin's name.
+  easyResponsiveTabs: (options) ->
   "use strict"
   instanceId = 0
   defaults =
