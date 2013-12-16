@@ -41,7 +41,8 @@
 // ================================================== 
 
 
-@import "reset"
+//@import "reset"
+@import "normalize"
 @import "base/_typography"
 @import "helpers"
 
@@ -130,14 +131,21 @@ abbr[title]
 
 b, strong 
     font-weight: bold 
+
 code, pre 
-    background: #fcfcfc;
-    border: 1px solid #f2f2f2;
-    border-radius: 3px;
+    border-radius 3px
     color: #1486cc;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 5px;
+    font-size 14px
+    font-weight 400
+    padding 5px
+    background #FFFEEF
+    border 1px solid #F6F1B2
+
+pre code
+    border 0
+    //color: #707070;
+    //padding-left: 15px;
+
 
 del 
     opacity: .75;
@@ -164,12 +172,7 @@ kbd
     font-size: 16px;
     padding: 5px 10px;
 
-pre 
-    color: #707070;
-    padding-left: 15px;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+
 
 sup, sub 
     font-size: 75% 

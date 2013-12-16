@@ -1,7 +1,7 @@
 dummy(col) {
   colors: col;
 }
-.table {
+.table-default {
   border-collapse: separate;
   color: #666;
   text-shadow: 1px 1px 0px #fff;
@@ -11,18 +11,18 @@ dummy(col) {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.table a:link {
+.table-default a:link {
   color: #666;
   font-weight: bold;
   text-decoration: none;
 }
-.table a:visited {
+.table-default a:visited {
   color: #999;
   font-weight: bold;
   text-decoration: none;
 }
-.table a:active,
-.table a:hover {
+.table-default a:active,
+.table-default a:hover {
   color: #bd5a35;
   text-decoration: underline;
   color: #666;
@@ -33,7 +33,7 @@ dummy(col) {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.table tr:nth-child(2n) td {
+.table-default tr:nth-child(2n) td {
   background-color: #fff;
   background-image: -webkit-gradient(linear, left #fff, left #fff, color-stop(0, #fff), color-stop(1, #fff));
   background-image: -webkit-linear-gradient(#fff, #fff, #fff);
@@ -51,7 +51,7 @@ dummy(col) {
   background-image: linear-gradient(#f8f8f8, #f8f8f8, #f6f6f6);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
-.table th {
+.table-default th {
   padding: 7px 0;
   border-top: 1px solid #fafafa;
   border-bottom: 1px solid #e0e0e0;
@@ -67,25 +67,25 @@ dummy(col) {
   background-image: linear-gradient(#ededed, #ededed, #ebebeb);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
-.table th:first-child {
+.table-default th:first-child {
   border-left: 0px solid #e0e0e0;
 }
-.table tr:first-child th:first-child {
+.table-default tr:first-child th:first-child {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
 }
-.table tr:first-child th:last-child {
+.table-default tr:first-child th:last-child {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-.table td:first-child {
+.table-default td:first-child {
   text-align: left;
   padding-left: 20px;
   border-left: 0;
 }
-.table td {
+.table-default td {
   padding: 10px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #e0e0e0;
@@ -99,28 +99,18 @@ dummy(col) {
   background-image: linear-gradient(#fbfbfb, #fbfbfb, #fafafa);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
-.table tr:last-child td {
+.table-default tr:last-child td {
   border-bottom: 0;
 }
-.table tr:last-child td:first-child {
+.table-default tr:last-child td:first-child {
   -moz-border-radius-bottomleft: 3px;
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-.table tr:last-child td:last-child {
+.table-default tr:last-child td:last-child {
   -moz-border-radius-bottomright: 3px;
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
-}
-.table tr:hover td {
-  background-color: #fefefe;
-  background-image: -webkit-gradient(linear, left #fefefe, left #fefefe, color-stop(0, #fefefe), color-stop(1, #fefefe));
-  background-image: -webkit-linear-gradient(#fefefe, #fefefe, #fefefe);
-  background-image: -moz-linear-gradient(#fefefe, #fefefe, #fefefe);
-  background-image: -ms-linear-gradient(#fefefe, #fefefe, #fefefe);
-  background-image: -o-linear-gradient(#fefefe, #fefefe, #fefefe);
-  background-image: linear-gradient(#fefefe, #fefefe, #fefefe);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
 table {
   *border-collapse: collapse;
@@ -129,42 +119,34 @@ table {
   border-spacing: 0;
   width: 100%;
 }
-.bordered {
-  border: solid #ccc 1px;
+.table-bordered {
+  border: solid #ddd 1px;
   -webkit-box-shadow: 0 1px 1px #eee;
   -moz-box-shadow: 0 1px 1px #eee;
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
   box-shadow: 0;
 }
-.bordered td:first-child,
-.bordered th:first-child {
+.table-bordered td:first-child,
+.table-bordered th:first-child {
   border-left: none !important;
 }
-.bordered tr:hover {
-  background: #fbf8e9 !important;
-  -o-transition: all;
-  -webkit-transition: all;
-  -moz-transition: all;
-  -ms-transition: all;
-  transition: all;
-}
-.bordered td,
-.bordered th {
-  border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  border-bottom: 0px solid #ccc !important;
+.table-bordered td,
+.table-bordered th {
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 0px solid #ddd !important;
   padding: 10px;
   text-align: left;
 }
-.bordered th {
-  background-color: #eee;
-  background-image: -webkit-gradient(linear, left #eee, left #e4e4e4, color-stop(0, #eee), color-stop(1, #e4e4e4));
-  background-image: -webkit-linear-gradient(#eee, #eee, #e4e4e4);
-  background-image: -moz-linear-gradient(#eee, #eee, #e4e4e4);
-  background-image: -ms-linear-gradient(#eee, #eee, #e4e4e4);
-  background-image: -o-linear-gradient(#eee, #eee, #e4e4e4);
-  background-image: linear-gradient(#eee, #eee, #e4e4e4);
+.table-bordered th {
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left #f7f7f7, left #f7f7f7, color-stop(0, #f7f7f7), color-stop(1, #f7f7f7));
+  background-image: -webkit-linear-gradient(#f7f7f7, #f7f7f7, #f7f7f7);
+  background-image: -moz-linear-gradient(#f7f7f7, #f7f7f7, #f7f7f7);
+  background-image: -ms-linear-gradient(#f7f7f7, #f7f7f7, #f7f7f7);
+  background-image: -o-linear-gradient(#f7f7f7, #f7f7f7, #f7f7f7);
+  background-image: linear-gradient(#f7f7f7, #f7f7f7, #f7f7f7);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
@@ -172,62 +154,63 @@ table {
   border-top: none;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
-/*----------------------*/
-.zebra td,
-.zebra th {
+.table-hover tr:hover {
+  background: #fafafa !important;
+  -o-transition: all;
+  -webkit-transition: all;
+  -moz-transition: all;
+  -ms-transition: all;
+  transition: all;
+}
+.table td,
+.table th {
   padding: 10px;
   border-bottom: 1px solid #f2f2f2;
 }
-.zebra tbody tr:nth-child(even) {
-  background: #f5f5f5;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0;
-}
-.zebra th {
+.table th {
   text-align: left;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-  border-bottom: 1px solid #ccc;
-  background-color: #f5f5f5;
-  background-image: -webkit-gradient(linear, left #f5f5f5, left #eee, color-stop(0, #f5f5f5), color-stop(1, #eee));
-  background-image: -webkit-linear-gradient(#f5f5f5, #f5f5f5, #eee);
-  background-image: -moz-linear-gradient(#f5f5f5, #f5f5f5, #eee);
-  background-image: -ms-linear-gradient(#f5f5f5, #f5f5f5, #eee);
-  background-image: -o-linear-gradient(#f5f5f5, #f5f5f5, #eee);
-  background-image: linear-gradient(#f5f5f5, #f5f5f5, #eee);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#top', EndColorStr='#bottom')";
 }
-.zebra tfoot td {
+.table tfoot td {
   border-bottom: 0;
   border-top: 1px solid #fff;
   background-color: #f1f1f1;
 }
-.rounded-table {
+.table-zebra th {
+  border-bottom: 1px solid #ccc;
+}
+.table-zebra tbody tr:nth-child(even) {
+  background: #fafafa;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+}
+.table-rounded {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.rounded-table th:first-child {
+.table-rounded th:first-child {
   -webkit-border-radius: 4px 0 0 0;
   -moz-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
 }
-.rounded-table th:last-child {
+.table-rounded th:last-child {
   -webkit-border-radius: 0 4px 0 0;
   -moz-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
 }
-.rounded-table th:only-child {
+.table-rounded th:only-child {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-.rounded-table tr:last-child td:first-child {
+.table-rounded tr:last-child td:first-child {
   -webkit-border-radius: 0 0 0 4px;
   -moz-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
 }
-.rounded-table tr:last-child td:last-child {
+.table-rounded tr:last-child td:last-child {
   -webkit-border-radius: 0 0 4px 0;
   -moz-border-radius: 0 0 4px 0;
   border-radius: 0 0 4px 0;

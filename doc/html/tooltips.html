@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../css/base.css" type="text/css">
     <link rel="stylesheet" href="../css/nav/nav.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
@@ -58,26 +57,25 @@
                     <li><a href="datepicker.html">DateTime Picker</a></li>
                   </ul>
                 </li>
-              </ul></a>
-            <script src="../js/doubletaptogo.js"></script>
-            <script>
-              /*
-                  VIEWPORT BUG FIX
-                  iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
-              */
-              
-              ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
-              
-              
-              
-              $( function()
-              {
-                  $( '#nav li:has(ul)' ).doubleTapToGo();
-              });
-              
-              
-            </script>
-          </nav>
+              </ul></a></nav>
+          <script src="../js/doubletaptogo.js"></script>
+          <script>
+            /*
+                VIEWPORT BUG FIX
+                iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+            */
+            
+            ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+            
+            
+            
+            $( function()
+            {
+                $( '#nav li:has(ul)' ).doubleTapToGo();
+            });
+            
+            
+          </script>
         </div>
       </div>
     </div>

@@ -1,130 +1,17 @@
--webkit-viewport {
-  width: device-width;
-  zoom: 1;
-}
--moz-viewport {
-  width: device-width;
-  zoom: 1;
-}
--ms-viewport {
-  width: device-width;
-  zoom: 1;
-}
--o-viewport {
-  width: device-width;
-  zoom: 1;
-}
-viewport {
-  width: device-width;
-  zoom: 1;
-}
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-button,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
+/* normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,
 aside,
-canvas,
 details,
-embed,
-figure,
 figcaption,
+figure,
 footer,
 header,
 hgroup,
-menu,
+main,
 nav,
-output,
-ruby,
 section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+summary {
   display: block;
-}
-html {
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 audio,
 canvas,
@@ -135,33 +22,169 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-iframe,
-object,
-embed {
-  max-width: 100%;
-}
 [hidden],
 template {
   display: none;
-  visibility: hidden;
+}
+html {
+  font-family: sans-serif;
+/* 1 */
+  -ms-text-size-adjust: 100%;
+/* 2 */
+  -webkit-text-size-adjust: 100%;
+/* 2 */
+}
+body {
+  margin: 0;
+}
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.7 em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
 }
 img {
-  -ms-interpolation-mode: bicubic;
+  border: 0;
 }
-a:focus,
-button:focus {
-  outline: thin dotted;
-  outline: 0.3125em auto -webkit-focus-ring-color;
-  outline-offset: -0.15625em;
+svg:not(:root) {
+  overflow: hidden;
 }
-a:hover,
-a:active {
-  outline: 0;
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.5 em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+/* 1 */
+  padding: 0;
+/* 2 */
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+/* 1 */
+  font-size: 100%;
+/* 2 */
+  margin: 0;
+/* 3 */
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+/* 1 */,
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+/* 2 */
+  cursor: pointer;
+/* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+/* 1 */
+  padding: 0;
+/* 2 */
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+/* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+/* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+/* 1 */
+  vertical-align: top;
+/* 2 */
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 body {
   background: #fff;
@@ -179,16 +202,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   text-rendering: optimizeLegibility;
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-  font-weight: normal;
-  line-height: 1.2;
-  margin-bottom: 1em;
-  padding-top: 1em;
+  margin: 0.5rem 0;
+  line-height: 1.5;
 }
 h1 small,
 h2 small,
@@ -235,16 +253,19 @@ h4,
 .h4,
 .delta {
   font-size: 1rem;
+  font-weight: bold;
 }
 h5,
 h5,
 .epsilon {
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
 }
 h6,
 h6,
 .zeta {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 .subheader {
   line-height: 1.4;
@@ -347,8 +368,7 @@ hr {
   height: 0;
 }
 .divide-section {
-  border-bottom: 4px double #bfbfbf;
-  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px dotted #bfbfbf;
   margin: 30px 0;
   padding: 12px 0px;
 }
@@ -432,6 +452,18 @@ dt {
 }
 dd {
   margin-left: 10px;
+}
+.info {
+  font-weight: 200;
+}
+.well {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05) inset;
+  margin-bottom: 20px;
+  min-height: 20px;
+  padding: 19px;
 }
 .text-small {
   font-size: 0.9375rem;
@@ -600,13 +632,16 @@ strong {
 }
 code,
 pre {
-  background: #fcfcfc;
-  border: 1px solid #f2f2f2;
   border-radius: 3px;
   color: #1486cc;
   font-size: 14px;
   font-weight: 400;
   padding: 5px;
+  background: #fffeef;
+  border: 1px solid #f6f1b2;
+}
+pre code {
+  border: 0;
 }
 del {
   opacity: 0.75;
@@ -632,13 +667,6 @@ kbd {
   font-family: "Droid Sans", Verdana, Geneva, sans-serif;
   font-size: 16px;
   padding: 5px 10px;
-}
-pre {
-  color: #707070;
-  padding-left: 15px;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
 }
 sup,
 sub {

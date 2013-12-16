@@ -1,37 +1,38 @@
 body
-    background: #fff
-    //font: 14px/16px "Open Sans", Helvetica, Arial, sans-serif
-    font-size: 100%
-    font-family: "Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif
-    //color: #444
-    -webkit-font-smoothing: antialiased/* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%
-    line-height: 1.5
-    color: #272727;
+  background: #fff
+  //font: 14px/16px "Open Sans", Helvetica, Arial, sans-serif
+  font-size: 100%
+  font-family: "Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif
+  //color: #444
+  -webkit-font-smoothing: antialiased/* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%
+  line-height: 1.5
+  color: #272727;
    
 
 /* Typography ================================================== */
 
 // Default header styles 
 h1, h2, h3, h4, h5, h6 
-    font-weight: 300
-    font-style: normal
-    text-rendering: optimizeLegibility
-    margin-top: 0.2rem
-    margin-bottom: 0.5rem
-    line-height: 1.4 
+  font-weight: 400
+  font-style: normal
+  text-rendering: optimizeLegibility
+  margin 0.5rem 0
+  //margin-top: 0.2rem
+  //margin-bottom: 0.5rem
+  line-height: 1.5 
 
-    font-weight: normal;
-    line-height: 1.2;
-    margin-bottom: 1em;
-    padding-top: 1em;
+  //font-weight: normal;
+  //line-height: 1.2;
+  //margin-bottom: 1em;
+  //padding-top: 1em;
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small 
-    font-size: 60%
-    line-height: 0   
+  font-size: 60%
+  line-height: 0   
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
-    font-weight: inherit
+  font-weight: inherit
 
 //color: #222222
 //color: #6f6f6f
@@ -77,11 +78,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 
 //Credits goes to http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
 .giga
-    font-size: 2.4rem 
+  font-size: 2.4rem 
 .mega
-    font-size: 2.1rem
+  font-size: 2.1rem
 .kilo
-    font-size: 1.95rem
+  font-size: 1.95rem
 
 h1, .h1, .alpha
   font-size: 1.88889rem 
@@ -93,13 +94,16 @@ h3, h3, .gamma
   font-size: 1.22222rem 
 
 h4, .h4 , .delta
-  font-size: 1rem 
+  font-size: 1rem
+  font-weight bold 
 
 h5, h5, .epsilon 
-  font-size: 1rem 
+  font-size: 0.95rem 
+  font-weight bold
 
 h6, h6, .zeta 
-  font-size: 1rem 
+  font-size: 0.9rem
+  font-weight bold 
 
 .subheader 
   line-height: 1.4
@@ -146,9 +150,9 @@ p img
 
 p.lead
 
-    font-size: 21px
-    line-height: 27px
-    color: #777
+  font-size: 21px
+  line-height: 27px
+  color: #777
 
 
 em
@@ -217,8 +221,8 @@ hr
     height: 0
 
 .divide-section
-    border-bottom: 4px double #BFBFBF;
-    border-top: 1px solid #BFBFBF;
+    //border-bottom: 4px double #BFBFBF;
+    border-bottom: 1px dotted #BFBFBF;
     margin: 30px 0;
     padding: 12px 0px;
 
@@ -307,4 +311,17 @@ dt
 
 dd 
     margin-left: 10px;
+
+.info
+    font-weight: 200;
+    //line-height: 1.4;
+    //margin-bottom: 20px;
+.well 
+    background-color: #F5F5F5;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
 
