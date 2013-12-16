@@ -474,17 +474,17 @@ li p {
   line-height: 21px;
 }
 dl {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 dt,
 dd {
-  line-height: 20px;
+  line-height: 1.5;
 }
 dt {
   font-weight: bold;
 }
 dd {
-  margin-left: 10px;
+  margin-bottom: 1rem;
 }
 .info {
   font-weight: 200;

@@ -154,15 +154,15 @@ html
 
           h2.divide-section Code
 
-          p.lorem Here's some code that's within a sentence: the <code>.js</code> file is very important
+          //- p Here's some code that's within a sentence: the <code>.js</code> file is very important
 
-          p Here's some preformatted text:
-            pre
-              code.
-                .js {
-                      color: #272727;
-                      background: #ffffff;
-                    }
+          p Here's some preformatted javascript code:
+          pre
+              code.language-javascript
+                = ".js {\n"
+                = "      color: #272727;\n"
+                = "      background: #ffffff;\n"
+                = "   } "
           
           h2.divide-section Lines
 
@@ -173,53 +173,107 @@ html
 
           h2.divide-section Lists
 
-      .row
-        .desktop-4
-          
-          
-          h3 Ordered
-          ol
-            li Item 1
-            li Item 2
-            li Item 3
-          
-        
-        .desktop-4
-          h3 Unordered Simple
+          table.table.bordered.rounded
+            thead
+              tr
+                th(colspan=2) Lists
+            tbody
+              tr
+                td.half 
+                  h3 Ordered
+                  ol
+                    li Item 1
+                    li Item 2
+                    li Item 3
+                td
+                  pre 
+                    code.language-markup= "<h3>Ordered<h3> \n  <ol> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ol>"
+              tr
+                td.half 
+                  h3 Unordered Simple
+                  ul
+                    li Item 1
+                    li Item 2
+                    li Item 3
+                td
+                  pre 
+                    code.language-markup= "<h3>Unordered Simple<h3> \n  <ul> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
 
-          ul
-            li Item 1
-            li Item 2
-            li Item 3
-        
-        .desktop-4  
-          h3 Unordered Disc
-          ul.disc
-            li Item 1
-            li Item 2
-            li Item 3
+              tr
+                td.half 
+                  h3 Unordered Disc
+                  ul.disc
+                    li Item 1
+                    li Item 2
+                    li Item 3
+                td
+                  pre 
+                    code.language-markup= "<h3>Unordered Disc<h3> \n  <ul class='disc'> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
       
-      .row
+              tr
+                td.half 
+                  h3 Unordered Circle
+                  ul.circle
+                    li Item 1
+                    li Item 2
+                    li Item 3
+                td
+                  pre 
+                    code.language-markup= "<h3>Unordered Disc<h3> \n  <ul class='circle'> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
+      
+              tr
+                td.half 
+                  h3 Unordered Square
+                  ul.square
+                    li Item 1
+                    li Item 2
+                    li Item 3
+                td
+                  pre 
+                    code.language-markup= "<h3>Unordered Disc<h3> \n  <ul class='square'> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
+      
+           
+          h2.divide-section Definition List
 
-        .desktop-4    
-          h3 Unordered Circle
-          ul.circle
-            li Item 1
-            li Item 2
-            li Item 3
-      
-        .desktop-4
-          h3 Unordered Square
-          ul.square
-            li Item 1
-            li Item 2
-            li Item 3
-        .desktop-4    
-          dl
-            dt Definition List
-            dd.
-               Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to 
-               display metadata (a list of key-value pairs).
+          - var d = "" 
+
+          table.table.bordered.rounded
+            thead
+              tr
+                th(colspan=2) Lists
+            tbody
+              tr
+                td.half 
+                  dl
+                    dt Definition List
+                    dd.
+                       Encloses a list of pairs of terms and descriptions.
+                    dt Definition List
+                    dd.
+                       Encloses a list of pairs of terms and descriptions. 
+                    dt Definition List
+                    dd.
+                       Encloses a list of pairs of terms and descriptions. 
+                td
+                  pre 
+                    code.language-markup= "<dl>\n"
+                                        = "   <dt>Definition List</dt>"
+                                        = "   <dd>\n"
+                                        = "     Encloses a list of pairs of terms and descriptions.\n"
+                                        = "   </dd>\n"
+                                        = "   <dt>Definition List</dt>\n"
+                                        = "   <dd>\n"
+                                        = "     Encloses a list of pairs of terms and descriptions.\n"
+                                        = "   </dd>\n"
+                                        = "   <dt>Definition List</dt>\n"
+                                        = "   <dd>\n"
+                                        = "     Encloses a list of pairs of terms and descriptions.\n"
+                                        = "   </dd>\n"
+                                        = "</dl>"
+
+              
+          
+
 
       .row  
         .desktop-12.tablet-6.mobile-3  
