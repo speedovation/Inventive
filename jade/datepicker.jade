@@ -7,6 +7,8 @@ html(lang='en')
     include header
 
     link(href='../css/datepicker.css', rel='stylesheet')
+    link(href='../css/forms/form.css', rel='stylesheet')
+
     style
       .container {
       background: #fff;
@@ -46,15 +48,15 @@ html(lang='en')
         .desktop-9
                 h2 Example
                 p Attached to a field with the format specified via options.
-                .well
-                  input#dp1.span2(type='text', value='02-16-2012')
+                .well.field
+                  input#dp1.input(type='text', value='02-16-2012')
                 p Attachet to a field with the format specified via data tag.
-                .well
-                  input#dp2.span2(type='text', value='02/16/12', data-date-format='mm/dd/yy')
+                .well.field
+                  input#dp2.input(type='text', value='02/16/12', data-date-format='mm/dd/yy')
                 p As component.
-                .well
+                .well.field
                   #dp3.input-append.date(data-date='12-02-2012', data-date-format='dd-mm-yyyy')
-                    input.span2(size='16', type='text', value='12-02-2012', readonly='readonly')
+                    input.input(size='16', type='text', value='12-02-2012', readonly='readonly')
                     span.add-on
                       i.icon-calendar
                 p Start with years viewMode.
@@ -89,22 +91,22 @@ html(lang='en')
                         td#endDate 2012-02-25
                 p Disabling dates in the past and dependent disabling.
                 .well
-                  table.table
+                  table.table.field
                     thead
                       tr
                         th
                           | Check in:
-                          input#dpd1.span2(type='text', value='')
+                          input#dpd1.input(type='text', value='')
                         th
                           | Check out:
-                          input#dpd2.span2(type='text', value='')
+                          input#dpd2.input(type='text', value='')
                             
                 hr
                 h2 Using datepicker.js
                 p Call the datepicker via javascript:
                             
                 h3 Options
-                table.table.table-bordered.table-zebra
+                table.table.bordered.zebra.rounded
                   thead
                     tr
                       th(style='width: 100px;') Name
@@ -151,7 +153,7 @@ html(lang='en')
                   | Set a new value for the datepicker. It cand be a string in the specified format or a Date object.
                 h3 Events
                 p.info Datepicker class exposes a few events for manipulating the dates.
-                table.table.table-bordered.table-striped
+                table.table.bordered.zebra.rounded
                   thead
                     tr
                       th(style='width: 150px;') Event

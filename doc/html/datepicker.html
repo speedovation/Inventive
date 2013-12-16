@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <link rel="stylesheet" href="../font/font.css" type="text/css">
     <script text="text/javascript" src="../js/jquery.js">	</script>
     <script text="text/javascript" src="../js/nav.js">	</script>
     <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
     <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
     <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
     <link href="../css/datepicker.css" rel="stylesheet">
+    <link href="../css/forms/form.css" rel="stylesheet">
     <style>
       .container {
       background: #fff;
@@ -101,17 +103,17 @@
         <div class="desktop-9">
           <h2>Example</h2>
           <p>Attached to a field with the format specified via options.</p>
-          <div class="well">
-            <input id="dp1" type="text" value="02-16-2012" class="span2">
+          <div class="well field">
+            <input id="dp1" type="text" value="02-16-2012" class="input">
           </div>
           <p>Attachet to a field with the format specified via data tag.</p>
-          <div class="well">
-            <input id="dp2" type="text" value="02/16/12" data-date-format="mm/dd/yy" class="span2">
+          <div class="well field">
+            <input id="dp2" type="text" value="02/16/12" data-date-format="mm/dd/yy" class="input">
           </div>
           <p>As component.</p>
-          <div class="well">
+          <div class="well field">
             <div id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy" class="input-append date">
-              <input size="16" type="text" value="12-02-2012" readonly="readonly" class="span2"><span class="add-on"><i class="icon-calendar"></i></span>
+              <input size="16" type="text" value="12-02-2012" readonly="readonly" class="input"><span class="add-on"><i class="icon-calendar"></i></span>
             </div>
           </div>
           <p>Start with years viewMode.</p>
@@ -146,14 +148,14 @@
           </div>
           <p>Disabling dates in the past and dependent disabling.</p>
           <div class="well">
-            <table class="table">
+            <table class="table field">
               <thead>
                 <tr>
                   <th>Check in:
-                    <input id="dpd1" type="text" value="" class="span2">
+                    <input id="dpd1" type="text" value="" class="input">
                   </th>
                   <th>Check out:
-                    <input id="dpd2" type="text" value="" class="span2">
+                    <input id="dpd2" type="text" value="" class="input">
                   </th>
                 </tr>
               </thead>
@@ -163,7 +165,7 @@
           <h2>Using datepicker.js</h2>
           <p>Call the datepicker via javascript:</p>
           <h3>Options</h3>
-          <table class="table table-bordered table-zebra">
+          <table class="table bordered zebra rounded">
             <thead>
               <tr>
                 <th style="width: 100px;">Name</th>
@@ -213,7 +215,7 @@
           <p class="info">Set a new value for the datepicker. It cand be a string in the specified format or a Date object.</p>
           <h3>Events</h3>
           <p class="info">Datepicker class exposes a few events for manipulating the dates.</p>
-          <table class="table table-bordered table-striped">
+          <table class="table bordered zebra rounded">
             <thead>
               <tr>
                 <th style="width: 150px;">Event</th>

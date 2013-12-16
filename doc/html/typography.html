@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
+    <link rel="stylesheet" href="../font/font.css" type="text/css">
     <script text="text/javascript" src="../js/jquery.js">	</script>
     <script text="text/javascript" src="../js/nav.js">	</script>
     <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
@@ -76,17 +77,44 @@
       <div class="row"> 
         <div class="desktop-12 tablet-6 mobile-3 example">
           <h2 class="divide-section">Typography</h2>
-          <p>CodeName uses relative sizing (ems and %, not pixels) for everything.</p>
+          <p>Uses relative sizing (rems and pixels as fallback) for everything.</p>
           <p>
              
             The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. 
             All other sizes are in rems. Changing the code font-size on the <code>body</code> element will adjust the typographical 
             scale for the entire site.
           </p>
-          <p><span class="label"> New to relative sizing? </span><a href="http://gomakethings.com/working-with-relative-sizing/">Learn more.</a></p>
-          <p>The <code>font-family</code>  on the <code>body</code> is <code>"Helvetica Neue", Arial, sans-serif</code> . This sets the typeface for the entire site. Adjust as needed.</p>
+          <p>The <code>font-family</code>  on the <code>body</code> is <code>"Open Sans","Helvetica Neue", Arial, sans-serif</code> . This sets the typeface for the entire site. Adjust as needed.</p>
           <h2 class="divide-section">Text Basics</h2>
           <p> Default text. <br><span class="text-muted">Muted text. </span><br><span class="text-small">Small text. </span><br><span class="text-tall">Tall text. </span><br><a href="#">Hyperlinks. </a><br><strong>Bold </strong> and <em>italics</em>.</p>
+          <h2 class="divide-section">Headings</h2>
+          <h1>h1. Heading 1</h1>
+          <h2>h2. Heading 2</h2>
+          <h3>h3. Heading 3</h3>
+          <h4>h4. Heading 4</h4>
+          <h5>h5. Heading 5</h5>
+          <h6>h6. Heading 6</h6>
+          <h2 class="divide-section">Paragraphs</h2>
+          <p>Dummy Text</p>
+          <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.</p>
+          <p class="lorem">Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.</p>
+          <p class="lorem">Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  </p>
+          <h2 class="divide-section">Blockquote</h2>
+          <blockquote class="lorem">
+            <Someone>once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.</Someone>
+          </blockquote>You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
+          <h2 class="divide-section">Code</h2>
+          <p class="lorem">Here's some code that's within a sentence: the <code>.js</code> file is very important</p>
+          <p>Here's some preformatted text:
+            <pre><code>
+                .js {
+                      color: #272727;
+                      background: #ffffff;
+                }
+                </code></pre>
+          </p>
+          <h2 class="divide-section">Lines</h2>
+          <p>Add lines to your markup using the &lt;hr&gt; element.</p><hr>
           <h2 class="divide-section">Lists</h2>
         </div>
       </div>
@@ -144,36 +172,12 @@
           </dl>
         </div>
       </div>
-      <div class="row">
-        <div class="desktop-12">
-          <h2 class="divide-section">Headings</h2>
-          <h1>h1. Heading 1</h1>
-          <h2>h2. Heading 2</h2>
-          <h3>h3. Heading 3</h3>
-          <h4>h4. Heading 4</h4>
-          <h5>h5. Heading 5</h5>
-          <h6>h6. Heading 6</h6>
-          <h2 class="divide-section">Blockquote</h2>
-          <blockquote>
-            Someone once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.
-            
-          </blockquote>You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
-          <h2 class="divide-section">Code</h2>
-          <p>Here's some code that's within a sentence: the <code>.js</code> file is very important</p>
-          <p>Here's some preformatted text:
-            <pre><code>
-                .js {
-                      color: #272727;
-                      background: #ffffff;
-                }
-                </code></pre>
-          </p>
-          <h2 class="divide-section">Lines</h2>
-          <p>Add lines to your markup using the &lt;hr&gt; element.</p><hr>
+      <div class="row"> 
+        <div class="desktop-12 tablet-6 mobile-3"> 
           <h2 class="divide-section">Alignment, Spacing & Visibility</h2>
           <p>You can adjust text alignment and spacing using a few simple CSS classes.</p>
           <h3>Text Alignment</h3>
-          <table class="table">
+          <table class="table bordered rounded zebra">
             <thead>
               <tr>
                 <th>Alignment</th>
@@ -196,7 +200,7 @@
             </tbody>
           </table>
           <h3>Floats</h3>
-          <table class="table">
+          <table class="table bordered rounded zebra">
             <thead>
               <tr>
                 <th>Float</th>
@@ -220,7 +224,7 @@
           </table>
           <p><span class="label">Pro Tip</span>Clear floats by wrapping floated content in a<code><div></code>with the<code>.group</code>class.</p>
           <h3>Spacing</h3>
-          <table class="table">
+          <table class="table bordered rounded zebra">
             <thead>
               <tr>
                 <th>Top</th>

@@ -15,15 +15,16 @@ html
         .desktop-12.tablet-6.mobile-3.example
           
           h2.divide-section Typography
-          p CodeName uses relative sizing (ems and %, not pixels) for everything.
+          p Uses relative sizing (rems and pixels as fallback) for everything.
+
           p 
             | The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. 
             | All other sizes are in rems. Changing the code font-size on the <code>body</code> element will adjust the typographical 
             | scale for the entire site.
           
-          p
-            span.label  New to relative sizing? 
-            a(href='http://gomakethings.com/working-with-relative-sizing/') Learn more.
+          //- p
+          //-   span.label  New to relative sizing? 
+          //-   a(href='http://gomakethings.com/working-with-relative-sizing/') Learn more.
           
           p
             | The 
@@ -31,7 +32,7 @@ html
             |   on the 
             code body
             |  is 
-            code "Helvetica Neue", Arial, sans-serif
+            code "Open Sans","Helvetica Neue", Arial, sans-serif
             |  . This sets the typeface for the entire site. Adjust as needed.
           
           h2.divide-section Text Basics
@@ -51,6 +52,52 @@ html
             |  and 
             em italics
             | .
+
+
+          h2.divide-section Headings
+
+          h1 h1. Heading 1
+          h2 h2. Heading 2
+          h3 h3. Heading 3
+          h4 h4. Heading 4
+          h5 h5. Heading 5
+          h6 h6. Heading 6
+
+          h2.divide-section Paragraphs
+
+          p Dummy Text
+
+          p.lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.
+
+          p.lorem Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.
+
+          p.lorem Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  
+
+          h2.divide-section Blockquote
+
+          blockquote.lorem
+            Someone once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.
+
+          | You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
+
+          h2.divide-section Code
+
+          p.lorem Here's some code that's within a sentence: the <code>.js</code> file is very important
+
+          p Here's some preformatted text:
+            pre
+              code.
+                .js {
+                      color: #272727;
+                      background: #ffffff;
+                    }
+          
+          h2.divide-section Lines
+
+          p= "Add lines to your markup using the <hr> element."
+
+          <hr>
+  
 
           h2.divide-section Lists
 
@@ -102,42 +149,8 @@ html
                Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to 
                display metadata (a list of key-value pairs).
 
-      .row
-        .desktop-12
-          h2.divide-section Headings
-
-          h1 h1. Heading 1
-          h2 h2. Heading 2
-          h3 h3. Heading 3
-          h4 h4. Heading 4
-          h5 h5. Heading 5
-          h6 h6. Heading 6
-
-          h2.divide-section Blockquote
-
-          blockquote.
-            Someone once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.
-
-          | You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
-
-          h2.divide-section Code
-
-          p Here's some code that's within a sentence: the <code>.js</code> file is very important
-
-          p Here's some preformatted text:
-            pre
-              code.
-                .js {
-                      color: #272727;
-                      background: #ffffff;
-                    }
-          
-          h2.divide-section Lines
-
-          p= "Add lines to your markup using the <hr> element."
-
-          <hr>
-
+      .row  
+        .desktop-12.tablet-6.mobile-3  
         
           h2.divide-section Alignment, Spacing & Visibility
           
@@ -145,7 +158,7 @@ html
           
           h3 Text Alignment
           
-          table.table
+          table.table.bordered.rounded.zebra
             thead
               tr
                 th Alignment
@@ -166,7 +179,7 @@ html
           
           h3 Floats
           
-          table.table
+          table.table.bordered.rounded.zebra
             thead
               tr
                 th Float
@@ -194,7 +207,7 @@ html
           
             
           h3 Spacing
-          table.table
+          table.table.bordered.rounded.zebra
             thead
               tr
                 th Top
