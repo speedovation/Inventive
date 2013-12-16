@@ -118,6 +118,7 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
+  margin-bottom: 2rem;
 }
 table.bordered {
   border: solid #ddd 1px;

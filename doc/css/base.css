@@ -253,19 +253,19 @@ h4,
 .h4,
 .delta {
   font-size: 1.09rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 h5,
 h5,
 .epsilon {
   font-size: 0.92rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 h6,
 h6,
 .zeta {
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 .subheader {
   line-height: 1.4;
@@ -497,6 +497,9 @@ dd {
   min-height: 22px;
   padding: 19px 22px;
 }
+.half {
+  width: 50%;
+}
 .text-small {
   font-size: 0.9375rem;
 }
@@ -548,6 +551,11 @@ dd {
 }
 .space-top {
   padding-top: 0.8125rem;
+}
+.screen-reader {
+  left: -9999em;
+  position: absolute;
+  top: -9999em;
 }
 /* #Images
 ================================================== */
@@ -676,10 +684,4 @@ abbr[title] {
 }
 .add-bottom {
   margin-bottom: 20px !important;
-}
-.lorem {
-  font-family: redacted_scriptregular;
-}
-.loremb {
-  font-family: redactedregular;
 }

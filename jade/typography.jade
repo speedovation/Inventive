@@ -37,48 +37,120 @@ html
           
           h2.divide-section Text Basics
           
-          p
-            |  Default text. 
-            br
-            span.text-muted Muted text. 
-            br 
-            span.text-small Small text. 
-            br 
-            span.text-tall Tall text. 
-            br 
-            a(href='#') Hyperlinks. 
-            br
-            strong Bold 
-            |  and 
-            em italics
-            | .
+          table.table.bordered
+            tr
+              th(colspan=2).
+                Text
+
+            tr              
+              td.half Default Text 
+              td 
+            tr 
+              td 
+                span.text-muted Muted text. 
+              td
+                code .text-muted
+            tr 
+              td 
+                span.text-small Small text. 
+              td
+                code .text-small  
+            tr 
+              td 
+                span.text-tall Tall text. 
+              td
+                code .text-tall  
+            tr 
+              td 
+                a(href='#') Hyperlinks. 
+              td                  
+            tr 
+              td 
+                strong Bold
+              td                 
+            tr 
+              td 
+                em italics
+              td 
+            
 
 
           h2.divide-section Headings
 
-          h1 h1. Heading 1
-          h2 h2. Heading 2
-          h3 h3. Heading 3
-          h4 h4. Heading 4
-          h5 h5. Heading 5
-          h6 h6. Heading 6
+          table.table.bordered
+            tr
+              th(colspan=2).
+                Heading elements
+
+            tr              
+              td.half 
+                h1 h1. Heading 1
+              td
+                code .h1, .alpha
+
+            tr              
+              td 
+                h2 h2. Heading 2
+              td
+                code .h2, .beta  
+            tr              
+              td 
+                h3 h3. Heading 3
+              td
+                code .h3, .gamma  
+            tr              
+              td 
+                h4 h4. Heading 4
+              td
+                code .h4, .delta 
+            tr              
+              td 
+                h5 h5. Heading 5
+              td
+                code .h5, .epsilon  
+            tr              
+              td 
+                h6 h6. Heading 6        
+              td
+                code .h6, .zeta
+          
+          //- h2.divide-section 
+          table.table.bordered
+            tr
+              th(colspan=2) Bonus Headings    
+            tr
+              td.half
+                span.giga Giga Heading
+              td
+                code .giga
+            tr
+              td
+                span.mega Mega Heading
+              td
+                code .mega
+            tr
+              td
+                span.kilo Kilo Heading
+              td
+                code .kilo                  
 
           h2.divide-section Paragraphs
 
           p Dummy Text
 
-          p.lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.
 
-          p.lorem Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.
+          p Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.
 
-          p.lorem Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  
+          p Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  
 
           h2.divide-section Blockquote
 
           blockquote.lorem
             Someone once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.
 
-          | You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
+          h2.divide-section Sup and Sub
+          p You can also include superscripts<sup>sup example</sup> and subscripts<sub>sub example</sub>.
 
           h2.divide-section Code
 
@@ -158,14 +230,14 @@ html
           
           h3 Text Alignment
           
-          table.table.bordered.rounded.zebra
+          table.table.bordered.rounded
             thead
               tr
                 th Alignment
                 th Class
             tbody
               tr
-                td Left
+                td.half Left
                 td
                   code .text-left
               tr
@@ -179,14 +251,14 @@ html
           
           h3 Floats
           
-          table.table.bordered.rounded.zebra
+          table.table.bordered.rounded
             thead
               tr
                 th Float
                 th Class
             tbody
               tr
-                td Left
+                td.half Left
                 td
                   code .float-left
               tr
@@ -207,7 +279,7 @@ html
           
             
           h3 Spacing
-          table.table.bordered.rounded.zebra
+          table.table.bordered.rounded
             thead
               tr
                 th Top

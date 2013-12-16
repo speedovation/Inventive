@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
-    <link rel="stylesheet" href="../font/font.css" type="text/css">
+    <!--link(rel='stylesheet', href='../font/font.css', type='text/css' )	-->
     <script text="text/javascript" src="../js/jquery.js">	</script>
     <script text="text/javascript" src="../js/nav.js">	</script>
     <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
@@ -86,23 +86,115 @@
           </p>
           <p>The <code>font-family</code>  on the <code>body</code> is <code>"Open Sans","Helvetica Neue", Arial, sans-serif</code> . This sets the typeface for the entire site. Adjust as needed.</p>
           <h2 class="divide-section">Text Basics</h2>
-          <p> Default text. <br><span class="text-muted">Muted text. </span><br><span class="text-small">Small text. </span><br><span class="text-tall">Tall text. </span><br><a href="#">Hyperlinks. </a><br><strong>Bold </strong> and <em>italics</em>.</p>
+          <table class="table bordered">
+            <tr>
+              <th colspan="2">
+                Text
+                
+              </th>
+            </tr>
+            <tr>             
+              <td class="half">Default Text </td>
+              <td> </td>
+            </tr>
+            <tr> 
+              <td> <span class="text-muted">Muted text. </span></td>
+              <td><code>.text-muted</code></td>
+            </tr>
+            <tr> 
+              <td> <span class="text-small">Small text. </span></td>
+              <td><code>.text-small  </code></td>
+            </tr>
+            <tr> 
+              <td> <span class="text-tall">Tall text. </span></td>
+              <td><code>.text-tall  </code></td>
+            </tr>
+            <tr> 
+              <td> <a href="#">Hyperlinks. </a></td>
+              <td>                 </td>
+            </tr>
+            <tr> 
+              <td> <strong>Bold</strong></td>
+              <td>                </td>
+            </tr>
+            <tr> 
+              <td> <em>italics</em></td>
+              <td> </td>
+            </tr>
+          </table>
           <h2 class="divide-section">Headings</h2>
-          <h1>h1. Heading 1</h1>
-          <h2>h2. Heading 2</h2>
-          <h3>h3. Heading 3</h3>
-          <h4>h4. Heading 4</h4>
-          <h5>h5. Heading 5</h5>
-          <h6>h6. Heading 6</h6>
+          <table class="table bordered">
+            <tr>
+              <th colspan="2">
+                Heading elements
+                
+              </th>
+            </tr>
+            <tr>             
+              <td class="half"> 
+                <h1>h1. Heading 1</h1>
+              </td>
+              <td><code>.h1, .alpha</code></td>
+            </tr>
+            <tr>             
+              <td> 
+                <h2>h2. Heading 2</h2>
+              </td>
+              <td><code>.h2, .beta  </code></td>
+            </tr>
+            <tr>             
+              <td> 
+                <h3>h3. Heading 3</h3>
+              </td>
+              <td><code>.h3, .gamma  </code></td>
+            </tr>
+            <tr>             
+              <td> 
+                <h4>h4. Heading 4</h4>
+              </td>
+              <td><code>.h4, .delta </code></td>
+            </tr>
+            <tr>             
+              <td> 
+                <h5>h5. Heading 5</h5>
+              </td>
+              <td><code>.h5, .epsilon  </code></td>
+            </tr>
+            <tr>             
+              <td> 
+                <h6>h6. Heading 6        </h6>
+              </td>
+              <td><code>.h6, .zeta</code></td>
+            </tr>
+          </table>
+          <table class="table bordered">
+            <tr>
+              <th colspan="2">Bonus Headings    </th>
+            </tr>
+            <tr>
+              <td class="half"><span class="giga">Giga Heading</span></td>
+              <td><code>.giga</code></td>
+            </tr>
+            <tr>
+              <td><span class="mega">Mega Heading</span></td>
+              <td><code>.mega</code></td>
+            </tr>
+            <tr>
+              <td><span class="kilo">Kilo Heading</span></td>
+              <td><code>.kilo                  </code></td>
+            </tr>
+          </table>
           <h2 class="divide-section">Paragraphs</h2>
           <p>Dummy Text</p>
-          <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.</p>
-          <p class="lorem">Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.</p>
-          <p class="lorem">Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.</p>
+          <p>Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.</p>
+          <p>Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  </p>
           <h2 class="divide-section">Blockquote</h2>
           <blockquote class="lorem">
             <Someone>once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.</Someone>
-          </blockquote>You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
+          </blockquote>
+          <h2 class="divide-section">Sup and Sub</h2>
+          <p>You can also include superscripts<sup>sup example</sup> and subscripts<sub>sub example</sub>.</p>
           <h2 class="divide-section">Code</h2>
           <p class="lorem">Here's some code that's within a sentence: the <code>.js</code> file is very important</p>
           <p>Here's some preformatted text:
@@ -177,7 +269,7 @@
           <h2 class="divide-section">Alignment, Spacing & Visibility</h2>
           <p>You can adjust text alignment and spacing using a few simple CSS classes.</p>
           <h3>Text Alignment</h3>
-          <table class="table bordered rounded zebra">
+          <table class="table bordered rounded">
             <thead>
               <tr>
                 <th>Alignment</th>
@@ -186,7 +278,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Left</td>
+                <td class="half">Left</td>
                 <td><code>.text-left</code></td>
               </tr>
               <tr>
@@ -200,7 +292,7 @@
             </tbody>
           </table>
           <h3>Floats</h3>
-          <table class="table bordered rounded zebra">
+          <table class="table bordered rounded">
             <thead>
               <tr>
                 <th>Float</th>
@@ -209,7 +301,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Left</td>
+                <td class="half">Left</td>
                 <td><code>.float-left</code></td>
               </tr>
               <tr>
@@ -224,7 +316,7 @@
           </table>
           <p><span class="label">Pro Tip</span>Clear floats by wrapping floated content in a<code><div></code>with the<code>.group</code>class.</p>
           <h3>Spacing</h3>
-          <table class="table bordered rounded zebra">
+          <table class="table bordered rounded">
             <thead>
               <tr>
                 <th>Top</th>
