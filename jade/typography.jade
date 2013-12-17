@@ -173,108 +173,114 @@ html
 
           h2.divide-section Lists
 
-          table.table.bordered.rounded
-            thead
-              tr
-                th(colspan=2) Lists
-            tbody
-              tr
-                td.half 
-                  h3 Ordered
-                  ol
-                    li Item 1
-                    li Item 2
-                    li Item 3
-                td
-                  pre 
-                    code.language-markup= "<h3>Ordered<h3> \n  <ol> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ol>"
-              tr
-                td.half 
-                  h3 Unordered Simple
-                  ul
-                    li Item 1
-                    li Item 2
-                    li Item 3
-                td
-                  pre 
-                    code.language-markup= "<h3>Unordered Simple<h3> \n  <ul> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
+          div.desktop-12.preview-wrap
+            div.preview
+              h3 Ordered
+              ol
+                li Item 1
+                li Item 2
+                li Item 3
 
-              tr
-                td.half 
-                  h3 Unordered Disc
-                  ul.disc
-                    li Item 1
-                    li Item 2
-                    li Item 3
-                td
-                  pre 
-                    code.language-markup= "<h3>Unordered Disc<h3> \n  <ul class='disc'> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
-      
-              tr
-                td.half 
-                  h3 Unordered Circle
-                  ul.circle
-                    li Item 1
-                    li Item 2
-                    li Item 3
-                td
-                  pre 
-                    code.language-markup= "<h3>Unordered Disc<h3> \n  <ul class='circle'> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
-      
-              tr
-                td.half 
-                  h3 Unordered Square
-                  ul.square
-                    li Item 1
-                    li Item 2
-                    li Item 3
-                td
-                  pre 
-                    code.language-markup= "<h3>Unordered Disc<h3> \n  <ul class='square'> \n   <li> Item 1</li>\n   <li> Item 2</li>\n   <li> Item 3</li>\n  </ul> "      
-      
+            pre.markup
+              code.language-markup  
+                h3 Ordered
+                ol
+                  li Item 1
+                  li Item 2
+                  li Item 3
+
+          div.desktop-12.preview-wrap
+            div.preview
+              h3 Unordered Simple
+              ul
+                li Item 1
+                li Item 2
+                li Item 3
+
+            pre.markup
+              code.language-markup  
+                h3 Unordered Simple
+                ul
+                  li Item 1
+                  li Item 2
+                  li Item 3
+
+          div.desktop-12.preview-wrap
+            div.preview
+              h3 Unordered Disc
+              ul.disc
+                li Item 1
+                li Item 2
+                li Item 3
+
+            pre.markup
+              code.language-markup  
+                h3 Unordered Disc
+                ul.disc
+                  li Item 1
+                  li Item 2
+                  li Item 3
+
+          div.desktop-12.preview-wrap
+            div.preview
+              h3 Unordered Circle
+              ul.circle
+                li Item 1
+                li Item 2
+                li Item 3
+            pre.markup
+              code.language-markup
+                h3 Unordered Circle
+                ul.circle
+                  li Item 1
+                  li Item 2
+                  li Item 3 
+
+          div.desktop-12.preview-wrap
+            div.preview
+              h3 Unordered Square
+              ul.square
+                li Item 1
+                li Item 2
+                li Item 3
+            pre.markup
+              code.language-markup
+                h3 Unordered Square
+                ul.square
+                  li Item 1
+                  li Item 2
+                  li Item 3
+
+
+          
            
           h2.divide-section Definition List
 
-          - var d = "" 
-
-          table.table.bordered.rounded
-            thead
-              tr
-                th(colspan=2) Lists
-            tbody
-              tr
-                td.half 
-                  dl
-                    dt Definition List
-                    dd.
-                       Encloses a list of pairs of terms and descriptions.
-                    dt Definition List
-                    dd.
-                       Encloses a list of pairs of terms and descriptions. 
-                    dt Definition List
-                    dd.
-                       Encloses a list of pairs of terms and descriptions. 
-                td
-                  pre 
-                    code.language-markup= "<dl>\n"
-                                        = "   <dt>Definition List</dt>"
-                                        = "   <dd>\n"
-                                        = "     Encloses a list of pairs of terms and descriptions.\n"
-                                        = "   </dd>\n"
-                                        = "   <dt>Definition List</dt>\n"
-                                        = "   <dd>\n"
-                                        = "     Encloses a list of pairs of terms and descriptions.\n"
-                                        = "   </dd>\n"
-                                        = "   <dt>Definition List</dt>\n"
-                                        = "   <dd>\n"
-                                        = "     Encloses a list of pairs of terms and descriptions.\n"
-                                        = "   </dd>\n"
-                                        = "</dl>"
-
-              
-          
-
-
+          div.desktop-12.preview-wrap
+            div.preview
+              h3 Unordered Square
+              dl
+                dt Definition List
+                dd.
+                   Encloses a list of pairs of terms and descriptions.
+                dt Definition List
+                dd.
+                   Encloses a list of pairs of terms and descriptions.
+                dt Definition List
+                dd.
+                   Encloses a list of pairs of terms and descriptions.
+            pre.markup
+              code.language-markup 
+                dl
+                  dt Definition List
+                  dd.
+                     Encloses a list of pairs of terms and descriptions.
+                  dt Definition List
+                  dd.
+                     Encloses a list of pairs of terms and descriptions.
+                  dt Definition List
+                  dd.
+                     Encloses a list of pairs of terms and descriptions.
       .row  
         .desktop-12.tablet-6.mobile-3  
         

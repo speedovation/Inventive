@@ -27,7 +27,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
   position:relative;
-  padding: 1em;
+  /*padding: 3rem;*/
   /*margin: .5em 0;*/
   /*-webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;*/
   /*-moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;*/

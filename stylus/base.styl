@@ -45,6 +45,9 @@
 @import "normalize"
 @import "base/_typography"
 @import "helpers"
+@import "grid/grid-12"
+@import "grid/grid-16"
+
 
 
 /* #Images
@@ -231,12 +234,80 @@ abbr[title]
     margin-bottom: 20px !important
 
 
+//This section belongs to doc style and not from core
+
 //Loremspun font..Redacted Font
 //.lorem
 //    font-family: redacted_scriptregular
 //.loremb
 //    font-family: redactedregular
 
+
+
+.markup:after,.preview:after
+    background-color: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 0;
+    color: #9DA0A4;
+    content: "HTML";
+    //font-size: 12px;
+    //font-weight: bold;
+    left: -1px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -1px;
+    max-height 24px   
+
+.markup,.preview
+    position relative
+    font-size 0.9rem
+    margin 0
+    width 50%
+    float left
+
+.preview-wrap
+    background: none repeat scroll 0 0 #FCFCFC;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    margin 0 0 2rem 0 !important
+    width 100% !important
+    position relative
+
+.preview-wrap:after
+    background-color: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    border-radius: 0 0 4px 4px;
+    bottom: -12px;
+    color: #777777;
+    content: "";
+    font-size: 1.3rem;
+    left: -1px;
+    max-height: 14px;
+    padding: 2px 0 8px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+
+.preview-wrap pre
+    background-color transparent
+    border none
     
+
+.preview    
+    padding 2rem
+    border-right 1px solid #ddd
+    //color: #CC470D;
+
+.preview:after
+    content "PREVIEW"
+    max-width: 64px;
+    left: -1px;
+
+@media untilmobile
+    .preview
+        border none
+        border-bottom 1px solid #ddd
+        width 100% !important
 
 

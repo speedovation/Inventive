@@ -110,7 +110,7 @@ h2.resp-tab-active span.resp-arrow {
 h2.resp-tab-active {
   background: #dbdbdb !important;
 }
-.resp-easy-accordion  h2.resp-accordion {
+.resp-easy-accordion h2.resp-accordion {
   display: block;
 }
 .resp-easy-accordion .resp-tab-content {

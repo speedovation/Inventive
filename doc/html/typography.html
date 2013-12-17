@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="../css/base.css" type="text/css">
     <link rel="stylesheet" href="../css/nav/nav.css" type="text/css">
-    <link rel="stylesheet" href="../css/grid/grid.css" type="text/css">
-    <link rel="stylesheet" href="../css/grid/grid-12.css" type="text/css">
+    <!--link(rel='stylesheet', href='../css/grid/grid.css', type='text/css' )-->
+    <!--link(rel='stylesheet', href='../css/grid/grid-12.css', type='text/css' )-->
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
     <!--link(rel='stylesheet', href='../font/font.css', type='text/css' )	-->
     <script text="text/javascript" src="../js/jquery.js">	</script>
@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
     <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
     <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
+    <script text="text/javascript" src="../vendors/doc.js"></script>
     <!--Highlighter-->
     <link rel="stylesheet" href="../vendors/pcolor/pcolor.css" type="text/css">
-    <script text="text/javascript" src="../vendors/pcolor/pcolor.js">	</script>
+    <script text="text/javascript" src="../vendors/pcolor/pcolor.js"></script>
   </head>
   <body>
     <div class="grid">
@@ -207,142 +208,114 @@
           <h2 class="divide-section">Lines</h2>
           <p>Add lines to your markup using the &lt;hr&gt; element.</p><hr>
           <h2 class="divide-section">Lists</h2>
-          <table class="table bordered rounded">
-            <thead>
-              <tr>
-                <th colspan="2">Lists</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="half"> 
-                  <h3>Ordered</h3>
-                  <ol>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                  </ol>
-                </td>
-                <td>
-                  <pre> <code class="language-markup">&lt;h3&gt;Ordered&lt;h3&gt; 
-  &lt;ol&gt; 
-   &lt;li&gt; Item 1&lt;/li&gt;
-   &lt;li&gt; Item 2&lt;/li&gt;
-   &lt;li&gt; Item 3&lt;/li&gt;
-  &lt;/ol&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="half"> 
-                  <h3>Unordered Simple</h3>
-                  <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                  </ul>
-                </td>
-                <td>
-                  <pre> <code class="language-markup">&lt;h3&gt;Unordered Simple&lt;h3&gt; 
-  &lt;ul&gt; 
-   &lt;li&gt; Item 1&lt;/li&gt;
-   &lt;li&gt; Item 2&lt;/li&gt;
-   &lt;li&gt; Item 3&lt;/li&gt;
-  &lt;/ul&gt; </code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="half"> 
-                  <h3>Unordered Disc</h3>
-                  <ul class="disc">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                  </ul>
-                </td>
-                <td>
-                  <pre> <code class="language-markup">&lt;h3&gt;Unordered Disc&lt;h3&gt; 
-  &lt;ul class='disc'&gt; 
-   &lt;li&gt; Item 1&lt;/li&gt;
-   &lt;li&gt; Item 2&lt;/li&gt;
-   &lt;li&gt; Item 3&lt;/li&gt;
-  &lt;/ul&gt; </code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="half"> 
-                  <h3>Unordered Circle</h3>
-                  <ul class="circle">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                  </ul>
-                </td>
-                <td>
-                  <pre> <code class="language-markup">&lt;h3&gt;Unordered Disc&lt;h3&gt; 
-  &lt;ul class='circle'&gt; 
-   &lt;li&gt; Item 1&lt;/li&gt;
-   &lt;li&gt; Item 2&lt;/li&gt;
-   &lt;li&gt; Item 3&lt;/li&gt;
-  &lt;/ul&gt; </code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="half"> 
-                  <h3>Unordered Square</h3>
-                  <ul class="square">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                  </ul>
-                </td>
-                <td>
-                  <pre> <code class="language-markup">&lt;h3&gt;Unordered Disc&lt;h3&gt; 
-  &lt;ul class='square'&gt; 
-   &lt;li&gt; Item 1&lt;/li&gt;
-   &lt;li&gt; Item 2&lt;/li&gt;
-   &lt;li&gt; Item 3&lt;/li&gt;
-  &lt;/ul&gt; </code></pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="desktop-12 preview-wrap">
+            <div class="preview">
+              <h3>Ordered</h3>
+              <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ol>
+            </div>
+            <pre class="markup"><code class="language-markup"> 
+                <h3>Ordered</h3>
+                <ol>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ol></code></pre>
+          </div>
+          <div class="desktop-12 preview-wrap">
+            <div class="preview">
+              <h3>Unordered Simple</h3>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <pre class="markup"><code class="language-markup"> 
+                <h3>Unordered Simple</h3>
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul></code></pre>
+          </div>
+          <div class="desktop-12 preview-wrap">
+            <div class="preview">
+              <h3>Unordered Disc</h3>
+              <ul class="disc">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <pre class="markup"><code class="language-markup"> 
+                <h3>Unordered Disc</h3>
+                <ul class="disc">
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul></code></pre>
+          </div>
+          <div class="desktop-12 preview-wrap">
+            <div class="preview">
+              <h3>Unordered Circle</h3>
+              <ul class="circle">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <pre class="markup"><code class="language-markup">
+                <h3>Unordered Circle</h3>
+                <ul class="circle">
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3 </li>
+                </ul></code></pre>
+          </div>
+          <div class="desktop-12 preview-wrap">
+            <div class="preview">
+              <h3>Unordered Square</h3>
+              <ul class="square">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <pre class="markup"><code class="language-markup">
+                <h3>Unordered Square</h3>
+                <ul class="square">
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul></code></pre>
+          </div>
           <h2 class="divide-section">Definition List</h2>
-          <table class="table bordered rounded">
-            <thead>
-              <tr>
-                <th colspan="2">Lists</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="half"> 
-                  <dl>
-                    <dt>Definition List</dt>
-                    <dd>Encloses a list of pairs of terms and descriptions.</dd>
-                    <dt>Definition List</dt>
-                    <dd>Encloses a list of pairs of terms and descriptions. </dd>
-                    <dt>Definition List</dt>
-                    <dd>Encloses a list of pairs of terms and descriptions. </dd>
-                  </dl>
-                </td>
-                <td>
-                  <pre> <code class="language-markup">&lt;dl&gt;
-   &lt;dt&gt;Definition List&lt;/dt&gt;   &lt;dd&gt;
-     Encloses a list of pairs of terms and descriptions.
-   &lt;/dd&gt;
-   &lt;dt&gt;Definition List&lt;/dt&gt;
-   &lt;dd&gt;
-     Encloses a list of pairs of terms and descriptions.
-   &lt;/dd&gt;
-   &lt;dt&gt;Definition List&lt;/dt&gt;
-   &lt;dd&gt;
-     Encloses a list of pairs of terms and descriptions.
-   &lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="desktop-12 preview-wrap">
+            <div class="preview">
+              <h3>Unordered Square</h3>
+              <dl>
+                <dt>Definition List</dt>
+                <dd>Encloses a list of pairs of terms and descriptions.</dd>
+                <dt>Definition List</dt>
+                <dd>Encloses a list of pairs of terms and descriptions.</dd>
+                <dt>Definition List</dt>
+                <dd>Encloses a list of pairs of terms and descriptions.</dd>
+              </dl>
+            </div>
+            <pre class="markup"><code class="language-markup"> 
+                <dl>
+                  <dt>Definition List</dt>
+                  <dd>Encloses a list of pairs of terms and descriptions.</dd>
+                  <dt>Definition List</dt>
+                  <dd>Encloses a list of pairs of terms and descriptions.</dd>
+                  <dt>Definition List</dt>
+                  <dd>Encloses a list of pairs of terms and descriptions.</dd>
+                </dl></code></pre>
+          </div>
         </div>
       </div>
       <div class="row"> 
