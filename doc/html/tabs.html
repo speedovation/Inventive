@@ -112,84 +112,99 @@
       <div class="row">
         <div class="desktop-12 tablet-6 mobile-3">
           <div>
-            <h1>Responsive Tabs to Accordion</h1>
-            <h3>Features</h3>
+            <h1 class="divide-section">Responsive Tabs</h1>
+            <h2>Features</h2>
             <ul>
               <li>Horizontal / Vertical Tabs to Accordion</li>
-              <li>Tabs and accordion are created entirely with jQuery</li>
               <li>Supports multiple sets of tabs on same page</li>
               <li>Cross browser compatibility (IE7+, Chrome, Firefox, Safari and Opera)</li>
               <li>Multi device support (Web, Tablets & Mobile)</li>
+              <li>Media query breakpoint is set  <b>768px</b>. Please resize the window to see "Tabs" to "Accordion"</li>
             </ul>
           </div>
           <h2>Demo</h2>
-          <p><b>Note:</b>Media query breakpoint is set<b>768px</b>. Please resize the window to see "Tabs" to "Accordion"</p>
-          <h3>Horizontal Tab</h3>
-          <div id="horizontalTab">
-            <ul class="resp-tabs-list">
-              <li>Responsive Tab-1</li>
-              <li>Responsive Tab-2</li>
-              <li>Responsive Tab-3</li>
-            </ul>
-            <div class="resp-tabs-container">
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
-              </div>
-              <div>
-                <p>This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit. Vestibulum nibh urna,  Vestibulum nibh urna,it.</p>
-              </div>
-              <div>
-                <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
-              </div>
+        </div>
+        <div class="desktop-12 preview-wrap">
+          <div class="preview">
+            <h3>Horizontal Tab</h3>
+            <div id="horizontalTab">
+              <ul class="resp-tabs-list">
+                <li>Responsive Tab-1</li>
+                <li>Responsive Tab-2</li>
+                <li>Responsive Tab-3</li>
+              </ul>
+              <div class="resp-tabs-container">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
+                </div>
+                <div>
+                  <p>This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit. Vestibulum nibh urna,  Vestibulum nibh urna,it.</p>
+                </div>
+                <div>
+                  <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
+                </div>
+              </div><br>
+              <div id="tabInfo">Selected tab:<span class="tabName"></span></div>
             </div>
-          </div><br>
-          <div id="tabInfo">Selected tab:<span class="tabName"></span></div><br><br>
-          <h3>Vertical Tabs</h3>
-          <div id="verticalTab">
-            <ul class="resp-tabs-list">
-              <li>Responsive Tab 1</li>
-              <li>Responsive Tab 2</li>
-              <li>Responsive Tab 3</li>
-              <li>Long name Responsive Tab 4</li>
-            </ul>
-            <div class="resp-tabs-container">
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
-              </div>
-              <div>
-                <p>This tab has icon in it.</p>
-              </div>
-              <div>
-                <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
-              </div>
-              <div>
-                <p>d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.</p>
+          </div>
+          <pre class="markup"><code class="language-markup"></code></pre>
+        </div>
+        <div class="desktop-12 preview-wrap">
+          <div class="preview"> 
+            <h3>Vertical Tabs</h3>
+            <div id="verticalTab">
+              <ul class="resp-tabs-list">
+                <li>Responsive Tab 1</li>
+                <li>Responsive Tab 2</li>
+                <li>Responsive Tab 3</li>
+                <li>Long name Responsive Tab 4</li>
+              </ul>
+              <div class="resp-tabs-container">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
+                </div>
+                <div>
+                  <p>This tab has icon in it.</p>
+                </div>
+                <div>
+                  <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
+                </div>
+                <div>
+                  <p>d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.</p>
+                </div>
               </div>
             </div>
           </div>
-          <h3>Pure Accordion          </h3>
-          <div id="accordions">
-            <ul class="resp-tabs-list">
-              <li>Responsive Tab 1</li>
-              <li>Responsive Tab 2</li>
-              <li>Responsive Tab 3</li>
-              <li>Long name Responsive Tab 4</li>
-            </ul>
-            <div class="resp-tabs-container">
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
+          <pre class="markup"><code class="language-markup">         </code></pre>
+        </div>
+        <div class="desktop-12 preview-wrap">
+          <div class="preview"> 
+            <h3>Pure Accordion          
+              <div id="accordions">
+                <ul class="resp-tabs-list">
+                  <li>Responsive Tab 1</li>
+                  <li>Responsive Tab 2</li>
+                  <li>Responsive Tab 3</li>
+                  <li>Long name Responsive Tab 4</li>
+                </ul>
+                <div class="resp-tabs-container">
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.</p>
+                  </div>
+                  <div>
+                    <p>This tab has icon in it.</p>
+                  </div>
+                  <div>
+                    <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
+                  </div>
+                  <div>
+                    <p>d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p>This tab has icon in it.</p>
-              </div>
-              <div>
-                <p>Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.</p>
-              </div>
-              <div>
-                <p>d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.</p>
-              </div>
-            </div>
+            </h3>
           </div>
+          <pre class="markup"><code class="language-markup"> </code></pre>
         </div>
         <script type="text/javascript">
           $(document).ready(function () {

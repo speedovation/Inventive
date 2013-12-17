@@ -81,7 +81,7 @@ h2.resp-tab-title:last-child {
   border-right: 1px solid #ddd;
   float: left;
   margin-right: -1px;
-  width: 30%;
+  width: 20%;
 }
 .resp-vtabs .resp-tabs-list li {
   border-bottom: 1px solid #c1c1c1;
@@ -100,7 +100,7 @@ h2.resp-tab-title:last-child {
   float: left;
   min-height: 250px;
   padding: 0;
-  width: 68%;
+  width: 78%;
 }
 .resp-vtabs .resp-tab-content {
   border: medium none;
@@ -114,15 +114,6 @@ h2.resp-tab-title:last-child {
   margin-right: -1px !important;
   position: relative;
   z-index: 1;
-}
-.resp-arrow {
-  width: 0;
-  height: 0;
-  float: right;
-  margin-top: 3px;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 12px solid #c1c1c1;
 }
 h2.resp-tab-active span.resp-arrow {
   border: none;
@@ -154,6 +145,7 @@ h2.resp-accordion:after {
 }
 .resp-easy-accordion .resp-tab-content {
   border: 1px solid #c1c1c1;
+  border-top: 0px solid #ccc;
 }
 .resp-easy-accordion .resp-tab-content:last-child {
   border-bottom: 1px solid #c1c1c1 !important;
@@ -178,6 +170,9 @@ h2.resp-accordion:first-child {
   }
   .resp-vtabs .resp-tab-content {
     border: 1px solid #c1c1c1;
+  }
+  .resp-tab-content {
+    border-top: 0px solid #ccc !important;
   }
   .resp-vtabs .resp-tabs-container {
     border: none;
