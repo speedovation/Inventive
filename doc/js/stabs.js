@@ -55,7 +55,7 @@
         $respTabs.find(".resp-tabs-container > div").addClass("resp-tab-content");
         jtab_options();
         $tabItemh2 = void 0;
-        $respTabs.find(".resp-tab-content").before("<h2 class='resp-accordion' role='tab'><span class='resp-arrow'></span></h2>");
+        $respTabs.find(".resp-tab-content").before("<h2 class='resp-accordion' role='tab'></h2>");
         itemCount = 0;
         $respTabs.find(".resp-accordion").each(function() {
           var $accItem, $tabItem;

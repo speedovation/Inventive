@@ -77,14 +77,8 @@ samp {
   font-family: monospace, serif;
   font-size: 1em;
 }
-pre {
-  white-space: pre-wrap;
-}
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
-}
-small {
-  font-size: 80%;
 }
 sub,
 sup {
@@ -107,11 +101,6 @@ svg:not(:root) {
 }
 figure {
   margin: 0;
-}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.5 em 0.625em 0.75em;
 }
 legend {
   border: 0;
@@ -1827,7 +1816,7 @@ abbr[title] {
   position: relative;
   font-size: 0.9rem;
   margin: 0;
-  width: 50%;
+  width: 100%;
   float: left;
 }
 .preview-wrap {
@@ -1859,17 +1848,10 @@ abbr[title] {
 }
 .preview {
   padding: 2rem;
-  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 .preview:after {
   content: "PREVIEW";
   max-width: 64px;
   left: -1px;
-}
-@media screen and (max-width: 740px) {
-  .preview {
-    border: none;
-    border-bottom: 1px solid #ddd;
-    width: 100% !important;
-  }
 }

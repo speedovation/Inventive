@@ -28,7 +28,9 @@ $(function() {
 
     $( "pre code" ).each(function() {
 //            alert($(this).html())
-            return $(this).html( htmlEscape($(this).html()) );
+            var html =  $(this).parent().prev('.preview').html();
+
+            return $(this).html( htmlEscape(html) );
         });
 
 });

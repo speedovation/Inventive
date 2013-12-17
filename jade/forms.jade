@@ -26,192 +26,224 @@ html
       //pre
       //  code Some text and some code here
       
-      .row
-        +select()
-        +select()
-        +select()
+
         
 
       .row
         .desktop-12
-          h2 Forms
-          p |Forms have always been tricky. With Gumby v2 we aim to make forms a little 
-            |less of a headache.
-          h3 Basic Input Element
-          p | All input elements have to be wrapped in some element (div, li, p, etc.) with 
+          
+          h1.divide-section Forms
+          p 
+            |Almost no extra work for forms. Grid can be applied to form elements. 
+            |Make form creation super easy and customizable 
+          
+          h2 Basic Input Element
+          p 
+            | All input elements have to be wrapped in some element (div, li, p, etc.) with 
             | the class
             code field
             | . The
-            code
-              != "<input>"
+            code= "<input>"
             | tag itself needs to have the class
             code input
             | . That's all you need!
-      form.row
-          .field
-              input(class="input desktop-12" type="text" placeholder="Text input")
+          
 
-          .field
-              input(class="input desktop-12" type="text" placeholder="Text input")
+        div.desktop-12.preview-wrap
+          div.preview
+            form.row
+              .field
+                  input(class="input" type="text" placeholder="Text input")
+
+              .field
+                  input( class="input desktop-12" type="email" placeholder="Email input")
+                 
+              .field
+                  input( class="input desktop-12" type="password" placeholder="Password input")
+                 
+              .field
+                  textarea( class="input  textarea desktop-12" placeholder="Textarea")
+
+          pre.markup
+            code.language-markup  
               
-          .field
-              input( class="input desktop-12" type="email" placeholder="Email input")
-             
-          .field
-              input( class="input desktop-12" type="password" placeholder="Password input")
-             
-          .field
-              textarea( class="input  textarea desktop-12" placeholder="Textarea")
 
-      form.row
-        
-        .field
-            input(class="input desktop-6" type="text" placeholder="Text input")
-            input(class="input desktop-6" type="text" placeholder="Text input")  
 
-        .field
-            input(class="input desktop-4" type="text" placeholder="Text input")
-            input(class="input desktop-4" type="text" placeholder="Text input")  
-            input(class="input desktop-4" type="text" placeholder="Text input")      
+        div.desktop-12.preview-wrap
+          div.preview    
+            form.row
       
-        .field
-            label(for="text1" class="inline desktop-4") Label 1
-            input(class="input desktop-8" type="text" placeholder="Text input")
+              .field
+                  input(class="input desktop-6" type="text" placeholder="Text input")
+                  input(class="input desktop-6" type="text" placeholder="Text input")  
 
-        .field
-            label(for="text1" class="inline desktop-4") Label 2
-            input(class="input desktop-8" type="text" placeholder="Text input")
+              .field
+                  input(class="input desktop-4" type="text" placeholder="Text input")
+                  input(class="input desktop-4" type="text" placeholder="Text input")  
+                  input(class="input desktop-4" type="text" placeholder="Text input")      
+            
+              .field
+                  label(for="text1" class="inline desktop-4") Label 1
+                  input(class="input desktop-8" type="text" placeholder="Text input")
 
-        fieldset
-          legend Fieldset with legend
+              .field
+                  label(for="text1" class="inline desktop-4") Label 2
+                  input(class="input desktop-8" type="text" placeholder="Text input")
+          pre.markup
+            code.language-markup
+
+
+        div.desktop-12.preview-wrap
+          div.preview    
+            form.row
+              +select()
+              +select()
+              +select()
+          pre.markup
+            code.language-markup    
         
-          .field
-            label( for="text1" class="inline") Label 1
-            input( class="input desktop-12" type="email" placeholder="Email input")
+        div.desktop-12.preview-wrap
+          div.preview    
+            form.row
+              fieldset
+                legend Fieldset with legend
+              
+                .field
+                  label( for="text1" class="inline") Label 1
+                  input( class="input desktop-12" type="email" placeholder="Email input")
+                
+                .field
+                  input( class="input desktop-12" type="email" placeholder="Email input")
+          pre.markup
+            code.language-markup
+               
           
-          .field
-            input( class="input desktop-12" type="email" placeholder="Email input")
-             
-        
-        form
-          fieldset
-            legend Some information about you
-            
-            label( for="fullname") Name:
-            input( type="text" id="fullname" )
-            
-            p Gender:
-            p 
-              input( type="radio" value="male" id="male" name="gender" ) 
-              label( for="male") Male
-            p 
-              input( type="radio" value="Female" id="female" name="gender" ) 
-              label( for="female") Female
-            
-            pStuff you like:
-            p 
-              input( type="checkbox" value="CSS3" id="css3" ) 
-              label( for="css3") CSS3
-            p 
-              input( type="checkbox" value="HTML5" id="html5" )
-              label( for="html5") HTML5
-            p 
-              input( type="checkbox" value="JavaScript" id="javascript" ) 
-              label( for="javascript") JavaScript
-            p 
-              input( type="checkbox" value="Other" id="other" ) 
-              label( for="other") Other
-            
+        div.desktop-12.preview-wrap
+          div.preview    
+            form.row        
+              fieldset
+                legend Some information about you
+                
+                p Gender:
+                p 
+                  input( type="radio" value="male" id="male" name="gender" ) 
+                  label( for="male") Male
+                p 
+                  input( type="radio" value="Female" id="female" name="gender" ) 
+                  label( for="female") Female
+                
+                p Stuff you like:
+                p 
+                  input( type="checkbox" value="CSS3" id="css3" ) 
+                  label( for="css3") CSS3
+                p 
+                  input( type="checkbox" value="HTML5" id="html5" )
+                  label( for="html5") HTML5
+                p 
+                  input( type="checkbox" value="JavaScript" id="javascript" ) 
+                  label( for="javascript") JavaScript
+                p 
+                  input( type="checkbox" value="Other" id="other" ) 
+                  label( for="other") Other
+          pre.markup
+            code.language-markup      
+              
           
-          
-          fieldset
-            legend What happens when I specify disabled or checked attributes?
-            
-            p Disabling and checking radio inputs:
-            p 
-              input( type="radio" value="disabled" id="disabled" name="disabled" disabled )
-              label( for="disabled") This is disabled
-            
-            p 
-              input( type="radio" value="check5" id="check5" name="check5" checked="" disabled=""  )
-              label( for="check5") This is disabled and checked
+        div.desktop-12.preview-wrap
+          div.preview    
+            form.row  
+              fieldset
+                legend What happens when I specify disabled or checked attributes?
+                
+                p Disabling and checking radio inputs:
+                p 
+                  input( type="radio" value="disabled" id="disabled" name="disabled" disabled )
+                  label( for="disabled") This is disabled
+                
+                p 
+                  input( type="radio" value="check5" id="check5" name="check5" checked="" disabled=""  )
+                  label( for="check5") This is disabled and checked
 
-            p 
-              input( type="radio" value="check" id="check" name="check" checked )
-              label( for="check") This is checked
-            
-            p Disabling and checking checkbox inputs:
-            p 
-              input( type="checkbox" value="disabled" id="disabled2" disabled ) 
-              label( for="disabled2") This is disabled
-            p 
-              input( type="checkbox" value="check" id="check2" checked ) 
-              label( for="check2") This is checked
-            p 
-              input( type="checkbox" value="Stop" id="disablecheck" disabled checked ) 
-              label( for="disablecheck") This is checked and disabled
-            p 
-              input( type="checkbox" value="Other" id="other2" ) 
-              label( for="other2") Other
-            
-          
-          
-          fieldset
-            legend Contact info
-            
-            label Email:
-             input( type="email" )
-            
-            p Subscribe to newsletter:
-            p 
-              input( type="radio" value="yes" id="yes" name="subscribe" ) 
-              label( for="yes") Yes
-            p 
-              input( type="radio" value="no" id="no" name="subscribe" ) 
-              label( for="no") No
-            
-            p Tick the information you would like to hear about:
-            p 
-              input( type="checkbox" value="Rich" id="rich" ) 
-              label( for="rich") I would like to here about the how the CSS Ninja can make me rich
-            p 
-              input( type="checkbox" value="Poor" id="poor" ) 
-              label( for="poor") How the CSS Ninja can make me poor
-            p 
-              input( type="checkbox" value="Stop" id="stop" ) 
-              label( for="stop") Please make the CSS Ninja stop from trying to make me rich or poor
-            p 
-              input( type="checkbox" value="Other" id="other3" ) 
-              label( for="other3") Other
+                p 
+                  input( type="radio" value="check" id="check" name="check" checked )
+                  label( for="check") This is checked
+                
+                p Disabling and checking checkbox inputs:
+                p 
+                  input( type="checkbox" value="disabled" id="disabled2" disabled ) 
+                  label( for="disabled2") This is disabled
+                p 
+                  input( type="checkbox" value="check" id="check2" checked ) 
+                  label( for="check2") This is checked
+                p 
+                  input( type="checkbox" value="Stop" id="disablecheck" disabled checked ) 
+                  label( for="disablecheck") This is checked and disabled
+                p 
+                  input( type="checkbox" value="Other" id="other2" ) 
+                  label( for="other2") Other
+          pre.markup
+            code.language-markup      
             
           
           
-          fieldset(lang="he" dir="rtl")
-            legend Change direction for international text
+          //- fieldset
+          //-   legend Contact info
             
-            p Gender:
-            p 
-              input( type="radio" value="male" id="male2" name="gender2" ) 
-              label( for="male2") Male
-            p 
-              input( type="radio" value="Female" id="female2" name="gender2" ) 
-              label( for="female2") Female
+          //-   label Email:
+          //-    input( type="email" )
             
-            p Stuff you like:
-            p 
-              input( type="checkbox" value="CSS3" id="css32" ) 
-              label( for="css32") CSS3
-            p 
-              input( type="checkbox" value="HTML5" id="html52" ) 
-              label( for="html52") HTML5
-            p 
-              input( type="checkbox" value="JavaScript" id="javascript2" ) 
-              label( for="javascript2") JavaScript
-            p 
-              input( type="checkbox" value="Other" id="other2" ) 
-              label( for="other2") Other
+          //-   p Subscribe to newsletter:
+          //-   p 
+          //-     input( type="radio" value="yes" id="yes" name="subscribe" ) 
+          //-     label( for="yes") Yes
+          //-   p 
+          //-     input( type="radio" value="no" id="no" name="subscribe" ) 
+          //-     label( for="no") No
+            
+          //-   p Tick the information you would like to hear about:
+          //-   p 
+          //-     input( type="checkbox" value="Rich" id="rich" ) 
+          //-     label( for="rich") I would like to here about the how the CSS Ninja can make me rich
+          //-   p 
+          //-     input( type="checkbox" value="Poor" id="poor" ) 
+          //-     label( for="poor") How the CSS Ninja can make me poor
+          //-   p 
+          //-     input( type="checkbox" value="Stop" id="stop" ) 
+          //-     label( for="stop") Please make the CSS Ninja stop from trying to make me rich or poor
+          //-   p 
+          //-     input( type="checkbox" value="Other" id="other3" ) 
+          //-     label( for="other3") Other
+            
+        div.desktop-12.preview-wrap
+          div.preview    
+            form.row             
+              fieldset(lang="he" dir="rtl")
+                legend Change direction for international text
+                
+                p Gender:
+                p 
+                  input( type="radio" value="male" id="male2" name="gender2" ) 
+                  label( for="male2") Male
+                p 
+                  input( type="radio" value="Female" id="female2" name="gender2" ) 
+                  label( for="female2") Female
+                
+                p Stuff you like:
+                p 
+                  input( type="checkbox" value="CSS3" id="css32" ) 
+                  label( for="css32") CSS3
+                p 
+                  input( type="checkbox" value="HTML5" id="html52" ) 
+                  label( for="html52") HTML5
+                p 
+                  input( type="checkbox" value="JavaScript" id="javascript2" ) 
+                  label( for="javascript2") JavaScript
+                p 
+                  input( type="checkbox" value="Other" id="other2" ) 
+                  label( for="other2") Other
 
-          
+          pre.markup
+            code.language-markup
 
             
           
