@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8">
-    <title>Slide</title>
+    <title>Messages ( messages)</title>
     <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,44 +21,6 @@
     <!--Highlighter-->
     <link rel="stylesheet" href="../vendors/pcolor/pcolor.css" type="text/css">
     <script text="text/javascript" src="../vendors/pcolor/pcolor.js"></script>
-    <script type="text/javascript" src="../js/components/slider.js"></script>
-    <link href="../css/components/slider.css" rel="stylesheet" type="text/css">
-    <style>
-      .main {
-      float: left;
-      width: 100%;
-      margin: 0 auto;
-      background: #161923;
-      }
-      
-      .clear {
-      width: auto;
-      }
-      
-      
-      
-      .page_container {
-      max-width: 960px;
-      margin: 50px auto;
-      }
-      
-      .immersive_slider .is-slide .content h2{
-      line-height: 140%;
-      font-weight: 100;
-      color: white;
-      font-weight: 100;
-      }
-      .immersive_slider .is-slide .content a {
-      color: white;
-      }
-      .immersive_slider .is-slide .content p{
-      float: left;
-      font-weight: 100;
-      width: 100%;
-      font-size: 17px;
-      margin-top: 5px;
-      }
-    </style>
   </head>
   <body>
     <div class="grid">
@@ -118,52 +79,64 @@
       </div>
     </div>
     <div class="grid">
-      <div class="desktop-12 tablet-6 mobile-3">
-        <h2 class="divide-section">Slider</h2>
-        <div class="main">
-          <div class="page_container">
-            <div id="immersive_slider">
-              <div data-blurred="../img/sliders/slide1_blurred.jpg" class="slide">
-                <div class="content">
-                  <h2><a href="http://www.bucketlistly.com" target="_blank">BucketListly</a></h2>
-                  <p>
-                    It’s never been easier to watch YouTube on the big screen
-                    Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.
-                  </p>
-                </div>
-                <div class="image"><a href="http://www.bucketlistly.com" target="_blank"><img src="img/slide1.jpg" alt="Slider 1"></a></div>
-              </div>
-              <div data-blurred="img/slide2_blurred.jpg" class="slide">
-                <div class="content">
-                  <h2><a href="http://www.bucketlistly.com/apps" target="_blank">BucketListly Apps</a></h2>
-                  <p>
-                    It’s never been easier to watch YouTube on the big screen
-                    Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.
-                  </p>
-                </div>
-                <div class="image"><a href="http://www.bucketlistly.com/apps" target="_blank"><img src="img/slide2.jpg" alt="Slider 2"></a></div>
-              </div>
-              <div data-blurred="img/slide3_blurred.jpg" class="slide">
-                <div class="content">
-                  <h2><a href="http://www.thepetedesign.com" target="_blank">The Pete Design</a></h2>
-                  <p>
-                    It’s never been easier to watch YouTube on the big screen
-                    Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.
-                  </p>
-                </div>
-                <div class="image"><a href="http://www.thepetedesign.com" target="_blank"><img src="img/slide3.jpg" alt="Slider 3"></a></div>
-              </div><a href="#" class="is-prev">«</a><a href="#" class="is-next">»</a>
+      <div class="row">
+        <div class="desktop-12">
+          <h1 class="divide-section">Messages </h1>
+          <p class="info">Defines styles for info, success, warning and error messages. </p>
+          <h2>Usage</h2>
+          <p>To apply this component, add the <code>.message</code> class to a block element.</p>
+          <hr>
+          <h3>Close button</h3>
+          <p>To apply a close button, add the <code>.message-close</code> class to a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code>  element inside the message box. To enable the JavaScript for the close button, just add the <code>data-message</code>  attribute to the message box. We recommend adding the <code>.close</code> class from the <a href="close.html">Close component</a> to give the button a proper styling, though you can also use text or an image.</p>
+        </div>
+        <div class="desktop-12 preview-wrap">
+          <div class="preview"> 
+            <h3>Example</h3>
+            <div class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
+          </div>
+          <pre class="markup"><code class="language-markup"></code></pre>
+        </div>
+        <div class="desktop-12 preview-wrap">
+          <div class="preview">
+            <h3>Example</h3>
+            <div data-message="" class="message"><a href="" class="message-close close"></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
           </div>
+          <pre class="markup"><code class="language-markup line-numbers"> </code></pre>
         </div>
-        <script type="text/javascript">
-          $(document).ready( function() {
-            $("#immersive_slider").immersive_slider({
-                container: ".main"
-            });
-          });
-          
-        </script>
+        <div class="desktop-12 preview-wrap">
+          <div class="preview">
+            <h2>Color modifiers</h2>
+            <p>There are several color modifiers available. Just add one of the following classes to apply a different look.</p>
+            <h3>Example</h3>
+            <div data-message="" class="message message-info"><a href="" class="message-close close"></a>
+              <p>To indicate info message add the <code>.message-info</code> class.</p>
+            </div>
+            <div data-message="" class="message message-success"><a href="" class="message-close close"></a>
+              <p>To indicate success or a positive message add the <code>.message-success</code> class.</p>
+            </div>
+            <div data-message="" class="message message-warning"><a href="" class="message-close close"></a>
+              <p>To indicate a message containing a warning add the <code>.message-warning</code> class.</p>
+            </div>
+            <div data-message="" class="message message-danger"><a href="" class="message-close close"></a>
+              <p>To indicate an important message add the <code>.message-danger</code> class.</p>
+            </div>
+          </div>
+          <pre class="markup"><code class="language-markup line-numbers"> </code></pre>
+        </div>
+        <div class="desktop-12 preview-wrap">
+          <div class="preview">
+            <h2>Size modifier</h2>
+            <p>Add the <code>.message-large</code> class to increase the spacing in an message box. This can be useful, if you want to use richer typography.</p>
+            <h3>Example</h3>
+            <div data-message="" class="message message-large"><a href="" class="message-close close"></a>
+              <h2>Today's headline</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+          <pre class="markup"><code class="language-markup line-numbers">          </code></pre>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,128 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Messages ( messages)
+
+    include header
+
+
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section Messages 
+          p.info Defines styles for info, success, warning and error messages. 
+          
+          h2 Usage
+          p
+            | To apply this component, add the 
+            code .message
+            |  class to a block element.
+          
+          hr
+          h3 Close button
+          p
+            | To apply a close button, add the 
+            code .message-close
+            |  class to a 
+            code= "<button>"
+            |  or 
+            code= "<a>"
+            |   element inside the message box. To enable the JavaScript for the close button, just add the 
+            code data-message
+            |   attribute to the message box. We recommend adding the 
+            code .close
+            |  class from the 
+            a(href='close.html') Close component
+            |  to give the button a proper styling, though you can also use text or an image.
+            
+        
+        div.desktop-12.preview-wrap
+          div.preview  
+            h3 Example
+            .message
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          pre.markup
+            code.language-markup
+
+        div.desktop-12.preview-wrap
+          div.preview
+            h3 Example
+            .message(data-message='')
+              a.message-close.close(href='')
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+          pre.markup
+            code.language-markup.line-numbers 
+
+
+        div.desktop-12.preview-wrap
+          div.preview
+            h2 Color modifiers
+            p
+              | There are several color modifiers available. Just add one of the following classes to apply a different look.
+            
+            h3 Example
+            
+            .message.message-info(data-message='')
+              a.message-close.close(href='')
+              p
+                | To indicate info message add the 
+                code .message-info
+                |  class.
+            
+
+            .message.message-success(data-message='')
+              a.message-close.close(href='')
+              p
+                | To indicate success or a positive message add the 
+                code .message-success
+                |  class.
+
+            
+            
+            .message.message-warning(data-message='')
+              a.message-close.close(href='')
+              p
+                | To indicate a message containing a warning add the 
+                code .message-warning
+                |  class.
+            .message.message-danger(data-message='')
+              a.message-close.close(href='')
+              p
+                | To indicate an important message add the 
+                code .message-danger
+                |  class.
+            
+          pre.markup
+            code.language-markup.line-numbers 
+
+
+        div.desktop-12.preview-wrap
+          div.preview
+
+            h2 Size modifier
+            p
+              | Add the 
+              code .message-large
+              |  class to increase the spacing in an message box. This can be useful, if you want to use richer typography.
+            
+            h3 Example
+            .message.message-large(data-message='')
+              a.message-close.close(href='')
+              h2 Today's headline
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              
+            
+          pre.markup
+            code.language-markup.line-numbers           
+          
+
+        

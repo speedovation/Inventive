@@ -1,0 +1,51 @@
+// taken from https://github.com/uikit/uikit/blob/master/dist/css/uikit.css
+.message 
+    background: none repeat scroll 0 0 #EFEFEF
+    border: 1px solid #ddd
+    border-radius: 4px
+    color: rgba(0, 0, 0, 0.6)
+    margin-bottom: 15px
+    padding: 10px
+    text-shadow: 0 1px 0 #FFFFFF
+
+//IE HACK
+// * + .message 
+//     margin-top: 15px
+// 
+.message > *:last-child 
+    margin: 0
+
+.message h1, .message h2, .message h3, .message h4, .message h5, .message h6 
+    color: inherit
+
+.message > .uk-close:first-child 
+    float: right
+
+.message > .uk-close:first-child + * 
+    margin: 0
+
+.message-info
+    background: none repeat scroll 0 0 #EBF7FD
+    border-color: rgba(45, 112, 145, 0.3)
+    color: #2D7091
+
+.message-success 
+    background: none repeat scroll 0 0 #F2FAE3
+    border-color: rgba(101, 159, 19, 0.3)
+    color: #659F13
+
+.message-warning 
+    background: none repeat scroll 0 0 #FFFCEB
+    border-color: rgba(226, 131, 39, 0.3)
+    color: #E28327
+
+.message-danger 
+    background: none repeat scroll 0 0 #FFF1F0
+    border-color: rgba(216, 80, 48, 0.3)
+    color: #D85030
+
+.message-large 
+    padding: 20px
+
+.message-large > .uk-close:first-child 
+    margin: -10px -10px 0 0
