@@ -1,0 +1,115 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Messages ( messages)
+
+    include header
+
+
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section Badges
+          p.info Easlily create nicely looking badges to label and highlight your content.
+          
+          h2.divide-section Usage
+          p
+            | To create a badge, just add the 
+            code .badge
+            |  class to a 
+            code= "<div>"
+            |  or 
+            code= "<span>"
+            |  element.
+  
+        .desktop-12
+          .preview-wrap
+            .preview  
+              p
+                ="\n" 
+                span.badge Info
+                | 
+                ="\n" 
+                span.badge New
+                | 
+                ="\n"  
+                span.badge Free
+                
+            pre.markup
+              code.language-markup
+
+          h2.divide-section Modifiers
+          p
+              | To display badges in a different style, just add modifier classes to the
+              code .badge
+              | class. These modifiers can be combined with each other.
+          h3 Round
+          p
+              | Add the
+              code .badge-round
+              | class to indicate a round, typically it is used with numbers. 
+         
+
+          .preview-wrap
+            .preview 
+              p
+                span.badge.badge-round 1
+                | 
+                span.badge.badge-round 2
+                | 
+                span.badge.badge-round 3
+                | 
+                span.badge.badge-round 10
+                | 
+                span.badge.badge-round 100
+                |         
+            
+            pre.markup
+              code.language-markup
+
+
+          h3 Color Modifier
+          p
+            | Add the
+            code .badge-success
+            | ,
+            code .badge-warning
+            | or
+            code .badge-danger
+            | class for additional colors. 
+          .preview-wrap
+            .preview  
+
+              p
+                span.badge.badge-info Info
+                | 
+                span.badge.badge-success Success
+                | 
+                span.badge.badge-warning Warning
+                | 
+                span.badge.badge-danger Danger
+                | 
+              p
+                span.badge.badge-round.badge-success 1
+                | 
+                span.badge.badge-round.badge-success 10
+                | 
+                span.badge.badge-round.badge-warning 1
+                | 
+                span.badge.badge-round.badge-warning 10
+                | 
+                span.badge.badge-round.badge-danger 1
+                | 
+                span.badge.badge-round.badge-danger 10
+                | 
+            
+            pre.markup
+              code.language-markup

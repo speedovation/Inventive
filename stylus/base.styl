@@ -42,13 +42,22 @@
 
 
 //@import "reset"
-@import "normalize"
-@import "base/_typography"
+@import "base/normalize"
+@import "base/typography"
 @import "helpers"
 @import "grid/grid-12"
 @import "grid/grid-16"
-@import "messages"
-@import "close"
+
+@import "components/nav"
+@import "components/subnav"
+@import "components/close"
+@import "components/messages"
+@import "components/badge"
+@import "components/thumbnail"
+@import "components/pagination"
+@import "components/breadcrumb"
+@import "components/progress"
+
 
 
 
@@ -257,7 +266,7 @@ abbr[title]
     left: -1px;
     padding: 3px 7px;
     position: absolute;
-    top: -1px;
+    top: -8.2%;
     max-height 24px   
 
 .markup,.preview
@@ -274,6 +283,7 @@ abbr[title]
     margin 0 0 2rem 0 !important
     width 100% !important
     position relative
+    float left
 
 .preview-wrap:after
     background-color: #F7F7F7;
@@ -294,6 +304,13 @@ abbr[title]
 .preview-wrap pre
     background-color transparent
     border none
+    padding-left 1.5%
+    margin-top 2.5%
+
+.preview-wrap pre code
+    padding 0
+    //margin-left: 1.92rem;
+    //margin-top: 1.2rem;    
     
 
 .preview    
@@ -305,6 +322,7 @@ abbr[title]
     content "PREVIEW"
     max-width: 64px;
     left: -1px;
+    top -1px
 
 // @media untilmobile
 //     .preview

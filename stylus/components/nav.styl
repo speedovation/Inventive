@@ -1,0 +1,295 @@
+/* ========================================================================
+Component: Nav
+========================================================================== */
+.nav,
+.nav ul 
+  margin: 0
+  padding: 0
+  list-style: none
+
+/*
+* Items
+*/
+.nav li > a 
+  display: block
+  text-decoration: none
+
+.nav > li > a 
+  padding: 5px 15px
+
+/*
+* Nested items
+*/
+.nav ul 
+  padding-left: 15px
+
+.nav ul a 
+  padding: 2px 0
+
+/*
+* Item subtitle
+*/
+.nav li > a > div 
+  font-size: 12px
+  line-height: 18px
+
+/* Sub-object: `nav-header`
+========================================================================== */
+.nav-header 
+  padding: 5px 15px
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 12px
+
+.nav-header:not(:first-child) 
+  margin-top: 15px
+
+/* Sub-object: `nav-divider`
+========================================================================== */
+.nav-divider 
+  margin: 9px 15px
+
+/* Sub-object: `nav-sub`
+========================================================================== */
+/*
+* `ul` needed for higher specificity to override padding
+*/
+ul.nav-sub 
+  padding: 5px 0 5px 15px
+
+/* Modifier: `nav-parent-icon`
+========================================================================== */
+.nav-parent-icon > .parent > a:after 
+  content: "\f104"
+  width: 20px
+  margin-right: -10px
+  float: right
+  font-family: FontAwesome
+  text-align: center
+
+.nav-parent-icon > .parent.open > a:after 
+  content: "\f107"
+
+/* Modifier `nav-side`
+========================================================================== */
+/*
+* Items
+*/
+.nav-side > li > a 
+  color: #444444
+
+/*
+* Hover
+* 1. Apply hover style also to focus state
+* 2. Remove default focus style
+*/
+.nav-side > li > a:hover,
+.nav-side > li > a:focus 
+  /* 1 */
+  background: rgba(0, 0, 0, 0.05)
+  color: #444444
+  outline: none
+  /* 2 */
+
+/* Active */
+.nav-side > li.active > a 
+  background: #00a8e6
+  color: #ffffff
+
+/*
+* Sub-object: `nav-header`
+*/
+.nav-side .nav-header 
+  color: #444444
+
+/*
+* Sub-object: `nav-divider`
+*/
+.nav-side .nav-divider 
+  border-top: 1px solid #dddddd
+
+/*
+* Nested items
+*/
+.nav-side ul a 
+  color: #0077dd
+
+.nav-side ul a:hover 
+  color: #005599
+
+/* Modifier `nav-dropdown`
+========================================================================== */
+/*
+* Items
+*/
+.nav-dropdown > li > a 
+  color: #444444
+
+/*
+* Hover
+* 1. Apply hover style also to focus state
+* 2. Remove default focus style
+*/
+.nav-dropdown > li > a:hover,
+.nav-dropdown > li > a:focus 
+  /* 1 */
+  background: #00a8e6
+  color: #ffffff
+  outline: none
+  /* 2 */
+
+/*
+* Sub-object: `nav-header`
+*/
+.nav-dropdown .nav-header 
+  color: #999999
+
+/*
+* Sub-object: `nav-divider`
+*/
+.nav-dropdown .nav-divider 
+  border-top: 1px solid #dddddd
+
+/*
+* Nested items
+*/
+.nav-dropdown ul a 
+  color: #0077dd
+
+.nav-dropdown ul a:hover 
+  color: #005599
+
+/* Modifier `nav-navbar`
+========================================================================== */
+/*
+* Items
+*/
+.nav-navbar > li > a 
+  color: #444444
+
+/*
+* Hover
+* 1. Apply hover style also to focus state
+* 2. Remove default focus style
+*/
+.nav-navbar > li > a:hover,
+.nav-navbar > li > a:focus 
+  /* 1 */
+  background: #00a8e6
+  color: #ffffff
+  outline: none
+  /* 2 */
+
+/*
+* Sub-object: `nav-header`
+*/
+.nav-navbar .nav-header 
+  color: #999999
+
+/*
+* Sub-object: `nav-divider`
+*/
+.nav-navbar .nav-divider 
+  border-top: 1px solid #dddddd
+
+/*
+* Nested items
+*/
+.nav-navbar ul a 
+  color: #0077dd
+
+.nav-navbar ul a:hover 
+  color: #005599
+
+/* Modifier `nav-search`
+========================================================================== */
+/*
+* Items
+*/
+.nav-search > li > a 
+  color: #444444
+
+/*
+* Active
+* 1. Remove default focus style
+*/
+.nav-search > li.active > a 
+  background: #00a8e6
+  color: #ffffff
+  outline: none
+  /* 2 */
+
+/*
+* Sub-object: `nav-header`
+*/
+.nav-search .nav-header 
+  color: #999999
+
+/*
+* Sub-object: `nav-divider`
+*/
+.nav-search .nav-divider 
+  border-top: 1px solid #dddddd
+
+/*
+* Nested items
+*/
+.nav-search ul a 
+  color: #0077dd
+
+.nav-search ul a:hover 
+  color: #005599
+
+/* Modifier `nav-offcanvas`
+========================================================================== */
+/*
+* Items
+*/
+.nav-offcanvas > li > a 
+  color: #cccccc
+  padding: 10px 15px
+
+/*
+* Hover
+* No hover on touch devices because it behaves buggy in fixed offcanvas
+* 1. Apply hover style also to focus state
+* 2. Remove default focus style
+*/
+.nav-offcanvas > .open > a,
+html:not(.touch) .nav-offcanvas > li > a:hover,
+html:not(.touch) .nav-offcanvas > li > a:focus 
+  /* 1 */
+  background: #404040
+  color: #ffffff
+  outline: none
+  /* 2 */
+
+/*
+* Active
+* `html .nav` needed for higher specificity to override hover
+*/
+html .nav.nav-offcanvas > li.active > a 
+  background: #1a1a1a
+  color: #ffffff
+
+/*
+* Sub-object: `nav-header`
+*/
+.nav-offcanvas .nav-header 
+  color: #777777
+
+/*
+* Sub-object: `nav-divider`
+*/
+.nav-offcanvas .nav-divider 
+  border-top: 1px solid #1a1a1a
+
+/*
+* Nested items
+* No hover on touch devices because it behaves buggy in fixed offcanvas
+*/
+.nav-offcanvas ul a 
+  color: #cccccc
+
+html:not(.touch) .nav-offcanvas ul a:hover 
+  color: #ffffff

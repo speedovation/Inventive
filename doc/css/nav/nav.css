@@ -22,7 +22,10 @@ dummy(col) {
 #nav li a:active {
   background-color: #c00 !important;
 }
-#nav span:after {
+#nav a.dropdown {
+  position: relative;
+}
+#nav a.dropdown:after {
   width: 0;
   height: 0;
   top: 45%;

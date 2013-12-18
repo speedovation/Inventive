@@ -1,0 +1,124 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Messages ( messages)
+
+    include header
+
+
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section Subnav
+          p.info Defines different styles for a sub navigation.
+          
+          h2 Usage
+          p
+            | To apply this component, add the 
+            code .subnav
+            |  class to an 
+            code= "<ul>"
+            |  element and nest 
+            code= "<a>"
+            |  elements within the list. Use a 
+            code= "<span>"
+            |  element instead to disable the item. 
+
+          h3.tm-article-subtitle Example
+          
+          ul.subnav
+            li
+              a(href='#') Item
+            li
+              a(href='#') Item
+            li
+              span Disabled
+            li
+              a(href='#') Item
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Modifiers
+          h3 Subnav line
+          p
+            | Add the
+            code .subnav-line
+            | class to separate menu items with lines.
+          h4.tm-article-subtitle Example
+          ul.subnav.subnav-line
+            li
+              a(href='#') Item
+            li
+              a(href='#') Item
+            li
+              span Disabled
+            li
+              a(href='#') Item
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Subnav pill
+          p
+            | Add the
+            code .subnav-pill
+            | class to highlight the active menu item with a background. To apply an active state to a menu item, just add the
+            code .active
+            | class.
+          h4.tm-article-subtitle Example
+          ul.subnav.subnav-pill
+            li.active
+              a(href='#') Active
+            li
+              a(href='#') Item
+            li
+              span Disabled
+            li
+              a(href='#') Item
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Subnav with dropdowns
+          p
+            | This is an example of how to use a subnav with the
+            a(href='dropdown.html') Dropdown component
+            | .
+          h4.tm-article-subtitle Example
+          ul.subnav.subnav-pill
+            li.active
+              a(href='#') Active
+            li
+              a(href='#') Item
+            li
+              span Disabled
+            li(data-dropdown='{mode:"click"}')
+              a(href='#')
+                | More
+                i.icon-caret-down
+              .dropdown.dropdown-small(style='')
+                ul.nav.nav-dropdown
+                  li
+                    a(href='#') Item
+                  li
+                    a(href='#') Another item
+                  li.nav-header Header
+                  li
+                    a(href='#') Item
+                  li
+                    a(href='#') Another item
+                  li.nav-divider
+                  li
+                    a(href='#') Separated item
+          h4.tm-article-subtitle Markup
+          pre.
+            

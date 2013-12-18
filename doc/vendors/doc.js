@@ -26,11 +26,19 @@ $(function() {
     //$('pre code').html(htmlEscape(content));
 
 
-    $( "pre code" ).each(function() {
-//            alert($(this).html())
+    $( "pre code" ).each(function(i,e) {
+            //alert($(this).html())
             var html =  $(this).parent().prev('.preview').html();
+            // if(html)
+            //     html = html.replace(/\s{4}/g,'' ).replace(/   \n/g,'' ); 
+            // else
+            //     html = $(this).html();
 
-            return $(this).html( htmlEscape(html) );
+            $(this).html( htmlEscape(html) );
+            //hljs.highlightBlock(e)
+
         });
 
 });
+
+

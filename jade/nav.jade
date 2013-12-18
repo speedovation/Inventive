@@ -1,20 +1,412 @@
 !!! 5
-html
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
   head
-    title Cutting Deals
     
+    title Messages ( messages)
+
     include header
 
-    style
 
-    
+
   body
 
     include _nav
 
     .grid
       .row
-        .desktop-12.tablet-6.mobile-3
-          h2 The above menu is live demo of Nav 
 
+        div.desktop-12
+
+          h1.divide-section Nav
+          p.info Defines different styles for list navigations.
+          h2 Usage
+          p
+            | To apply this component, add the 
+            code .nav
+            |  class to an 
+            code= "<ul>"
+            |  element. Use 
+            code= "<a>"
+            |  elements as menu items within the list. To apply an active state to a menu item, just add the 
+            code .active
+            |  class.
+          h3.tm-article-subtitle Example
+          .width-medium-1-3
+            ul.nav.nav-side
+              li.active
+                a(href='#') Active
+              li
+                a(href='#') Item
+              li
+                a(href='#') Item
+          p
+            span.badge.badge-info NOTE
+            | By default, the nav has no styling. That's why it is important to add a modifier class to give it some styling. In our examples we used the
+            code .nav-side
+            | class.
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Nested navs
+          p
+            | You can easily add any number of
+            code= "<ul>"
+            | elements to your nav.
           
+          table.table.rounded
+            thead
+              tr
+                th Class
+                th Description
+            tbody
+              tr
+                td
+                  code .nav-sub
+                td
+                  | Add this class to the first nested
+                  code= "<ul>"
+                  | for optimized spacing.
+              tr
+                td
+                  code .parent
+                td Add this class to indicate a parent menu item.
+              tr
+                td
+                  code .nav-parent-icon
+                td Add this class to the nav to add icons, indicating parent items.
+          
+
+          h4.tm-article-subtitle Example
+          .width-medium-1-3
+            ul.nav.nav-side.nav-parent-icon
+              li.active
+                a(href='') Active
+              li.parent.open
+                a(href='#') Parent
+                ul.nav-sub
+                  li
+                    a(href='') Sub item
+                  li
+                    a(href='') Sub item
+                    ul
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Accordion
+          p
+            | By default child menu items are always visible. To apply the accordion effect, just add the
+            code data-nav
+            | attribute to the main
+            code= "<ul>"
+            | . When clicking on a parent item, an open one will close, allowing only one open nested list at a time. To avoid this behavior, just append
+            code {multiple:true}
+            | to the data attribute.
+          h3.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-2
+              p
+                code data-nav
+              ul.nav.nav-side.nav-parent-icon.width-medium-2-3(data-nav='')
+                li.active
+                  a(href='') Active
+                li
+                  a(href='') Item
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+                        ul
+                          li
+                            a(href='') Sub item
+                          li
+                            a(href='') Sub item
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+            .width-medium-1-2
+              p
+                code data-nav="{multiple:true}"
+              ul.nav.nav-side.nav-parent-icon.width-medium-2-3(data-nav='{multiple:true}')
+                li.active
+                  a(href='') Active
+                li
+                  a(href='') Item
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+                        ul
+                          li
+                            a(href='') Sub item
+                          li
+                            a(href='') Sub item
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+          h3.tm-article-subtitle Markup
+          .grid(data-grid-margin='')
+            .width-medium-1-2
+              pre.
+                
+            .width-medium-1-2
+              pre.
+                
+          hr.article-divider
+          h3 Header and divider
+          p
+            | Add one of the following classes to a list item to create a header or a divider between items.
+          table.table
+            thead
+              tr
+                th Class
+                th Description
+            tbody
+              tr
+                td
+                  code .nav-header
+                td
+                  | Add this class to a
+                  code= "<li>"
+                  | element to create a header.
+              tr
+                td
+                  code .nav-divider
+                td
+                  | Add this class to a
+                  code= "<li>"
+                  | element to create a divider separating menu items.
+          p
+            span.badge NOTE
+            | You can also add subtitles to nav items. Just create a
+            code= "<div>"
+            | element inside the
+            code= "<a>"
+            | element within the list item.
+          h4.tm-article-subtitle Example
+          .width-medium-1-3
+            ul.nav.nav-side(data-nav='')
+              li.nav-header Header
+              li
+                a(href='')
+                  | Item
+                  div Subtitle
+              li
+                a(href='') Item
+              li.nav-divider
+              li
+                a(href='') Item
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Style modifiers
+          p
+            | There are several modifiers to style the nav according to the context, in which it is used.
+          h3 Nav side
+          p
+            | Add the
+            code .nav-side
+            | class to place a nav inside your sidebar, panels or anywhere else in your content.
+          h4.tm-article-subtitle Example
+          .width-medium-1-3
+            .panel.panel-box
+              h3.panel-title Nav side in panel
+              ul.nav.nav-side.nav-parent-icon(data-nav='')
+                li.active
+                  a(href='') Active
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+                        ul
+                          li
+                            a(href='') Sub item
+                          li
+                            a(href='') Sub item
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+                li
+                  a(href='') Item
+                li.nav-header Header
+                li.parent
+                  a(href='')
+                    i.icon-star
+                    | Parent
+                li
+                  a(href='')
+                    i.icon-twitter
+                    | Item
+                li.nav-divider
+                li
+                  a(href='')
+                    i.icon-rss
+                    | Item
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Nav dropdown
+          p
+            | Add the
+            code .nav-dropdown
+            | class to place a nav inside a default dropdown from the
+            a(href='dropdown.html') Dropdown component
+            | .
+          h4.tm-article-subtitle Example
+          .button-dropdown(data-dropdown='')
+            button.button
+              | Dropdown
+              i.icon-caret-down
+            .dropdown.dropdown-small
+              ul.nav.nav-dropdown
+                li
+                  a(href='#') Item
+                li
+                  a(href='#') Another item
+                li.nav-header Header
+                li
+                  a(href='#') Item
+                li
+                  a(href='#') Another item
+                li.nav-divider
+                li
+                  a(href='#') Separated item
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Nav navbar
+          p
+            | Add the
+            code .nav-navbar
+            | class to place the nav inside a navbar dropdown from the
+            a(href='navbar.html') Navbar component
+            | .
+          h4.tm-article-subtitle Example
+          nav.navbar
+            ul.navbar-nav
+              li.parent(data-dropdown='')
+                a(href='') Parent
+                .dropdown.dropdown-navbar
+                  ul.nav.nav-navbar
+                    li
+                      a(href='#') Item
+                    li
+                      a(href='#') Another item
+                    li.nav-header Header
+                    li
+                      a(href='#') Item
+                    li
+                      a(href='#') Another item
+                    li.nav-divider
+                    li
+                      a(href='#') Separated item
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Nav search
+          p
+            | Add the
+            code .nav-search
+            | class to place the nav inside a dropdown showing search results from the
+            a(href='search.html') Search component
+            | . By default, the search JavaScript injects the nav automatically, so it doesn't need to be set manually.
+          h4.tm-article-subtitle Example
+          form.search(data-search='{source:"../vendor/searchresults.json"}')
+            input.search-field(placeholder='search...', type='search')
+            button.search-close(type='reset')
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Nav off-canvas
+          p
+            | Add the
+            code .nav-offcanvas
+            | class to place the nav inside an off-canvas sidebar from the
+            a(href='offcanvas.html') Off-canvas component
+            | .
+          h4.tm-article-subtitle Example
+          button.button(data-offcanvas='{target:"#offcanvas-1"}') Off-canvas
+          #offcanvas-1.offcanvas
+            .offcanvas-bar
+              ul.nav.nav-offcanvas.nav-parent-icon(data-nav='')
+                li
+                  a(href='') Item
+                li.active
+                  a(href='') Active
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+                        ul
+                          li
+                            a(href='') Sub item
+                          li
+                            a(href='') Sub item
+                li.parent
+                  a(href='#') Parent
+                  div(style='overflow: hidden; height: 0; position: relative;')
+                    ul.nav-sub
+                      li
+                        a(href='') Sub item
+                      li
+                        a(href='') Sub item
+                li
+                  a(href='') Item
+                li.nav-header Header
+                li.parent
+                  a(href='')
+                    i.icon-star
+                    | Parent
+                li
+                  a(href='')
+                    i.icon-twitter
+                    | Item
+                li.nav-divider
+                li
+                  a(href='')
+                    i.icon-rss
+                    | Item
+          h4.tm-article-subtitle Markup
+          pre.
+            

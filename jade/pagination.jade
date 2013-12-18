@@ -1,0 +1,204 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Messages ( messages)
+
+    include header
+
+
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section  Pagination
+          p.article-lead Easlily create a nicely looking pagination to navigate through pages.
+          h2 Usage
+          p
+            | The Pagination component consists of button-like styled links, that are aligned side by side.
+          table.table
+            thead
+              tr
+                th Class
+                th Description
+            tbody
+              tr
+                td
+                  code .pagination
+                td
+                  | Add this class to a
+                  code <ul>
+                  | element to define the Pagination component. Use
+                  code <a>
+                  | elements as pagination items within the list.
+              tr
+                td
+                  code .active
+                td
+                  | Add this class to a list item to apply an active state and use a
+                  code <span>
+                  | instead of an
+                  code <a>
+                  | element.
+              tr
+                td
+                  code .disabled
+                td
+                  | Add this class to a list item to apply a disabled state and use a
+                  code <span>
+                  | instead of an
+                  code <a>
+                  | element.
+          p
+            | To apply an ellipsis without any styling, just use a
+            code <span>
+            | element instead of an
+            code <a>
+            | element.
+          h3.tm-article-subtitle Example
+          ul.pagination
+            li.disabled
+              span
+                i.icon-angle-double-left
+            li.active
+              span 1
+            li
+              a(href='#') 2
+            li
+              a(href='#') 3
+            li
+              a(href='#') 4
+            li
+              span ...
+            li
+              a(href='#') 20
+            li
+              a(href='#')
+                i.icon-angle-double-right
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Alignment modifiers
+          p
+            | Add the
+            code .pagination-left
+            | or
+            code .pagination-right
+            | class to the pagination to align it left or right.
+          h4.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-2
+              ul.pagination.pagination-left
+                li
+                  a(href='#') 1
+                li
+                  span ...
+                li
+                  a(href='#') 8
+                li
+                  a(href='#') 9
+                li.active
+                  span 10
+                li
+                  a(href='#') 11
+                li
+                  a(href='#') 12
+                li
+                  span ...
+                li
+                  a(href='#') 20
+            .width-medium-1-2
+              ul.pagination.pagination-right
+                li
+                  a(href='#') 1
+                li
+                  span ...
+                li
+                  a(href='#') 8
+                li
+                  a(href='#') 9
+                li.active
+                  span 10
+                li
+                  a(href='#') 11
+                li
+                  a(href='#') 12
+                li
+                  span ...
+                li
+                  a(href='#') 20
+          h3.tm-article-subtitle Markup
+          .grid(data-grid-margin='')
+            .width-medium-1-2
+              pre.
+                
+            .width-medium-1-2
+              pre.
+                
+          hr.article-divider
+          h2 Previous and next
+          p
+            | Creating a simple previous and next pagination is very easy. Just add the
+            code .pagination-previous
+            | or
+            code .pagination-next
+            | class to a
+            code <li>
+            | element to align previous and next buttons left or right.
+          h4.tm-article-subtitle Example
+          ul.pagination
+            li.pagination-previous
+              a(href='#')
+                i.icon-angle-double-left
+                | Previous
+            li.pagination-next
+              a(href='#')
+                | Next
+                i.icon-angle-double-right
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Pagination with icons
+          p
+            | Enhance your pagination with icons from the
+            a(href='icon.html') Icon component
+            | by adding one of the
+            code .icon-*
+            | classes to an
+            code <i>
+            | or
+            code <span>
+            | element within a pagination link.
+          h3.tm-article-subtitle Example
+          ul.pagination
+            li
+              a(href='#')
+                i.icon-angle-double-left
+            li.active
+              span
+                i.icon-angle-double-left
+            li.disabled
+              span
+                i.icon-angle-double-left
+            li
+              span ...
+            li.disabled
+              span
+                i.icon-angle-double-right
+            li.active
+              span
+                i.icon-angle-double-right
+            li
+              a(href='#')
+                i.icon-angle-double-right
+          h3.tm-article-subtitle Markup
+          pre.
+            

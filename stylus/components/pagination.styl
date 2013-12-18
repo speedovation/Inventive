@@ -1,0 +1,114 @@
+
+/* ========================================================================
+Component: Pagination
+========================================================================== */
+/*
+* 1. Remove default list style
+* 2. Center pagination by default
+* 3. Remove whitespace between child elements when using `inline-block`
+*/
+.pagination 
+  /* 1 */
+  padding: 0
+  list-style: none
+  /* 2 */
+  text-align: center
+  /* 3 */
+  letter-spacing: -0.31em
+
+/*
+* Micro clearfix
+* Needed if `pagination-previous` or `pagination-next` sub-objects are used
+*/
+.pagination:before,
+.pagination:after 
+  content: " "
+  display: table
+
+.pagination:after 
+  clear: both
+
+/* Items
+========================================================================== */
+/*
+* 1. Reset whitespace hack
+*/
+.pagination > li 
+  display: inline-block
+  letter-spacing: normal
+  /* 1 */
+
+.pagination > li:nth-child(n+2) 
+  margin-left: 5px
+
+/*
+* 1. Makes pagination more robust against different box-sizing use
+* 2. Reset text-align to center if alignment modifier is used
+*/
+.pagination > li > a,
+.pagination > li > span 
+  -moz-box-sizing: content-box
+  box-sizing: content-box
+  /* 1 */
+  display: inline-block
+  min-width: 16px
+  padding: 3px 5px
+  line-height: 20px
+  text-decoration: none
+  text-align: center
+  /* 2 */
+
+/*
+* Links
+*/
+.pagination > li > a 
+  background: #eeeeee
+  color: #444444
+
+/*
+* Hover
+* 1. Apply hover style also to focus state
+* 2. Remove default focus style
+*/
+.pagination > li > a:hover,
+.pagination > li > a:focus 
+  /* 1 */
+  background-color: #f5f5f5
+  color: #444444
+  outline: none
+  /* 2 */
+
+/* OnClick */
+.pagination > li > a:active 
+  background-color: #dddddd
+  color: #444444
+
+/*
+* Active
+*/
+.pagination > .active > span 
+  background: #00a8e6
+  color: #ffffff
+
+/*
+* Disabled
+*/
+.pagination > .disabled > span 
+  background-color: #f5f5f5
+  color: #999999
+
+/* Previous and next navigation
+========================================================================== */
+.pagination-previous 
+  float: left
+
+.pagination-next 
+  float: right
+
+/* Alignment modifiers
+========================================================================== */
+.pagination-left 
+  text-align: left
+
+.pagination-right 
+  text-align: right

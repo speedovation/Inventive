@@ -1,0 +1,67 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Messages ( messages)
+
+    include header
+
+
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section  Breadcrumb
+          p.article-lead Create breadcrumbs to show users their location within a website.
+          h2 Usage
+          p
+            | The Breadcrumb component consists of links which are aligned side by side and separated by a divider.
+          table.table
+            thead
+              tr
+                th Class
+                th Description
+            tbody
+              tr
+                td
+                  code .breadcrumb
+                td
+                  | Add this class to a
+                  code <ul>
+                  | element to define the Breadcrumb component. Use
+                  code <a>
+                  | elements as breadcrumb items within the list.
+              tr
+                td
+                  code .active
+                td
+                  | Add this class to a list item to apply an active state and use a
+                  code <span>
+                  | instead of an
+                  code <a>
+                  | element.
+          p
+            | Use a
+            code <span>
+            | instead of an
+            code <a>
+            | element to disable a breadcrumb item.
+          h3.tm-article-subtitle Example
+          ul.breadcrumb
+            li
+              a(href='#') Home
+            li
+              a(href='#') Blog
+            li
+              span Category
+            li.active
+              span Post
+          h3.tm-article-subtitle Markup
+          pre.
+            

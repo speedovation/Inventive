@@ -1,0 +1,115 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Messages ( messages)
+
+    include header
+
+
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section Progress
+          p.info Defines different styles for progress bars.
+          h2 Usage
+          p
+            | The progress bar consists of a background bar and the progress bar itself, indicating the increase.
+          table.table
+            thead
+              tr
+                th Class
+                th Description
+            tbody
+              tr
+                td
+                  code .progress
+                td
+                  | This class is used on the parent container to create the background of the progress bar.
+              tr
+                td
+                  code .progress-bar
+                td
+                  | This class needs to be added to the child element to create the actual progress bar.
+          h3.tm-article-subtitle Example
+          .progress
+            .progress-bar(style='width: 40%;') 40%
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Size modifiers
+          p
+            | Add the
+            code .progress-mini
+            | or
+            code .progress-small
+            | class to change the size of the bar.
+          h3.tm-article-subtitle Example
+          .progress.progress-mini
+            .progress-bar(style='width: 50%;')
+          .progress.progress-small
+            .progress-bar(style='width: 55%;')
+          .progress
+            .progress-bar(style='width: 60%;')
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Color modifiers
+          p
+            | To apply different colors to your progress bars, just add the
+            code .progress-success
+            | ,
+            code .progress-warning
+            | or
+            code .progress-danger
+            | class.
+          h4.tm-article-subtitle Example
+          .progress.progress-success
+            .progress-bar(style='width: 75%;')
+          .progress.progress-warning
+            .progress-bar(style='width: 55%;')
+          .progress.progress-danger
+            .progress-bar(style='width: 35%;')
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Striped
+          p
+            | To create a striped progress bar, use the
+            code .striped
+            | class.
+          h4.tm-article-subtitle Example
+          .progress.progress-striped
+            .progress-bar(style='width: 65%;')
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          p
+            | You can even animate the striped bar. To do so, just add the
+            code .active
+            | class.
+          h4.tm-article-subtitle Example
+          .progress.progress-striped.active
+            .progress-bar(style='width: 85%;')
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Combinable
+          p All modifiers of the Progress component can be combined with each other.
+          h4.tm-article-subtitle Example
+          .progress.progress-small.progress-danger.progress-striped.active
+            .progress-bar(style='width: 55%;')
+          h3.tm-article-subtitle Markup
+          pre.
+            

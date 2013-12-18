@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Cutting Deals</title>
+    <title>Messages ( messages)</title>
     <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -21,7 +21,9 @@
     <!--Highlighter-->
     <link rel="stylesheet" href="../vendors/pcolor/pcolor.css" type="text/css">
     <script text="text/javascript" src="../vendors/pcolor/pcolor.js"></script>
-    <style></style>
+    <!--<link rel="stylesheet" href="../vendors/jshighlight/styles/default.css">-->
+    <!--<script src="../vendors/jshighlight/highlight.pack.js"></script>-->
+    <!--<script>//hljs.initHighlightingOnLoad();</script>-->
   </head>
   <body>
     <div class="grid">
@@ -42,14 +44,21 @@
                     <li><a href="forms.html">Forms</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
                     <li><a href="nav.html">Navigation</a></li>
-                    <li><a href="tabs.html">Tabs & Accordions</a></li>
-                    <li><a href="herotabs.html">Hero Tabs & Sliders </a></li>
                     <li><a href="tooltips.html">Tooltips</a></li>
                     <li><a href="messages.html">Messages</a></li>
+                    <li><a href="badge.html">Badges  </a></li>
+                    <li><a href="thumbnail.html">Thumbnail </a></li>
+                    <li><a href="subnav.html">Subnav</a></li>
+                    <li><a href="breadcrumb.html">Breadcrumb </a></li>
+                    <li><a href="pagination.html">Pagination</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="search.html">Search          </a></li>
                   </ul>
                 </li>
-                <li><a href="sliders.html"><span>Components</span></a>
+                <li><a href="sliders.html" class="dropdown"><span>Components</span></a>
                   <ul>
+                    <li><a href="tabs.html">Tabs & Accordions</a></li>
+                    <li><a href="herotabs.html">Hero Tabs & Sliders </a></li>
                     <li><a href="sliders.html">Sliders</a></li>
                     <li><a href="sidemenu.html">SideMenu   </a></li>
                     <li><a href="colorpicker.html">ColorPicker</a></li>
@@ -81,8 +90,310 @@
     </div>
     <div class="grid">
       <div class="row">
-        <div class="desktop-12 tablet-6 mobile-3">
-          <h2>The above menu is live demo of Nav </h2>
+        <div class="desktop-12">
+          <h1 class="divide-section">Nav</h1>
+          <p class="info">Defines different styles for list navigations.</p>
+          <h2>Usage</h2>
+          <p>To apply this component, add the <code>.nav</code> class to an <code>&lt;ul&gt;</code> element. Use <code>&lt;a&gt;</code> elements as menu items within the list. To apply an active state to a menu item, just add the <code>.active</code> class.</p>
+          <h3 class="tm-article-subtitle">Example</h3>
+          <div class="width-medium-1-3">
+            <ul class="nav nav-side">
+              <li class="active"><a href="#">Active</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </div>
+          <p><span class="badge badge-info">NOTE</span>By default, the nav has no styling. That's why it is important to add a modifier class to give it some styling. In our examples we used the<code>.nav-side</code>class.</p>
+          <h3 class="tm-article-subtitle">Markup</h3>
+          <pre></pre>
+          <hr class="article-divider">
+          <h3>Nested navs</h3>
+          <p>You can easily add any number of<code>&lt;ul&gt;</code>elements to your nav.</p>
+          <table class="table rounded">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.nav-sub</code></td>
+                <td>Add this class to the first nested<code>&lt;ul&gt;</code>for optimized spacing.</td>
+              </tr>
+              <tr>
+                <td><code>.parent</code></td>
+                <td>Add this class to indicate a parent menu item.</td>
+              </tr>
+              <tr>
+                <td><code>.nav-parent-icon</code></td>
+                <td>Add this class to the nav to add icons, indicating parent items.</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 class="tm-article-subtitle">Example</h4>
+          <div class="width-medium-1-3">
+            <ul class="nav nav-side nav-parent-icon">
+              <li class="active"><a href="">Active</a></li>
+              <li class="parent open"><a href="#">Parent</a>
+                <ul class="nav-sub">
+                  <li><a href="">Sub item</a></li>
+                  <li><a href="">Sub item</a>
+                    <ul>
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <h4 class="tm-article-subtitle">Markup</h4>
+          <pre></pre>
+          <hr class="article-divider">
+          <h3>Accordion</h3>
+          <p>By default child menu items are always visible. To apply the accordion effect, just add the<code>data-nav</code>attribute to the main<code>&lt;ul&gt;</code>. When clicking on a parent item, an open one will close, allowing only one open nested list at a time. To avoid this behavior, just append<code>{multiple:true}</code>to the data attribute.</p>
+          <h3 class="tm-article-subtitle">Example</h3>
+          <div data-grid-margin="" class="grid">
+            <div class="width-medium-1-2">
+              <p><code>data-nav</code></p>
+              <ul data-nav="" class="nav nav-side nav-parent-icon width-medium-2-3">
+                <li class="active"><a href="">Active</a></li>
+                <li><a href="">Item</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                        <ul>
+                          <li><a href="">Sub item</a></li>
+                          <li><a href="">Sub item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="width-medium-1-2">
+              <p><code>data-nav="{multiple:true}"</code></p>
+              <ul data-nav="{multiple:true}" class="nav nav-side nav-parent-icon width-medium-2-3">
+                <li class="active"><a href="">Active</a></li>
+                <li><a href="">Item</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                        <ul>
+                          <li><a href="">Sub item</a></li>
+                          <li><a href="">Sub item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h3 class="tm-article-subtitle">Markup</h3>
+          <div data-grid-margin="" class="grid">
+            <div class="width-medium-1-2">
+              <pre></pre>
+            </div>
+            <div class="width-medium-1-2">
+              <pre></pre>
+            </div>
+          </div>
+          <hr class="article-divider">
+          <h3>Header and divider</h3>
+          <p>Add one of the following classes to a list item to create a header or a divider between items.</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.nav-header</code></td>
+                <td>Add this class to a<code>&lt;li&gt;</code>element to create a header.</td>
+              </tr>
+              <tr>
+                <td><code>.nav-divider</code></td>
+                <td>Add this class to a<code>&lt;li&gt;</code>element to create a divider separating menu items.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><span class="badge">NOTE</span>You can also add subtitles to nav items. Just create a<code>&lt;div&gt;</code>element inside the<code>&lt;a&gt;</code>element within the list item.</p>
+          <h4 class="tm-article-subtitle">Example</h4>
+          <div class="width-medium-1-3">
+            <ul data-nav="" class="nav nav-side">
+              <li class="nav-header">Header</li>
+              <li><a href="">Item
+                  <div>Subtitle</div></a></li>
+              <li><a href="">Item</a></li>
+              <li class="nav-divider"></li>
+              <li><a href="">Item</a></li>
+            </ul>
+          </div>
+          <h4 class="tm-article-subtitle">Markup</h4>
+          <pre></pre>
+          <hr class="article-divider">
+          <h2>Style modifiers</h2>
+          <p>There are several modifiers to style the nav according to the context, in which it is used.</p>
+          <h3>Nav side</h3>
+          <p>Add the<code>.nav-side</code>class to place a nav inside your sidebar, panels or anywhere else in your content.</p>
+          <h4 class="tm-article-subtitle">Example</h4>
+          <div class="width-medium-1-3">
+            <div class="panel panel-box">
+              <h3 class="panel-title">Nav side in panel</h3>
+              <ul data-nav="" class="nav nav-side nav-parent-icon">
+                <li class="active"><a href="">Active</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                        <ul>
+                          <li><a href="">Sub item</a></li>
+                          <li><a href="">Sub item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="">Item</a></li>
+                <li class="nav-header">Header</li>
+                <li class="parent"><a href=""><i class="icon-star"></i>Parent</a></li>
+                <li><a href=""><i class="icon-twitter"></i>Item</a></li>
+                <li class="nav-divider"></li>
+                <li><a href=""><i class="icon-rss"></i>Item</a></li>
+              </ul>
+            </div>
+          </div>
+          <h4 class="tm-article-subtitle">Markup</h4>
+          <pre></pre>
+          <hr class="article-divider">
+          <h3>Nav dropdown</h3>
+          <p>Add the<code>.nav-dropdown</code>class to place a nav inside a default dropdown from the<a href="dropdown.html">Dropdown component</a>.</p>
+          <h4 class="tm-article-subtitle">Example</h4>
+          <div data-dropdown="" class="button-dropdown">
+            <button class="button">Dropdown<i class="icon-caret-down"></i></button>
+            <div class="dropdown dropdown-small">
+              <ul class="nav nav-dropdown">
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Another item</a></li>
+                <li class="nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Another item</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="#">Separated item</a></li>
+              </ul>
+            </div>
+          </div>
+          <h4 class="tm-article-subtitle">Markup</h4>
+          <pre></pre>
+          <hr class="article-divider">
+          <h3>Nav navbar</h3>
+          <p>Add the<code>.nav-navbar</code>class to place the nav inside a navbar dropdown from the<a href="navbar.html">Navbar component</a>.</p>
+          <h4 class="tm-article-subtitle">Example</h4>
+          <nav class="navbar">
+            <ul class="navbar-nav">
+              <li data-dropdown="" class="parent"><a href="">Parent</a>
+                <div class="dropdown dropdown-navbar">
+                  <ul class="nav nav-navbar">
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="nav-header">Header</li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="nav-divider"></li>
+                    <li><a href="#">Separated item</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <h4 class="tm-article-subtitle">Markup</h4>
+          <pre></pre>
+          <hr class="article-divider">
+          <h3>Nav search</h3>
+          <p>Add the<code>.nav-search</code>class to place the nav inside a dropdown showing search results from the<a href="search.html">Search component</a>. By default, the search JavaScript injects the nav automatically, so it doesn't need to be set manually.</p>
+          <h4 class="tm-article-subtitle">Example</h4>
+          <form data-search="{source:&quot;../vendor/searchresults.json&quot;}" class="search">
+            <input placeholder="search..." type="search" class="search-field">
+            <button type="reset" class="search-close"></button>
+          </form>
+          <h4 class="tm-article-subtitle">Markup</h4>
+          <pre></pre>
+          <hr class="article-divider">
+          <h3>Nav off-canvas</h3>
+          <p>Add the<code>.nav-offcanvas</code>class to place the nav inside an off-canvas sidebar from the<a href="offcanvas.html">Off-canvas component</a>.</p>
+          <h4 class="tm-article-subtitle">Example</h4>
+          <button data-offcanvas="{target:&quot;#offcanvas-1&quot;}" class="button">Off-canvas</button>
+          <div id="offcanvas-1" class="offcanvas">
+            <div class="offcanvas-bar">
+              <ul data-nav="" class="nav nav-offcanvas nav-parent-icon">
+                <li><a href="">Item</a></li>
+                <li class="active"><a href="">Active</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                        <ul>
+                          <li><a href="">Sub item</a></li>
+                          <li><a href="">Sub item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="">Item</a></li>
+                <li class="nav-header">Header</li>
+                <li class="parent"><a href=""><i class="icon-star"></i>Parent</a></li>
+                <li><a href=""><i class="icon-twitter"></i>Item</a></li>
+                <li class="nav-divider"></li>
+                <li><a href=""><i class="icon-rss"></i>Item</a></li>
+              </ul>
+            </div>
+          </div>
+          <h4 class="tm-article-subtitle">Markup</h4>
+          <pre></pre>
         </div>
       </div>
     </div>
