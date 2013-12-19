@@ -24,7 +24,7 @@ function createPreviewTabs()
         var content = $('.preview-template').clone();
         content.removeClass('hidden').removeClass('preview-template');
         content.find('.preview').append( $(this).html() );
-        content.find('code').append( htmlEscape($(this).html()) );
+        content.find('code.language-markup').append( htmlEscape($(this).html()) );
 
         $(this) .removeClass('preview-box')
                 .addClass('preview-tab')

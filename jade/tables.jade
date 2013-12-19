@@ -39,55 +39,66 @@ body
             h1 Tables
             
             h2.divide-section Simple Table
-            table(class="table")
-                +table(th_cols,td_rows)
+            .preview-box
+                table(class="table")
+                  +table(th_cols,td_rows)
 
             h2.divide-section Simple Table with hover effect
-            table(class="table hover")
+            .preview-box
+              table(class="table hover")
                 +table(th_cols,td_rows)
                 
 
             h2.divide-section Simple Table with Zebra
-            table.table.zebra
+            .preview-box
+              table.table.zebra
                 +table(th_cols,td_rows)
 
             h2.divide-section Rounded and Bordered table
-            table(class="bordered rounded")
+            .preview-box
+              table(class="bordered rounded")
                 +table(th_cols,td_rows)    
 
             h2.divide-section Rounded and Bordered  Table with and Zebra
-            table(class="rounded zebra bordered")
+            .preview-box
+              table(class="rounded zebra bordered")
                 +table(th_cols,td_rows)    
                
 
             h1.divide-section Extended Table Styles
             
             h2.divide-section Horizontal Minimalist  
-            table( id="hor-minimalist-a" summary="Employee Pay Sheet")
+            .preview-box
+              table( id="hor-minimalist-a" summary="Employee Pay Sheet")
                 +table(th_cols,td_rows)
                         
             h2.divide-section Horizontal Minimalist with lines
-            table( id="hor-minimalist-b" summary="Employee Pay Sheet")
+            .preview-box
+              table( id="hor-minimalist-b" summary="Employee Pay Sheet")
                 +table(th_cols,td_rows)
                     
             h1.divide-section Vertical Minimalist
             h2.divide-section Vertical Minimalist    
-            table( id="ver-minimalist" summary="Most Favorite Movies")
+            .preview-box
+              table( id="ver-minimalist" summary="Most Favorite Movies")
                 +table(th_cols,td_rows)
                     
             h1.divide-section Box
             h2.divide-section Row Based Box 
-            table( id="box-table-a" summary="Employee Pay Sheet")
+            .preview-box
+              table( id="box-table-a" summary="Employee Pay Sheet")
                 +table(th_cols,td_rows)
                 
             h2.divide-section Column Based Box
-            table( id="box-table-b" summary="Most Favorit Movies")
+            .preview-box
+              table( id="box-table-b" summary="Most Favorit Movies")
                 +table(th_cols,td_rows)
 
             h1.divide-section Zebra    
             
             h2.divide-section  Vertical Zebra Style 
-            table( id="ver-zebra" summary="Most Favorite Movies")
+            .preview-box
+              table( id="ver-zebra" summary="Most Favorite Movies")
                 colgroup
                     col( class="vzebra-odd" )
                     col( class="vzebra-even" )
@@ -130,7 +141,8 @@ body
                 
 
             h2.divide-section One Column Emphasis           
-            table( id="one-column-emphasis" summary="2007 Major IT Companies' Profit")
+            .preview-box
+              table( id="one-column-emphasis" summary="2007 Major IT Companies' Profit")
                 colgroup
                     col( class="oce-first" )
                 
@@ -140,11 +152,13 @@ body
 
             h1.divide-section Newspaper
             h2.divide-section Newspaper A
-            table( id="newspaper-a" summary="2007 Major IT Companies' Profit")
+            .preview-box
+              table( id="newspaper-a" summary="2007 Major IT Companies' Profit")
                 +table(th_cols,td_rows)        
 
             h2.divide-section Newspaper B    
-            table( id="newspaper-b" summary="2007 Major IT Companies' Profit")
+            .preview-box
+              table( id="newspaper-b" summary="2007 Major IT Companies' Profit")
                 +table(th_cols,td_rows)
                    
                 
@@ -158,7 +172,8 @@ body
                 
 
             h2.divide-section Newspaper C
-            table( id="newspaper-c" summary="Personal Movie Rating")
+            .preview-box
+              table( id="newspaper-c" summary="Personal Movie Rating")
                 +table(th_cols,td_rows) 
                     
                 

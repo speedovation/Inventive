@@ -44,32 +44,27 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             |  to give the button a proper styling, though you can also use text or an image.
             
         
-        div.desktop-12.preview-wrap
-          div.preview  
+        
+          .preview-box
             h3 Example
             .message
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-          pre.markup
-            code.language-markup
 
-        div.desktop-12.preview-wrap
-          div.preview
+
+          .preview-box    
             h3 Example
             .message(data-message='')
               a.message-close.close(href='')
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-          pre.markup |
-            code.language-markup.line-numbers 
-
-
-        div.desktop-12.preview-wrap
-          div.preview
-            h2 Color modifiers
-            p
-              | There are several color modifiers available. Just add one of the following classes to apply a different look.
+          
+          h2 Color modifiers
+          p
+            | There are several color modifiers available. Just add one of the following classes to apply a different look.
             
-            h3 Example
+          h3 Example
+          .preview-box
+            
             
             .message.message-info(data-message='')
               a.message-close.close(href='')
@@ -86,8 +81,6 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                 code .message-success
                 |  class.
 
-            
-            
             .message.message-warning(data-message='')
               a.message-close.close(href='')
               p
@@ -101,28 +94,21 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                 code .message-danger
                 |  class.
             
-          pre.markup
-            code.language-markup.line-numbers 
+          
 
 
-        div.desktop-12.preview-wrap
-          div.preview
-
-            h2 Size modifier
-            p
-              | Add the 
-              code .message-large
-              |  class to increase the spacing in an message box. This can be useful, if you want to use richer typography.
+          h2 Size modifier
+          p
+            | Add the 
+            code .message-large
+            |  class to increase the spacing in an message box. This can be useful, if you want to use richer typography.
             
             h3 Example
+          .preview-box           
+            
             .message.message-large(data-message='')
               a.message-close.close(href='')
               h2 Today's headline
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               
             
-          pre.markup
-            code.language-markup.line-numbers           
-          
-
-        
