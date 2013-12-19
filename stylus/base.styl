@@ -48,9 +48,12 @@
 @import "grid/grid-12"
 @import "grid/grid-16"
 
+@import "buttons/buttons"
+
 @import "components/nav"
 @import "components/subnav"
 @import "components/close"
+@import "components/panel"
 @import "components/messages"
 @import "components/badge"
 @import "components/thumbnail"
@@ -253,7 +256,52 @@ abbr[title]
 //.loremb
 //    font-family: redactedregular
 
+//width 100%
+//float left
 
+// .preview-wrap
+//     background: none repeat scroll 0 0 #FCFCFC;
+//     border: 1px solid #DDDDDD;
+//     border-radius: 3px;
+//     margin 0 0 2rem 0 !important
+//     width 100% !important
+//     position relative
+//     float left
+
+// .preview-wrap:after
+//     background-color: #F7F7F7;
+//     border: 1px solid #DDDDDD;
+//     border-radius: 0 0 4px 4px;
+//     bottom: -12px;
+//     color: #777777;
+//     content: "";
+//     font-size: 1.3rem;
+//     left: -1px;
+//     max-height: 14px;
+//     padding: 2px 0 8px;
+//     position: absolute;
+//     text-align: center;
+//     width: 100%;
+
+
+// .preview-wrap pre
+//     background-color transparent
+//     border none
+//     padding-left 1.5%
+//     margin-top 2.5%
+
+// .preview-wrap pre code
+//     padding 0
+//margin-left: 1.92rem;
+//margin-top: 1.2rem;    
+
+ 
+
+.markup,.preview
+    position relative
+    //font-size 0.9rem
+    margin-top 1.5rem
+ 
 
 .markup:after,.preview:after
     background-color: #F7F7F7;
@@ -261,68 +309,59 @@ abbr[title]
     border-radius: 4px 0;
     color: #9DA0A4;
     content: "HTML";
-    //font-size: 12px;
-    //font-weight: bold;
+    font-size: 0.8rem
+    font-weight: 300
     left: -1px;
     padding: 3px 7px;
     position: absolute;
-    top: -8.2%;
-    max-height 24px   
-
-.markup,.preview
-    position relative
-    font-size 0.9rem
-    margin 0
-    width 100%
-    float left
-
-.preview-wrap
-    background: none repeat scroll 0 0 #FCFCFC;
-    border: 1px solid #DDDDDD;
-    border-radius: 3px;
-    margin 0 0 2rem 0 !important
-    width 100% !important
-    position relative
-    float left
-
-.preview-wrap:after
-    background-color: #F7F7F7;
-    border: 1px solid #DDDDDD;
-    border-radius: 0 0 4px 4px;
-    bottom: -12px;
-    color: #777777;
-    content: "";
-    font-size: 1.3rem;
-    left: -1px;
-    max-height: 14px;
-    padding: 2px 0 8px;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-
-
-.preview-wrap pre
-    background-color transparent
-    border none
-    padding-left 1.5%
-    margin-top 2.5%
-
-.preview-wrap pre code
-    padding 0
-    //margin-left: 1.92rem;
-    //margin-top: 1.2rem;    
-    
+    top: -1px;
+    max-height 24px 
 
 .preview    
     padding 2rem
-    border-bottom 1px solid #ddd
+    border 1px solid #ddd
+    background-color #FEFEFE
+    min-height 200px
     //color: #CC470D;
 
-.preview:after
-    content "PREVIEW"
-    max-width: 64px;
-    left: -1px;
-    top -1px
+    &:after
+        content "PREVIEW"
+        max-width: 64px;
+        left: -1px;
+        top -1px
+        font-weight 300
+        font-size: 0.8rem
+
+
+.preview-tab 
+    position relative
+    
+    &:after
+        background-color: #F7F7F7;
+        border: 1px solid #c1c1c1;
+        border-radius: 0;
+        top: 2px;
+        right: 0
+        color: #777777;
+        content: "Example with Markup";
+        padding: 6px 20px;
+        position: absolute;
+        text-align: left
+        font-weight 300
+        font-size 0.9rem       
+
+    .resp-tab-content    
+        min-height 200px
+        border 0
+
+    .resp-tabs-list li 
+        margin 0 -1px -2px 0  
+        padding 8px 15px 
+        border-radius(0)
+
+    h2.resp-accordion 
+        padding: 9px 15px
+    
 
 // @media untilmobile
 //     .preview

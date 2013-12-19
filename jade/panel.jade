@@ -1,0 +1,284 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Panel
+
+    include header
+
+
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section Panel
+          p.article-lead Create layout boxes with different styles.
+          p
+            | UIkit uses panels to outline certain sections of your content, which can be styled differently. Typically, panels are arranged in grid columns from the
+            a(href='grid.html') Grid component
+            | .
+          hr.article-divider
+          h2 Usage
+          p
+            | The Panel component consists of the panel itself, the panel title and a panel badge. To prevent redundant white space, top and bottom margins are removed from the panel's content.
+          table.table
+            thead
+              tr
+                th Class
+                th Description
+            tbody
+              tr
+                td
+                  code .panel
+                td
+                  | Add this class to a
+                  code <div>
+                  | element to define the Panel component.
+              tr
+                td
+                  code .panel-title
+                td Add this class to a heading to create the panel title.
+              tr
+                td
+                  code .panel-badge
+                td
+                  | Add this class to a
+                  code <div>
+                  | element to create a panel badge. The easiest way to style your badge, is by adding the modifier classes from the
+                  a(href='badge.html') Badge component
+                  | .
+          h3.tm-article-subtitle Example
+          .panel.panel-box.width-medium-1-3
+            .panel-badge.badge.badge-danger Hot
+            h3.panel-title Title
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p
+            span.badge.badge-info NOTE
+            | By default, a panel is blank and has no styling. That is why it is important to add a modifier class, which gives the panel some styling. In our examples we used the
+            code .panel-box
+            | class.
+          h3.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Panels in a grid
+          p
+            | This is a short example of how to use panels with the
+            a(href='grid.html') Grid component
+            | . Both panels are using the
+            code .width-medium-1-2
+            | class.
+          h4.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-2
+              .panel.panel-box
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+            .width-medium-1-2
+              .panel.panel-box
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h2 Modifiers
+          p
+            | Modifier classes are necessary to add a specific style to panels. UIkit includes a number of panel modifiers and you also have the possibility to create your own.
+          h3 Panel box
+          p
+            | Add the
+            code .panel-box
+            | class to create a visually styled box. This is the default panel modifier.
+          h4.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-3
+              .panel.panel-box
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box
+            .width-medium-1-3
+              .panel.panel-box
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box
+            .width-medium-1-3
+              .panel.panel-box
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          p
+            | Add the
+            code .panel-box-primary
+            | class to modify the box panel and emphasize it with a different color.
+          h4.tm-article-subtitle Example
+          .grid.tm-grid-truncate(data-grid-margin='')
+            .width-medium-1-3
+              .panel.panel-box.panel-box-primary
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box-primary
+            .width-medium-1-3
+              .panel.panel-box.panel-box-primary
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box-primary
+            .width-medium-1-3
+              .panel.panel-box.panel-box-primary
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box-primary
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          p
+            | Add the
+            code .panel-box-secondary
+            | class to modify the box panel and give it a white background.
+          h4.tm-article-subtitle Example
+          .grid.tm-grid-truncate(data-grid-margin='')
+            .width-medium-1-3
+              .panel.panel-box.panel-box-secondary
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box-secondary
+            .width-medium-1-3
+              .panel.panel-box.panel-box-secondary
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box-secondary
+            .width-medium-1-3
+              .panel.panel-box.panel-box-secondary
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-box-secondary
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Panel header
+          p
+            | Add the
+            code .panel-header
+            | class to seperate the panel title and content with a horizontal line.
+          h4.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-3
+              .panel.panel-header
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-header
+            .width-medium-1-3
+              .panel.panel-header
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-header
+            .width-medium-1-3
+              .panel.panel-header
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-header
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Panel space
+          p
+            | Add the
+            code .panel-space
+            | class to increase the spacing around the panel content.
+          h4.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-3
+              .panel.panel-space
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-space
+            .width-medium-1-3
+              .panel.panel-space
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-space
+            .width-medium-1-3
+              .panel.panel-space
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-space
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          hr.article-divider
+          h3 Panel divider
+          p
+            | Add the
+            code .panel-divider
+            | class to separate vertically stacked panels with lines.
+          h4.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-2
+              .panel.panel-divider
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-divider
+              .panel.panel-divider
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-divider
+              .panel.panel-divider
+                h3.panel-title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                code .panel-divider
+          h4.tm-article-subtitle Markup
+          pre.
+            
+          p
+            span.badge NOTE
+            | Use the
+            code .grid-divider
+            | class from the
+            a(href='grid.html') Grid component
+            | to seperate grid columns.
+          hr.article-divider
+          h2 Panel with icons
+          p
+            | Easily apply an icon from our
+            a(href='icon.html') Icon component
+            | to your panel by adding one of the
+            code .icon-*
+            | classes to an
+            code <i>
+            | or
+            code <span>
+            | element inside the panel title.
+          h3.tm-article-subtitle Example
+          .grid(data-grid-margin='')
+            .width-medium-1-3
+              .panel.panel-box
+                h3.panel-title
+                  i.icon-user
+                  | Panel
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .width-medium-1-3
+              .panel.panel-box
+                h3.panel-title
+                  i.icon-home
+                  | Panel
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .width-medium-1-3
+              .panel.panel-box
+                h3.panel-title
+                  i.icon-bookmark
+                  | Panel
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          h4.tm-article-subtitle Markup
+          pre.
+            

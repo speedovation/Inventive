@@ -16,7 +16,7 @@
     <script text="text/javascript" src="../js/nav.js">	</script>
     <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
     <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
-    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
+    <!--link(rel='stylesheet', href='../css/buttons/buttons.css', type='text/css' ) -->
     <script text="text/javascript" src="../vendors/doc.js"></script>
     <!--Highlighter-->
     <link rel="stylesheet" href="../vendors/pcolor/pcolor.css" type="text/css">
@@ -24,6 +24,8 @@
     <!--<link rel="stylesheet" href="../vendors/jshighlight/styles/default.css">-->
     <!--<script src="../vendors/jshighlight/highlight.pack.js"></script>-->
     <!--<script>//hljs.initHighlightingOnLoad();</script>-->
+    <link type="text/css" rel="stylesheet" href="../css/components/stabs.css">
+    <script src="../js/stabs.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="grid">
@@ -49,6 +51,7 @@
                     <li><a href="badge.html">Badges  </a></li>
                     <li><a href="thumbnail.html">Thumbnail </a></li>
                     <li><a href="subnav.html">Subnav</a></li>
+                    <li><a href="panel.html">Panel  </a></li>
                     <li><a href="breadcrumb.html">Breadcrumb </a></li>
                     <li><a href="pagination.html">Pagination</a></li>
                     <li><a href="progress.html">Progress</a></li>
@@ -88,11 +91,25 @@
         </div>
       </div>
     </div>
+    <div class="hidden preview-template preview-wrap"> 
+      <ul class="resp-tabs-list">
+        <li>Preview</li>
+        <li>Html Code</li>
+      </ul>
+      <div class="resp-tabs-container">
+        <div>
+          <div class="preview"></div>
+        </div>
+        <div>
+          <pre class="markup"><code class="language-markup"></code></pre>
+        </div>
+      </div>
+    </div>
     <div class="grid">
       <div class="row">
         <div class="desktop-12">
           <h1 class="divide-section"> Breadcrumb</h1>
-          <p class="article-lead">Create breadcrumbs to show users their location within a website.</p>
+          <p class="info">Create breadcrumbs to show users their location within a website.</p>
           <h2>Usage</h2>
           <p>The Breadcrumb component consists of links which are aligned side by side and separated by a divider.</p>
           <table class="table">
@@ -105,24 +122,29 @@
             <tbody>
               <tr>
                 <td><code>.breadcrumb</code></td>
-                <td>Add this class to a<code><ul></code>element to define the Breadcrumb component. Use<code><a></code>elements as breadcrumb items within the list.</td>
+                <td>Add this class to a <code>&lt;ul&gt;</code> element to define the Breadcrumb component. Use <code>&lt;a&gt;</code> elements as breadcrumb items within the list.</td>
               </tr>
               <tr>
                 <td><code>.active</code></td>
-                <td>Add this class to a list item to apply an active state and use a<code><span></code>instead of an<code><a></code>element.</td>
+                <td>Add this class to a list item to apply an active state and use a <code>&lt;span&gt;</code> instead of an <code>&lt;a&gt;</code> element.</td>
               </tr>
             </tbody>
           </table>
-          <p>Use a<code><span></code>instead of an<code><a></code>element to disable a breadcrumb item.</p>
-          <h3 class="tm-article-subtitle">Example</h3>
-          <ul class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><span>Category</span></li>
-            <li class="active"><span>Post</span></li>
-          </ul>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <pre></pre>
+          <p>Use a <code>&lt;span&gt;</code> instead of an <code>&lt;a&gt;</code> element to disable a breadcrumb item.</p>
+          <div class="preview">
+            <ul class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><span>Category</span></li>
+              <li class="active"><span>Post</span></li>
+              <div></div>
+            </ul>
+          </div>
+          <h2>mmm</h2>
+          <p>
+            mmmm                
+            
+          </p>
         </div>
       </div>
     </div>
