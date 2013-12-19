@@ -93,7 +93,7 @@
     </div>
     <div class="hidden preview-template preview-wrap"> 
       <ul class="resp-tabs-list">
-        <li>Preview</li>
+        <li>Example Preview</li>
         <li>Html Code</li>
       </ul>
       <div class="resp-tabs-container">
@@ -109,7 +109,7 @@
       <div class="row">
         <div class="desktop-12">
           <h1 class="divide-section"> Pagination</h1>
-          <p class="article-lead">Easlily create a nicely looking pagination to navigate through pages.</p>
+          <p class="info">Easlily create a nicely looking pagination to navigate through pages.</p>
           <h2>Usage</h2>
           <p>The Pagination component consists of button-like styled links, that are aligned side by side.</p>
           <table class="table">
@@ -122,98 +122,87 @@
             <tbody>
               <tr>
                 <td><code>.pagination</code></td>
-                <td>Add this class to a<code><ul></code>element to define the Pagination component. Use<code><a></code>elements as pagination items within the list.</td>
+                <td>Add this class to a <code>&lt;ul&gt;</code> element to define the Pagination component. Use <code>&lt;a&gt;</code> elements as pagination items within the list.</td>
               </tr>
               <tr>
                 <td><code>.active</code></td>
-                <td>Add this class to a list item to apply an active state and use a<code><span></code>instead of an<code><a></code>element.</td>
+                <td>Add this class to a list item to apply an active state and use a <code>&lt;span&gt;</code> instead of an <code>&lt;a&gt;</code> element.</td>
               </tr>
               <tr>
                 <td><code>.disabled</code></td>
-                <td>Add this class to a list item to apply a disabled state and use a<code><span></code>instead of an<code><a></code>element.</td>
+                <td>Add this class to a list item to apply a disabled state and use a <code>&lt;span&gt;</code> instead of an <code>&lt;a&gt;</code> element.</td>
               </tr>
             </tbody>
           </table>
-          <p>To apply an ellipsis without any styling, just use a<code><span></code>element instead of an<code><a></code>element.</p>
-          <h3 class="tm-article-subtitle">Example</h3>
-          <ul class="pagination">
-            <li class="disabled"><span><i class="icon-angle-double-left"></i></span></li>
-            <li class="active"><span>1</span></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><span>...</span></li>
-            <li><a href="#">20</a></li>
-            <li><a href="#"><i class="icon-angle-double-right"></i></a></li>
-          </ul>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <pre></pre>
-          <hr class="article-divider">
+          <p>To apply an ellipsis without any styling, just use a <code>&lt;span&gt;</code> element instead of an <code>&lt;a&gt;</code> element.</p>
+          <div class="preview-box">
+            <ul class="pagination">
+              <li class="disabled"><span><i class="icon-angle-double-left"></i></span></li>
+              <li class="active"><span>1</span></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><span>...</span></li>
+              <li><a href="#">20</a></li>
+              <li><a href="#"><i class="icon-angle-double-right"></i></a></li>
+            </ul>
+          </div>
+          <hr>
           <h2>Alignment modifiers</h2>
-          <p>Add the<code>.pagination-left</code>or<code>.pagination-right</code>class to the pagination to align it left or right.</p>
-          <h4 class="tm-article-subtitle">Example</h4>
-          <div data-grid-margin="" class="grid">
-            <div class="width-medium-1-2">
-              <ul class="pagination pagination-left">
-                <li><a href="#">1</a></li>
-                <li><span>...</span></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li class="active"><span>10</span></li>
-                <li><a href="#">11</a></li>
-                <li><a href="#">12</a></li>
-                <li><span>...</span></li>
-                <li><a href="#">20</a></li>
-              </ul>
-            </div>
-            <div class="width-medium-1-2">
-              <ul class="pagination pagination-right">
-                <li><a href="#">1</a></li>
-                <li><span>...</span></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li class="active"><span>10</span></li>
-                <li><a href="#">11</a></li>
-                <li><a href="#">12</a></li>
-                <li><span>...</span></li>
-                <li><a href="#">20</a></li>
-              </ul>
-            </div>
-          </div>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <div data-grid-margin="" class="grid">
-            <div class="width-medium-1-2">
-              <pre></pre>
-            </div>
-            <div class="width-medium-1-2">
-              <pre></pre>
+          <p>Add the <code>.pagination-left</code> or <code>.pagination-right</code> class to the pagination to align it left or right.</p>
+          <div class="preview-box">
+            <div data-grid-margin="" class="grid">
+              <div class="w-50">
+                <ul class="pagination pagination-left">
+                  <li><a href="#">1</a></li>
+                  <li><span>...</span></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li class="active"><span>10</span></li>
+                  <li><a href="#">11</a></li>
+                  <li><a href="#">12</a></li>
+                  <li><span>...</span></li>
+                  <li><a href="#">20</a></li>
+                </ul>
+              </div>
+              <div class="w-50">
+                <ul class="pagination pagination-right">
+                  <li><a href="#">1</a></li>
+                  <li><span>...</span></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li class="active"><span>10</span></li>
+                  <li><a href="#">11</a></li>
+                  <li><a href="#">12</a></li>
+                  <li><span>...</span></li>
+                  <li><a href="#">20</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <hr class="article-divider">
+          <hr>
           <h2>Previous and next</h2>
-          <p>Creating a simple previous and next pagination is very easy. Just add the<code>.pagination-previous</code>or<code>.pagination-next</code>class to a<code><li></code>element to align previous and next buttons left or right.</p>
-          <h4 class="tm-article-subtitle">Example</h4>
-          <ul class="pagination">
-            <li class="pagination-previous"><a href="#"><i class="icon-angle-double-left"></i>Previous</a></li>
-            <li class="pagination-next"><a href="#">Next<i class="icon-angle-double-right"></i></a></li>
-          </ul>
-          <h4 class="tm-article-subtitle">Markup</h4>
-          <pre></pre>
-          <hr class="article-divider">
+          <p>Creating a simple previous and next pagination is very easy. Just add the <code>.pagination-previous</code> or <code>.pagination-next</code> class to a <code>&lt;li&gt;</code> element to align previous and next buttons left or right.</p>
+          <div class="preview-box">
+            <ul class="pagination">
+              <li class="pagination-previous"><a href="#"><i class="icon-angle-double-left"></i>Previous</a></li>
+              <li class="pagination-next"><a href="#">Next<i class="icon-angle-double-right"></i></a></li>
+            </ul>
+          </div>
+          <hr>
           <h2>Pagination with icons</h2>
-          <p>Enhance your pagination with icons from the<a href="icon.html">Icon component</a>by adding one of the<code>.icon-*</code>classes to an<code><i></code>or<code><span></code>element within a pagination link.</p>
-          <h3 class="tm-article-subtitle">Example</h3>
-          <ul class="pagination">
-            <li><a href="#"><i class="icon-angle-double-left"></i></a></li>
-            <li class="active"><span><i class="icon-angle-double-left"></i></span></li>
-            <li class="disabled"><span><i class="icon-angle-double-left"></i></span></li>
-            <li><span>...</span></li>
-            <li class="disabled"><span><i class="icon-angle-double-right"></i></span></li>
-            <li class="active"><span><i class="icon-angle-double-right"></i></span></li>
-            <li><a href="#"><i class="icon-angle-double-right"></i></a></li>
-          </ul>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <pre></pre>
+          <p>Enhance your pagination with icons from the <a href="icon.html">Icon component</a> by adding one of the <code>.icon-*</code> classes to an <code>&lt;i&gt;</code> or <code>&lt;span&gt;</code> element within a pagination link.</p>
+          <div class="preview-box">
+            <ul class="pagination">
+              <li><a href="#"><i class="icon-angle-double-left"></i></a></li>
+              <li class="active"><span><i class="icon-angle-double-left"></i></span></li>
+              <li class="disabled"><span><i class="icon-angle-double-left"></i></span></li>
+              <li><span>...</span></li>
+              <li class="disabled"><span><i class="icon-angle-double-right"></i></span></li>
+              <li class="active"><span><i class="icon-angle-double-right"></i></span></li>
+              <li><a href="#"><i class="icon-angle-double-right"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

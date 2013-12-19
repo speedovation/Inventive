@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>ColorPicker</title>
+    <title>Messages ( messages)</title>
     <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,49 +26,6 @@
     <!--<script>//hljs.initHighlightingOnLoad();</script>-->
     <link type="text/css" rel="stylesheet" href="../css/components/stabs.css">
     <script src="../js/stabs.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../css/forms/form.css" type="text/css">
-    <link rel="stylesheet" href="../css/tables/table.css" type="text/css">
-    <link rel="stylesheet" href="../css/tables/tables.css" type="text/css">
-    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
-    <script src="../js/components/colorpicker.js"></script>
-    <link rel="stylesheet" href="../css/components/colorpicker.css">
-    <script>
-      $(document).ready( function() {
-      $('.demo').each( function() {
-      //
-      // Dear reader, it's actually very easy to initialize MiniColors. For example:
-      //
-      //  $(selector).minicolors();
-      //
-      // The way I've done it below is just for the demo, so don't get confused
-      // by it. Also, data- attributes aren't supported at this time. Again,
-      // they're only used for the purposes of this demo.
-      //
-      $(this).minicolors({
-        control: $(this).attr('data-control') || 'hue',
-        defaultValue: $(this).attr('data-defaultValue') || '',
-        inline: $(this).attr('data-inline') === 'true',
-        letterCase: $(this).attr('data-letterCase') || 'lowercase',
-        opacity: $(this).attr('data-opacity'),
-        position: $(this).attr('data-position') || 'bottom left',
-        change: function(hex, opacity) {
-          var log;
-          try {
-          
-            log = hex ? hex : 'transparent';
-            
-            if( opacity ) log += ', ' + opacity;
-              console.log(log);
-            } 
-            catch(e) {}
-          },
-          theme: 'default'
-          });
-          
-        });
-      });
-      
-    </script>
   </head>
   <body>
     <div class="grid">
@@ -149,83 +106,64 @@
       </div>
     </div>
     <div class="grid">
-      <div class="row"> 
-        <div class="desktop-12 tablet-6 mobile-3 example">
-          <h2 class="divide-section">ColorPicker </h2>
-        </div>
-      </div>
       <div class="row">
-        <div class="desktop-4"> 
-          <h3>Control Types</h3>
-          <div class="field">
-            <label for="hue-demo">Hue (default)</label>
-            <input id="hue-demo" type="text" data-control="hue" value="#ff6161" class="demo">
+        <div class="desktop-12">
+          <h1 class="divide-section">Search</h1>
+          <p class="info">Easily create a nicely looking search.</p>
+          <h2>Usage</h2>
+          <p>The Search component consists of the search field itself and a close button.</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.search</code></td>
+                <td>Add this class to a <code>&lt;form&gt;</code> element to define the Search component.</td>
+              </tr>
+              <tr>
+                <td><code>.search-field</code></td>
+                <td>Add this class to an <code>&lt;input&gt;</code> element to create the search field.</td>
+              </tr>
+              <tr>
+                <td><code>.search-close</code></td>
+                <td>Add this class to a <code>&lt;button&gt;</code> element to create a close button, resetting the search input.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>To enable the necessary JavaScript for the search, just add the <code>data-search</code> attribute.</p>
+          <div class="preview-box">
+            <form data-search="" class="search">
+              <input placeholder="search..." type="search" class="search-field">
+              <button type="reset" class="search-close"></button>
+            </form>
           </div>
-          <div class="field">
-            <label for="saturation-demo">Saturation</label>
-            <input id="saturation-demo" type="text" data-control="saturation" value="#0088cc" class="demo">
+          <hr>
+          <h2>Ajax search results</h2>
+          <p>You can use a dropdown from the<a href="dropdown.html">Dropdown component</a>to display search results. Just add<code>{source:'PATH/TO/RESULTS'}</code>to the data attribute and set the path to your search results, which need to be formatted in JSON. This enables the Ajax search and injects a dropdown with the<code>.dropdown-search</code>class displaying the search results. You can even navigate through the dropdown with the up and down keys of your keyboard.</p>
+          <div class="preview-box">
+            <form data-search="{source:&quot;../vendor/searchresults.json&quot;}" class="search">
+              <input placeholder="search..." type="search" class="search-field">
+              <button type="reset" class="search-close"></button>
+            </form>
           </div>
-          <div class="field">
-            <label for="brightness-demo">Brightness</label>
-            <input id="brightness-demo" type="text" data-control="brightness" value="#00ffff" class="demo">
-          </div>
-          <div class="field">
-            <label for="wheel-demo">Wheel</label>
-            <input id="wheel-demo" type="text" data-control="wheel" value="#ff99ee" class="demo">
-          </div>
-          <!-- Input modes-->
-        </div>
-        <div class="desktop-4">
-          <h3>Input Modes</h3>
-          <div class="field">
-            <label for="text-field">Text field</label><br>
-            <input id="text-field" type="text" value="#70c24a" class="demo">
-          </div>
-          <div class="field">
-            <label for="hidden-input">Hidden Input</label><br>
-            <input id="hidden-input" type="hidden" value="#db913d" class="demo">
-          </div>
-          <div class="field">
-            <label for="inline">Inline</label><br>
-            <input id="inline" type="text" data-inline="true" value="#4fc8db" class="demo">
-          </div>
-          <!-- Positions-->
-        </div>
-        <div class="desktop-4">
-          <h3>Positions</h3>
-          <div class="field">
-            <label for="position-bottom-left">bottom left (default)</label>
-            <input id="position-bottom-left" type="text" data-position="bottom left" value="#0088cc" class="demo">
-          </div>
-          <div class="field">
-            <label for="position-top-left">top left</label>
-            <input id="position-top-left" type="text" data-position="top left" value="#0088cc" class="demo">
-          </div>
-          <div class="field">
-            <label for="position-bottom-right">bottom right</label>
-            <input id="position-bottom-right" type="text" data-position="bottom right" value="#0088cc" class="demo">
-          </div>
-          <div class="field">
-            <label for="position-top-right">top right</label>
-            <input id="position-top-right" type="text" data-position="top right" value="#0088cc" class="demo">
-          </div>
-          <!-- and more-->
-        </div>
-      </div>
-      <div class="row">
-        <div class="desktop-12 mobile-12 tablet-12">
-          <h3>…and more!</h3>
-          <div class="field">
-            <label for="opacity">Opacity</label><br>
-            <input id="opacity" type="text" data-opacity=".5" value="#766fa8" class="demo">
-          </div>
-          <div class="field">
-            <label for="default-value">Default Value</label><br>
-            <input id="default-value" type="text" data-defaultvalue="#ff6600" class="demo">
-          </div>
-          <div class="field">
-            <label for="letter-case">Letter Case</label><br>
-            <input id="letter-case" type="text" data-lettercase="uppercase" class="demo">
+          <hr>
+          <h2>Search in navbars</h2>
+          <p>A search can be used inside a Navbar from the<a href="navbar.html">Navbar component</a>.</p>
+          <div class="preview-box">
+            <nav class="navbar">
+              <div class="navbar-flip">
+                <div class="navbar-content">
+                  <form data-search="{flipDropdown:true, source:&quot;../vendor/searchresults.json&quot;}" class="search">
+                    <input placeholder="search..." type="search" class="search-field">
+                    <button type="reset" class="search-close"></button>
+                  </form>
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>

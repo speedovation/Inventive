@@ -31,20 +31,19 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             |  element.
   
         .desktop-12
-          .preview-wrap
-            .preview  
-              p
-                ="\n" 
-                span.badge Info
-                | 
-                ="\n" 
-                span.badge New
-                | 
-                ="\n"  
-                span.badge Free
-                
-            pre.markup
-              code.language-markup
+          
+          .preview-box 
+            p
+              ="\n" 
+              span.badge Info
+              | 
+              ="\n" 
+              span.badge New
+              | 
+              ="\n"  
+              span.badge Free
+              
+            
 
           h2.divide-section Modifiers
           p
@@ -58,22 +57,21 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
               | class to indicate a round, typically it is used with numbers. 
          
 
-          .preview-wrap
-            .preview 
-              p
-                span.badge.badge-round 1
-                | 
-                span.badge.badge-round 2
-                | 
-                span.badge.badge-round 3
-                | 
-                span.badge.badge-round 10
-                | 
-                span.badge.badge-round 100
-                |         
+      
+          .preview-box
+            p
+              span.badge.badge-round 1
+              | 
+              span.badge.badge-round 2
+              | 
+              span.badge.badge-round 3
+              | 
+              span.badge.badge-round 10
+              | 
+              span.badge.badge-round 100
+              |         
             
-            pre.markup
-              code.language-markup
+            
 
 
           h3 Color Modifier
@@ -85,31 +83,29 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             | or
             code .badge-danger
             | class for additional colors. 
-          .preview-wrap
-            .preview  
+          
+          .preview-box
 
-              p
-                span.badge.badge-info Info
-                | 
-                span.badge.badge-success Success
-                | 
-                span.badge.badge-warning Warning
-                | 
-                span.badge.badge-danger Danger
-                | 
-              p
-                span.badge.badge-round.badge-success 1
-                | 
-                span.badge.badge-round.badge-success 10
-                | 
-                span.badge.badge-round.badge-warning 1
-                | 
-                span.badge.badge-round.badge-warning 10
-                | 
-                span.badge.badge-round.badge-danger 1
-                | 
-                span.badge.badge-round.badge-danger 10
-                | 
+            p
+              span.badge.badge-info Info
+              | 
+              span.badge.badge-success Success
+              | 
+              span.badge.badge-warning Warning
+              | 
+              span.badge.badge-danger Danger
+              | 
+            p
+              span.badge.badge-round.badge-success 1
+              | 
+              span.badge.badge-round.badge-success 10
+              | 
+              span.badge.badge-round.badge-warning 1
+              | 
+              span.badge.badge-round.badge-warning 10
+              | 
+              span.badge.badge-round.badge-danger 1
+              | 
+              span.badge.badge-round.badge-danger 10
+              | 
             
-            pre.markup
-              code.language-markup

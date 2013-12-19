@@ -1,0 +1,93 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Messages ( messages)
+
+    include header
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          h1.divide-section Search
+  
+          p.info Easily create a nicely looking search.
+          
+          h2 Usage
+          p The Search component consists of the search field itself and a close button.
+          table.table
+            thead
+              tr
+                th Class
+                th Description
+            tbody
+              tr
+                td
+                  code .search
+                td
+                  | Add this class to a 
+                  code= "<form>"
+                  |  element to define the Search component.
+              tr
+                td
+                  code .search-field
+                td
+                  | Add this class to an 
+                  code= "<input>"
+                  |  element to create the search field.
+              tr
+                td
+                  code .search-close
+                td
+                  | Add this class to a 
+                  code= "<button>"
+                  |  element to create a close button, resetting the search input.
+          p
+            | To enable the necessary JavaScript for the search, just add the 
+            code data-search
+            |  attribute.
+          
+          .preview-box
+            form.search(data-search='')
+              input.search-field(placeholder='search...', type='search')
+              button.search-close(type='reset')
+            
+          hr
+          h2 Ajax search results
+          p
+            | You can use a dropdown from the
+            a(href='dropdown.html') Dropdown component
+            | to display search results. Just add
+            code {source:'PATH/TO/RESULTS'}
+            | to the data attribute and set the path to your search results, which need to be formatted in JSON. This enables the Ajax search and injects a dropdown with the
+            code .dropdown-search
+            | class displaying the search results. You can even navigate through the dropdown with the up and down keys of your keyboard.
+          
+  
+          .preview-box
+            form.search(data-search='{source:"../vendor/searchresults.json"}')
+              input.search-field(placeholder='search...', type='search')
+              button.search-close(type='reset')
+          
+
+          hr
+          h2 Search in navbars
+          p
+            | A search can be used inside a Navbar from the
+            a(href='navbar.html') Navbar component
+            | .
+          
+          .preview-box
+            nav.navbar
+              .navbar-flip
+                .navbar-content
+                  form.search(data-search='{flipDropdown:true, source:"../vendor/searchresults.json"}')
+                    input.search-field(placeholder='search...', type='search')
+                    button.search-close(type='reset')
+            
