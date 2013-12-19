@@ -22,6 +22,7 @@
       accord = "accordion";
       hash = window.location.hash;
       historyApi = !!(window.history && history.replaceState);
+      historyApi = false;
       $(this).bind("tabactivate", function(e, currentTab) {
         if (typeof options.activate === "function") {
           return options.activate.call(currentTab, e);

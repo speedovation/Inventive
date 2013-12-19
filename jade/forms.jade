@@ -49,8 +49,7 @@ html
             | . That's all you need!
           
 
-        div.desktop-12.preview-wrap
-          div.preview
+          .preview-box
             form.row
               .field
                   input(class="input" type="text" placeholder="Text input")
@@ -64,13 +63,9 @@ html
               .field
                   textarea( class="input  textarea desktop-12" placeholder="Textarea")
 
-          pre.markup 
-            code.language-markup  
-              |
 
-
-        div.desktop-12.preview-wrap
-          div.preview    
+        
+          .preview-box
             form.row
       
               .field
@@ -89,21 +84,19 @@ html
               .field
                   label(for="text1" class="inline desktop-4") Label 2
                   input(class="input desktop-8" type="text" placeholder="Text input")
-          pre.markup
-            code.language-markup
+          
 
 
-        div.desktop-12.preview-wrap
-          div.preview    
+        
+          .preview-box    
             form.row
               +select()
               +select()
               +select()
-          pre.markup
-            code.language-markup    
+             
         
-        div.desktop-12.preview-wrap
-          div.preview    
+        
+          .preview-box    
             form.row
               fieldset
                 legend Fieldset with legend
@@ -114,12 +107,11 @@ html
                 
                 .field
                   input( class="input desktop-12" type="email" placeholder="Email input")
-          pre.markup
-            code.language-markup
+          
                
           
-        div.desktop-12.preview-wrap
-          div.preview    
+        
+          .preview-box    
             form.row        
               fieldset
                 legend Some information about you
@@ -145,12 +137,11 @@ html
                 p 
                   input( type="checkbox" value="Other" id="other" ) 
                   label( for="other") Other
-          pre.markup
-            code.language-markup      
+              
               
           
-        div.desktop-12.preview-wrap
-          div.preview    
+
+          .preview-box   
             form.row  
               fieldset
                 legend What happens when I specify disabled or checked attributes?
@@ -181,8 +172,7 @@ html
                 p 
                   input( type="checkbox" value="Other" id="other2" ) 
                   label( for="other2") Other
-          pre.markup
-            code.language-markup      
+        
             
           
           
@@ -214,8 +204,8 @@ html
           //-     input( type="checkbox" value="Other" id="other3" ) 
           //-     label( for="other3") Other
             
-        div.desktop-12.preview-wrap
-          div.preview    
+ 
+          .preview-box    
             form.row             
               fieldset(lang="he" dir="rtl")
                 legend Change direction for international text
@@ -242,12 +232,4 @@ html
                   input( type="checkbox" value="Other" id="other2" ) 
                   label( for="other2") Other
 
-          pre.markup
-            code.language-markup
-
-            
-          
-          
-          
-
-           
+        

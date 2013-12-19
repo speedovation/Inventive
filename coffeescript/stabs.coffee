@@ -1,6 +1,6 @@
 # Easy Responsive Tabs Plugin
 # Author: Samson.Onna <Email : samson3d@gmail.com>
-
+#https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion
 
 # Reference jQuery
 $ = jQuery
@@ -29,6 +29,8 @@ $.fn.extend
     accord = "accordion"
     hash = window.location.hash
     historyApi = !!(window.history and history.replaceState)
+    historyApi = false
+
     
     #Events
     $(this).bind "tabactivate", (e, currentTab) ->
