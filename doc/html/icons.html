@@ -85,6 +85,7 @@
       .size-18 { font-size: 18px; }
       .size-21 { font-size: 21px; }
       .size-24 { font-size: 24px; }
+      .size-32 { font-size: 32px; }
       .size-36 { font-size: 36px; }
       .size-48 { font-size: 48px; }
       .size-60 { font-size: 60px; }
@@ -224,6 +225,38 @@
       .i-play:before { content: "\f12e"; }
       .i-shield-64:before { content: "\f12f"; }
       .i-trophy-64:before { content: "\f130"; }
+      
+      .block {
+        display : inline-block;
+      }
+      .block li
+      {
+        display : inline-block;
+        margin: 1.5rem 0;
+        
+      }
+      .block .show-icon {
+        position: relative;
+        margin: 0 3rem;
+      }
+      .block .icon-name{
+        display: block;
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 0.84rem;
+        color: #999;
+      }
+      
+      //- .block span:before {
+      //-     content: attr(title);
+      //-     font-size: 0.8rem;
+      //-     position: absolute;
+      //-     bottom : -25px;
+      //-     width: 7.5rem;
+      //-     margin-left: -2rem;
+      //- }
+      
+      
     </style>
     <!--[if lte IE 8]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -233,6 +266,7 @@
       var body = document.getElementsByTagName('body')[0];
       body.className = body.className === 'characters-off' ? '' : 'characters-off';
       }
+      
       
       
     </script>
@@ -245,7 +279,7 @@
     <!--link(rel='stylesheet', href='../css/grid/grid.css', type='text/css' )-->
     <!--link(rel='stylesheet', href='../css/grid/grid-12.css', type='text/css' )-->
     <link rel="stylesheet" href="../css/grid/demo.css" type="text/css">
-    <!--link(rel='stylesheet', href='../font/font.css', type='text/css' )	-->
+    <link rel="stylesheet" href="../font/rudra.css" type="text/css">
     <script text="text/javascript" src="../js/jquery.js">	</script>
     <script text="text/javascript" src="../js/nav.js">	</script>
     <!--link(rel='stylesheet', href='../css/tables/table.css', type='text/css' )-->
@@ -260,7 +294,7 @@
     <!--<script>//hljs.initHighlightingOnLoad();</script>-->
     <link type="text/css" rel="stylesheet" href="../css/components/stabs.css">
     <script src="../js/stabs.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../font/font.css" type="text/css">
+    <link rel="stylesheet" href="../font/rudra.css" type="text/css">
   </head>
   <body>
     <div class="grid">
@@ -344,6 +378,58 @@
     <div class="grid">
       <div class="row">
         <div class="desktop-12">
+          <h1>Rudra Icons</h1>
+          <ul class="block">
+            <li> <span title="i-Adjustment" class="show-icon"><i class="i-Adjustment size-32"> </i><span class="icon-name">i-Adjustment </span></span></li>
+            <li> <span title="i-Align-center" class="show-icon"><i class="i-Align-center size-32"> </i><span class="icon-name">i-Align-center </span></span></li>
+            <li> <span title="i-Align-justify" class="show-icon"><i class="i-Align-justify size-32"> </i><span class="icon-name">i-Align-justify </span></span></li>
+            <li> <span title="i-Align-left" class="show-icon"><i class="i-Align-left size-32"> </i><span class="icon-name">i-Align-left </span></span></li>
+            <li> <span title="i-Align-right" class="show-icon"><i class="i-Align-right size-32"> </i><span class="icon-name">i-Align-right </span></span></li>
+            <li> <span title="i-Ambulence" class="show-icon"><i class="i-Ambulence size-32"> </i><span class="icon-name">i-Ambulence </span></span></li>
+            <li> <span title="i-android" class="show-icon"><i class="i-android size-32"> </i><span class="icon-name">i-android </span></span></li>
+            <li> <span title="i-archieve" class="show-icon"><i class="i-archieve size-32"> </i><span class="icon-name">i-archieve </span></span></li>
+            <li> <span title="i-backward" class="show-icon"><i class="i-backward size-32"> </i><span class="icon-name">i-backward </span></span></li>
+            <li> <span title="i-bar-chart" class="show-icon"><i class="i-bar-chart size-32"> </i><span class="icon-name">i-bar-chart </span></span></li>
+            <li> <span title="i-bars" class="show-icon"><i class="i-bars size-32"> </i><span class="icon-name">i-bars </span></span></li>
+            <li> <span title="i-bars1" class="show-icon"><i class="i-bars1 size-32"> </i><span class="icon-name">i-bars1 </span></span></li>
+            <li> <span title="i-bell" class="show-icon"><i class="i-bell size-32"> </i><span class="icon-name">i-bell </span></span></li>
+            <li> <span title="i-bit-bucket-blk" class="show-icon"><i class="i-bit-bucket-blk size-32"> </i><span class="icon-name">i-bit-bucket-blk </span></span></li>
+            <li> <span title="i-bit-bucket" class="show-icon"><i class="i-bit-bucket size-32"> </i><span class="icon-name">i-bit-bucket </span></span></li>
+            <li> <span title="i-bold" class="show-icon"><i class="i-bold size-32"> </i><span class="icon-name">i-bold </span></span></li>
+            <li> <span title="i-bolt" class="show-icon"><i class="i-bolt size-32"> </i><span class="icon-name">i-bolt </span></span></li>
+            <li> <span title="i-book" class="show-icon"><i class="i-book size-32"> </i><span class="icon-name">i-book </span></span></li>
+            <li> <span title="i-building" class="show-icon"><i class="i-building size-32"> </i><span class="icon-name">i-building </span></span></li>
+            <li> <span title="i-building1" class="show-icon"><i class="i-building1 size-32"> </i><span class="icon-name">i-building1 </span></span></li>
+            <li> <span title="i-bull-eye" class="show-icon"><i class="i-bull-eye size-32"> </i><span class="icon-name">i-bull-eye </span></span></li>
+            <li> <span title="i-Bull-horn" class="show-icon"><i class="i-Bull-horn size-32"> </i><span class="icon-name">i-Bull-horn </span></span></li>
+            <li> <span title="i-calander" class="show-icon"><i class="i-calander size-32"> </i><span class="icon-name">i-calander </span></span></li>
+            <li> <span title="i-camera" class="show-icon"><i class="i-camera size-32"> </i><span class="icon-name">i-camera </span></span></li>
+            <li> <span title="i-caret-down" class="show-icon"><i class="i-caret-down size-32"> </i><span class="icon-name">i-caret-down </span></span></li>
+            <li> <span title="i-caret-left" class="show-icon"><i class="i-caret-left size-32"> </i><span class="icon-name">i-caret-left </span></span></li>
+            <li> <span title="i-caret-right" class="show-icon"><i class="i-caret-right size-32"> </i><span class="icon-name">i-caret-right </span></span></li>
+            <li> <span title="i-caret-square-down" class="show-icon"><i class="i-caret-square-down size-32"> </i><span class="icon-name">i-caret-square-down </span></span></li>
+            <li> <span title="i-caret-square-left" class="show-icon"><i class="i-caret-square-left size-32"> </i><span class="icon-name">i-caret-square-left </span></span></li>
+            <li> <span title="i-caret-square-right" class="show-icon"><i class="i-caret-square-right size-32"> </i><span class="icon-name">i-caret-square-right </span></span></li>
+            <li> <span title="i-caret-square-up" class="show-icon"><i class="i-caret-square-up size-32"> </i><span class="icon-name">i-caret-square-up </span></span></li>
+            <li> <span title="i-caret-up" class="show-icon"><i class="i-caret-up size-32"> </i><span class="icon-name">i-caret-up </span></span></li>
+            <li> <span title="i-certificate" class="show-icon"><i class="i-certificate size-32"> </i><span class="icon-name">i-certificate </span></span></li>
+            <li> <span title="i-clipboard" class="show-icon"><i class="i-clipboard size-32"> </i><span class="icon-name">i-clipboard </span></span></li>
+            <li> <span title="i-clock" class="show-icon"><i class="i-clock size-32"> </i><span class="icon-name">i-clock </span></span></li>
+            <li> <span title="i-cloud-download" class="show-icon"><i class="i-cloud-download size-32"> </i><span class="icon-name">i-cloud-download </span></span></li>
+            <li> <span title="i-cloud-upload" class="show-icon"><i class="i-cloud-upload size-32"> </i><span class="icon-name">i-cloud-upload </span></span></li>
+            <li> <span title="i-cloud" class="show-icon"><i class="i-cloud size-32"> </i><span class="icon-name">i-cloud </span></span></li>
+            <li> <span title="i-crop" class="show-icon"><i class="i-crop size-32"> </i><span class="icon-name">i-crop </span></span></li>
+            <li> <span title="i-enevelop" class="show-icon"><i class="i-enevelop size-32"> </i><span class="icon-name">i-enevelop </span></span></li>
+            <li> <span title="i-forward" class="show-icon"><i class="i-forward size-32"> </i><span class="icon-name">i-forward </span></span></li>
+            <li> <span title="i-glass" class="show-icon"><i class="i-glass size-32"> </i><span class="icon-name">i-glass </span></span></li>
+            <li> <span title="i-home-64" class="show-icon"><i class="i-home-64 size-32"> </i><span class="icon-name">i-home-64 </span></span></li>
+            <li> <span title="i-pause" class="show-icon"><i class="i-pause size-32"> </i><span class="icon-name">i-pause </span></span></li>
+            <li> <span title="i-Pen" class="show-icon"><i class="i-Pen size-32"> </i><span class="icon-name">i-Pen </span></span></li>
+            <li> <span title="i-pie-chrt" class="show-icon"><i class="i-pie-chrt size-32"> </i><span class="icon-name">i-pie-chrt </span></span></li>
+            <li> <span title="i-play" class="show-icon"><i class="i-play size-32"> </i><span class="icon-name">i-play </span></span></li>
+            <li> <span title="i-shield-64" class="show-icon"><i class="i-shield-64 size-32"> </i><span class="icon-name">i-shield-64 </span></span></li>
+            <li> <span title="i-trophy-64" class="show-icon"><i class="i-trophy-64 size-32"> </i><span class="icon-name">i-trophy-64 </span></span></li>
+          </ul>
           <h1 class="divide-section">Icons
             <h1>rudra contains 49 glyphs:</h1><a onclick="toggleCharacters(); return false;" href="#">Toggle Preview Characters</a>
           </h1>

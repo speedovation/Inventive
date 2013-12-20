@@ -86,6 +86,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
       .size-18 { font-size: 18px; }
       .size-21 { font-size: 21px; }
       .size-24 { font-size: 24px; }
+      .size-32 { font-size: 32px; }
       .size-36 { font-size: 36px; }
       .size-48 { font-size: 48px; }
       .size-60 { font-size: 60px; }
@@ -225,6 +226,38 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
       .i-play:before { content: "\f12e"; }
       .i-shield-64:before { content: "\f12f"; }
       .i-trophy-64:before { content: "\f130"; }
+    
+      .block {
+        display : inline-block;
+      }
+      .block li
+      {
+        display : inline-block;
+        margin: 1.5rem 0;
+
+      }
+      .block .show-icon {
+        position: relative;
+        margin: 0 3rem;
+      }
+      .block .icon-name{
+        display: block;
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 0.84rem;
+        color: #999;
+      }
+
+      //- .block span:before {
+      //-     content: attr(title);
+      //-     font-size: 0.8rem;
+      //-     position: absolute;
+      //-     bottom : -25px;
+      //-     width: 7.5rem;
+      //-     margin-left: -2rem;
+      //- }
+
+
     //if lte IE 8
       script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
     script
@@ -232,10 +265,11 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
       var body = document.getElementsByTagName('body')[0];
       body.className = body.className === 'characters-off' ? '' : 'characters-off';
       }
+
  
 
     include header
-    link(rel='stylesheet', href='../font/font.css', type='text/css' )   
+    link(rel='stylesheet', href='../font/rudra.css', type='text/css' )   
 
   body
 
@@ -245,6 +279,19 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
       .row
 
         div.desktop-12
+
+          - var icons = ['i-Adjustment' , 'i-Align-center' , 'i-Align-justify' , 'i-Align-left' , 'i-Align-right' , 'i-Ambulence' , 'i-android' , 'i-archieve' , 'i-backward' , 'i-bar-chart' , 'i-bars' , 'i-bars1' , 'i-bell' , 'i-bit-bucket-blk' , 'i-bit-bucket' , 'i-bold' , 'i-bolt' , 'i-book' , 'i-building' , 'i-building1' , 'i-bull-eye' , 'i-Bull-horn' , 'i-calander' , 'i-camera' , 'i-caret-down' , 'i-caret-left' , 'i-caret-right' , 'i-caret-square-down' , 'i-caret-square-left' , 'i-caret-square-right' , 'i-caret-square-up' , 'i-caret-up' , 'i-certificate' , 'i-clipboard' , 'i-clock' , 'i-cloud-download' , 'i-cloud-upload' , 'i-cloud' , 'i-crop' , 'i-enevelop' , 'i-forward' , 'i-glass' , 'i-home-64' , 'i-pause' , 'i-Pen' , 'i-pie-chrt' , 'i-play' , 'i-shield-64' , 'i-trophy-64']  
+
+
+          h1 Rudra Icons
+          
+          ul.block
+            each val in icons
+              li 
+                  span(title = "#{val}",class="show-icon")
+                    i(class="#{val} size-32") 
+                    span.icon-name #{val} 
+            
 
           h1.divide-section Icons
 

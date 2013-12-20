@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "rudra";
-  src: url("./rudra_e3b637378ad73d90510c10fe8406f758.eot");
-  src: url("./rudra_e3b637378ad73d90510c10fe8406f758.eot?#iefix") format("embedded-opentype"),
-       url("./rudra_e3b637378ad73d90510c10fe8406f758.woff") format("woff"),
-       url("./rudra_e3b637378ad73d90510c10fe8406f758.ttf") format("truetype"),
-       url("./rudra_e3b637378ad73d90510c10fe8406f758.svg#rudra") format("svg");
+  src: url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.eot");
+  src: url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.eot?#iefix") format("embedded-opentype"),
+       url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.woff") format("woff"),
+       url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.ttf") format("truetype"),
+       url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.svg#rudra") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,6 +34,7 @@
 .i-bold:before,
 .i-bolt:before,
 .i-book:before,
+.i-building-new:before,
 .i-building:before,
 .i-building1:before,
 .i-bull-eye:before,
@@ -49,6 +50,7 @@
 .i-caret-square-up:before,
 .i-caret-up:before,
 .i-certificate:before,
+.i-certificate1:before,
 .i-clipboard:before,
 .i-clock:before,
 .i-cloud-download:before,
@@ -64,6 +66,7 @@
 .i-pie-chrt:before,
 .i-play:before,
 .i-shield-64:before,
+.i-sun:before,
 .i-trophy-64:before {
   font-family: "rudra";
   font-style: normal;
@@ -95,34 +98,37 @@
 .i-bold:before { content: "\f10f"; }
 .i-bolt:before { content: "\f110"; }
 .i-book:before { content: "\f111"; }
-.i-building:before { content: "\f112"; }
-.i-building1:before { content: "\f113"; }
-.i-bull-eye:before { content: "\f114"; }
-.i-Bull-horn:before { content: "\f115"; }
-.i-calander:before { content: "\f116"; }
-.i-camera:before { content: "\f117"; }
-.i-caret-down:before { content: "\f118"; }
-.i-caret-left:before { content: "\f119"; }
-.i-caret-right:before { content: "\f11a"; }
-.i-caret-square-down:before { content: "\f11b"; }
-.i-caret-square-left:before { content: "\f11c"; }
-.i-caret-square-right:before { content: "\f11d"; }
-.i-caret-square-up:before { content: "\f11e"; }
-.i-caret-up:before { content: "\f11f"; }
-.i-certificate:before { content: "\f120"; }
-.i-clipboard:before { content: "\f121"; }
-.i-clock:before { content: "\f122"; }
-.i-cloud-download:before { content: "\f123"; }
-.i-cloud-upload:before { content: "\f124"; }
-.i-cloud:before { content: "\f125"; }
-.i-crop:before { content: "\f126"; }
-.i-enevelop:before { content: "\f127"; }
-.i-forward:before { content: "\f128"; }
-.i-glass:before { content: "\f129"; }
-.i-home-64:before { content: "\f12a"; }
-.i-pause:before { content: "\f12b"; }
-.i-Pen:before { content: "\f12c"; }
-.i-pie-chrt:before { content: "\f12d"; }
-.i-play:before { content: "\f12e"; }
-.i-shield-64:before { content: "\f12f"; }
-.i-trophy-64:before { content: "\f130"; }
+.i-building-new:before { content: "\f112"; }
+.i-building:before { content: "\f113"; }
+.i-building1:before { content: "\f114"; }
+.i-bull-eye:before { content: "\f115"; }
+.i-Bull-horn:before { content: "\f116"; }
+.i-calander:before { content: "\f117"; }
+.i-camera:before { content: "\f118"; }
+.i-caret-down:before { content: "\f119"; }
+.i-caret-left:before { content: "\f11a"; }
+.i-caret-right:before { content: "\f11b"; }
+.i-caret-square-down:before { content: "\f11c"; }
+.i-caret-square-left:before { content: "\f11d"; }
+.i-caret-square-right:before { content: "\f11e"; }
+.i-caret-square-up:before { content: "\f11f"; }
+.i-caret-up:before { content: "\f120"; }
+.i-certificate:before { content: "\f121"; }
+.i-certificate1:before { content: "\f122"; }
+.i-clipboard:before { content: "\f123"; }
+.i-clock:before { content: "\f124"; }
+.i-cloud-download:before { content: "\f125"; }
+.i-cloud-upload:before { content: "\f126"; }
+.i-cloud:before { content: "\f127"; }
+.i-crop:before { content: "\f128"; }
+.i-enevelop:before { content: "\f129"; }
+.i-forward:before { content: "\f12a"; }
+.i-glass:before { content: "\f12b"; }
+.i-home-64:before { content: "\f12c"; }
+.i-pause:before { content: "\f12d"; }
+.i-Pen:before { content: "\f12e"; }
+.i-pie-chrt:before { content: "\f12f"; }
+.i-play:before { content: "\f130"; }
+.i-shield-64:before { content: "\f131"; }
+.i-sun:before { content: "\f132"; }
+.i-trophy-64:before { content: "\f133"; }

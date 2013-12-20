@@ -2977,7 +2977,6 @@ a.thumbnail.active {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 /* 1 */
-  display: inline-block;
   min-width: 16px;
   padding: 3px 5px;
   line-height: 20px;
@@ -2986,7 +2985,6 @@ a.thumbnail.active {
 /* 2 */
 }
 .pagination > li > a {
-  background: #eee;
   color: #444;
 }
 .pagination > li > a:hover,
@@ -3002,12 +3000,10 @@ a.thumbnail.active {
   color: #444;
 }
 .pagination > .active > span {
-  background: #00a8e6;
-  color: #fff;
+  color: #00a8e6;
 }
 .pagination > .disabled > span {
-  background-color: #f5f5f5;
-  color: #999;
+  color: #eaeaea;
 }
 .pagination-previous {
   float: left;
