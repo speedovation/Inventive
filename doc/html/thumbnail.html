@@ -33,10 +33,11 @@
         <div class="desktop-12 tablet-6 mobile-3">
           <nav id="nav" role="navigation"><a href="#nav" title="Show navigation">Show navigation<a href="#" title="Hide navigation">Hide navigation</a>
               <ul class="clearfix">
-                <li><a href="typography.html">Home</a></li>
+                <li><a href="typography.html"> <i class="i-home-64"></i>Home</a></li>
                 <li><a href="typography.html"><span>Design</span></a>
                   <ul>
                     <li><a href="typography.html">Typography</a></li>
+                    <li><a href="icons.html">Icon</a></li>
                   </ul>
                 </li>
                 <li><a href="grid.html"><span>UI</span></a>
@@ -109,74 +110,61 @@
       <div class="row">
         <div class="desktop-12">
           <h1 class="divide-section">Thumbnail</h1>
-          <p class="uk-article-lead">Create different thumbnail images, which come in various styles and sizes.</p>
+          <p class="info">Create different thumbnail images, which come in various styles and sizes.</p>
           <h2>Usage</h2>
-          <p>To apply this component, just add the<code>.uk-thumbnail</code>class to an<code><img></code>,<code><a></code>or<code><figure></code>element.</p>
-          <h3 class="tm-article-subtitle">Example</h3>
-          <div class="uk-margin"><img alt="" src="http://placekitten.com/200/100" class="uk-thumbnail"><a href="#" class="uk-thumbnail"><img alt="" src="http://placekitten.com/200/100"></a>
-            <figure class="uk-thumbnail"><img alt="" src="http://placekitten.com/200/100"></figure>
+          <p>To apply this component, just add the <code>.thumbnail</code> class to an <code>&lt;img&gt;</code> , <code>&lt;a&gt;</code> or <code>&lt;figure&gt;</code> element.</p>
+          <div class="preview-box"><img alt="" src="../img/demo/cow-1.jpg" class="w-33 thumbnail"><a href="#" class="w-33 thumbnail"><img alt="" src="../img/demo/cow-2.jpg"></a>
+            <figure class="w-33 thumbnail"><img alt="" src="../img/demo/cow-3.jpg"></figure>
           </div>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <pre></pre>
-          <hr class="uk-article-divider">
+          <hr>
           <h3>Caption</h3>
-          <p>Add the<code>.uk-thumbnail-caption</code>class to a<code><div></code>element to apply a text caption under the image.</p>
-          <h4 class="tm-article-subtitle">Example</h4>
-          <div class="uk-margin">
-            <div class="uk-thumbnail"><img alt="" src="http://placekitten.com/200/100">
-              <div class="uk-thumbnail-caption">Caption<code><div></code></div>
-            </div><a href="#" class="uk-thumbnail"><img alt="" src="http://placekitten.com/200/100">
-              <div class="uk-thumbnail-caption">Caption<code><a></code></div></a>
-            <figure class="uk-thumbnail"><img alt="" src="http://placekitten.com/200/100">
-              <figcaption class="uk-thumbnail-caption">Caption<code><figure></code></figcaption>
+          <p>Add the  <code>.caption </code> class to a <code>&lt;div&gt;</code> element to apply a text caption under the image.</p>
+          <div class="preview-box">
+            <div class="thumbnail w-33"><img alt="" src="../img/demo/cow-1.jpg">
+              <div class="caption">Caption <code>&lt;div&gt;</code></div>
+            </div><a href="#" class="w-33 thumbnail"><img alt="" src="../img/demo/cow-2.jpg">
+              <div class="caption">Caption<code>&lt;a&gt;</code></div></a>
+            <figure class="w-33 thumbnail"><img alt="" src="../img/demo/cow-3.jpg">
+              <figcaption class="caption">Caption <code>&lt;figure&gt;</code></figcaption>
             </figure>
           </div>
-          <h4 class="tm-article-subtitle">Markup</h4>
-          <pre></pre>
-          <hr class="uk-article-divider">
+          <hr>
           <h2>Size modifiers</h2>
-          <p>Apply the<code>.uk-thumbnail-large</code>,<code>.uk-thumbnail-medium</code>,<code>.uk-thumbnail-small</code>or<code>.uk-thumbnail-mini</code>classes to resize images. The<a href="base.html">Base component</a>is required to make the images responsive by default.</p>
-          <h3 class="tm-article-subtitle">Example</h3>
-          <div class="uk-margin">
-            <div class="uk-thumbnail uk-thumbnail-large"><img alt="" src="http://placekitten.com/600/400">
-              <div class="uk-thumbnail-caption"><code>.uk-thumbnail-large</code></div>
+          <p>Apply the <code>.thumbnail-large</code> , <code>.thumbnail-medium</code> , <code>.thumbnail-small</code> or <code>.thumbnail-mini</code> classes to resize images. The <a href="base.html">Base component</a> is required to make the images responsive by default.</p>
+          <div class="preview-box">
+            <div class="thumbnail thumbnail-large"><img alt="" src="../img/demo/cow-large.jpg">
+              <div class="caption"><code>.thumbnail-large</code></div>
+            </div>
+            <div class="thumbnail thumbnail-medium"><img alt="" src="../img/demo/cow-large.jpg">
+              <div class="caption"><code>.thumbnail-medium</code></div>
+            </div>
+            <div class="thumbnail thumbnail-small"><img alt="" src="../img/demo/cow-large.jpg">
+              <div class="caption"><code>.thumbnail-small</code></div>
+            </div>
+            <div class="thumbnail thumbnail-mini"><img alt="" src="../img/demo/cow-large.jpg">
+              <div class="caption"><code>.thumbnail-mini</code></div>
             </div>
           </div>
-          <div class="uk-margin">
-            <div class="uk-thumbnail uk-thumbnail-medium"><img alt="" src="http://placekitten.com/600/400">
-              <div class="uk-thumbnail-caption"><code>.uk-thumbnail-medium</code></div>
-            </div>
-            <div class="uk-thumbnail uk-thumbnail-small"><img alt="" src="http://placekitten.com/600/400">
-              <div class="uk-thumbnail-caption"><code>.uk-thumbnail-small</code></div>
-            </div>
-            <div class="uk-thumbnail uk-thumbnail-mini"><img alt="" src="http://placekitten.com/600/400">
-              <div class="uk-thumbnail-caption"><code>.uk-thumbnail-mini</code></div>
+          <p>You can even scale a thumbnail beyond its proper size, so that it extends to the full width of its parent element. Just add the<code>.thumbnail-expand</code>class.</p>
+          <div class="preview-box">
+            <div class="thumbnail thumbnail-expand"><img alt="" src="../img/demo/cow-large.jpg">
+              <div class="caption"><code>.thumbnail-expand</code></div>
             </div>
           </div>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <pre></pre>
-          <p>You can even scale a thumbnail beyond its proper size, so that it extends to the full width of its parent element. Just add the<code>.uk-thumbnail-expand</code>class.</p>
-          <h3 class="tm-article-subtitle">Example</h3>
-          <div class="uk-thumbnail uk-thumbnail-expand"><img alt="" src="http://placekitten.com/600/400">
-            <div class="uk-thumbnail-caption"><code>.uk-thumbnail-expand</code></div>
-          </div>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <pre></pre>
-          <hr class="uk-article-divider">
+          <hr>
           <h2>Grid</h2>
-          <p>You can easily create a grid with thumbnails by using the<a href="grid.html">Grid component</a>.</p>
-          <h3 class="tm-article-subtitle">Example</h3>
-          <div data-uk-grid-margin="" class="uk-grid">
-            <div class="uk-width-medium-1-2"><img alt="" src="http://placekitten.com/600/400" class="uk-thumbnail"></div>
-            <div class="uk-width-medium-1-2">
-              <div data-uk-grid-margin="" class="uk-grid">
-                <div class="uk-width-medium-1-2"><img alt="" src="http://placekitten.com/300/455" class="uk-thumbnail"></div>
-                <div class="uk-width-medium-1-2"><img alt="" src="http://placekitten.com/120/255" class="uk-thumbnail"></div>
+          <p>You can easily create a grid with thumbnails by using the <a href="grid.html">Grid component</a>.</p>
+          <div class="preview-box">
+            <div data-grid-margin="" class="grid">
+              <div class="w-50"><img alt="" src="../img/demo/cow-1.jpg" class="thumbnail"></div>
+              <div class="w-50">
+                <div data-grid-margin="" class="grid">
+                  <div class="w-50"><img alt="" src="../img/demo/cow-4.jpg" class="thumbnail"></div>
+                  <div class="w-50"><img alt="" src="../img/demo/cow-4.jpg" class="thumbnail"></div>
+                </div>
               </div>
             </div>
           </div>
-          <h3 class="tm-article-subtitle">Markup</h3>
-          <pre></pre>
         </div>
       </div>
     </div>

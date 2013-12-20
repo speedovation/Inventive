@@ -19,120 +19,117 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
           h1.divide-section Thumbnail
           
-          p.uk-article-lead Create different thumbnail images, which come in various styles and sizes.
+          p.info Create different thumbnail images, which come in various styles and sizes.
+          
           h2 Usage
           p
-            | To apply this component, just add the
-            code .uk-thumbnail
-            | class to an
-            code <img>
-            | ,
-            code <a>
-            | or
-            code <figure>
-            | element.
-          h3.tm-article-subtitle Example
-          .uk-margin
-            img.uk-thumbnail(alt='', src='http://placekitten.com/200/100')
-            a.uk-thumbnail(href='#')
-              img(alt='', src='http://placekitten.com/200/100')
-            figure.uk-thumbnail
-              img(alt='', src='http://placekitten.com/200/100')
-          h3.tm-article-subtitle Markup
-          pre.
+            | To apply this component, just add the 
+            code .thumbnail
+            |  class to an 
+            code= "<img>" 
+            |  , 
+            code= "<a>"
+            |  or 
+            code= "<figure>"
+            |  element.
+          
+          .preview-box
             
-          hr.uk-article-divider
+            img.w-33.thumbnail(alt='', src='../img/demo/cow-1.jpg')
+            a.w-33.thumbnail(href='#')
+              img(alt='', src='../img/demo/cow-2.jpg')
+            figure.w-33.thumbnail
+              img(alt='', src='../img/demo/cow-3.jpg')
+          
+          hr
           h3 Caption
           p
-            | Add the
-            code .uk-thumbnail-caption
-            | class to a
-            code <div>
-            | element to apply a text caption under the image.
-          h4.tm-article-subtitle Example
-          .uk-margin
-            .uk-thumbnail
-              img(alt='', src='http://placekitten.com/200/100')
-              .uk-thumbnail-caption
-                | Caption
-                code <div>
-            a.uk-thumbnail(href='#')
-              img(alt='', src='http://placekitten.com/200/100')
-              .uk-thumbnail-caption
-                | Caption
-                code <a>
-            figure.uk-thumbnail
-              img(alt='', src='http://placekitten.com/200/100')
-              figcaption.uk-thumbnail-caption
-                | Caption
-                code <figure>
-          h4.tm-article-subtitle Markup
-          pre.
+            | Add the  
+            code .caption 
+            |  class to a 
+            code= "<div>"
+            |  element to apply a text caption under the image.
+          
+          .preview-box
             
-          hr.uk-article-divider
+            .thumbnail.w-33
+              img(alt='', src='../img/demo/cow-1.jpg')
+              .caption
+                | Caption 
+                code= "<div>"
+            
+            a.w-33.thumbnail(href='#')
+              img(alt='', src='../img/demo/cow-2.jpg')
+              .caption
+                | Caption
+                code= "<a>"
+            figure.w-33.thumbnail
+              img(alt='', src='../img/demo/cow-3.jpg')
+              figcaption.caption
+                | Caption 
+                code= "<figure>"
+          
+          hr
           h2 Size modifiers
           p
-            | Apply the
-            code .uk-thumbnail-large
-            | ,
-            code .uk-thumbnail-medium
-            | ,
-            code .uk-thumbnail-small
-            | or
-            code .uk-thumbnail-mini
-            | classes to resize images. The
+            | Apply the 
+            code .thumbnail-large
+            |  , 
+            code .thumbnail-medium
+            |  , 
+            code .thumbnail-small
+            |  or 
+            code .thumbnail-mini
+            |  classes to resize images. The 
             a(href='base.html') Base component
-            | is required to make the images responsive by default.
-          h3.tm-article-subtitle Example
-          .uk-margin
-            .uk-thumbnail.uk-thumbnail-large
-              img(alt='', src='http://placekitten.com/600/400')
-              .uk-thumbnail-caption
-                code .uk-thumbnail-large
-          .uk-margin
-            .uk-thumbnail.uk-thumbnail-medium
-              img(alt='', src='http://placekitten.com/600/400')
-              .uk-thumbnail-caption
-                code .uk-thumbnail-medium
-            .uk-thumbnail.uk-thumbnail-small
-              img(alt='', src='http://placekitten.com/600/400')
-              .uk-thumbnail-caption
-                code .uk-thumbnail-small
-            .uk-thumbnail.uk-thumbnail-mini
-              img(alt='', src='http://placekitten.com/600/400')
-              .uk-thumbnail-caption
-                code .uk-thumbnail-mini
-          h3.tm-article-subtitle Markup
-          pre.
+            |  is required to make the images responsive by default.
+          
+          .preview-box
+            .thumbnail.thumbnail-large
+              img(alt='', src='../img/demo/cow-large.jpg')
+              .caption
+                code .thumbnail-large
+          
+            .thumbnail.thumbnail-medium
+              img(alt='', src='../img/demo/cow-large.jpg')
+              .caption
+                code .thumbnail-medium
+            .thumbnail.thumbnail-small
+              img(alt='', src='../img/demo/cow-large.jpg')
+              .caption
+                code .thumbnail-small
+            .thumbnail.thumbnail-mini
+              img(alt='', src='../img/demo/cow-large.jpg')
+              .caption
+                code .thumbnail-mini
+          
             
           p
             | You can even scale a thumbnail beyond its proper size, so that it extends to the full width of its parent element. Just add the
-            code .uk-thumbnail-expand
+            code .thumbnail-expand
             | class.
-          h3.tm-article-subtitle Example
-          .uk-thumbnail.uk-thumbnail-expand
-            img(alt='', src='http://placekitten.com/600/400')
-            .uk-thumbnail-caption
-              code .uk-thumbnail-expand
-          h3.tm-article-subtitle Markup
-          pre.
+          
+          .preview-box
+            .thumbnail.thumbnail-expand
+              img(alt='', src='../img/demo/cow-large.jpg')
+              .caption
+                code .thumbnail-expand
             
-          hr.uk-article-divider
+          hr
           h2 Grid
           p
-            | You can easily create a grid with thumbnails by using the
+            | You can easily create a grid with thumbnails by using the 
             a(href='grid.html') Grid component
             | .
-          h3.tm-article-subtitle Example
-          .uk-grid(data-uk-grid-margin='')
-            .uk-width-medium-1-2
-              img.uk-thumbnail(alt='', src='http://placekitten.com/600/400')
-            .uk-width-medium-1-2
-              .uk-grid(data-uk-grid-margin='')
-                .uk-width-medium-1-2
-                  img.uk-thumbnail(alt='', src='http://placekitten.com/300/455')
-                .uk-width-medium-1-2
-                  img.uk-thumbnail(alt='', src='http://placekitten.com/120/255')
-          h3.tm-article-subtitle Markup
-          pre.
+          
+          .preview-box
+            .grid(data-grid-margin='')
+              .w-50
+                img.thumbnail(alt='', src='../img/demo/cow-1.jpg')
+              .w-50
+                .grid(data-grid-margin='')
+                  .w-50
+                    img.thumbnail(alt='', src='../img/demo/cow-4.jpg')
+                  .w-50
+                    img.thumbnail(alt='', src='../img/demo/cow-4.jpg')
             

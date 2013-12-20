@@ -2523,8 +2523,25 @@ a.thumbnail.active {
   border-color: #f00;
 }
 .thumbnail .caption {
-  color: #333;
   padding: 9px;
+  text-align: center;
+  color: #444;
+}
+.thumbnail-mini {
+  width: 150px;
+}
+.thumbnail-small {
+  width: 200px;
+}
+.thumbnail-medium {
+  width: 300px;
+}
+.thumbnail-large {
+  width: 400px;
+}
+.thumbnail-expand,
+.thumbnail-expand > img {
+  width: 100%;
 }
 .pagination {
 /* 1 */
