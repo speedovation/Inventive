@@ -5,11 +5,8 @@ html
 
     include header
     
-    link(rel='stylesheet', href='../css/tables/table.css', type='text/css' )
+    
     link(rel='stylesheet', href='../css/tables/tables.css', type='text/css' )    
-
-    link(rel='stylesheet', href='../css/buttons/buttons.css', type='text/css' )
-
       
 body
 
@@ -28,8 +25,8 @@ body
               tbody
                 for tr in tbody_trs
                   tr 
-                    for td in tr
-                      td= td
+                    for td,index in tr
+                      td(data-title=thead_ths[index])= td
 
 
             - var th_cols = [ 'Comedy','Adventure','Action','Children' ]
@@ -55,13 +52,23 @@ body
                 +table(th_cols,td_rows)
 
             h2.divide-section Rounded and Bordered table
+            p Normal table for tablet and desktop
+            p 
+              | No table for mobiles very handy and suggestive. 
+              | To appy just use <code>.no-table</code>. 
+              | See below live example
+              //- | This idea is inspired from 
+              //- a(href="http://css-tricks.com/responsive-data-tables/",rel="nofollow") Css Tricks
+              //- |  and improved.  
+              | Click on mobile icon to see how this works.
+
             .preview-box
-              table(class="bordered rounded")
+              table(class="no-table bordered rounded")
                 +table(th_cols,td_rows)    
 
             h2.divide-section Rounded and Bordered  Table with and Zebra
             .preview-box
-              table(class="rounded zebra bordered")
+              table(class="rounded zebra bordered no-table")
                 +table(th_cols,td_rows)    
                
 
@@ -69,36 +76,36 @@ body
             
             h2.divide-section Horizontal Minimalist  
             .preview-box
-              table( id="hor-minimalist-a" summary="Employee Pay Sheet")
+              table( id="hor-minimalist-a" summary="Employee Pay Sheet",class="no-table")
                 +table(th_cols,td_rows)
                         
             h2.divide-section Horizontal Minimalist with lines
             .preview-box
-              table( id="hor-minimalist-b" summary="Employee Pay Sheet")
+              table( id="hor-minimalist-b" summary="Employee Pay Sheet",class="no-table")
                 +table(th_cols,td_rows)
                     
             h1.divide-section Vertical Minimalist
             h2.divide-section Vertical Minimalist    
             .preview-box
-              table( id="ver-minimalist" summary="Most Favorite Movies")
+              table( id="ver-minimalist" summary="Most Favorite Movies",class="no-table")
                 +table(th_cols,td_rows)
                     
             h1.divide-section Box
             h2.divide-section Row Based Box 
             .preview-box
-              table( id="box-table-a" summary="Employee Pay Sheet")
+              table( id="box-table-a" summary="Employee Pay Sheet",class="no-table")
                 +table(th_cols,td_rows)
                 
             h2.divide-section Column Based Box
             .preview-box
-              table( id="box-table-b" summary="Most Favorit Movies")
+              table( id="box-table-b" summary="Most Favorit Movies",class="no-table")
                 +table(th_cols,td_rows)
 
             h1.divide-section Zebra    
             
             h2.divide-section  Vertical Zebra Style 
             .preview-box
-              table( id="ver-zebra" summary="Most Favorite Movies")
+              table( id="ver-zebra" summary="Most Favorite Movies",class="no-table")
                 colgroup
                     col( class="vzebra-odd" )
                     col( class="vzebra-even" )
@@ -142,7 +149,7 @@ body
 
             h2.divide-section One Column Emphasis           
             .preview-box
-              table( id="one-column-emphasis" summary="2007 Major IT Companies' Profit")
+              table( id="one-column-emphasis" summary="2007 Major IT Companies' Profit",class="no-table")
                 colgroup
                     col( class="oce-first" )
                 
@@ -153,12 +160,12 @@ body
             h1.divide-section Newspaper
             h2.divide-section Newspaper A
             .preview-box
-              table( id="newspaper-a" summary="2007 Major IT Companies' Profit")
+              table( id="newspaper-a" summary="2007 Major IT Companies' Profit",class="no-table")
                 +table(th_cols,td_rows)        
 
             h2.divide-section Newspaper B    
             .preview-box
-              table( id="newspaper-b" summary="2007 Major IT Companies' Profit")
+              table( id="newspaper-b" summary="2007 Major IT Companies' Profit",class="no-table")
                 +table(th_cols,td_rows)
                    
                 
@@ -173,7 +180,7 @@ body
 
             h2.divide-section Newspaper C
             .preview-box
-              table( id="newspaper-c" summary="Personal Movie Rating")
+              table( id="newspaper-c" summary="Personal Movie Rating",class="no-table")
                 +table(th_cols,td_rows) 
                     
                 

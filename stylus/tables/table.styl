@@ -1,5 +1,7 @@
+@import "../grid/variables"
 @import "../_funcs"
 @import "_variables"
+
 
 table.default
     
@@ -147,6 +149,9 @@ table.hover
 
 
 .table
+    overflow-x: scroll
+    overflow-y: hidden
+
     td, th
         padding: 10px
         border-bottom: 1px solid #f2f2f2    
@@ -189,3 +194,207 @@ table.rounded
 
     tr:last-child td:last-child 
         border-radius(0 0 radius 0)
+
+
+@media untilmobile 
+    .table:after , .table thead:after 
+        visibility: hidden
+        display: block
+        font-size: 0
+        content: " "
+        clear: both
+        height: 0;
+        
+    .table
+        width: 100%
+        border-collapse: collapse
+        border-spacing: 0;
+        display block
+
+    .table th,
+    .table td 
+        margin: 0
+        vertical-align: top;
+    .table th 
+        text-align: left;
+    .table table 
+        display: block
+        position: relative
+        width: 100%
+    .table thead
+        display: block
+        float: left
+    .table tbody 
+        display: block
+        width: auto
+        position: relative
+        overflow-x: auto
+        white-space: nowrap
+    .table thead tr 
+        display: block
+    .table th 
+        display: block
+        text-align: right
+    .table tbody tr 
+        display: inline-block
+        vertical-align: top
+    .table td 
+        display: block
+        min-height: 1.25em
+        text-align: left
+
+
+    //- sort out borders */
+
+    .table th 
+        border-bottom: 0
+        border-left: 0
+    .table td 
+        border-left: 0
+        border-right: 0
+        border-bottom: 0
+    .table tbody tr 
+        border-left: 1px solid #ddd
+    .table th:last-child,
+    .table td:last-child 
+        border-bottom: 1px solid #ddd
+
+
+    // More practical CSS...
+    // using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
+
+    $breakpoint-alpha: 480px; // adjust to your needs
+
+    table.rounded, 
+      display block
+
+    table.no-table 
+      margin: 1em 0;
+      //min-width: 300px; // adjust to your needs
+      display block
+
+      thead, tbody, th, td, tr
+          display block
+      
+      tr 
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        &:nth-child(even) 
+            background: #f3f3f3 
+            
+      
+      
+      th 
+        display: none;    
+      
+      
+      td 
+        display: block;
+        border-right 1px solid #DDDDDD
+        
+        &:first-child 
+          //padding-top: .5em
+          border-left: 1px solid #ddd !important
+        
+        &:last-child 
+          //padding-bottom: .5em
+          border-bottom 1px solid #DDDDDD !important
+      
+    
+        
+        
+
+        &:before 
+          content: attr(data-title)": "; // who knew you could do this? The internet, that's who.
+          font-weight: bold;
+
+          // optional stuff to make it look nicer
+          width: 6.5em; // magic number :( adjust according to your own content
+          display: inline-block;
+          // end options
+          
+          @media (min-width: $breakpoint-alpha) 
+            display: none;
+          
+        
+      
+      
+      th, td 
+        text-align: left;
+        
+        @media (min-width: $breakpoint-alpha) 
+          display: table-cell;
+          padding: .25em .5em;
+          
+          &:first-child 
+            padding-left: 0;
+          
+          
+          &:last-child 
+            padding-right: 0;
+          
+        
+
+      
+      
+      
+    
+
+
+
+
+
+
+// //- This technique was developed by Chris Coyier (@chriscoyier) 
+// //- and described in his post Responsive Data Tables at css-tricks.com. 
+// //- While you're there, you should probably check out the Responsive Tables 
+// //- Roundup post, which showcases all these techniques and more.
+
+// //-  Force table to not be like tables anymore */
+// .no-table,
+// .no-table thead,
+// .no-table tbody,
+// .no-table th,
+// .no-table td,
+// .no-table tr
+//     display: block
+
+
+// //- Hide table headers (but not display: none;, for accessibility) */
+// .no-table thead tr 
+//     position: absolute;
+//     top: -9999px;
+//     left: -9999px;
+
+
+// .no-table tr 
+//     border: 1px solid #ccc;
+
+// .no-table td 
+//     //- Behave like a "row" 
+//     border: none;
+//     border-bottom: 1px solid #eee;
+//     position: relative;
+//     padding-left: 50%;
+//     white-space: normal;
+//     text-align:left;
+
+
+// .no-table td:before 
+//     //- Now like a table header
+//     position: absolute;
+//     //- Top/left values mimic padding 
+//     top: 6px;
+//     left: 6px;
+//     width: 45%;
+//     padding-right: 10px;
+//     white-space: nowrap;
+//     text-align:left;
+//     font-weight: bold;
+
+
+    
+// //-    Label the data
+// .no-table td:before 
+//     content: attr(data-title)

@@ -163,6 +163,10 @@ table.hover tr:hover {
   -ms-transition: all;
   transition: all;
 }
+.table {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
 .table td,
 .table th {
   padding: 10px;
@@ -215,4 +219,93 @@ table.rounded tr:last-child td:last-child {
   -webkit-border-radius: 0 0 4px 0;
   -moz-border-radius: 0 0 4px 0;
   border-radius: 0 0 4px 0;
+}
+@media untilmobile {
+  .table,
+  .table thead:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+/* sort out borders */
+  }
+  .table .table table,
+  .table thead:after .table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  .table .table th,
+  .table thead:after .table th,
+  .table .table td,
+  .table thead:after .table td {
+    margin: 0;
+    vertical-align: top;
+  }
+  .table .table th,
+  .table thead:after .table th {
+    text-align: left;
+  }
+  .table .table table,
+  .table thead:after .table table {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .table .table thead,
+  .table thead:after .table thead {
+    display: block;
+    float: left;
+  }
+  .table .table tbody,
+  .table thead:after .table tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .table .table thead tr,
+  .table thead:after .table thead tr {
+    display: block;
+  }
+  .table .table th,
+  .table thead:after .table th {
+    display: block;
+    text-align: right;
+  }
+  .table .table tbody tr,
+  .table thead:after .table tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .table .table td,
+  .table thead:after .table td {
+    display: block;
+    min-height: 1.25em;
+    text-align: left;
+  }
+  .table .table th,
+  .table thead:after .table th {
+    border-bottom: 0;
+    border-left: 0;
+  }
+  .table .table td,
+  .table thead:after .table td {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .table .table tbody tr,
+  .table thead:after .table tbody tr {
+    border-left: 1px solid #ddd;
+  }
+  .table .table th:last-child,
+  .table thead:after .table th:last-child,
+  .table .table td:last-child,
+  .table thead:after .table td:last-child {
+    border-bottom: 1px solid #ddd;
+  }
 }
