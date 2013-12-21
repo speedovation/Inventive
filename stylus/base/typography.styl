@@ -11,6 +11,7 @@ body
   text-rendering: optimizeLegibility;
   line-height: 1.5
   color: #272727;
+  margin: 0;
    
 
 /* Typography ================================================== */
@@ -73,8 +74,41 @@ hr
   clear: both
   margin: 1.11111rem 0 1.05556rem
   height: 0 
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 10px 0 30px
 
-/* Helpful Typography Defaults */
+
+//TODO we will see if this required or not 
+//for now let it be here
+pre
+    word-break: break-all /* webkit */
+    word-wrap: break-word
+    white-space: pre
+    white-space: -moz-pre-wrap /* fennec */
+    white-space: pre-wrap
+    white-space: pre\9 /* IE7+ */
+    white-space: -pre-wrap 
+    white-space: -o-pre-wrap 
+
+code, pre, kbd, samp 
+    font-family: Consolas, 'Liberation Mono', Monaco, Courier, monospace
+    //font-weight: bold
+    //color: #bb240d   
+    border-radius 3px
+    //color: #1486cc;
+    color #CC470D  
+    font-size 0.8rem
+    font-weight 300
+    padding 3px 5px
+    background #fcfcfc
+    border 1px solid #ddd
+
+pre code
+    border 0
+    display block
+
+
 del 
     opacity: .75;
     -webkit-user-select: none;
@@ -96,16 +130,20 @@ kbd
     border: 1px solid #a5a5a5;
     border-radius: 3px;
     box-shadow: inset 0 1px 0 0 #fff,inset 0 -2px 0 0 #d9d9d9;
-    font-family: "Droid Sans",Verdana,Geneva,sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 5px 10px;
 
 sup, sub 
-    font-size: 75% 
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 sup     
     vertical-align: super 
+    top: -0.5em;
 sub     
     vertical-align: sub 
+    bottom: -0.25em;
 
 em, i 
   font-style: italic
@@ -119,34 +157,6 @@ small, .milli
   font-size: 60%
   line-height: inherit 
 
-//TODO we will see if this required or not 
-//for now let it be here
-pre
-    word-break: break-all /* webkit */
-    word-wrap: break-word
-    white-space: pre
-    white-space: -moz-pre-wrap /* fennec */
-    white-space: pre-wrap
-    white-space: pre\9 /* IE7+ */
-    white-space: -pre-wrap 
-    white-space: -o-pre-wrap 
-
-code, pre 
-    font-family: Consolas, 'Liberation Mono', Monaco, Courier, monospace
-    //font-weight: bold
-    //color: #bb240d   
-    border-radius 3px
-    //color: #1486cc;
-    color #CC470D  
-    font-size 0.8rem
-    font-weight 300
-    padding 3px 5px
-    background #fcfcfc
-    border 1px solid #ddd
-
-pre code
-    border 0
-    display block
     
 p
     margin-bottom: 1.5625rem;
@@ -187,12 +197,7 @@ blockquote cite a, blockquote cite a:visited, blockquote cite a:visited
     color: #555
 
 
-hr
-    border: solid #ddd
-    border-width: 1px 0 0
-    clear: both
-    margin: 10px 0 30px
-    height: 0
+
 
 .divide-section
     //border-bottom: 4px double #BFBFBF;
@@ -205,10 +210,11 @@ hr
 a, a:visited
     color: red
     text-decoration: none
-    //outline: 0
+    outline: thin dotted;
 
 a:hover, a:focus
     color: #000
+    outline: 0;
 
 // Prevents border/background on linked image hover.
 // Adds slight opacity.

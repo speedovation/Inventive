@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "rudra";
-  src: url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.eot");
-  src: url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.eot?#iefix") format("embedded-opentype"),
-       url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.woff") format("woff"),
-       url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.ttf") format("truetype"),
-       url("./rudra_e7ce73a5aafbf59ef3b2a53be2887155.svg#rudra") format("svg");
+  src: url("./rudra_ef24c89b37b09a32705c51ed332c3070.eot");
+  src: url("./rudra_ef24c89b37b09a32705c51ed332c3070.eot?#iefix") format("embedded-opentype"),
+       url("./rudra_ef24c89b37b09a32705c51ed332c3070.woff") format("woff"),
+       url("./rudra_ef24c89b37b09a32705c51ed332c3070.ttf") format("truetype"),
+       url("./rudra_ef24c89b37b09a32705c51ed332c3070.svg#rudra") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +24,19 @@
 .i-Ambulence:before,
 .i-android:before,
 .i-archieve:before,
+.i-arrow-down-circle:before,
+.i-arrow-download:before,
+.i-arrow-h:before,
+.i-arrow-left-circle:before,
+.i-arrow-left:before,
+.i-arrow-right-circle:before,
+.i-arrow-right:before,
+.i-arrow-up-circle:before,
+.i-arrow-up:before,
+.i-arrow-v:before,
+.i-asterisk:before,
 .i-backward:before,
+.i-banned:before,
 .i-bar-chart:before,
 .i-bars:before,
 .i-bars1:before,
@@ -51,22 +63,52 @@
 .i-caret-up:before,
 .i-certificate:before,
 .i-certificate1:before,
+.i-certificate3:before,
+.i-chevron-circle-down:before,
+.i-chevron-circle-right:before,
+.i-chevron-circle-up:before,
+.i-chevron-circleleft:before,
+.i-chevron-down:before,
+.i-chevron-left:before,
+.i-chevron-right:before,
+.i-chevron-up:before,
 .i-clipboard:before,
 .i-clock:before,
 .i-cloud-download:before,
 .i-cloud-upload:before,
 .i-cloud:before,
+.i-comment-o:before,
+.i-comment:before,
+.i-comments:before,
+.i-compass:before,
+.i-compress:before,
+.i-credit-card:before,
 .i-crop:before,
+.i-desktop:before,
+.i-download:before,
 .i-enevelop:before,
+.i-exclamation-alt:before,
+.i-exclamation-circle:before,
+.i-exclamation-square:before,
+.i-exclamation-triangle:before,
+.i-exclamation:before,
+.i-expand:before,
+.i-female:before,
 .i-forward:before,
 .i-glass:before,
 .i-home-64:before,
+.i-male:before,
+.i-monitor:before,
+.i-next-double-arrow:before,
 .i-pause:before,
 .i-Pen:before,
 .i-pie-chrt:before,
 .i-play:before,
+.i-power:before,
 .i-shield-64:before,
 .i-sun:before,
+.i-tick-alt:before,
+.i-tick:before,
 .i-trophy-64:before {
   font-family: "rudra";
   font-style: normal;
@@ -88,47 +130,89 @@
 .i-Ambulence:before { content: "\f105"; }
 .i-android:before { content: "\f106"; }
 .i-archieve:before { content: "\f107"; }
-.i-backward:before { content: "\f108"; }
-.i-bar-chart:before { content: "\f109"; }
-.i-bars:before { content: "\f10a"; }
-.i-bars1:before { content: "\f10b"; }
-.i-bell:before { content: "\f10c"; }
-.i-bit-bucket-blk:before { content: "\f10d"; }
-.i-bit-bucket:before { content: "\f10e"; }
-.i-bold:before { content: "\f10f"; }
-.i-bolt:before { content: "\f110"; }
-.i-book:before { content: "\f111"; }
-.i-building-new:before { content: "\f112"; }
-.i-building:before { content: "\f113"; }
-.i-building1:before { content: "\f114"; }
-.i-bull-eye:before { content: "\f115"; }
-.i-Bull-horn:before { content: "\f116"; }
-.i-calander:before { content: "\f117"; }
-.i-camera:before { content: "\f118"; }
-.i-caret-down:before { content: "\f119"; }
-.i-caret-left:before { content: "\f11a"; }
-.i-caret-right:before { content: "\f11b"; }
-.i-caret-square-down:before { content: "\f11c"; }
-.i-caret-square-left:before { content: "\f11d"; }
-.i-caret-square-right:before { content: "\f11e"; }
-.i-caret-square-up:before { content: "\f11f"; }
-.i-caret-up:before { content: "\f120"; }
-.i-certificate:before { content: "\f121"; }
-.i-certificate1:before { content: "\f122"; }
-.i-clipboard:before { content: "\f123"; }
-.i-clock:before { content: "\f124"; }
-.i-cloud-download:before { content: "\f125"; }
-.i-cloud-upload:before { content: "\f126"; }
-.i-cloud:before { content: "\f127"; }
-.i-crop:before { content: "\f128"; }
-.i-enevelop:before { content: "\f129"; }
-.i-forward:before { content: "\f12a"; }
-.i-glass:before { content: "\f12b"; }
-.i-home-64:before { content: "\f12c"; }
-.i-pause:before { content: "\f12d"; }
-.i-Pen:before { content: "\f12e"; }
-.i-pie-chrt:before { content: "\f12f"; }
-.i-play:before { content: "\f130"; }
-.i-shield-64:before { content: "\f131"; }
-.i-sun:before { content: "\f132"; }
-.i-trophy-64:before { content: "\f133"; }
+.i-arrow-down-circle:before { content: "\f108"; }
+.i-arrow-download:before { content: "\f109"; }
+.i-arrow-h:before { content: "\f10a"; }
+.i-arrow-left-circle:before { content: "\f10b"; }
+.i-arrow-left:before { content: "\f10c"; }
+.i-arrow-right-circle:before { content: "\f10d"; }
+.i-arrow-right:before { content: "\f10e"; }
+.i-arrow-up-circle:before { content: "\f10f"; }
+.i-arrow-up:before { content: "\f110"; }
+.i-arrow-v:before { content: "\f111"; }
+.i-asterisk:before { content: "\f112"; }
+.i-backward:before { content: "\f113"; }
+.i-banned:before { content: "\f114"; }
+.i-bar-chart:before { content: "\f115"; }
+.i-bars:before { content: "\f116"; }
+.i-bars1:before { content: "\f117"; }
+.i-bell:before { content: "\f118"; }
+.i-bit-bucket-blk:before { content: "\f119"; }
+.i-bit-bucket:before { content: "\f11a"; }
+.i-bold:before { content: "\f11b"; }
+.i-bolt:before { content: "\f11c"; }
+.i-book:before { content: "\f11d"; }
+.i-building-new:before { content: "\f11e"; }
+.i-building:before { content: "\f11f"; }
+.i-building1:before { content: "\f120"; }
+.i-bull-eye:before { content: "\f121"; }
+.i-Bull-horn:before { content: "\f122"; }
+.i-calander:before { content: "\f123"; }
+.i-camera:before { content: "\f124"; }
+.i-caret-down:before { content: "\f125"; }
+.i-caret-left:before { content: "\f126"; }
+.i-caret-right:before { content: "\f127"; }
+.i-caret-square-down:before { content: "\f128"; }
+.i-caret-square-left:before { content: "\f129"; }
+.i-caret-square-right:before { content: "\f12a"; }
+.i-caret-square-up:before { content: "\f12b"; }
+.i-caret-up:before { content: "\f12c"; }
+.i-certificate:before { content: "\f12d"; }
+.i-certificate1:before { content: "\f12e"; }
+.i-certificate3:before { content: "\f12f"; }
+.i-chevron-circle-down:before { content: "\f130"; }
+.i-chevron-circle-right:before { content: "\f131"; }
+.i-chevron-circle-up:before { content: "\f132"; }
+.i-chevron-circleleft:before { content: "\f133"; }
+.i-chevron-down:before { content: "\f134"; }
+.i-chevron-left:before { content: "\f135"; }
+.i-chevron-right:before { content: "\f136"; }
+.i-chevron-up:before { content: "\f137"; }
+.i-clipboard:before { content: "\f138"; }
+.i-clock:before { content: "\f139"; }
+.i-cloud-download:before { content: "\f13a"; }
+.i-cloud-upload:before { content: "\f13b"; }
+.i-cloud:before { content: "\f13c"; }
+.i-comment-o:before { content: "\f13d"; }
+.i-comment:before { content: "\f13e"; }
+.i-comments:before { content: "\f13f"; }
+.i-compass:before { content: "\f140"; }
+.i-compress:before { content: "\f141"; }
+.i-credit-card:before { content: "\f142"; }
+.i-crop:before { content: "\f143"; }
+.i-desktop:before { content: "\f144"; }
+.i-download:before { content: "\f145"; }
+.i-enevelop:before { content: "\f146"; }
+.i-exclamation-alt:before { content: "\f147"; }
+.i-exclamation-circle:before { content: "\f148"; }
+.i-exclamation-square:before { content: "\f149"; }
+.i-exclamation-triangle:before { content: "\f14a"; }
+.i-exclamation:before { content: "\f14b"; }
+.i-expand:before { content: "\f14c"; }
+.i-female:before { content: "\f14d"; }
+.i-forward:before { content: "\f14e"; }
+.i-glass:before { content: "\f14f"; }
+.i-home-64:before { content: "\f150"; }
+.i-male:before { content: "\f151"; }
+.i-monitor:before { content: "\f152"; }
+.i-next-double-arrow:before { content: "\f153"; }
+.i-pause:before { content: "\f154"; }
+.i-Pen:before { content: "\f155"; }
+.i-pie-chrt:before { content: "\f156"; }
+.i-play:before { content: "\f157"; }
+.i-power:before { content: "\f158"; }
+.i-shield-64:before { content: "\f159"; }
+.i-sun:before { content: "\f15a"; }
+.i-tick-alt:before { content: "\f15b"; }
+.i-tick:before { content: "\f15c"; }
+.i-trophy-64:before { content: "\f15d"; }

@@ -1,0 +1,148 @@
+.example .grid {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.example .grid [class*="desktop-"] {
+  background: none repeat scroll 0 0 #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #555;
+  margin-bottom: 1.8%;
+  overflow: hidden;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  text-align: center;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  -o-transition: background-color;
+  -webkit-transition: background-color;
+  -moz-transition: background-color;
+  -ms-transition: background-color;
+  transition: background-color;
+}
+.example .row .row [class*="desktop-"] {
+  background: none repeat scroll 0 0 rgba(255,255,255,0.25);
+  margin-bottom: 0;
+}
+.example .row:hover [class*="desktop-"] {
+  background: none repeat scroll 0 0 #aaa;
+}
+.example .row:hover [class*="desktop-"] [class*="desktop-"] {
+  background: none repeat scroll 0 0 rgba(255,255,255,0.25);
+  margin-bottom: 0;
+}
+.example .span_d {
+  display: block;
+}
+.example .span_t,
+.example .span_m {
+  display: none;
+}
+@media screen and (max-width: 979px) {
+  .example .span_d {
+    display: none;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 979px) {
+  .example .span_t {
+    display: block;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 739px) {
+  .example .span_m {
+    display: block;
+  }
+}
+.markup,
+.preview {
+  position: relative;
+  margin-top: 1.5rem;
+}
+.markup:after,
+.preview:after {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #9da0a4;
+  content: "HTML";
+  font-size: 0.8rem;
+  font-weight: 300;
+  left: -1px;
+  padding: 3px 7px;
+  position: absolute;
+  top: -1px;
+  max-height: 24px;
+}
+.preview {
+  padding: 3.5rem 2rem 2rem;
+  border: 1px solid #ddd;
+  background-color: #fefefe;
+  min-height: 200px;
+}
+.preview:after {
+  content: "PREVIEW";
+  max-width: 64px;
+  left: -1px;
+  top: -1px;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+.preview-tab {
+  position: relative;
+  margin-bottom: 2rem !important;
+}
+.preview-tab:after {
+  background-color: #f7f7f7;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  top: 2px;
+  right: 0;
+  color: #777;
+  content: "Example with Markup";
+  padding: 6px 20px;
+  position: absolute;
+  text-align: left;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.preview-tab .resp-tab-content {
+  min-height: 200px;
+  border: 0;
+}
+.preview-tab .resp-tabs-list li {
+  margin: 0 -1px -2px 15px;
+  padding: 8px 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.preview-tab h2.resp-accordion {
+  padding: 9px 15px;
+}
+.size-32 {
+  font-size: 32px;
+  color: #555;
+}
+.block {
+  display: inline-block;
+}
+.block li {
+  display: inline-block;
+  margin: 1.5rem 0;
+}
+.block .show-icon {
+  margin: 0 3rem;
+}
+.block .icon-name {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.84rem;
+  color: #999;
+}

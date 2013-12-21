@@ -2,20 +2,22 @@
 
 //#dae5ed
 
-.button, button 
+.button, button ,a.button
     // box model
+
     display: inline-block
-    padding: 0.4em 0.9em 0.25em
-    padding: 0.5em 1em
+    //padding: 0.4em 0.9em 0.25em
+    padding: 0.5rem 1.3rem 0.61rem
+    //padding 0 0 .15rem 0
     margin: 1px
     width: auto
+    position: relative
     
     // typography
     font-weight: normal
-    font-size: 1em
-    //font-family: Verdana, sans-serif
+    font-size: 0.9rem
     text-decoration: none
-    text-align: center
+    //text-align: center
     line-height: normal
     letter-spacing: -0.01em
     
@@ -33,11 +35,13 @@
     
     // border
     border: 1px solid darken(#bbb, 10)
-    border-radius(0.3em)
-    box-shadow(inset 0 1px 0 #fff)
+    border-radius(0.3rem)
+    box-shadow(0 -0.15rem 0 rgba(0, 0, 0, 0.15) inset)
+
+    //border-radius: 4px;
     
     // fill
-    grad(darken(#fff, 10), darken(#eee, 10))
+    grad(darken(#fff, 5), darken(#eee, 5))
     
     // default hover/focus
     &:hover,&:focus 
@@ -53,8 +57,14 @@
         mybutton(200)
         
         &:hover, &:focus 
-            mybutton(200, 10)
+            mybutton(200, 5)
+    
+    &.info 
+        mybutton(170)
+        text-shadow: none
         
+        &:hover, &:focus 
+            mybutton(170, 5)    
     
     
     &.negative 
@@ -62,48 +72,41 @@
         text-shadow: none
         
         &:hover, &:focus 
-            mybutton(5, 10)
+            mybutton(5, 5)
+    
+    &.success 
+        mybutton(120)
         
+        &:hover,&:focus 
+            mybutton(120, 5)    
     
     
     &.positive 
         mybutton(80)
         
         &:hover,&:focus 
-            mybutton(90, 10)
-        
+            mybutton(80, 5)
     
+    //35    
+    &.warning
+        mybutton(410)
+        
+        &:hover,&:focus 
+            mybutton(410, 5)
 
     &.dark 
         color: rbg(0, 0, 20)
         border: 1px solid hsl(0, 0, 39)
         text-shadow: 0 1px hsl(0, 0, 90)
         grad(hsl(0, 0, 76), hsl(0, 0, 67))
-        box-shadow(inset 0 1px 0 hsl(0, 0, 90))
+        //box-shadow(inset 0 1px 0 hsl(0, 0, 90))
         
         &:hover, &:focus 
             grad(hsl(0, 0, 86), hsl(0, 0, 77))
         
     
     
-    // default layout options
     
-    &.left 
-        border-radius(0.3em 0 0 0.3em)
-        margin-right: -4px !important
-        border-right: none
-    
-
-    &.middle 
-        border-radius(0)
-        margin-left: 0
-        margin-right: -4px
-        border-right: none
-    
-
-    &.right 
-        border-radius(0 0.3em 0.3em 0)
-        margin-left: 0 !important
     
     
     
@@ -114,6 +117,7 @@
         // remove gradient
         background-image: none !important
         filter: none !important
+        border 1px solid #A2A2A2
         
         // remove shadows
         text-shadow: none
@@ -127,83 +131,139 @@
         
         // remove pointer
         cursor: default
+        &:hover
+            color inherit
+            //border-color inherit
 
 
-    &.success
-        grad(#7FBF4D, #63A62F);
-        border-color: #63A62F #63A62F #5B992B;
-        border-image: none;
-        border-radius: 3px;
-        border-style: solid;
-        border-width: 1px;
-        box-shadow(0 1px 0 0 #96CA6D inset)
-        color: #FFFFFF; 
-        margin-right: 20px;
-        //padding: 10px 20px 13px;
-        text-align: center;
-        text-shadow: 0 -1px 0 #4C9021;
-        //text-transform: uppercase;
+    // &.success-alt
+    //     grad(darken(#7FBF4D,5), darken(#63A62F,5))
+    //     border-color: #63A62F #63A62F #5B992B;
+    //     border-image: none;
+    //     //border-radius: 3px;
+    //     border-style: solid;
+    //     border-width: 1px;
+        
+    //     color: #FFFFFF; 
+    //     margin-right: 20px;
+    //     //padding: 10px 20px 13px;
+    //     text-align: center;
+    //     text-shadow: 0 -1px 0 #4C9021;
+    //     //text-transform: uppercase;
 
-        &:hover 
-            grad(#76B347, #5E9E2E);
-            box-shadow(0 1px 0 0 #8DBF67 inset)
-            cursor: pointer
+    //     &:hover 
+    //         //grad(#76B347, #5E9E2E);
+    //         grad(#7FBF4D, #63A62F);
+    //         //box-shadow(0 1px 0 0 #8DBF67 inset)
+    //         cursor: pointer
 
-        &:active 
-            border-color: #5B992B #5B992B #538C27
-            border-image: none
-            border-style: solid
-            border-width: 1px
-            box-shadow(0 0 8px 4px #548C29 inset, 0 1px 0 0 #EEEEEE)
+    //     &:active 
+    //         border-color: #5B992B #5B992B #538C27
+    //         border-image: none
+    //         border-style: solid
+    //         border-width: 1px
+    //         //box-shadow(0 0 8px 4px #548C29 inset, 0 1px 0 0 #EEEEEE)
 
+    //35 orangish
+    //70 greenish
+    //90 green success
 
-.pill 
-    border-radius(1em)
-    padding-left: 0.9em
-    padding-right: 0.9em
+    //100 proper green
 
-//        font: 600 1.4em/1.8 'Dosis','Helvetica Neue',Helvetica,Arial,sans-serif;
-// .hdefault {
-//     background-color: #EAEAEA;
-//     background-image: linear-gradient(center top , #F6F6F6, #EAEAEA);
-//     border-color: #DDDDDD #DDDDDD #CCCCCC;
-//     border-image: none;
-//     border-radius: 0.3em;
-//     border-style: solid;
-//     border-width: 1px;
-//     box-shadow: 0 1px 0 #FFFFFF inset;
-//     padding: 1em 1.5em;
-//     text-decoration:none;
-// }
-// .hdefault:active {
-//     background-image: -moz-linear-gradient(center top , #EAEAEA, #F6F6F6);
-//     top: 1px;
-// }
-// .hdefault:before {
-//     background-color: #EAEAEA;
-//     border-radius: 140px;
-//     bottom: -8px;
-//     content: "";
-//     left: -8px;
-//     opacity: 0.5;
-//     position: absolute;
-//     right: -8px;
-//     top: -8px;
-//     z-index: -1;
-// }
-// .hdefault:active:before {
-//     top: -9px;
-// }
-// .hdefault:hover:before {
-//     opacity: 1;
-// }
-// .hdefault.twitter:hover:before {
-//     background-color: #C6F0F8;
-// }
+    //120
 
-// .hdefault img {
-//     border: 0 none;
-// }
-
-
+    //for num in (10..400)
+        
     
+        
+
+    &.mini
+        font-size: 0.75rem;
+        //line-height: 9px;
+        //min-height: 20px;
+        //padding: 2px 6px;
+        //box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset)
+    
+    &.small
+        font-size: 0.85rem;
+        //line-height: 23px;
+        //min-height: 25px;
+        //padding: 2px 10px;
+    
+    &.large 
+        //border-radius: 4px;
+        font-size: 1.4rem;
+        //line-height: 38px;
+        //min-height: 40px;
+        //padding: 0 15px;
+        //box-shadow(0 -3px 0 rgba(0, 0, 0, 0.15) inset)
+    
+    &.massive 
+        //border-radius: 5px
+        font-size: 2.2rem
+        //line-height: 38px
+        //min-height: 42px
+        //padding: 10px 21px
+        box-shadow(0 -4px 0 rgba(0, 0, 0, 0.15) inset)
+     
+    i
+        padding-left 0.3rem
+
+    &.box        
+        padding-right 2.5rem
+    
+        
+        i
+            //background: none repeat scroll 0 0 #CCCCCC;
+            border-left: 1px solid #BBBBBB;
+            border-color inherit
+            border-radius: 0;
+            display: inline-block;
+            margin-left: 0.5rem;
+            padding: 0.46rem 0.5rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+        &.left
+            padding-right 1.3rem
+            padding-left 2.5 rem
+            
+            i                
+                border-color: inherit;
+                border-left-style: none;
+                border-right-style: solid;
+                border-right-width: 1px;
+                left: 0;
+                right: inherit;
+                margin-left 0
+
+
+        //&:hover
+            
+
+
+    &.pill 
+        border-radius(1em)
+        //padding 0.5rem 1.3rem 0.61rem
+        //box-shadow(none)
+
+// default layout options
+// Button groups
+
+.button.group-left, .buttons-group .button:first-child
+    border-radius(0.3em 0 0 0.3em)
+    margin-right: -4px !important
+    border-right-color: transparent
+
+
+.button.group-middle, .buttons-group button, .buttons-group .button 
+    border-radius(0)
+    margin-left: 0
+    margin-right: -4px
+    //border-right-color: transparent
+
+
+.button.group-right,.buttons-group .button:last-child 
+    border-radius(0 0.3em 0.3em 0)
+    margin-left: 0 !important
