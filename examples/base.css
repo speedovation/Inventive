@@ -172,13 +172,13 @@ h6 a {
   font-weight: inherit;
 }
 .giga {
-  font-size: 4.1rem;
+  font-size: 2.4rem;
 }
 .mega {
-  font-size: 3.1rem;
+  font-size: 2.1rem;
 }
 .kilo {
-  font-size: 2.1rem;
+  font-size: 1.95rem;
 }
 h1,
 .h1,
@@ -228,7 +228,7 @@ hr {
   height: 0;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  margin: 2.5rem 0;
+  margin: 10px 0 30px;
 }
 pre {
   word-break: break-all;
@@ -471,58 +471,6 @@ dd {
   margin-bottom: 20px;
   min-height: 22px;
   padding: 19px 22px;
-}
-img {
-  max-width: 100%;
-}
-img[width],
-img[height] {
-  max-width: none;
-}
-.img-round {
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  border-radius: 0.25rem;
-}
-.img-right {
-  float: right;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-}
-.img-left {
-  float: left;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
-.img-center {
-  display: block;
-  margin-right: auto;
-  margin-bottom: 1rem;
-  margin-left: auto;
-}
-.img-short {
-  height: 5rem;
-}
-.img-medium {
-  height: 10rem;
-}
-.img-tall {
-  height: 15rem;
-}
-figure > img {
-  display: block;
-}
-.header {
-  font-size: 1.3rem;
-  padding: 2em 1.2rem;
-  margin-bottom: 3rem;
-}
-.footer {
-  border-top: 1px solid #ddd;
-  color: #777;
-  margin-top: 6rem;
-  padding-bottom: 2rem;
-  padding-top: 2.625rem;
 }
 .hidden {
   display: none;
@@ -3929,3 +3877,5 @@ a.thumbnail.active {
     background-position: 30px 0;
   }
 }
+/* #Forms
+================================================== */

@@ -65,3 +65,13 @@ transition(props)
     -ms-transition: props
     transition: props
 
+//pass base as
+//  rem or px
+// usage  convert-size(16,'px')  will produce 1rem
+// if pass rem as second parameter nothing will happen it will return as it is
+convert-size(size,base="rem")
+    
+    if(base == "px")
+        return (size/16)rem
+
+    return (size)rem    
