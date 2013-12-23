@@ -1,0 +1,201 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Nav
+
+    include header
+
+    link(type='text/css', rel='stylesheet', href='../css/nav/navbar.css')  
+    script(src='../js/navbar.js', type='text/javascript')
+
+
+  body
+
+    //include _nav
+
+   grid
+      row
+        .desktop-4
+    
+          hgroup.site-title
+              h1 FlexNav
+              h2.site-title-sub A jQuery Plugin for Responsive Menus
+              a.twitter-share-button Tweet
+            .menu-button
+              | Menu
+              span.touch-button
+                i.navicon ▼
+            nav
+              ul.flexnav.with-js.opacity.lg-screen(data-breakpoint='800')
+                li.item-with-ul
+                  a(href='') Item 1
+                  ul(style='display: none;')
+                    li
+                      a(href='#content') Sub 1 Item 1
+                    li
+                      a(href='/') Sub 1 Item 2
+                    li
+                      a(href='/') Sub 1 Item 3
+                    li
+                      a(href='/') Sub 1 Item 4
+                  
+                li.item-with-ul
+                  a(href='/') Item 2
+                  ul(style='display: none;')
+                    li
+                      a(href='/') Sub 1 Item 1
+                    li.item-with-ul
+                      a(href='/') Sub 1 Item 2
+                      ul(style='display: none;')
+                        li
+                          a(href='/') Sub 2 Item 1
+                        li
+                          a(href='http://jasonweaver.name/') Sub 2 Item 2
+                        li
+                          a(href='http://jasonweaver.name/') Sub 2 Item 3
+                      
+                    li.item-with-ul
+                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                      ul(style='display: none;')
+                        li
+                          a(href='http://jasonweaver.name/') Sub 2 Item 1
+                        li.item-with-ul
+                          a(href='http://jasonweaver.name/') Sub 2 Item 2
+                          ul(style='display: none;')
+                            li
+                              a(href='http://jasonweaver.name/') Sub 3 Item 1
+                            li
+                              a(href='http://jasonweaver.name/') Sub 3 Item 2
+                            li
+                              a(href='http://jasonweaver.name/') Sub 3 Item 3
+                          
+                      
+                  
+                li.item-with-ul
+                  a(href='http://jasonweaver.name/') Item 3
+                  ul(style='display: none;')
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 1
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 2
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                  
+                li.item-with-ul
+                  a(href='') Item 4
+                  ul(style='display: none;')
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 1
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 2
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                  
+                li.item-with-ul
+                  a(href='http://jasonweaver.name/') Item 5
+                  ul(style='display: none;')
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 1
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 2
+                    li
+                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                  
+
+          section#content(role='main')
+            article
+              .article-wrap
+                .block
+                  h2 Single page navigation pattern
+                  p
+                    | This is an example of using FlexNav on a single page with the navigation anchoring to each section of the page. Just add the .one-page class to the body, .menu-button, and your navigation ul.
+                .block
+                  //- h2 Usage
+                  //- p
+                  //-   | Start with a simple unordered list, adding in the class and data attributes:
+                  //-   code <ul class="flexnav one-page" data-breakpoint="800"> <li&gt...</li&gt </ul>
+                  //- p
+                  //-   | Add the small screen menu button somewhere outside your navigation markup:
+                  //-   code <div class="menu-button">Menu</div>
+                  //- p
+                  //-   | Add flexnav.css to the head of your document:
+                  //-   code <link href="css/flexnav.css" rel="stylesheet" type="text/css" />
+                  //- p
+                  //-   | Add jquery.flexnav.min.js before the closing body tag:
+                  //-   code <script type="text/javascript" src="js/jquery.flexnav.min.js"></script>
+                  //- p
+                  //-   | Initialize FlexNav right before your closing body tag:
+                  //-   code $(".flexnav").flexNav();
+                  //- p
+                  //-   | you can change the default speed too:
+                  //-   code $(".flexnav").flexNav({ 'animationSpeed' : 'fast' });
+                  h2 Options
+                  //- p
+                  //-   code
+                  //-     | 'animationSpeed' : '250',
+                  //-     span  // default drop animation speed
+                  //-     br
+                  //-     | 'transitionOpacity': true,
+                  //-     span  // default opacity animation
+                  //-     br
+                  //-     | 'buttonSelector': '.menu-button',
+                  //-     span  // default menu button class
+                  //-     br
+                  //-     | 'hoverIntent': false,
+                  //-     span  // Use with hoverIntent plugin
+                  //-     br
+                  //-     | 'hoverIntentTimeout': 150
+                  //-     span  // hoverIntent default timeout
+                  //-     br
+                #section2.block
+                  h2 Section 2
+                  p
+                    | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
+                  p
+                    | Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.
+                  p
+                    | Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.
+                #section3.block
+                  h2 Section 3
+                  p
+                    | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
+                  p
+                    | Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.
+                  p
+                    | Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.
+                #section4.block
+                  h2 Section 4
+                  p
+                    | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
+                  p
+                    | Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.
+                  p
+                    | Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.
+                #section5.block
+                  h2 Section 5
+                  p
+                    | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
+                  p
+                    | Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.
+                  p
+                    | Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.
+            article
+              .article-wrap
+               
+                .block
+                  h2 Features
+                  ul
+                    li Multiple nested sub menus
+                    li Tap targets to reveal sub menus for touch screens
+                    li Hover reveal for desktop
+                    li Keyboard tab input accessibility
+              
+
+          //- script(type='text/javascript')
+            //$.noConflict();
+          
+          script(type='text/javascript')
+            jQuery(document).ready(function($){
+            $(".flexnav").flexNav();
+            });

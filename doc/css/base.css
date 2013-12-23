@@ -173,12 +173,14 @@ h6 a {
 }
 .giga {
   font-size: 4.1rem;
+  line-height: 1;
 }
 .mega {
-  font-size: 3.1rem;
+  font-size: 3.3rem;
+  line-height: 1.1;
 }
 .kilo {
-  font-size: 2.1rem;
+  font-size: 2.9rem;
 }
 h1,
 .h1,
@@ -363,7 +365,7 @@ img.responsive {
 }
 a,
 a:visited {
-  color: #f00;
+  color: #647ca4;
   text-decoration: none;
 }
 a:hover,
@@ -454,23 +456,41 @@ dt {
 dd {
   margin-bottom: 1rem;
 }
-.info {
-  font-weight: 200;
-}
-.lead {
-  font-size: 21px;
-  line-height: 27px;
-  color: #777;
-}
-.well {
-  background-color: #f7f7f7;
+ul.link-list {
+  margin: 0 0 1.6rem 0;
+  padding: 0;
+  list-style: none;
   border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  min-height: 22px;
-  padding: 19px 22px;
+}
+ul.link-list li {
+  border-bottom: 0.0625rem solid #ddd;
+  margin: 0;
+  line-height: 1;
+}
+ul.link-list li:last-child {
+  border-bottom: 0;
+}
+ul.link-list li a h4 {
+  color: #333;
+  line-height: 0.5;
+}
+ul.link-list li a,
+ul.link-list li span {
+  display: block;
+  padding: 0.7rem 0 0.7rem 1rem;
+}
+ul.link-list li a.active {
+  background-color: #f2f2f2;
+  color: #444;
+}
+ul.link-list li a {
+  color: #555;
+}
+ul.link-list li a:hover,
+ul.link-list li a:focus,
+ul.link-list li a:active {
+  color: #333;
+  background-color: #f5f5f5;
 }
 img {
   max-width: 100%;
@@ -517,7 +537,8 @@ figure > img {
   padding: 2em 1.2rem;
   margin-bottom: 3rem;
 }
-.footer {
+.footer,
+footer {
   border-top: 1px solid #ddd;
   color: #777;
   margin-top: 6rem;
@@ -530,12 +551,35 @@ figure > img {
 .half {
   width: 50%;
 }
+.info {
+  font-weight: 200;
+}
+.active {
+  background-color: #f2f2f2;
+  color: #444;
+}
+.well {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  min-height: 22px;
+  padding: 19px 22px;
+}
 .text-small {
   font-size: 0.9375rem;
+  color: #777;
 }
-.text-tall {
-  font-size: 1.1875rem;
-  line-height: 1.4;
+.text-lead {
+  font-size: 1.3275rem;
+  line-height: 1.3;
+  color: #666;
+}
+.text-large {
+  font-size: 1.8rem;
+  line-height: 1.2;
 }
 .text-muted {
   color: #808080;
@@ -2704,6 +2748,23 @@ a.button.dark:focus {
   background-image: -o-linear-gradient(top, #dbdbdb, #c4c4c4);
   background-image: linear-gradient(top, #dbdbdb, #c4c4c4);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+}
+.button.link,
+button.link,
+a.button.link {
+  background-image: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: none;
+  color: #28356a;
+}
+.button.link:hover,
+button.link:hover,
+a.button.link:hover {
+  text-decoration: underline;
+  color: #2b3a71;
 }
 .button.disabled,
 button.disabled,

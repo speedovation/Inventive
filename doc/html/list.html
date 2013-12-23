@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Messages ( messages)</title>
+    <title>List Group</title>
     <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -104,51 +104,35 @@
     </div>
     <div class="grid">
       <div class="row">
-        <div class="desktop-12">
-          <h1 class="divide-section">Messages </h1>
-          <p class="info">Defines styles for info, success, warning and error messages. </p>
-          <h2>Usage</h2>
-          <p>To apply this component, add the <code>.message</code> class to a block element.</p>
-          <hr>
-          <h3>Close button</h3>
-          <p>To apply a close button, add the <code>.message-close</code> class to a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code>  element inside the message box. To enable the JavaScript for the close button, just add the <code>data-message</code>  attribute to the message box. We recommend adding the <code>.close</code> class from the <a href="close.html">Close component</a> to give the button a proper styling, though you can also use text or an image.</p>
-          <div class="preview-box">
-            <h3>Example</h3>
-            <div class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
-          </div>
-          <div class="preview-box">   
-            <h3>Example</h3>
-            <div data-message="" class="message"><a href="" class="message-close close"></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <h2>Color modifiers</h2>
-          <p>There are several color modifiers available. Just add one of the following classes to apply a different look.</p>
-          <h3>Example</h3>
-          <div class="preview-box">
-            <div data-message="" class="message message-info"><a href="" class="message-close close"></a>
-              <p>To indicate info message add the <code>.message-info</code> class.</p>
-            </div>
-            <div data-message="" class="message message-success"><a href="" class="message-close close"></a>
-              <p>To indicate success or a positive message add the <code>.message-success</code> class.</p>
-            </div>
-            <div data-message="" class="message message-warning"><a href="" class="message-close close"></a>
-              <p>To indicate a message containing a warning add the <code>.message-warning</code> class.</p>
-            </div>
-            <div data-message="" class="message message-danger"><a href="" class="message-close close"></a>
-              <p>To indicate an important message add the <code>.message-danger</code> class.</p>
-            </div>
-          </div>
-          <h2>Size modifier</h2>
-          <p>Add the <code>.message-large</code> class to increase the spacing in an message box. This can be useful, if you want to use richer typography.
-            <h3>Example</h3>
-          </p>
-          <div class="preview-box">          
-            <div data-message="" class="message message-large"><a href="" class="message-close close"></a>
-              <h2>Today's headline</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
+        <h1 class="divide-section">List Group</h1>
+        <h2>Simple List Group</h2>
+        <div class="preview-box">
+          <ul class="link-list w-33">
+            <li class="active"><span> KineticWing IDE</span></li>
+            <li><span> MVC Logic</span></li>
+            <li><span> Dreamhost</span></li>
+            <li><span> Rudra Icons   </span></li>
+          </ul>
+        </div>
+        <h2>Simple Link List Group</h2>
+        <div class="preview-box">
+          <ul class="link-list w-33">
+            <li><a title="KineticWing IDE" href="http://kineticwing.com">KineticWing IDE</a></li>
+            <li><a title="MVC Logic" href="http://mvclogic.com" class="active">MVC Logic</a></li>
+            <li><a title="Jals" href="http://www.jals.in/">Jals</a></li>
+            <li><a title="Rudra Icons" href="http://speedovation.com/">Rudra Icons</a></li>
+          </ul>
+        </div>
+        <h2>Link List with headers</h2>
+        <div class="preview-box">
+          <ul class="link-list w-33">
+            <li><a title="Site Templates" href="http://kineticwing.com"> 
+                <h4>List group heading</h4>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</a></li>
+            <li><a title="Website Templates" href="http://kineticwing.com" class="active">
+                <h4>List group heading</h4>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</a></li>
+            <li><a title="Website Templates" href="http://kineticwing.com">
+                <h4>List group heading</h4>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</a></li>
+          </ul>
         </div>
       </div>
     </div>
