@@ -5,7 +5,7 @@ $ = jQuery;
 $.fn.flexNav = function(options) {
   var $nav, $top_nav_items, breakpoint, count, nav_percent, nav_width, resetMenu, resizer, settings, showMenu, toggle_selector, touch_selector;
   settings = $.extend({
-    'animationSpeed': 250,
+    'animationSpeed': 0,
     'transitionOpacity': true,
     'buttonSelector': '.menu-button',
     'hoverIntent': false,
@@ -96,16 +96,12 @@ $.fn.flexNav = function(options) {
   $(touch_selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
   toggle_selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
   $(toggle_selector).on('click', function(e) {
-    var $btnParent, $thisNav, bs;
-    $(toggle_selector).toggleClass('active');
+    $(this).toggleClass('active');
     e.preventDefault();
     e.stopPropagation();
-    bs = settings['buttonSelector'];
-    $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
-    $thisNav = $btnParent.data('navEl');
-    return $thisNav.toggleClass('flexnav-show');
+    return $(this).next('.flexnav').toggleClass('flexnav-show');
   });
-  $('.touch-button').on('click', function(e) {
+  $('.item-with-ul a,.touch-button').on('click', function(e) {
     var $sub, $touchButton;
     $sub = $(this).parent('.item-with-ul').find('>ul');
     $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
@@ -114,11 +110,13 @@ $.fn.flexNav = function(options) {
     }
     if ($sub.hasClass('flexnav-show') === true) {
       $sub.removeClass('flexnav-show').slideUp(settings.animationSpeed);
-      return $touchButton.removeClass('active');
+      $touchButton.removeClass('active');
     } else if ($sub.hasClass('flexnav-show') === false) {
       $sub.addClass('flexnav-show').slideDown(settings.animationSpeed);
-      return $touchButton.addClass('active');
+      $touchButton.addClass('active');
     }
+    e.preventDefault();
+    return e.stopPropagation();
   });
   $nav.find('.item-with-ul *').focus(function() {
     $(this).parent('.item-with-ul').parent().find(".open").not(this).removeClass("open").hide();

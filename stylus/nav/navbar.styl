@@ -1,10 +1,25 @@
 // Navbar 
 @import "../_funcs"
-$nav_text= #222
+
+
+$nav_text= #565656
 $top_level= #a6a6a2
 $second_level= #b2b2af
 $third_level= #bfbfbc
 $fourth_level= #cbcbc9
+
+
+nav
+  grad(#fbfbfb,#efefef)
+  border-bottom: 1px solid #d2d2d2
+  border: 1px solid #d9d9d9;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  //border-radius(4px)
+  box-shadow(0 1px 4px rgba(0, 0, 0, 0.077))
+
+  .field
+    padding: 0.46rem;
 
 .flexnav 
   -webkit-transition: none
@@ -13,9 +28,11 @@ $fourth_level= #cbcbc9
   transition: none
   -webkit-transform-style: preserve-3d // stop webkit flicker
   overflow: hidden
-  margin: 0 auto
+  margin: 0
+  padding 0
   width: 100%
   max-height: 0
+  
   
   &.opacity 
     opacity: 0
@@ -37,7 +54,7 @@ $fourth_level= #cbcbc9
     
     
   li 
-    font-size: 100%
+    font-size: 1rem
     position: relative
     overflow: hidden
     margin 0
@@ -45,22 +62,43 @@ $fourth_level= #cbcbc9
     a 
       position: relative
       display: block
-      padding: .96rem
+      padding: 0.96rem 1.2rem
       z-index: 2
       overflow: hidden
       color: $nav_text
-      background: #a6a6a2
-      border-bottom: 1px solid rgba(0,0,0,.15)
-  
+      &:hover, &:active
+        color: #222
+
     ul 
-      width: 100% 
       margin 0 
-      padding 0 
+      padding 0.8rem 0
+      //padding 0
+      grad(#efefef,#efefef) 
+      border: 1px solid #DDDDDD;
+      border-top none
+      //border-radius(0 0 4px 4px)
+      width: 110%;
+      //box-shadow(1px 1px 3px rgba(0, 0, 0, 0.09))
+      box-shadow(0px 2px 2px rgba(0, 0, 0, 0.05))
+
+        
         
       li 
-        font-size: 100%
+        font-size: 0.85rem
         position: relative
-        overflow: visible       
+        overflow: visible
+
+        a
+          padding: 0.76rem 1.2rem
+          border-top 1px solid transparent
+          border-bottom 1px solid transparent
+          &:hover,&:active
+            grad(#fcfcfc,#f8f8f8)
+            border-top 1px solid #DDDDDD
+            border-bottom 1px solid #DDDDDD
+
+        ul
+          border: 1px solid #DDDDDD;       
     
     
     ul.flexnav-show li 
@@ -70,13 +108,14 @@ $fourth_level= #cbcbc9
     
     li ul li a 
         display: block
-        background: $second_level
+
+        //background: $second_level
     
     ul li ul li a 
-        background: $third_level
+        //background: $third_level
     
     ul li ul li ul li a 
-        background: $fourth_level
+       // background: $fourth_level
     
   .touch-button 
     position: absolute
@@ -95,19 +134,20 @@ $fourth_level= #cbcbc9
     .navicon 
       position: relative
       top: 1.0rem
-      font-size: convert-size(12,"px")
+      font-size: 0.55rem
       color: #666
       
-    
+.sm-screen
+  //background-color #fff    
 
 .menu-button 
   position: relative
   display: block
   padding: 1rem
-  background: $top_level
+  //background: $top_level
   color: $nav_text
   cursor: pointer
-  border-bottom: 1px solid rgba(0,0,0,.2)
+  //border-bottom: 1px solid rgba(0,0,0,.2)
   
   &.one-page 
     position: fixed
@@ -140,6 +180,9 @@ $fourth_level= #cbcbc9
     body.one-page 
         padding-top: convert-size(70,"px")
     
+    nav
+      height: 3.2rem;
+
     .flexnav 
         overflow: visible
         &.opacity 
@@ -155,18 +198,21 @@ $fourth_level= #cbcbc9
           list-style: none
           float: left
           display: block 
-          background-color: #a6a6a2
+          //background-color: #a6a6a2
           overflow: visible
-          width: 20%
+          width: convert-size(160,"px")
         
         li a 
-          border-left: 1px solid #acaca1
-          border-bottom: none
+          //border-right: 0px solid #dedede
+          //border-bottom: none
         
+        //li:first-child a
+        //    border-left none
+
         li > ul 
           position: absolute 
           top: auto
-          left: 0
+          left: -1px
             
           li 
             width: 100%
@@ -181,7 +227,7 @@ $fourth_level= #cbcbc9
         //nothing definded here
 
         li ul li a 
-            border-bottom: none
+            //border-bottom: none
         
         li ul.open 
             display: block
@@ -220,7 +266,7 @@ $fourth_level= #cbcbc9
       float: left
       display: block 
       background-color: #a6a6a2  
-      width: 20%
+      width: convert-size(80,"px")
       min-height: convert-size(50,"px")
       overflow: visible
     

@@ -1,3 +1,23 @@
+nav {
+  background-color: top;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#efefef));
+  background-image: -webkit-linear-gradient(top, #fbfbfb, #efefef);
+  background-image: -moz-linear-gradient(top, #fbfbfb, #efefef);
+  background-image: -ms-linear-gradient(top, #fbfbfb, #efefef);
+  background-image: -o-linear-gradient(top, #fbfbfb, #efefef);
+  background-image: linear-gradient(top, #fbfbfb, #efefef);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+  border-bottom: 1px solid #d2d2d2;
+  border: 1px solid #d9d9d9;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.077);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.077);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.077);
+}
+nav .field {
+  padding: 0.46rem;
+}
 .flexnav {
   -webkit-transition: none;
   -moz-transition: none;
@@ -9,7 +29,8 @@
   transition: none;
   -webkit-transform-style: preserve-3d;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   width: 100%;
   max-height: 0;
 }
@@ -35,7 +56,7 @@
   max-width: 12.5rem;
 }
 .flexnav li {
-  font-size: 100%;
+  font-size: 1rem;
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -43,35 +64,64 @@
 .flexnav li a {
   position: relative;
   display: block;
-  padding: 0.96rem;
+  padding: 0.96rem 1.2rem;
   z-index: 2;
   overflow: hidden;
+  color: #565656;
+}
+.flexnav li a:hover,
+.flexnav li a:active {
   color: #222;
-  background: #a6a6a2;
-  border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 .flexnav li ul {
-  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0.8rem 0;
+  background-color: top;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#efefef));
+  background-image: -webkit-linear-gradient(top, #efefef, #efefef);
+  background-image: -moz-linear-gradient(top, #efefef, #efefef);
+  background-image: -ms-linear-gradient(top, #efefef, #efefef);
+  background-image: -o-linear-gradient(top, #efefef, #efefef);
+  background-image: linear-gradient(top, #efefef, #efefef);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+  border: 1px solid #ddd;
+  border-top: none;
+  width: 110%;
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
 }
 .flexnav li ul li {
-  font-size: 100%;
+  font-size: 0.85rem;
   position: relative;
   overflow: visible;
+}
+.flexnav li ul li a {
+  padding: 0.76rem 1.2rem;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+.flexnav li ul li a:hover,
+.flexnav li ul li a:active {
+  background-color: top;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f8f8f8));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #f8f8f8);
+  background-image: -moz-linear-gradient(top, #fcfcfc, #f8f8f8);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #f8f8f8);
+  background-image: -o-linear-gradient(top, #fcfcfc, #f8f8f8);
+  background-image: linear-gradient(top, #fcfcfc, #f8f8f8);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.flexnav li ul li ul {
+  border: 1px solid #ddd;
 }
 .flexnav li ul.flexnav-show li {
   overflow: visible;
 }
 .flexnav li li ul li a {
   display: block;
-  background: #b2b2af;
-}
-.flexnav li ul li ul li a {
-  background: #bfbfbc;
-}
-.flexnav li ul li ul li ul li a {
-  background: #cbcbc9;
 }
 .flexnav .touch-button {
   position: absolute;
@@ -89,17 +139,15 @@
 .flexnav .touch-button .navicon {
   position: relative;
   top: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   color: #666;
 }
 .menu-button {
   position: relative;
   display: block;
   padding: 1rem;
-  background: #a6a6a2;
-  color: #222;
+  color: #565656;
   cursor: pointer;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .menu-button.one-page {
   position: fixed;
@@ -128,6 +176,9 @@
   body.one-page {
     padding-top: 4.375rem;
   }
+  nav {
+    height: 3.2rem;
+  }
   .flexnav {
     overflow: visible;
   }
@@ -144,18 +195,13 @@
     list-style: none;
     float: left;
     display: block;
-    background-color: #a6a6a2;
     overflow: visible;
-    width: 20%;
-  }
-  .flexnav li a {
-    border-left: 1px solid #acaca1;
-    border-bottom: none;
+    width: 10rem;
   }
   .flexnav li > ul {
     position: absolute;
     top: auto;
-    left: 0;
+    left: -1px;
   }
   .flexnav li > ul li {
     width: 100%;
@@ -163,9 +209,6 @@
   .flexnav li ul li > ul {
     margin-left: 100%;
     top: 0;
-  }
-  .flexnav li ul li a {
-    border-bottom: none;
   }
   .flexnav li ul.open {
     display: block;
@@ -202,7 +245,7 @@
   float: left;
   display: block;
   background-color: #a6a6a2;
-  width: 20%;
+  width: 5rem;
   min-height: 3.125rem;
   overflow: visible;
 }

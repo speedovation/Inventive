@@ -5,7 +5,7 @@ $ = jQuery
 
 $.fn.flexNav = (options) ->
   settings = $.extend
-    'animationSpeed': 250,
+    'animationSpeed': 0,
     'transitionOpacity': true,
     'buttonSelector': '.menu-button',
     'hoverIntent': false,
@@ -15,6 +15,7 @@ $.fn.flexNav = (options) ->
     options
 
   $nav = $(@)
+
 
   # Set some classes in the markup
   $nav.addClass('with-js')
@@ -114,17 +115,18 @@ $.fn.flexNav = (options) ->
   # Toggle touch for nav menu
   toggle_selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
   $(toggle_selector).on('click', (e) ->
-    $(toggle_selector).toggleClass('active')
+    $(@).toggleClass('active')
     e.preventDefault()
     e.stopPropagation()
-    bs = settings['buttonSelector']
-    $btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
-    $thisNav = $btnParent.data('navEl')
-    $thisNav.toggleClass('flexnav-show')
+    #bs = settings['buttonSelector']
+    #$btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
+    #$thisNav = $btnParent.data('navEl')
+    #$thisNav.toggleClass('flexnav-show')
+    $(@).next('.flexnav').toggleClass('flexnav-show')
   )
 				
   # Toggle for sub-menus
-  $('.touch-button').on('click', (e) ->
+  $('.item-with-ul a,.touch-button').on('click', (e) ->
     $sub = $(@).parent('.item-with-ul').find('>ul')
     $touchButton = $(@).parent('.item-with-ul').find('>span.touch-button')
     # remove class of flexnav-show from all elements that are not current
@@ -137,8 +139,15 @@ $.fn.flexNav = (options) ->
     else if $sub.hasClass('flexnav-show') is false
       $sub.addClass('flexnav-show').slideDown(settings.animationSpeed)
       $touchButton.addClass('active')
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    #$(@).parents('.item-with-ul').addClass('.opened')
+    
+    
   )
-	
+
   # Sub ul's should have a class of 'open' if an element has focus
   $nav.find('.item-with-ul *').focus ->
     # remove class of open from all elements that are not focused

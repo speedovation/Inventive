@@ -35,9 +35,6 @@ html {
   -webkit-text-size-adjust: 100%;
 /* 2 */
 }
-a {
-  background: transparent;
-}
 dfn {
   font-style: italic;
 }
@@ -553,10 +550,6 @@ footer {
 }
 .info {
   font-weight: 200;
-}
-.active {
-  background-color: #f2f2f2;
-  color: #444;
 }
 .well {
   background-color: #f7f7f7;
@@ -3460,6 +3453,10 @@ html .nav.nav-offcanvas > li.active > a {
 }
 html:not(.touch) .nav-offcanvas ul a:hover {
   color: #fff;
+}
+.subnav .active {
+  background-color: #f2f2f2;
+  color: #444;
 }
 .subnav {
 /* 1 */

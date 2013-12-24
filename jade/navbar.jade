@@ -12,21 +12,18 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
   body
 
-    //include _nav
+    include _nav
 
-   grid
-      row
-        .desktop-4
+   .grid
+      .row
+        .desktop-12
     
-          hgroup.site-title
-              h1 FlexNav
-              h2.site-title-sub A jQuery Plugin for Responsive Menus
-              a.twitter-share-button Tweet
-            .menu-button
-              | Menu
-              span.touch-button
-                i.navicon ▼
-            nav
+          
+          
+            
+          nav
+              .menu-button  Menu
+              
               ul.flexnav.with-js.opacity.lg-screen(data-breakpoint='800')
                 li.item-with-ul
                   a(href='') Item 1
@@ -51,56 +48,56 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                         li
                           a(href='/') Sub 2 Item 1
                         li
-                          a(href='http://jasonweaver.name/') Sub 2 Item 2
+                          a(href='#') Sub 2 Item 2
                         li
-                          a(href='http://jasonweaver.name/') Sub 2 Item 3
+                          a(href='#') Sub 2 Item 3
                       
                     li.item-with-ul
-                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                      a(href='#') Sub 1 Item 3
                       ul(style='display: none;')
                         li
-                          a(href='http://jasonweaver.name/') Sub 2 Item 1
+                          a(href='#') Sub 2 Item 1
                         li.item-with-ul
-                          a(href='http://jasonweaver.name/') Sub 2 Item 2
+                          a(href='#') Sub 2 Item 2
                           ul(style='display: none;')
                             li
-                              a(href='http://jasonweaver.name/') Sub 3 Item 1
+                              a(href='#') Sub 3 Item 1
                             li
-                              a(href='http://jasonweaver.name/') Sub 3 Item 2
+                              a(href='#') Sub 3 Item 2
                             li
-                              a(href='http://jasonweaver.name/') Sub 3 Item 3
+                              a(href='#') Sub 3 Item 3
                           
                       
                   
                 li.item-with-ul
-                  a(href='http://jasonweaver.name/') Item 3
+                  a(href='#') Item 3
                   ul(style='display: none;')
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 1
+                      a(href='#') Sub 1 Item 1
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 2
+                      a(href='#') Sub 1 Item 2
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                      a(href='#') Sub 1 Item 3
                   
                 li.item-with-ul
                   a(href='') Item 4
                   ul(style='display: none;')
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 1
+                      a(href='#') Sub 1 Item 1
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 2
+                      a(href='#') Sub 1 Item 2
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                      a(href='#') Sub 1 Item 3
                   
                 li.item-with-ul
-                  a(href='http://jasonweaver.name/') Item 5
+                  a(href='#') Item 5
                   ul(style='display: none;')
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 1
+                      a(href='#') Sub 1 Item 1
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 2
+                      a(href='#') Sub 1 Item 2
                     li
-                      a(href='http://jasonweaver.name/') Sub 1 Item 3
+                      a(href='#') Sub 1 Item 3
                   
 
           section#content(role='main')
@@ -148,22 +145,61 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                   //-     | 'hoverIntentTimeout': 150
                   //-     span  // hoverIntent default timeout
                   //-     br
-                #section2.block
-                  h2 Section 2
-                  p
-                    | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
-                  p
-                    | Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.
-                  p
-                    | Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.
+           
+                //- #section2.block
+                //-   h2 Section 2
+                //-   p
+                //-     | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
+                //-   p
+                //-     | Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.
+                //-   p
+                //-     | Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.
                 #section3.block
                   h2 Section 3
                   p
                     | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
-                  p
-                    | Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.
-                  p
-                    | Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.
+                 
+                nav
+                  .menu-button  Menu 2
+                  
+                  ul.flexnav.opacity.lg-screen(data-breakpoint='800')
+                    li.item-with-ul
+                      a(href='') Item 1
+                      ul(style='display: none;')
+                        li
+                          a(href='#content') Sub 1 Item 1
+                        li
+                          a(href='/') Sub 1 Item 2
+                        li
+                          a(href='/') Sub 1 Item 3
+                        li
+                          a(href='/') Sub 1 Item 4
+                      
+                    li
+                      a(href='/') Item 2
+                     
+                              
+                          
+                      
+                    li
+                      a(href='#') Item 3
+                    
+                      
+                    li.item-with-ul
+                      a(href='') Item 4
+                      ul(style='display: none;')
+                        li
+                          a(href='#') Sub 1 Item 1
+                        li
+                          a(href='#') Sub 1 Item 2
+                        li
+                          a(href='#') Sub 1 Item 3
+                      
+                    li
+                      .field
+                        input.input(placeholder="Search") 
+                        button.button.positive Search  
+                     
                 #section4.block
                   h2 Section 4
                   p
