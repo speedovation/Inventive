@@ -8,10 +8,10 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>Sliders Template</title>
 
     
-    <!-- <link rel="stylesheet" href="../../doc/css/base.css"> -->
+    <link rel="stylesheet" href="../../doc/css/base.css">
 
   
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,45 +34,58 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-    <div class="navbar-wrapper">
-      <div class="container">
+    
+    <div class="grid">
 
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Project name</a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+    <div class="row">
+      <nav>
+            <div class="menu-button"><i class="i-bars1"></i></div>
+            <div class="flexnav opacity lg-screen with-js" data-breakpoint="800">
+              <h4>Site Name</h4>
+              <ul>
+                <li class="item-with-ul"><a href="">
+                     
+                    Item 1<i class="i-chevron-down"> </i></a>
+                  <ul style="display: none;">
+                    <li><a href="#content">Sub 1 Item 1</a></li>
+                    <li><a href="/">Sub 1 Item 2</a></li>
+                    <li><a href="/">Sub 1 Item 3</a></li>
+                    <li><a href="/">Sub 1 Item 4</a></li>
                   </ul>
                 </li>
+                <li class="item-with-ul"><a href="/">
+                     
+                    Item 2<i class="i-chevron-down"> </i></a>
+                  <ul style="display: none;">
+                    <li><a href="/">Sub 1 Item 1</a></li>
+                    <li class="item-with-ul"><a href="/">
+                         
+                        Sub 1 Item 2<i class="i-chevron-right"> </i></a>
+                      <ul style="display: none;">
+                        <li><a href="/">Sub 2 Item 1</a></li>
+                        <li><a href="#">Sub 2 Item 2</a></li>
+                        <li><a href="#">Sub 2 Item 3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Item 3</a></li>
               </ul>
+              <div>
+                <ul>
+                  <li><a href="#content">item</a></li>
+                  <li><a href="#content">item  </a></li>
+                </ul>
+              </div>
+              <div>
+                <div class="field">
+                  <input class="input" placeholder="Search">
+                  <button class="button positive">Go</button>
+                </div>
+              </div>
             </div>
+          </nav>
           </div>
-        </div>
-
-      </div>
-    </div>
-
 
     <!-- Carousel
     ================================================== -->
@@ -125,7 +138,7 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="grid">
+
 
       <!-- Three columns of text below the carousel -->
       <div class="row">

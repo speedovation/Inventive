@@ -186,6 +186,12 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                     button.button.positive Go
            
 
+          h2 Important helpers
+          p We can add class <code>.fixed</code> to make it fix in current position.
+          p 
+          | Also we can add class <code> .top</code> to make it fix at top. 
+          | This class won't work without <code>.fixed</code> class.
+          p Always add <code>.fixed</code> and <code>.top</code> class to <code>nav</code> element only.
           
           h2 Javascript 
           p We need to initialize nav. No support for data attributes in this version.
@@ -193,4 +199,5 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           pre 
             code
               $(".flexnav").flexNav();
+              
                 

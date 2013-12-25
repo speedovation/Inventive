@@ -171,6 +171,7 @@ h6 a {
 .giga {
   font-size: 4.1rem;
   line-height: 1;
+  font-weight: 500;
 }
 .mega {
   font-size: 3.3rem;
@@ -3296,6 +3297,14 @@ nav {
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.077);
   -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.077);
   box-shadow: 0 1px 4px rgba(0,0,0,0.077);
+}
+nav.fixed {
+  position: fixed;
+  width: 74%;
+  margin: 0;
+}
+nav.top {
+  top: 0;
 }
 nav .field {
   padding: 0.5rem 1rem;

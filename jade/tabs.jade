@@ -6,37 +6,36 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
     include header
     
-    link(type='text/css', rel='stylesheet', href='../css/components/stabs.css')  
-    script(src='../js/stabs.js', type='text/javascript')
     
-    style(type='text/css')
-      .demo {
-      width: 980px;
-      margin: 0px auto;
-      }
-      .demo h1 {
-      margin:33px 0 25px;
-      }
-      .demo h3 {
-      margin: 10px 0;
-      }
-      pre {
-      background: #fff;
-      }
-      @media only screen and (max-width: 780px) {
-      .demo {
-      margin: 5%;
-      width: 90%;
-      }
-      .how-use {
-      float: left;
-      width: 300px;
-      display: none;
-      }
-      }
-      #tabInfo {
-      display: none;
-      }
+    
+    //- style(type='text/css')
+    //-   .demo {
+    //-   width: 980px;
+    //-   margin: 0px auto;
+    //-   }
+    //-   .demo h1 {
+    //-   margin:33px 0 25px;
+    //-   }
+    //-   .demo h3 {
+    //-   margin: 10px 0;
+    //-   }
+    //-   pre {
+    //-   background: #fff;
+    //-   }
+    //-   @media only screen and (max-width: 780px) {
+    //-   .demo {
+    //-   margin: 5%;
+    //-   width: 90%;
+    //-   }
+    //-   .how-use {
+    //-   float: left;
+    //-   width: 300px;
+    //-   display: none;
+    //-   }
+    //-   }
+    //-   #tabInfo {
+    //-   display: none;
+    //-   }
   body
 
     include _nav
@@ -58,39 +57,57 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           
           h2 Demo
         
+
+        .preview-box
+          h3 Horizontal Tab
+          #horizontalTab
+            ul.resp-tabs-list
+              li Responsive Tab-1
+              li Responsive Tab-2
+              li Responsive Tab-3
+            .resp-tabs-container
+              div
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+              div
+                p
+                  | This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit. Vestibulum nibh urna,  Vestibulum nibh urna,it.
+              div
+                p
+                  | Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
+            br
+            #tabInfo
+              | Selected tab:
+              span.tabName
           
 
-
-        div.desktop-12.preview-wrap
-          div.preview
-            h3 Horizontal Tab
-            #horizontalTab
-              ul.resp-tabs-list
-                li Responsive Tab-1
-                li Responsive Tab-2
-                li Responsive Tab-3
-              .resp-tabs-container
-                div
-                  p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
-                div
-                  p
-                    | This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit. Vestibulum nibh urna,  Vestibulum nibh urna,it.
-                div
-                  p
-                    | Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
-              br
-              #tabInfo
-                | Selected tab:
-                span.tabName
-          pre.markup
-            code.language-markup
-
           
-        div.desktop-12.preview-wrap
-          div.preview 
-            h3 Vertical Tabs
-            #verticalTab
+        .preview-box
+          h3 Vertical Tabs
+          #verticalTab
+            ul.resp-tabs-list
+              li Responsive Tab 1
+              li Responsive Tab 2
+              li Responsive Tab 3
+              li Long name Responsive Tab 4
+            .resp-tabs-container
+              div
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+              div
+                p This tab has icon in it.
+              div
+                p
+                  | Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
+              div
+                p
+                  | d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.
+               
+          
+        
+        .preview-box
+          h3 Pure Accordion          
+            #accordions
               ul.resp-tabs-list
                 li Responsive Tab 1
                 li Responsive Tab 2
@@ -108,32 +125,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                 div
                   p
                     | d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.
-          pre.markup
-            code.language-markup          
           
-        div.desktop-12.preview-wrap
-          div.preview 
-            h3 Pure Accordion          
-              #accordions
-                ul.resp-tabs-list
-                  li Responsive Tab 1
-                  li Responsive Tab 2
-                  li Responsive Tab 3
-                  li Long name Responsive Tab 4
-                .resp-tabs-container
-                  div
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
-                  div
-                    p This tab has icon in it.
-                  div
-                    p
-                      | Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
-                  div
-                    p
-                      | d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.
-          pre.markup
-            code.language-markup 
 
 
 
