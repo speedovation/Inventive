@@ -2117,12 +2117,11 @@ form.row {
 .field textarea {
   font-size: 1rem;
   font-weight: 300;
-  margin: 0 24px 0 0 !important;
+  margin: 0;
   max-width: 100%;
   outline: medium none;
   padding: 0;
   resize: none;
-  width: 100%;
   background: #fff;
   border: 1px solid #bbb;
   -webkit-border-radius: 3px;
@@ -2143,9 +2142,7 @@ form.row {
   -moz-border-radius: 4px;
   border-radius: 4px;
   font-size: 1rem;
-  height: 36px;
-  line-height: 34px;
-  padding: 0 10px;
+  padding: 5px 10px;
   position: relative;
 }
 .field .input.search {
@@ -2475,8 +2472,8 @@ form.row {
 button,
 a.button {
   display: inline-block;
-  padding: 0.5rem 1.3rem 0.61rem;
-  margin: 1px;
+  padding: 0.5rem 0.9rem 0.61rem;
+  margin: 0px;
   width: auto;
   position: relative;
   font-weight: normal;

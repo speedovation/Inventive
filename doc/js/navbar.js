@@ -3,7 +3,7 @@ var $;
 $ = jQuery;
 
 $.fn.flexNav = function(options) {
-  var $nav, $top_nav_items, breakpoint, count, nav_percent, nav_width, resetMenu, resizer, settings, showMenu, toggle_selector, touch_selector;
+  var $nav, $top_nav_items, breakpoint, count, nav_percent, nav_width, resetMenu, resizer, settings, showMenu, toggle_selector;
   settings = $.extend({
     'animationSpeed': 0,
     'transitionOpacity': true,
@@ -92,8 +92,6 @@ $.fn.flexNav = function(options) {
     }
   };
   $(settings['buttonSelector']).data('navEl', $nav);
-  touch_selector = '.item-with-ul, ' + settings['buttonSelector'];
-  $(touch_selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
   toggle_selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
   $(toggle_selector).on('click', function(e) {
     $(this).toggleClass('active');

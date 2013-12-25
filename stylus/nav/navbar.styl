@@ -9,6 +9,7 @@ $third_level= #bfbfbc
 $fourth_level= #cbcbc9
 
 
+
 nav
   grad(#fbfbfb,#efefef)
   border-bottom: 1px solid #d2d2d2
@@ -19,9 +20,10 @@ nav
   box-shadow(0 1px 4px rgba(0, 0, 0, 0.077))
 
   .field
-    padding: 0.46rem;
+    padding: 0.5rem 1rem
 
 .flexnav 
+  
   -webkit-transition: none
   -moz-transition: none
   -ms-transition: none
@@ -32,7 +34,15 @@ nav
   padding 0
   width: 100%
   max-height: 0
-  
+  margin 0
+
+  i
+    font-size: 0.6rem
+    margin-left: 0.5rem
+    float right
+
+  h4
+    padding: 0.25rem 1rem;  
   
   &.opacity 
     opacity: 0
@@ -51,61 +61,76 @@ nav
     top: convert-size(50,"px")
     right: 5%
     max-width: convert-size(200,"px")
+      
     
-    
-  li 
-    font-size: 1rem
-    position: relative
-    overflow: hidden
-    margin 0
-  
-    a 
+  ul 
+    margin 0  
+    padding 0  
+
+    li 
+      font-size: 1rem
       position: relative
-      display: block
-      padding: 0.96rem 1.2rem
-      z-index: 2
       overflow: hidden
-      color: $nav_text
-      &:hover, &:active
-        color: #222
+      margin 0
 
-    ul 
-      margin 0 
-      padding 0.8rem 0
-      //padding 0
-      grad(#efefef,#efefef) 
-      border: 1px solid #DDDDDD;
-      border-top none
-      //border-radius(0 0 4px 4px)
-      width: 110%;
-      //box-shadow(1px 1px 3px rgba(0, 0, 0, 0.09))
-      box-shadow(0px 2px 2px rgba(0, 0, 0, 0.05))
-
-        
-        
-      li 
-        font-size: 0.85rem
-        position: relative
-        overflow: visible
-
-        a
-          padding: 0.76rem 1.2rem
-          border-top 1px solid transparent
-          border-bottom 1px solid transparent
-          &:hover,&:active
-            grad(#fcfcfc,#f8f8f8)
-            border-top 1px solid #DDDDDD
-            border-bottom 1px solid #DDDDDD
-
-        ul
-          border: 1px solid #DDDDDD;       
     
+      a 
+        position: relative
+        display: block
+        padding: 0.96rem 1.2rem
+        z-index: 2
+        overflow: hidden
+        color: $nav_text
+        &:hover, &:active
+          color: #222
+        // &.dropdown:after
+        //   width: 0px;
+        //   height: 0px;
+        //   content " "
+        //   right 20px
+        //   //margin-top: 5px;
+        //   border-left: 10px solid transparent;
+        //   border-right: 10px solid transparent;
+        //   border-top: 10px solid #c1c1c1;
+        //   position absolute
+      ul 
+        margin 0 
+        padding 0.8rem 0
+        outline 0
+        //padding 0
+        grad(#efefef,#efefef) 
+        border: 1px solid #DDDDDD;
+        border-top none
+        //border-radius(0 0 4px 4px)
+        width: 130%;
+        //box-shadow(1px 1px 3px rgba(0, 0, 0, 0.09))
+        box-shadow(0px 2px 2px rgba(0, 0, 0, 0.05))
+
+          
+          
+        li 
+          font-size: 0.85rem
+          position: relative
+          overflow: visible
+
+          a
+            padding: 0.76rem 1rem
+            border-top 1px solid transparent
+            border-bottom 1px solid transparent
+            &:hover,&:active
+              grad(#fcfcfc,#f8f8f8)
+              border-top 1px solid #DDDDDD
+              border-bottom 1px solid #DDDDDD
+
+          ul
+            border: 1px solid #DDDDDD;       
+      
     
     ul.flexnav-show li 
       overflow: visible
         
-       
-    
+         
+      
     li ul li a 
         display: block
 
@@ -137,17 +162,18 @@ nav
       font-size: 0.55rem
       color: #666
       
-.sm-screen
-  //background-color #fff    
-
 .menu-button 
-  position: relative
+  padding: 0.4rem 1rem;
+  position: relative;
+  text-align: right;
   display: block
-  padding: 1rem
-  //background: $top_level
   color: $nav_text
   cursor: pointer
-  //border-bottom: 1px solid rgba(0,0,0,.2)
+  
+  i
+    //float: right;
+    font-size: 1.1rem;
+    //margin-top: 0.1rem;
   
   &.one-page 
     position: fixed
@@ -183,16 +209,28 @@ nav
     nav
       height: 3.2rem;
 
-    .flexnav 
-        overflow: visible
-        &.opacity 
-          opacity: 1
-        
-        &.one-page 
-          top: 0
-          right: auto
-          max-width: 1080px
-        
+    .flexnav
+      
+      div
+       float right
+      i 
+        float none
+      h4
+        display: inline-block;
+        float: left;
+        padding: 0.25rem 1rem;
+
+      
+      overflow: visible
+      &.opacity 
+        opacity: 1
+      
+      &.one-page 
+        top: 0
+        right: auto
+        max-width: 1080px
+      
+      ul  
         li 
           position: relative
           list-style: none
@@ -200,7 +238,7 @@ nav
           display: block 
           //background-color: #a6a6a2
           overflow: visible
-          width: convert-size(160,"px")
+          //width: convert-size(160,"px")
         
         li a 
           //border-right: 0px solid #dedede
@@ -254,70 +292,71 @@ nav
     padding-top: convert-size(70,"px")
   
   .flexnav 
-    overflow: visible
-    &.one-page 
-      top: 0
-      right: auto
-      max-width: 1080px
-    
-    li 
-      position: relative
-      list-style: none
-      float: left
-      display: block 
-      background-color: #a6a6a2  
-      width: convert-size(80,"px")
-      min-height: convert-size(50,"px")
+    ul
       overflow: visible
-    
-    li:hover > ul  
-      display: block
-      width: 100%
-      overflow: visible
-      li 
-        width: 100%
-        float: none
-        
-    
-    li a 
-      border-left: 1px solid #acaca1
-      border-bottom: none
-      overflow: visible  
-    
-    li > ul 
-      background:#acaca1
-      position: absolute 
-      top: auto
-      left: 0
-      display: none
-      z-index: 1
-      overflow: visible
-    
-    li ul li ul  
-      top: 0     
-    
-    li ul li a 
-      border-bottom: none
-    
-    li ul.open 
-      display: block
-      width: 100%
-      overflow: visible
-      li 
-        width: 100%
-      
-      ul.open 
-        margin-left: 100%
+      &.one-page 
         top: 0
+        right: auto
+        max-width: 1080px
+      
+      li 
+        position: relative
+        list-style: none
+        float: left
+        display: block 
+        background-color: #a6a6a2  
+        width: convert-size(80,"px")
+        min-height: convert-size(50,"px")
+        overflow: visible
+      
+      li:hover > ul  
         display: block
         width: 100%
         overflow: visible
-        
-    
-    ul li:hover ul 
-      margin-left: 100%
-      top: 0
+        li 
+          width: 100%
+          float: none
+          
       
+      li a 
+        border-left: 1px solid #acaca1
+        border-bottom: none
+        overflow: visible  
+      
+      li > ul 
+        background:#acaca1
+        position: absolute 
+        top: auto
+        left: 0
+        display: none
+        z-index: 1
+        overflow: visible
+      
+      li ul li ul  
+        top: 0     
+      
+      li ul li a 
+        border-bottom: none
+      
+      li ul.open 
+        display: block
+        width: 100%
+        overflow: visible
+        li 
+          width: 100%
+        
+        ul.open 
+          margin-left: 100%
+          top: 0
+          display: block
+          width: 100%
+          overflow: visible
+          
+      
+      ul li:hover ul 
+        margin-left: 100%
+        top: 0
+        
   
   .menu-button 
     display: none

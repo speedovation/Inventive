@@ -109,8 +109,12 @@ $.fn.flexNav = (options) ->
   $(settings['buttonSelector']).data('navEl', $nav)
 
   # Add in touch buttons
-  touch_selector = '.item-with-ul, ' + settings['buttonSelector']
-  $(touch_selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
+  #touch_selector = '.item-with-ul, ' + settings['buttonSelector']
+  
+  #$(settings['buttonSelector']).addClass('dropdown')
+  #$('.item-with-ul a').addClass('dropdown')
+
+  #$(touch_selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 
   # Toggle touch for nav menu
   toggle_selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
@@ -122,6 +126,8 @@ $.fn.flexNav = (options) ->
     #$btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
     #$thisNav = $btnParent.data('navEl')
     #$thisNav.toggleClass('flexnav-show')
+    #console.log( $(@).next('.flexnav').find('ul').addClass('flexnav-show').html() )
+
     $(@).next('.flexnav').toggleClass('flexnav-show')
   )
 				

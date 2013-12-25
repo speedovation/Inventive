@@ -24,6 +24,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           nav
               .menu-button  Menu
               
+              
               ul.flexnav.with-js.opacity.lg-screen(data-breakpoint='800')
                 li.item-with-ul
                   a(href='') Item 1
@@ -160,46 +161,69 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                     | Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.
                  
                 nav
-                  .menu-button  Menu 2
+                  .menu-button  
+                      
+                      i.i-bars1
                   
-                  ul.flexnav.opacity.lg-screen(data-breakpoint='800')
-                    li.item-with-ul
-                      a(href='') Item 1
-                      ul(style='display: none;')
-                        li
-                          a(href='#content') Sub 1 Item 1
-                        li
-                          a(href='/') Sub 1 Item 2
-                        li
-                          a(href='/') Sub 1 Item 3
-                        li
-                          a(href='/') Sub 1 Item 4
+                  .flexnav.opacity.lg-screen(data-breakpoint='800')
+                    h4 Site Name
+                    ul
+                      li.item-with-ul
+                        a(href='') 
+                          | Item 1
+                          i.i-chevron-down  
+
+                        ul
+                          li
+                            a(href='#content') Sub 1 Item 1
+                          li
+                            a(href='/') Sub 1 Item 2
+                          li
+                            a(href='/') Sub 1 Item 3
+                          li
+                            a(href='/') Sub 1 Item 4
+                        
+                      li
+                        a(href='/') 
+                          | Item 2
+                          i.i-chevron-down  
+                        
+                        ul(style='display: none;')
+                          li
+                            a(href='/') Sub 1 Item 1
+                          li.item-with-ul
+                            a(href='/') 
+                              | Sub 1 Item 2
+                              i.i-chevron-right  
+                            ul(style='display: none;')
+                              li
+                                a(href='/') Sub 2 Item 1
+                              li
+                                a(href='#') Sub 2 Item 2
+                              li
+                                a(href='#') Sub 2 Item 3
+                       
+                                
+                            
+                        
+                      li
+                        a(href='#') Item 3
                       
-                    li
-                      a(href='/') Item 2
-                     
-                              
-                          
+                        
                       
-                    li
-                      a(href='#') Item 3
-                    
-                      
-                    li.item-with-ul
-                      a(href='') Item 4
-                      ul(style='display: none;')
+                        
+                    div
+                      ul
                         li
-                          a(href='#') Sub 1 Item 1
+                          a(href='#content') item
                         li
-                          a(href='#') Sub 1 Item 2
-                        li
-                          a(href='#') Sub 1 Item 3
-                      
-                    li
+                          a(href='#content') item  
+
+                    div
                       .field
                         input.input(placeholder="Search") 
-                        button.button.positive Search  
-                     
+                        button.button.positive Go
+                                               
                 #section4.block
                   h2 Section 4
                   p
