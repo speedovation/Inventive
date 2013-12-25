@@ -39,6 +39,11 @@ $(function() {
 
     createPreviewTabs()
 
+
+    //initiliase all navs
+    $(".flexnav").flexNav();
+   
+
 });
 
 

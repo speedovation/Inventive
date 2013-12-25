@@ -7,8 +7,7 @@ nav {
   background-image: -o-linear-gradient(top, #fbfbfb, #efefef);
   background-image: linear-gradient(top, #fbfbfb, #efefef);
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
-  border-bottom: 1px solid #d2d2d2;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #ddd;
   margin-top: 2rem;
   margin-bottom: 2rem;
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.077);
@@ -80,6 +79,7 @@ nav .field {
   padding: 0.96rem 1.2rem;
   z-index: 2;
   overflow: hidden;
+  outline: 0;
   color: #565656;
 }
 .flexnav ul li a:hover,
@@ -90,20 +90,14 @@ nav .field {
   margin: 0;
   padding: 0.8rem 0;
   outline: 0;
-  background-color: top;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#efefef));
-  background-image: -webkit-linear-gradient(top, #efefef, #efefef);
-  background-image: -moz-linear-gradient(top, #efefef, #efefef);
-  background-image: -ms-linear-gradient(top, #efefef, #efefef);
-  background-image: -o-linear-gradient(top, #efefef, #efefef);
-  background-image: linear-gradient(top, #efefef, #efefef);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+  background-color: #efefef;
   border: 1px solid #ddd;
-  border-top: none;
+  border-left-color: transparent;
   width: 130%;
   -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
   -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
   box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+  z-index: 4;
 }
 .flexnav ul li ul li {
   font-size: 0.85rem;
@@ -137,25 +131,6 @@ nav .field {
 .flexnav ul li ul li a {
   display: block;
 }
-.flexnav .touch-button {
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 3.125rem;
-  height: 3.125rem;
-  display: inline-block;
-  text-align: center;
-}
-.flexnav .touch-button:hover {
-  cursor: pointer;
-}
-.flexnav .touch-button .navicon {
-  position: relative;
-  top: 1rem;
-  font-size: 0.55rem;
-  color: #666;
-}
 .menu-button {
   padding: 0.4rem 1rem;
   position: relative;
@@ -166,29 +141,6 @@ nav .field {
 }
 .menu-button i {
   font-size: 1.1rem;
-}
-.menu-button.one-page {
-  position: fixed;
-  top: 0;
-  right: 5%;
-  padding-right: 2.8125rem;
-}
-.menu-button .touch-button {
-  background: transparent;
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 3.125rem;
-  height: 3.125rem;
-  display: inline-block;
-  text-align: center;
-}
-.menu-button .touch-button .navicon {
-  font-size: 1rem;
-  position: relative;
-  top: 1rem;
-  color: #666;
 }
 @media all and (min-width: 800px) {
   body.one-page {
@@ -230,6 +182,8 @@ nav .field {
     position: absolute;
     top: auto;
     left: -1px;
+    border-top: none;
+    border-left-color: #ddd;
   }
   .flexnav ul li > ul li {
     width: 100%;
@@ -255,79 +209,4 @@ nav .field {
   .menu-button {
     display: none;
   }
-}
-.oldie body.one-page {
-  padding-top: 4.375rem;
-}
-.oldie .flexnav ul {
-  overflow: visible;
-}
-.oldie .flexnav ul.one-page {
-  top: 0;
-  right: auto;
-  max-width: 1080px;
-}
-.oldie .flexnav ul li {
-  position: relative;
-  list-style: none;
-  float: left;
-  display: block;
-  background-color: #a6a6a2;
-  width: 5rem;
-  min-height: 3.125rem;
-  overflow: visible;
-}
-.oldie .flexnav ul li:hover > ul {
-  display: block;
-  width: 100%;
-  overflow: visible;
-}
-.oldie .flexnav ul li:hover > ul li {
-  width: 100%;
-  float: none;
-}
-.oldie .flexnav ul li a {
-  border-left: 1px solid #acaca1;
-  border-bottom: none;
-  overflow: visible;
-}
-.oldie .flexnav ul li > ul {
-  background: #acaca1;
-  position: absolute;
-  top: auto;
-  left: 0;
-  display: none;
-  z-index: 1;
-  overflow: visible;
-}
-.oldie .flexnav ul li ul li ul {
-  top: 0;
-}
-.oldie .flexnav ul li ul li a {
-  border-bottom: none;
-}
-.oldie .flexnav ul li ul.open {
-  display: block;
-  width: 100%;
-  overflow: visible;
-}
-.oldie .flexnav ul li ul.open li {
-  width: 100%;
-}
-.oldie .flexnav ul li ul.open ul.open {
-  margin-left: 100%;
-  top: 0;
-  display: block;
-  width: 100%;
-  overflow: visible;
-}
-.oldie .flexnav ul ul li:hover ul {
-  margin-left: 100%;
-  top: 0;
-}
-.oldie .menu-button {
-  display: none;
-}
-.oldie.ie7 .flexnav li {
-  width: 19.9%;
 }

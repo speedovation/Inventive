@@ -132,7 +132,7 @@ $.fn.flexNav = (options) ->
   )
 				
   # Toggle for sub-menus
-  $('.item-with-ul a,.touch-button').on('click', (e) ->
+  $('.item-with-ul + a').on('click', (e) ->
     $sub = $(@).parent('.item-with-ul').find('>ul')
     $touchButton = $(@).parent('.item-with-ul').find('>span.touch-button')
     # remove class of flexnav-show from all elements that are not current

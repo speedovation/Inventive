@@ -1,117 +1,87 @@
-- var CodeName = "SuperActive"
 .grid
   .row
     .desktop-12.tablet-6.mobile-3
-        nav#nav(role='navigation')
-            a(href='#nav', title='Show navigation') Show navigation
-              a(href='#', title='Hide navigation') Hide navigation
-              ul.clearfix
+      nav
+        .menu-button
+            i.i-bars1
+        
+        .flexnav.opacity.lg-screen(data-breakpoint='800')
+          h4 Super Active Responsive framework
+          ul
+            li
+              a(href='home.html') Home
+
+            li.item-with-ul
+              a(href='#')  Design
+                i.i-chevron-down  
+
+              ul
                 li
-                  a(href='typography.html') 
-                    i.i-home-64
-                    | Home
+                  a(href='typography.html') Typography
                 li
-                  a(href='typography.html')
-                    span Design
-                  ul
-                    li
-                      a(href='typography.html') Typography
-                    li
-                      a(href='icons.html') Icons
+                  a(href='icons.html') Icons
 
+            li
+              a(href='grid.html') UI Components
+                i.i-chevron-down 
+              ul
+              
                 li
-                  a(href='grid.html')
-                    span UI
-                  ul
-                    
-                    li
-                      a(href='grid.html') Grid
-                    li
-                      a(href='tables.html') Tables
-                    li
-                      a(href='forms.html') Forms
-                    li
-                      a(href='buttons.html') Buttons
-                    
-                    
-                    li
-                      a(href='tooltips.html') Tooltips
-                    li
-                      a(href='messages.html') Messages
-                    li
-                      a(href='badge.html') Badges  
-                    li
-                      a(href='thumbnail.html') Thumbnail 
-
-                    li
-                      a(href='navbar.html') Navbar
-                    li
-                      a(href='nav.html') Nav
-                    li
-                      a(href='subnav.html') Subnav
-                    li
-                      a(href='panel.html') Panel  
-                    li
-                      a(href='breadcrumb.html') Breadcrumb 
-                    li
-                      a(href='pagination.html') Pagination
-                    li
-                      a(href='progress.html') Progress
-                    li
-                      a(href='search.html') Search          
-
-                        
-
-                    
-
+                  a(href='grid.html') Grid
                 li
-                  a.dropdown(href='sliders.html')
-                    span Components
-                  ul
-                    li
-                      a(href='tabs.html') Tabs & Accordions
-                    li
-                      a(href='herotabs.html') Hero Tabs & Sliders 
-                    li
-                      a(href='sliders.html') Sliders
-                    li
-                      a(href='sidemenu.html') SideMenu   
-                    li
-                      a(href='colorpicker.html') ColorPicker
-                    li
-                      a(href='modal.html') Modal
-                    li
-                      a(href='datepicker.html') DateTime Picker
+                  a(href='tables.html') Tables
+                li
+                  a(href='forms.html') Forms
+                li
+                  a(href='buttons.html') Buttons
                 
+                
+                li
+                  a(href='tooltips.html') Tooltips
+                li
+                  a(href='messages.html') Messages
+                li
+                  a(href='badge.html') Badges  
+                li
+                  a(href='thumbnail.html') Thumbnail 
 
-        script(src='../js/doubletaptogo.js')
-        
-        script
+                li
+                  a(href='navbar.html') Navbar
+                li
+                  a(href='nav.html') Nav
+                li
+                  a(href='subnav.html') Subnav
+                li
+                  a(href='panel.html') Panel  
+                li
+                  a(href='breadcrumb.html') Breadcrumb 
+                li
+                  a(href='pagination.html') Pagination
+                li
+                  a(href='progress.html') Progress
+                li
+                  a(href='search.html') Search          
 
-            /*
-                VIEWPORT BUG FIX
-                iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
-            */
+                  
 
-            ;(function(e){function o(){s.content="width=device-width,minimum-scale="+i[0]+",maximum-scale="+i[1];e.removeEventListener(n,o,true)}var t="addEventListener",n="gesturestart",r="querySelectorAll",i=[1,1],s=r in e?e[r]("meta[name=viewport]"):[];if((s=s[s.length-1])&&t in e){o();i=[.25,1.6];e[t](n,o,true)}})(document);
+              
 
+            li
+              a.dropdown(href='sliders.html') Js Components
+                i.i-chevron-down 
+              ul
+                li
+                  a(href='tabs.html') Tabs & Accordions
+                li
+                  a(href='herotabs.html') Hero Tabs & Sliders 
+                li
+                  a(href='sliders.html') Sliders
+                li
+                  a(href='sidemenu.html') SideMenu   
+                li
+                  a(href='colorpicker.html') ColorPicker
+                li
+                  a(href='modal.html') Modal
+                li
+                  a(href='datepicker.html') DateTime Picker   
 
-
-            $( function()
-            {
-                $( '#nav li:has(ul)' ).doubleTapToGo();
-            });
-
-
-.hidden.preview-template.preview-wrap 
-  ul.resp-tabs-list
-    li Example Preview
-    li Html Code
-  .resp-tabs-container
-    div
-      .preview
-      
-        
-    div
-      pre.markup
-        code.language-markup

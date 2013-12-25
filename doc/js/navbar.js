@@ -99,7 +99,7 @@ $.fn.flexNav = function(options) {
     e.stopPropagation();
     return $(this).next('.flexnav').toggleClass('flexnav-show');
   });
-  $('.item-with-ul a,.touch-button').on('click', function(e) {
+  $('.item-with-ul + a').on('click', function(e) {
     var $sub, $touchButton;
     $sub = $(this).parent('.item-with-ul').find('>ul');
     $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');

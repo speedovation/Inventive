@@ -2,18 +2,26 @@
 @import "../_funcs"
 
 
+nav_bg_top = #fbfbfb
+nav_bg_bottom = #efefef 
+
+border-color = #DDDDDD
+
+a_hover_bg_top = #fcfcfc
+a_hover_bg_bottom = #f8f8f8 
+a_hover_color = #222 
+
 $nav_text= #565656
+
 $top_level= #a6a6a2
 $second_level= #b2b2af
 $third_level= #bfbfbc
 $fourth_level= #cbcbc9
 
 
-
 nav
-  grad(#fbfbfb,#efefef)
-  border-bottom: 1px solid #d2d2d2
-  border: 1px solid #d9d9d9;
+  grad(nav_bg_top,nav_bg_bottom)
+  border: 1px solid border-color;
   margin-top: 2rem;
   margin-bottom: 2rem;
   //border-radius(4px)
@@ -80,34 +88,23 @@ nav
         padding: 0.96rem 1.2rem
         z-index: 2
         overflow: hidden
+        outline 0
         color: $nav_text
         &:hover, &:active
-          color: #222
-        // &.dropdown:after
-        //   width: 0px;
-        //   height: 0px;
-        //   content " "
-        //   right 20px
-        //   //margin-top: 5px;
-        //   border-left: 10px solid transparent;
-        //   border-right: 10px solid transparent;
-        //   border-top: 10px solid #c1c1c1;
-        //   position absolute
+          color: a_hover_color
+        
       ul 
         margin 0 
         padding 0.8rem 0
         outline 0
-        //padding 0
-        grad(#efefef,#efefef) 
-        border: 1px solid #DDDDDD;
-        border-top none
+        background-color nav_bg_bottom
+        border: 1px solid border-color;
+        border-left-color transparent
         //border-radius(0 0 4px 4px)
         width: 130%;
-        //box-shadow(1px 1px 3px rgba(0, 0, 0, 0.09))
         box-shadow(0px 2px 2px rgba(0, 0, 0, 0.05))
+        z-index 4
 
-          
-          
         li 
           font-size: 0.85rem
           position: relative
@@ -118,50 +115,27 @@ nav
             border-top 1px solid transparent
             border-bottom 1px solid transparent
             &:hover,&:active
-              grad(#fcfcfc,#f8f8f8)
-              border-top 1px solid #DDDDDD
-              border-bottom 1px solid #DDDDDD
+              grad(a_hover_bg_top,a_hover_bg_bottom)
+              border-top 1px solid border-color
+              border-bottom 1px solid border-color
 
           ul
-            border: 1px solid #DDDDDD;       
+            border: 1px solid border-color;       
       
     
     ul.flexnav-show li 
       overflow: visible
         
-         
       
     li ul li a 
         display: block
 
-        //background: $second_level
+    // ul li ul li a 
+    //     //background: $third_level
     
-    ul li ul li a 
-        //background: $third_level
+    // ul li ul li ul li a 
+    //    // background: $fourth_level
     
-    ul li ul li ul li a 
-       // background: $fourth_level
-    
-  .touch-button 
-    position: absolute
-    z-index: 999
-    top: 0
-    right: 0
-    width: convert-size(50,"px")
-    height: convert-size(50,"px")
-    display: inline-block
-    //background: #acaca1
-    //background: rgba(0,0,0,.075)
-    text-align: center
-    &:hover 
-        cursor: pointer
-    
-    .navicon 
-      position: relative
-      top: 1.0rem
-      font-size: 0.55rem
-      color: #666
-      
 .menu-button 
   padding: 0.4rem 1rem;
   position: relative;
@@ -171,37 +145,8 @@ nav
   cursor: pointer
   
   i
-    //float: right;
     font-size: 1.1rem;
-    //margin-top: 0.1rem;
-  
-  &.one-page 
-    position: fixed
-    top: 0
-    right: 5%
-    padding-right: convert-size(45,"px")
     
-    
-  .touch-button 
-    background: transparent
-    position: absolute
-    z-index: 999
-    top: 0
-    right: 0
-    width: convert-size(50,"px")
-    height: convert-size(50,"px")
-    display: inline-block
-    text-align: center
-              
-    .navicon 
-      font-size: 1rem
-      position: relative
-      top: 1rem
-      color: #666
-        
-    
-
-
 @media all and (min-width: 800px) 
     body.one-page 
         padding-top: convert-size(70,"px")
@@ -236,7 +181,6 @@ nav
           list-style: none
           float: left
           display: block 
-          //background-color: #a6a6a2
           overflow: visible
           //width: convert-size(160,"px")
         
@@ -251,6 +195,8 @@ nav
           position: absolute 
           top: auto
           left: -1px
+          border-top none
+          border-left-color border-color
             
           li 
             width: 100%
@@ -264,21 +210,21 @@ nav
         //li ul li > ul.flexnav-show 
         //nothing definded here
 
-        li ul li a 
-            //border-bottom: none
+        //li ul li a 
+        //    //border-bottom: none
         
         li ul.open 
-            display: block
-            opacity: 1
-            visibility: visible
-            z-index: 1
-            li 
-                overflow: visible
-                max-height: 100px
-               
-            ul.open 
-                margin-left: 100%
-                top: 0
+          display: block
+          opacity: 1
+          visibility: visible
+          z-index: 1
+          li 
+              overflow: visible
+              max-height: 100px
+             
+          ul.open 
+              margin-left: 100%
+              top: 0
             
         
     
@@ -287,80 +233,80 @@ nav
     
 
 
-.oldie 
-  body.one-page 
-    padding-top: convert-size(70,"px")
+// .oldie 
+//   body.one-page 
+//     padding-top: convert-size(70,"px")
   
-  .flexnav 
-    ul
-      overflow: visible
-      &.one-page 
-        top: 0
-        right: auto
-        max-width: 1080px
+//   .flexnav 
+//     ul
+//       overflow: visible
+//       &.one-page 
+//         top: 0
+//         right: auto
+//         max-width: 1080px
       
-      li 
-        position: relative
-        list-style: none
-        float: left
-        display: block 
-        background-color: #a6a6a2  
-        width: convert-size(80,"px")
-        min-height: convert-size(50,"px")
-        overflow: visible
+//       li 
+//         position: relative
+//         list-style: none
+//         float: left
+//         display: block 
+//         background-color: #a6a6a2  
+//         width: convert-size(80,"px")
+//         min-height: convert-size(50,"px")
+//         overflow: visible
       
-      li:hover > ul  
-        display: block
-        width: 100%
-        overflow: visible
-        li 
-          width: 100%
-          float: none
+//       li:hover > ul  
+//         display: block
+//         width: 100%
+//         overflow: visible
+//         li 
+//           width: 100%
+//           float: none
           
       
-      li a 
-        border-left: 1px solid #acaca1
-        border-bottom: none
-        overflow: visible  
+//       li a 
+//         border-left: 1px solid #acaca1
+//         border-bottom: none
+//         overflow: visible  
       
-      li > ul 
-        background:#acaca1
-        position: absolute 
-        top: auto
-        left: 0
-        display: none
-        z-index: 1
-        overflow: visible
+//       li > ul 
+//         background:#acaca1
+//         position: absolute 
+//         top: auto
+//         left: 0
+//         display: none
+//         z-index: 1
+//         overflow: visible
       
-      li ul li ul  
-        top: 0     
+//       li ul li ul  
+//         top: 0     
       
-      li ul li a 
-        border-bottom: none
+//       li ul li a 
+//         border-bottom: none
       
-      li ul.open 
-        display: block
-        width: 100%
-        overflow: visible
-        li 
-          width: 100%
+//       li ul.open 
+//         display: block
+//         width: 100%
+//         overflow: visible
+//         li 
+//           width: 100%
         
-        ul.open 
-          margin-left: 100%
-          top: 0
-          display: block
-          width: 100%
-          overflow: visible
+//         ul.open 
+//           margin-left: 100%
+//           top: 0
+//           display: block
+//           width: 100%
+//           overflow: visible
           
       
-      ul li:hover ul 
-        margin-left: 100%
-        top: 0
+//       ul li:hover ul 
+//         margin-left: 100%
+//         top: 0
         
   
-  .menu-button 
-    display: none
+//   .menu-button 
+//     display: none
   
-  &.ie7 .flexnav li 
-    width: 19.9%
+//   &.ie7 .flexnav li 
+//     width: 19.9%
   

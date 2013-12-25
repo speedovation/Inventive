@@ -27,17 +27,53 @@
 
 <div class="grid">
     <div class="row">
-        <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
-            <a class="pure-menu-heading" href="">Your Site</a>
-
-            <ul class="subnav subnav-pill">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">API</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </div>
+        <nav>
+            <div class="menu-button"><i class="i-bars1"></i></div>
+            <div class="flexnav opacity lg-screen with-js" data-breakpoint="800">
+              <h4>Site Name</h4>
+              <ul>
+                <li class="item-with-ul"><a href="">
+                     
+                    Item 1<i class="i-chevron-down"> </i></a>
+                  <ul style="display: none;">
+                    <li><a href="#content">Sub 1 Item 1</a></li>
+                    <li><a href="/">Sub 1 Item 2</a></li>
+                    <li><a href="/">Sub 1 Item 3</a></li>
+                    <li><a href="/">Sub 1 Item 4</a></li>
+                  </ul>
+                </li>
+                <li class="item-with-ul"><a href="/">
+                     
+                    Item 2<i class="i-chevron-down"> </i></a>
+                  <ul style="display: none;">
+                    <li><a href="/">Sub 1 Item 1</a></li>
+                    <li class="item-with-ul"><a href="/">
+                         
+                        Sub 1 Item 2<i class="i-chevron-right"> </i></a>
+                      <ul style="display: none;">
+                        <li><a href="/">Sub 2 Item 1</a></li>
+                        <li><a href="#">Sub 2 Item 2</a></li>
+                        <li><a href="#">Sub 2 Item 3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Item 3</a></li>
+              </ul>
+              <div>
+                <ul>
+                  <li><a href="#content">item</a></li>
+                  <li><a href="#content">item  </a></li>
+                </ul>
+              </div>
+              <div>
+                <div class="field">
+                  <input class="input" placeholder="Search">
+                  <button class="button positive">Go</button>
+                </div>
+              </div>
+            </div>
+          </nav>
     </div>
 
     <div class="header panel-box-secondary  row">
