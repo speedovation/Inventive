@@ -392,12 +392,14 @@ abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #4d4d4d;
 }
-ul,
-ol {
-  margin-bottom: 20px;
-}
 ul {
   list-style: none outside;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
 }
 ol {
   list-style: decimal;
@@ -406,7 +408,7 @@ ol,
 ul.square,
 ul.circle,
 ul.disc {
-  margin-left: 30px;
+  margin: 0;
 }
 ul.square {
   list-style: square outside;
