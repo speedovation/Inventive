@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Datepicker</title>
+    <!--link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', type='text/css')-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="dist/css/base.css" type="text/css">
+    <!--link(rel='stylesheet', href='dist/css/nav/nav.css', type='text/css' )	-->
+    <link rel="stylesheet" href="dist/css/doc.css" type="text/css">
+    <link rel="stylesheet" href="dist/font/rudra.css" type="text/css">
+    <script text="text/javascript" src="dist/js/jquery.js">	</script>
+    <script src="dist/js/navbar.js" type="text/javascript"></script>
+    <script text="text/javascript" src="dist/vendors/doc.js"></script>
+    <!--Highlighter-->
+    <link rel="stylesheet" href="dist/vendors/pcolor/pcolor.css" type="text/css">
+    <script text="text/javascript" src="dist/vendors/pcolor/pcolor.js"></script>
+    <!--<link rel="stylesheet" href="vendors/jshighlight/styles/default.css">-->
+    <!--<script src="vendors/jshighlight/highlight.pack.js"></script>-->
+    <!--<script>//hljs.initHighlightingOnLoad();</script>-->
+    <link type="text/css" rel="stylesheet" href="dist/css/components/stabs.css">
+    <script src="dist/js/stabs.js" type="text/javascript"></script>
+    <link href="../css/components/datepicker.css" rel="stylesheet">
+    <style>
+      .container {
+      background: #fff;
+      }
+      #alert {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <nav>
+            <div class="menu-button"><i class="i-bars1"></i></div>
+            <div data-breakpoint="800" class="flexnav opacity lg-screen">
+              <h4>Speedovation Responsive framework</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="item-with-ul"><a href="javascript://;"> Design<i class="i-chevron-down"> </i></a>
+                  <ul>
+                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                  </ul>
+                </li>
+                <li><a href="javascript://;">UI Components<i class="i-chevron-down"> </i></a>
+                  <ul>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="tables.html">Tables</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="tooltips.html">Tooltips</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="badge.html">Badges  </a></li>
+                    <li><a href="thumbnail.html">Thumbnail </a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="list.html">List  Group</a></li>
+                    <li><a href="nav.html">Nav</a></li>
+                    <li><a href="subnav.html">Subnav</a></li>
+                    <li><a href="panel.html">Panel  </a></li>
+                    <li><a href="breadcrumb.html">Breadcrumb </a></li>
+                    <li><a href="pagination.html">Pagination</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="search.html">Search          </a></li>
+                  </ul>
+                </li>
+                <li><a href="javascript://;">Js Components<i class="i-chevron-down"> </i></a>
+                  <ul>
+                    <li><a href="tabs.html">Tabs & Accordions</a></li>
+                    <li><a href="herotabs.html">Hero Tabs & Sliders </a></li>
+                    <li><a href="sliders.html">Sliders</a></li>
+                    <li><a href="sidemenu.html">SideMenu   </a></li>
+                    <li><a href="colorpicker.html">ColorPicker</a></li>
+                    <li><a href="modal.html">Modal</a></li>
+                    <li><a href="datepicker.html">DateTime Picker   </a></li>
+                  </ul>
+                </li>
+                <li><a href="javascript://;">About<i class="i-chevron-down"> </i></a>
+                  <ul>
+                    <li><a href="https://github.com/speedovation/wall/">GitHub</a></li>
+                    <li><a href="about-framework.html">Framework</a></li>
+                    <li><a href="about-team.html">Team</a></li>
+                    <li><a href="about-credit.html">Credit</a></li>
+                    <li><a href="about-license.html">Licences</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="hidden preview-template preview-wrap"> 
+      <ul class="resp-tabs-list">
+        <li>Example Preview</li>
+        <li>Html Code</li>
+      </ul>
+      <div class="resp-tabs-container">
+        <div>
+          <div class="preview"></div>
+        </div>
+        <div>
+          <pre class="markup"><code class="language-markup"></code></pre>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-3">
+          <h2>About</h2>
+          <p>Add datepicker picker to field or to any other element.</p>
+          <ul>
+            <li>can be used as a component</li>
+            <li>formats: dd, d, mm, m, yyyy, yy</li>
+            <li>separators: -, /, .</li>
+          </ul>
+          <p>
+            <!-- Place this tag where you want the +1 button to render.-->
+            <div data-size="medium" data-annotation="inline" data-width="120" class="g-plusone"></div>
+            <!-- Place this tag after the last +1 button tag.-->
+          </p>
+        </div>
+        <div class="desktop-9">
+          <h2>Example</h2>
+          <p>Attached to a field with the format specified via options.</p>
+          <div class="well field">
+            <input id="dp1" type="text" value="02-16-2012" class="input">
+          </div>
+          <p>Attachet to a field with the format specified via data tag.</p>
+          <div class="well field">
+            <input id="dp2" type="text" value="02/16/12" data-date-format="mm/dd/yy" class="input">
+          </div>
+          <p>As component.</p>
+          <div class="well field">
+            <div id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy" class="input-append date">
+              <input size="16" type="text" value="12-02-2012" readonly="readonly" class="input"><span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
+          </div>
+          <p>Start with years viewMode.</p>
+          <div class="well">
+            <div id="dpYears" data-date="12-02-2012" data-date-format="dd-mm-yyyy" data-date-viewmode="years" class="input-append date">
+              <input size="16" type="text" value="12-02-2012" readonly="readonly" class="span2"><span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
+          </div>
+          <p>Limit the view mode to months</p>
+          <div class="well">
+            <div id="dpMonths" data-date="102/2012" data-date-format="mm/yyyy" data-date-viewmode="years" data-date-minviewmode="months" class="input-append date">
+              <input size="16" type="text" value="02/2012" readonly="readonly" class="span2"><span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
+          </div>
+          <p>Attached to other elment then field and using events to work with the date values.</p>
+          <div class="well">
+            <div id="alert" class="alert alert-error"><strong>Oh snap!</strong></div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Start date<a id="dp4" href="#" data-date-format="yyyy-mm-dd" data-date="2012-02-20" class="button">Change</a></th>
+                  <th>End date<a id="dp5" href="#" data-date-format="yyyy-mm-dd" data-date="2012-02-25" class="button">Change</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="startDate">2012-02-20</td>
+                  <td id="endDate">2012-02-25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Disabling dates in the past and dependent disabling.</p>
+          <div class="well">
+            <table class="table field">
+              <thead>
+                <tr>
+                  <th>Check in:
+                    <input id="dpd1" type="text" value="" class="input">
+                  </th>
+                  <th>Check out:
+                    <input id="dpd2" type="text" value="" class="input">
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <hr>
+          <h2>Using datepicker.js</h2>
+          <p>Call the datepicker via javascript:</p>
+          <h3>Options</h3>
+          <table class="table bordered zebra rounded">
+            <thead>
+              <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">type</th>
+                <th style="width: 100px;">default</th>
+                <th>description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>format</td>
+                <td>string</td>
+                <td>'mm/dd/yyyy'</td>
+                <td>the date format, combination of  d, dd, m, mm, yy, yyy.</td>
+              </tr>
+              <tr>
+                <td>weekStart</td>
+                <td>integer</td>
+                <td>0</td>
+                <td>day of the week start. 0 for Sunday -  6 for Saturday</td>
+              </tr>
+              <tr>
+                <td>viewMode</td>
+                <td>string|integer</td>
+                <td>0 = 'days'</td>
+                <td>set the start view mode. Accepts: 'days', 'months', 'years', 0 for days, 1 for months and 2 for years</td>
+              </tr>
+              <tr>
+                <td>minViewMode</td>
+                <td>string|integer</td>
+                <td>0 = 'days'</td>
+                <td>set a limit for view mode. Accepts: 'days', 'months', 'years', 0 for days, 1 for months and 2 for years</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Markup</h3>
+          <h3>Methods</h3>
+          <h4>.datepicker(options)</h4>
+          <p class="info">Initializes an datepicker.</p>
+          <h4>.datepicker('show')</h4>
+          <p class="info">Show the datepicker.</p>
+          <h4>.datepicker('hide')</h4>
+          <p class="info">Hide the datepicker.</p>
+          <h4>.datepicker('place')</h4>
+          <p class="info">Updates the date picker's position relative to the element</p>
+          <h4>.datepicker('setValue', value)</h4>
+          <p class="info">Set a new value for the datepicker. It cand be a string in the specified format or a Date object.</p>
+          <h3>Events</h3>
+          <p class="info">Datepicker class exposes a few events for manipulating the dates.</p>
+          <table class="table bordered zebra rounded">
+            <thead>
+              <tr>
+                <th style="width: 150px;">Event</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>show</td>
+                <td>This event fires immediately when the date picker is displayed.</td>
+              </tr>
+              <tr>
+                <td>hide</td>
+                <td>This event is fired immediately when the date picker is hidden.</td>
+              </tr>
+              <tr>
+                <td>changeDate</td>
+                <td>This event is fired when the date is changed.</td>
+              </tr>
+              <tr>
+                <td>onRender</td>
+                <td>This event is fired when a day is rendered inside the datepicker. Should return a string. Return 'disabled' to disable the day from being selected.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <script src="../js/datepicker.js"></script>
+        <script>
+          if (top.location != location) {
+            top.location.href = document.location.href ;
+          }
+          $(function(){
+          
+          $('#dp1').datepicker({
+            format: 'mm-dd-yyyy'
+          });
+          $('#dp2').datepicker();
+          $('#dp3').datepicker();
+          $('#dp3').datepicker();
+          $('#dpYears').datepicker();
+          $('#dpMonths').datepicker();
+          var startDate = new Date(2012,1,20);
+          var endDate = new Date(2012,1,25);
+          
+          $('#dp4').datepicker()
+          .on('changeDate', function(ev){
+            if (ev.date.valueOf() > endDate.valueOf()){
+              $('#alert').show().find('strong').text('The start date can not be greater then the end date');
+            } 
+            else 
+            {
+              $('#alert').hide();
+              startDate = new Date(ev.date);
+              $('#startDate').text($('#dp4').data('date'));
+            }
+            $('#dp4').datepicker('hide');
+          });
+          $('#dp5').datepicker()
+          .on('changeDate', function(ev){
+          if (ev.date.valueOf() < startDate.valueOf()){
+          $('#alert').show().find('strong').text('The end date can not be less then the start date');
+          } else {
+          $('#alert').hide();
+          endDate = new Date(ev.date);
+          $('#endDate').text($('#dp5').data('date'));
+          }
+          $('#dp5').datepicker('hide');
+          });
+          // disabling dates
+          var nowTemp = new Date();
+          var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+          var checkin = $('#dpd1').datepicker({
+          onRender: function(date) {
+          return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+          }).on('changeDate', function(ev) {
+          if (ev.date.valueOf() > checkout.date.valueOf()) {
+          var newDate = new Date(ev.date)
+          newDate.setDate(newDate.getDate() + 1);
+          checkout.setValue(newDate);
+          }
+          checkin.hide();
+          $('#dpd2')[0].focus();
+          }).data('datepicker');
+          var checkout = $('#dpd2').datepicker({
+          onRender: function(date) {
+          return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+          }
+          }).on('changeDate', function(ev) {
+          checkout.hide();
+          }).data('datepicker');
+          });
+          
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
