@@ -2,7 +2,7 @@
 html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
   head
     
-    title Messages ( messages)
+    title Search
 
     include header
 
@@ -55,27 +55,12 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           
           .preview-box
             form.search(data-search='')
-              input.search-field(placeholder='search...', type='search')
-              button.search-close(type='reset')
+              .field
+                input.search-field.input(placeholder='search...', type='search')
+                button.search-close.i-compass(type='reset')
+                
             
-          hr
-          h2 Ajax search results
-          p
-            | You can use a dropdown from the
-            a(href='dropdown.html') Dropdown component
-            | to display search results. Just add
-            code {source:'PATH/TO/RESULTS'}
-            | to the data attribute and set the path to your search results, which need to be formatted in JSON. This enables the Ajax search and injects a dropdown with the
-            code .dropdown-search
-            | class displaying the search results. You can even navigate through the dropdown with the up and down keys of your keyboard.
           
-  
-          .preview-box
-            form.search(data-search='{source:"../vendor/searchresults.json"}')
-              input.search-field(placeholder='search...', type='search')
-              button.search-close(type='reset')
-          
-
           hr
           h2 Search in navbars
           p
