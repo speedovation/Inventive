@@ -1,0 +1,39 @@
+!!! 5
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    
+    title Shoping Cart Icons - Speedovation Responsive framework
+  
+    include header
+    link(rel='stylesheet', href='dist/bags/bags.css', type='text/css' )   
+
+  body
+
+    include _nav
+
+    .grid
+      .row
+
+        div.desktop-12
+
+          - var icons = ['cart-basket-cancel' , 'cart-basket-plus' , 'cart-basket' , 'cart-discoun-altt' , 'cart-discount' , 'cart-sale-alt' , 'cart-sale' , 'cart-shoping-bag-16' , 'cart-shoping-bag-dollar16' , 'cart-shoping-bag' , 'cart-shoping-bags-1-16' , 'cart-shoping-bags-16' , 'cart-shoping-basket-16' , 'cart-shoping-cart-16' , 'cart-shoping-cart-alt16' , 'cart-shoping-cart-cross16' , 'cart-shoping-cart-delete' , 'cart-shoping-cart-fill16' , 'cart-shoping-cart-plus' , 'cart-shoping-cart-plus16' , 'cart-shoping-cart' , 'cart-tag-discount' , 'cart-tag' , 'cart-vehical']
+
+
+          h1.divide-section 
+            | Shoping Cart Icons  
+            span.text-muted.text-small Total icons are 
+                =icons.length
+
+          ul.block
+            each val in icons
+              li 
+                  span(title = "#{val}",class="show-icon")
+                    i(class="#{val} size-64") 
+                    span.icon-name #{val} 
+            
+
+           p.divide-section         
+          
+
+
+

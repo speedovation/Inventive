@@ -129,6 +129,10 @@
   font-size: 32px;
   color: #555;
 }
+.size-64 {
+  font-size: 64px;
+  color: #555;
+}
 .block {
   display: inline-block;
 }
