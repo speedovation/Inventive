@@ -197,7 +197,7 @@ table.rounded
 
 
 @media untilmobile 
-    .table:after , .table thead:after 
+    .table-r:after , .table-r thead:after 
         visibility: hidden
         display: block
         font-size: 0
@@ -205,43 +205,42 @@ table.rounded
         clear: both
         height: 0;
         
-    .table
+    .table-r
         width: 100%
         border-collapse: collapse
         border-spacing: 0;
         display block
 
-    .table th,
-    .table td 
-        margin: 0
-        vertical-align: top;
-    .table th 
-        text-align: left;
-    .table table 
-        display: block
-        position: relative
-        width: 100%
-    .table thead
-        display: block
-        float: left
-    .table tbody 
-        display: block
-        width: auto
-        position: relative
-        overflow-x: auto
-        white-space: nowrap
-    .table thead tr 
-        display: block
-    .table th 
-        display: block
-        text-align: right
-    .table tbody tr 
-        display: inline-block
-        vertical-align: top
-    .table td 
-        display: block
-        min-height: 1.25em
-        text-align: left
+        th , td 
+            margin: 0
+            vertical-align: top;
+        th 
+            text-align: left;
+        table 
+            display: block
+            position: relative
+            width: 100%
+        thead
+            display: block
+            float: left
+        tbody 
+            display: block
+            width: auto
+            position: relative
+            overflow-x: auto
+            white-space: nowrap
+        thead tr 
+            display: block
+        th 
+            display: block
+            text-align: right
+        tbody tr 
+            display: inline-block
+            vertical-align: top
+        td 
+            display: block
+            min-height: 1.25em
+            text-align: left
 
 
     //- sort out borders */
