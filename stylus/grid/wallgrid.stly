@@ -1,0 +1,87 @@
+*,
+*:after,
+*:before
+  margin 0
+  padding 0
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+
+/* Set the width of the grid */
+.row
+  width 100%
+  margin 0 auto
+
+
+/* Attribute selector */
+[class*='col-']
+  float left
+  padding 0.3em
+
+
+/* Floats last ".col-" to the right */
+[class*='col-']:last-of-type
+  float right
+
+
+/* Clearfix */
+.row:after
+  content ""
+  display table
+  clear both
+
+
+
+/* grid and site dimensions */
+grid-increment-desktop = 80px
+grid-increment-tablet = 60px
+grid-increment-mobile = grid-increment-tablet
+
+grid-start-desktop = 60px
+grid-start-tablet = 40px
+grid-start-mobile = grid-start-tablet
+
+grid-end-desktop = 940px
+grid-end-tablet = 700px
+grid-end-mobile = 280px
+grid-end-mobile-wide = 400px
+
+site-width-desktop = 1000px
+site-width-tablet = 760px
+site-width-mobile = 320px
+site-width-wide = 480px
+
+/* media query dimensions */
+/* obviously the default view doesn't require a media query */
+media-query-tablet = 'only screen and (min-width: 760px) and (max-width: 1000px)'
+media-query-mobile = 'only screen and (max-width: 760px)'
+media-query-mobile-wide = 'only screen and (min-width: 480px) and (max-width: 760px)'
+
+
+generate-grid(increment, start, end)
+  total = start
+  for n, x in 0..((end - start) / increment)
+    .column-{x+1}
+      width total
+    total = total + increment
+
+
+/* and now to generate the grids... */
+
+
+/* Desktop Layout (default) */
+generate-grid(grid-increment-desktop, grid-start-desktop, grid-end-desktop)
+
+
+/* Tablet Layout - 760px */
+@media media-query-tablet
+  generate-grid(grid-increment-tablet, grid-start-tablet, grid-end-tablet)
+
+/* Mobile Layout - 320px */
+@media media-query-mobile
+  generate-grid(grid-increment-mobile, grid-start-mobile, grid-end-mobile)
+
+/* Wide Mobile Layout - 480px */
+@media media-query-mobile-wide
+  generate-grid(grid-increment-mobile, grid-start-mobile, grid-end-mobile-wide)
