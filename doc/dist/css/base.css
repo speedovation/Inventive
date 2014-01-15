@@ -321,7 +321,7 @@ small,
   line-height: inherit;
 }
 p {
-  margin-bottom: 1.5625rem;
+  margin: 0 0 1.6rem;
 }
 p img {
   margin: 0;
@@ -398,9 +398,8 @@ ul {
 }
 ul,
 ol {
-  margin: 0;
+  margin: 0 0 1.6rem;
   padding: 0;
-  margin-bottom: 20px;
 }
 ol {
   list-style: decimal;
@@ -457,8 +456,6 @@ dd {
   margin-bottom: 1rem;
 }
 ul.link-list {
-  margin: 0 0 1.6rem 0;
-  padding: 0;
   list-style: none;
   border: 1px solid #ddd;
 }
