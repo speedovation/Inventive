@@ -32,20 +32,21 @@
   clear both
 
 
+/* Inspired from http://davidwalsh.name/stylus-grid */
 
 /* grid and site dimensions */
 grid-increment-desktop = 80px
 grid-increment-tablet = 60px
 grid-increment-mobile = grid-increment-tablet
 
-grid-start-desktop = 60px
-grid-start-tablet = 40px
-grid-start-mobile = grid-start-tablet
+grid-min-desktop = 60px
+grid-min-tablet = 40px
+grid-min-mobile = grid-start-tablet
 
-grid-end-desktop = 940px
-grid-end-tablet = 700px
-grid-end-mobile = 280px
-grid-end-mobile-wide = 400px
+grid-max-desktop = 940px
+grid-max-tablet = 700px
+grid-max-mobile = 280px
+grid-max-mobile-wide = 400px
 
 site-width-desktop = 1000px
 site-width-tablet = 760px
@@ -68,6 +69,7 @@ generate-grid(increment, start, end)
 
 
 /* and now to generate the grids... */
+
 
 
 /* Desktop Layout (default) */
