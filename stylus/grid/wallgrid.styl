@@ -8,82 +8,143 @@
   box-sizing border-box
 
 
-/* Set the width of the grid */
+// Set the width of the grid */
 .row
   width 100%
   margin 0 auto
+  max-width 2140px
+  *zoom 1
 
 
-/* Attribute selector */
-[class*='col-']
-  float left
-  padding 0.3em
+// Attribute selector */
+//[class*='mobile-'],
+//[class*='tablet-'],
+//[class*='large-']
+//  float left
+//padding 0.3em
 
 
-/* Floats last ".col-" to the right */
-[class*='col-']:last-of-type
-  float right
+// Floats last ".col-" to the right */
+//[class*='desktop-']:last-of-type,
+//[class*='mobile-']:last-of-type,
+//[class*='tablet-']:last-of-type,
+//[class*='large-']:last-of-type
+//  float right
 
 
-/* Clearfix */
-.row:after
+// Clearfix */
+.row:before,.row:after
   content ""
   display table
+
+.row:after
   clear both
 
 
-/* Inspired from http://davidwalsh.name/stylus-grid */
+// @media (min-width: 768px) {
+//   .container {
+//     width: 750px;
+//   }
+// }
 
-/* grid and site dimensions */
-grid-increment-desktop = 80px
-grid-increment-tablet = 60px
-grid-increment-mobile = grid-increment-tablet
+//@media (min-width: 992px) {
+//  .container {
+//    width: 970px;
+//  }
+//}
 
-grid-min-desktop = 60px
-grid-min-tablet = 40px
-grid-min-mobile = grid-start-tablet
-
-grid-max-desktop = 940px
-grid-max-tablet = 700px
-grid-max-mobile = 280px
-grid-max-mobile-wide = 400px
-
-site-width-desktop = 1000px
-site-width-tablet = 760px
-site-width-mobile = 320px
-site-width-wide = 480px
-
-/* media query dimensions */
-/* obviously the default view doesn't require a media query */
-media-query-tablet = 'only screen and (min-width: 760px) and (max-width: 1000px)'
-media-query-mobile = 'only screen and (max-width: 760px)'
-media-query-mobile-wide = 'only screen and (min-width: 480px) and (max-width: 760px)'
+//@media (min-width: 1200px) {
+//  .container {
+//    width: 1170px;
+//  }
+//}
 
 
-generate-grid(increment, start, end)
-  total = start
-  for n, x in 0..((end - start) / increment)
-    .column-{x+1}
-      width total
-    total = total + increment
+// Inspired from http://davidwalsh.name/stylus-grid */
 
+// grid and site dimensions */
+//grid-increment-desktop = 80px
+//grid-increment-tablet = 60px
+//grid-increment-mobile = grid-increment-tablet
 
-/* and now to generate the grids... */
+//grid-min-desktop = 60px
+//grid-min-tablet = 40px
+//grid-min-mobile = grid-start-tablet
+
+//grid-max-desktop = 940px
+//grid-max-tablet = 700px
+//grid-max-mobile = 280px
+//grid-max-mobile-wide = 400px
 
 
 
-/* Desktop Layout (default) */
-generate-grid(grid-increment-desktop, grid-start-desktop, grid-end-desktop)
+//width-desktop = 1024px
+//site-width-tablet = 760px
+//site-width-mobile = 320px
+//site-width-wide = 480px
+
+// media query dimensions */
+//media-query-tablet = 'only screen and (min-width: 760px) and (max-width: 1000px)'
+//media-query-mobile = 'only screen and (max-width: 760px)'
+//media-query-mobile-wide = 'only screen and (min-width: 480px) and (max-width: 760px)'
+
+// Smartphones (portrait and landscape)  //480 should be max ...but during resize some area is blank...now not
+media-mobile = ' only screen and (min-width : 320px) and (max-width : 760px)'
+// iPads (portrait and landscape)
+media-tablet = ' only screen and (min-width : 768px) and (max-width : 1024px)'
+// Desktops and laptops
+media-desktop = ' only screen and (min-width : 1025px)'
+// Large screens
+media-large = ' only screen and (min-width : 1440)'
+// eXtra Large screens
+media-xlarge = ' only screen and (min-width : 1824px)'
+
+width-large = 1440px
+width-desktop = 1240px
+width-tablet = 940px
+width-mobile = 440px
 
 
-/* Tablet Layout - 760px */
-@media media-query-tablet
-  generate-grid(grid-increment-tablet, grid-start-tablet, grid-end-tablet)
 
-/* Mobile Layout - 320px */
-@media media-query-mobile
-  generate-grid(grid-increment-mobile, grid-start-mobile, grid-end-mobile)
+generate-grid(column,wide)
 
-/* Wide Mobile Layout - 480px */
-@media media-query-mobile-wide
-  generate-grid(grid-increment-mobile, grid-start-mobile, grid-end-mobile-wide)
+  .row
+    width wide
+
+  [class*={column}-]
+    float left
+
+  for n,x in (1..12)
+    x= x + 1
+    .{column}-{(x)}
+      width ( 100 * (x / 12 ) )%
+
+
+//default columns
+//.row
+//  width 1200px
+//generate-grid('desktop')
+
+// Tablet Layout - 320px - 480px
+@media media-mobile
+  generate-grid('mobile',width-mobile)
+
+// Tablet Layout - 768px - 1024px
+@media media-tablet
+  generate-grid('tablet',width-tablet)
+
+// Default look
+// Desktop Layout - 1024px - 1440px
+@media media-desktop
+  generate-grid('desktop',width-desktop)
+
+// Large Layout - 1440px - 1824px
+@media media-large
+  generate-grid( 'large',width-large)
+
+// Remove comments to support extra large screens
+// Desktop Layout - 1440px - 1824px
+//@media media-xlarge
+//  .row
+//    width 2100px
+//  generate-grid('xlarge')
