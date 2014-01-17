@@ -1,3 +1,6 @@
+marginright = 0.7
+
+
 *,
 *:after,
 *:before
@@ -17,20 +20,26 @@
 
 
 // Attribute selector */
-//[class*='mobile-'],
-//[class*='tablet-'],
-//[class*='large-']
+[class*='mobile-'],
+[class*='tablet-'],
+[class*='desktop-'],
+[class*='large-'],
 [class*='col-']
   float left
+  margin-right (marginright)%
 //padding 0.3em
 
 
 // Floats last ".col-" to the right */
-//[class*='desktop-']:last-of-type,
-//[class*='mobile-']:last-of-type,
-//[class*='tablet-']:last-of-type,
-//[class*='large-']:last-of-type
-//  float right
+[class*='mobile-']:last-child,
+[class*='desktop-']:last-child,
+[class*='tablet-']:last-child,
+[class*='col-']:last-child,
+[class*='large-']:last-child
+  //float right
+  margin-right 0
+  //padding-right (marginright/2)%
+  //padding-left (marginright/2)%
 
 
 // Clearfix */
@@ -92,9 +101,9 @@
 // Smartphones (portrait and landscape)  //480 should be max ...but during resize some area is blank...now not
 media-mobile = ' only screen and (min-width : 320px) and (max-width : 768px)'
 // iPads (portrait and landscape)
-media-tablet = ' only screen and (min-width : 768px) and (max-width : 960px)'
+media-tablet = ' only screen and (min-width : 768px) and (max-width : 1000px)'
 // Desktops and laptops
-media-desktop = ' only screen and (min-width : 960px)'
+media-desktop = ' only screen and (min-width : 1000px)'
 // Large screens
 media-large = ' only screen and (min-width : 1200px)'
 // eXtra Large screens
@@ -103,9 +112,9 @@ media-xlarge = ' only screen and (min-width : 1440px)'
 //width-xxlarge = 1940px
 width-xlarge = 1440px
 width-large = 1200px
-width-desktop = 960px
+width-desktop = 990px
 width-tablet = 740px
-width-mobile = 440px
+width-mobile = 90% //440px
 
 
 
@@ -114,18 +123,19 @@ generate-grid(column,wide)
   .row
     width wide
 
-  [class*={column}-]
-    float left
+    //if column =='mobile'
+    .row
+      width 100%
+
+  //[class*={column}-]
+  //  float left
 
   for n,x in (1..12)
     x= x + 1
     .{column}-{(x)} , .col-{(x)}
-      width ( 100 * (x / 12 ) )%
+      width ( ( (100 * (x / 12 ))  ) - (marginright - (n*marginright/12))  )%
 
-//default columns
-//.row
-//  width 1200px
-//generate-grid('desktop')
+
 
 // Tablet Layout - 320px - 480px
 @media media-mobile
@@ -135,7 +145,6 @@ generate-grid(column,wide)
 @media media-tablet
   generate-grid('tablet',width-tablet)
 
-// Default look
 // Desktop Layout - 1024px - 1440px
 @media media-desktop
   generate-grid('desktop',width-desktop)
@@ -150,3 +159,31 @@ generate-grid(column,wide)
 //  .row
 //    width 2100px
 //  generate-grid('xlarge')
+
+//fixed width in percentages
+.width-per-5     { width: 5% }
+.width-per-10    { width:10% }
+.width-per-12    { width:12.5% }     /* 1/8 */
+.width-per-15    { width:15% }
+.width-per-20    { width:20% }
+.width-per-25    { width:25% }       /* 1/4 */
+.width-per-30    { width:30% }
+.width-per-33    { width:33.333% }   /* 1/3 */
+.width-per-35    { width:35% }
+.width-per-37    { width:37.5% }     /* 3/8 */
+.width-per-40    { width:40% }
+.width-per-45    { width:45% }
+.width-per-50    { width:50% }       /* 1/2 */
+.width-per-55    { width:55% }
+.width-per-60    { width:60% }
+.width-per-62    { width:62.5% }     /* 5/8 */
+.width-per-65    { width:65% }
+.width-per-66    { width:66.666% }   /* 2/3 */
+.width-per-70    { width:70% }
+.width-per-75    { width:75% }       /* 3/4*/
+.width-per-80    { width:80% }
+.width-per-85    { width:85% }
+.width-per-87    { width:87.5% }     /* 7/8 */
+.width-per-90    { width:90% }
+.width-per-95    { width:95% }
+.width-per-100    { width:100% }

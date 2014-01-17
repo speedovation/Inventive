@@ -9,102 +9,101 @@ html
 
     include _nav
    
-    .grid
-      .row  
-        .desktop-12.tablet-12.mobile-12.example
-          
-          h1.welcome Welcome in Superactive . Relax , We've already done it for you 
-          .grid
-          
 
-            //demo 1
-
-            mixin span_text(d,t,m)
-              span.span_d desktop #{d}
-              span.span_t tablet #{t}
-              span.span_m mobile #{m}
+    .row.example
+        h1.welcome Welcome in Superactive . Relax , We've already done it for you
 
           
-            h2 Asymmetrical 
-            .row
-              .desktop-4.tablet-4.mobile-4
-                +span_text('4','4','4')
-              
-              .desktop-8.tablet-8.mobile-8
-                +span_text('8','8','8')
 
-            h2 Symmetrical
-            .row
-              .desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3')
+        //demo 1
 
-              .desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3')
-
-              .desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3')
-
-              .desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3')
-
-            h2 Column
-
-            .row
-              .desktop-4.tablet-4.mobile-4
-                +span_text('4','4','4')
-              .desktop-4.tablet-4.mobile-4
-                +span_text('4','4','4')
-              .desktop-4.tablet-4.mobile-4
-                +span_text('4','4','4')
-
-            h2 Universal responsive class
-            p Just use .col if you want
-
-            .row
-                .col-4
-                    +span_text('4','4','4')
-                .col-4
-                    +span_text('4','4','4')
-                .col-4
-                    +span_text('4','4','4')
-
-            h2 Push
-
-            .row
-              .desktop-4.desktop-push-4.tablet-2.tablet-push-2.mobile-2.mobile-push-1
-                +span_text('push 4','push 2','push 1')
-
-            .row
-              .desktop-4.desktop-push-2.tablet-2.tablet-push-1.mobile-1
-                +span_text('push 2','push 1','1')
-
-              .desktop-4.tablet-2.mobile-1
-                +span_text('4','2','1')
-
-            .row
-              .desktop-12.tablet-6.mobile-3
-                +span_text('12','6','3')
+        mixin span_text(l,d,t,m)
+          span.span_l large #{d}
+          span.span_d desktop #{d}
+          span.span_t tablet #{t}
+          span.span_m mobile #{m}
 
 
-            h2 Padded
+        h2 Asymmetrical
+        .row
+          .large-4.desktop-4.tablet-4.mobile-4
+            +span_text('4','4','4','4')
 
-            .row
-              .desktop-4.tablet-2.mobile-1.padded(style="background:#f6f6f6")
-                +span_text('4','2','1')
+          .large-8.desktop-8.tablet-8.mobile-8
+            +span_text('8','8','8','8')
 
-              .desktop-8.tablet-4.mobile-2.padded
-                +span_text('8','4','2')
-            
-            h2 Contained
+        h2 Symmetrical
+        .row
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
 
-            .row
-              .desktop-4.tablet-2.mobile-1.contained(style="background:#f6f6f6")
-                +span_text('4','2','1')
-        
-              .desktop-8.tablet-4.mobile-2.contained
-                +span_text('8','4','2')
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
 
-    
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
 
-          
-  
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
+
+        h2 Column
+
+        .row
+          .large-4.desktop-4.tablet-4.mobile-4
+              +span_text('4','4','4','4')
+          .large-4.desktop-4.tablet-4.mobile-4
+              +span_text('4','4','4','4')
+          .large-4.desktop-4.tablet-4.mobile-4
+              +span_text('4','4','4','4')
+
+        h2 Universal responsive class
+        p Just use .col if you want
+
+        .row
+            .col-4
+                +span_text('4','4','4','4')
+            .col-4
+                +span_text('4','4','4','4')
+            .col-4
+                +span_text('4','4','4','4')
+
+  //      h2 Push
+  //
+  //      .row
+  //        .desktop-4.desktop-push-4.tablet-2.tablet-push-2.mobile-2.mobile-push-1
+  //          +span_text('push 4','push 2','push 1')
+  //
+  //      .row
+  //        .desktop-4.desktop-push-2.tablet-2.tablet-push-1.mobile-1
+  //          +span_text('push 2','push 1','1')
+  //
+  //        .desktop-4.tablet-2.mobile-1
+  //          +span_text('4','2','1')
+  //
+  //      .row
+  //        .desktop-12.tablet-6.mobile-3
+  //          +span_text('12','6','3')
+  //
+  //
+  //      h2 Padded
+  //
+  //      .row
+  //        .desktop-4.tablet-2.mobile-1.padded(style="background:#f6f6f6")
+  //          +span_text('4','2','1')
+  //
+  //        .desktop-8.tablet-4.mobile-2.padded
+  //          +span_text('8','4','2')
+  //
+  //      h2 Contained
+  //
+  //      .row
+  //        .desktop-4.tablet-2.mobile-1.contained(style="background:#f6f6f6")
+  //          +span_text('4','2','1')
+  //
+  //        .desktop-8.tablet-4.mobile-2.contained
+  //          +span_text('8','4','2')
+  //
+  //
+  //
+  //
+  //
