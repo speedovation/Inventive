@@ -20,7 +20,8 @@
 //[class*='mobile-'],
 //[class*='tablet-'],
 //[class*='large-']
-//  float left
+[class*='col-']
+  float left
 //padding 0.3em
 
 
@@ -89,19 +90,21 @@
 //media-query-mobile-wide = 'only screen and (min-width: 480px) and (max-width: 760px)'
 
 // Smartphones (portrait and landscape)  //480 should be max ...but during resize some area is blank...now not
-media-mobile = ' only screen and (min-width : 320px) and (max-width : 760px)'
+media-mobile = ' only screen and (min-width : 320px) and (max-width : 768px)'
 // iPads (portrait and landscape)
-media-tablet = ' only screen and (min-width : 768px) and (max-width : 1024px)'
+media-tablet = ' only screen and (min-width : 768px) and (max-width : 960px)'
 // Desktops and laptops
-media-desktop = ' only screen and (min-width : 1025px)'
+media-desktop = ' only screen and (min-width : 960px)'
 // Large screens
-media-large = ' only screen and (min-width : 1440)'
+media-large = ' only screen and (min-width : 1200px)'
 // eXtra Large screens
-media-xlarge = ' only screen and (min-width : 1824px)'
+media-xlarge = ' only screen and (min-width : 1440px)'
 
-width-large = 1440px
-width-desktop = 1240px
-width-tablet = 940px
+//width-xxlarge = 1940px
+width-xlarge = 1440px
+width-large = 1200px
+width-desktop = 960px
+width-tablet = 740px
 width-mobile = 440px
 
 
@@ -116,9 +119,8 @@ generate-grid(column,wide)
 
   for n,x in (1..12)
     x= x + 1
-    .{column}-{(x)}
+    .{column}-{(x)} , .col-{(x)}
       width ( 100 * (x / 12 ) )%
-
 
 //default columns
 //.row

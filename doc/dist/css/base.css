@@ -714,6 +714,9 @@ footer {
   max-width: 2140px;
   *zoom: 1;
 }
+[class*='col-'] {
+  float: left;
+}
 .row:before,
 .row:after {
   content: "";
@@ -722,179 +725,227 @@ footer {
 .row:after {
   clear: both;
 }
-@media  only screen and (min-width : 320px) and (max-width : 760px) {
+@media  only screen and (min-width : 320px) and (max-width : 768px) {
   .row {
     width: 440px;
   }
   [class*=mobile-] {
     float: left;
   }
-  .mobile-1 {
+  .mobile-1,
+  .col-1 {
     width: 8.333333333333332%;
   }
-  .mobile-2 {
+  .mobile-2,
+  .col-2 {
     width: 16.666666666666664%;
   }
-  .mobile-3 {
+  .mobile-3,
+  .col-3 {
     width: 25%;
   }
-  .mobile-4 {
+  .mobile-4,
+  .col-4 {
     width: 33.33333333333333%;
   }
-  .mobile-5 {
+  .mobile-5,
+  .col-5 {
     width: 41.66666666666667%;
   }
-  .mobile-6 {
+  .mobile-6,
+  .col-6 {
     width: 50%;
   }
-  .mobile-7 {
+  .mobile-7,
+  .col-7 {
     width: 58.333333333333336%;
   }
-  .mobile-8 {
+  .mobile-8,
+  .col-8 {
     width: 66.66666666666666%;
   }
-  .mobile-9 {
+  .mobile-9,
+  .col-9 {
     width: 75%;
   }
-  .mobile-10 {
+  .mobile-10,
+  .col-10 {
     width: 83.33333333333334%;
   }
-  .mobile-11 {
+  .mobile-11,
+  .col-11 {
     width: 91.66666666666666%;
   }
-  .mobile-12 {
+  .mobile-12,
+  .col-12 {
     width: 100%;
   }
 }
-@media  only screen and (min-width : 768px) and (max-width : 1024px) {
+@media  only screen and (min-width : 768px) and (max-width : 960px) {
   .row {
-    width: 940px;
+    width: 740px;
   }
   [class*=tablet-] {
     float: left;
   }
-  .tablet-1 {
+  .tablet-1,
+  .col-1 {
     width: 8.333333333333332%;
   }
-  .tablet-2 {
+  .tablet-2,
+  .col-2 {
     width: 16.666666666666664%;
   }
-  .tablet-3 {
+  .tablet-3,
+  .col-3 {
     width: 25%;
   }
-  .tablet-4 {
+  .tablet-4,
+  .col-4 {
     width: 33.33333333333333%;
   }
-  .tablet-5 {
+  .tablet-5,
+  .col-5 {
     width: 41.66666666666667%;
   }
-  .tablet-6 {
+  .tablet-6,
+  .col-6 {
     width: 50%;
   }
-  .tablet-7 {
+  .tablet-7,
+  .col-7 {
     width: 58.333333333333336%;
   }
-  .tablet-8 {
+  .tablet-8,
+  .col-8 {
     width: 66.66666666666666%;
   }
-  .tablet-9 {
+  .tablet-9,
+  .col-9 {
     width: 75%;
   }
-  .tablet-10 {
+  .tablet-10,
+  .col-10 {
     width: 83.33333333333334%;
   }
-  .tablet-11 {
+  .tablet-11,
+  .col-11 {
     width: 91.66666666666666%;
   }
-  .tablet-12 {
+  .tablet-12,
+  .col-12 {
     width: 100%;
   }
 }
-@media  only screen and (min-width : 1025px) {
+@media  only screen and (min-width : 960px) {
   .row {
-    width: 1240px;
+    width: 960px;
   }
   [class*=desktop-] {
     float: left;
   }
-  .desktop-1 {
+  .desktop-1,
+  .col-1 {
     width: 8.333333333333332%;
   }
-  .desktop-2 {
+  .desktop-2,
+  .col-2 {
     width: 16.666666666666664%;
   }
-  .desktop-3 {
+  .desktop-3,
+  .col-3 {
     width: 25%;
   }
-  .desktop-4 {
+  .desktop-4,
+  .col-4 {
     width: 33.33333333333333%;
   }
-  .desktop-5 {
+  .desktop-5,
+  .col-5 {
     width: 41.66666666666667%;
   }
-  .desktop-6 {
+  .desktop-6,
+  .col-6 {
     width: 50%;
   }
-  .desktop-7 {
+  .desktop-7,
+  .col-7 {
     width: 58.333333333333336%;
   }
-  .desktop-8 {
+  .desktop-8,
+  .col-8 {
     width: 66.66666666666666%;
   }
-  .desktop-9 {
+  .desktop-9,
+  .col-9 {
     width: 75%;
   }
-  .desktop-10 {
+  .desktop-10,
+  .col-10 {
     width: 83.33333333333334%;
   }
-  .desktop-11 {
+  .desktop-11,
+  .col-11 {
     width: 91.66666666666666%;
   }
-  .desktop-12 {
+  .desktop-12,
+  .col-12 {
     width: 100%;
   }
 }
-@media  only screen and (min-width : 1440) {
+@media  only screen and (min-width : 1200px) {
   .row {
-    width: 1440px;
+    width: 1200px;
   }
   [class*=large-] {
     float: left;
   }
-  .large-1 {
+  .large-1,
+  .col-1 {
     width: 8.333333333333332%;
   }
-  .large-2 {
+  .large-2,
+  .col-2 {
     width: 16.666666666666664%;
   }
-  .large-3 {
+  .large-3,
+  .col-3 {
     width: 25%;
   }
-  .large-4 {
+  .large-4,
+  .col-4 {
     width: 33.33333333333333%;
   }
-  .large-5 {
+  .large-5,
+  .col-5 {
     width: 41.66666666666667%;
   }
-  .large-6 {
+  .large-6,
+  .col-6 {
     width: 50%;
   }
-  .large-7 {
+  .large-7,
+  .col-7 {
     width: 58.333333333333336%;
   }
-  .large-8 {
+  .large-8,
+  .col-8 {
     width: 66.66666666666666%;
   }
-  .large-9 {
+  .large-9,
+  .col-9 {
     width: 75%;
   }
-  .large-10 {
+  .large-10,
+  .col-10 {
     width: 83.33333333333334%;
   }
-  .large-11 {
+  .large-11,
+  .col-11 {
     width: 91.66666666666666%;
   }
-  .large-12 {
+  .large-12,
+  .col-12 {
     width: 100%;
   }
 }

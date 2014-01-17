@@ -11,7 +11,7 @@ html
    
     .grid
       .row  
-        .desktop-12.tablet-6.mobile-3.example
+        .desktop-12.tablet-12.mobile-12.example
           
           h1.welcome Welcome in Superactive . Relax , We've already done it for you 
           .grid
@@ -27,17 +27,17 @@ html
           
             h2 Asymmetrical 
             .row
-              .desktop-4.tablet-2.mobile-1
-                +span_text('4','2','1')
+              .desktop-4.tablet-4.mobile-4
+                +span_text('4','4','4')
               
-              .desktop-8.tablet-4.mobile-3
-                +span_text('8','4','3')
+              .desktop-8.tablet-8.mobile-8
+                +span_text('8','8','8')
 
             h2 Symmetrical
             .row
               .desktop-3.tablet-3.mobile-3
                 +span_text('3','3','3')
-              
+
               .desktop-3.tablet-3.mobile-3
                 +span_text('3','3','3')
 
@@ -50,15 +50,24 @@ html
             h2 Column
 
             .row
-              .desktop-4.tablet-2.mobile-1
-                +span_text('4','2','1')
+              .desktop-4.tablet-4.mobile-4
+                +span_text('4','4','4')
+              .desktop-4.tablet-4.mobile-4
+                +span_text('4','4','4')
+              .desktop-4.tablet-4.mobile-4
+                +span_text('4','4','4')
 
-              .desktop-4.tablet-2.mobile-1
-                +span_text('4','2','1')
+            h2 Universal responsive class
+            p Just use .col if you want
 
-              .desktop-4.tablet-2.mobile-1
-                +span_text('4','2','1')
-            
+            .row
+                .col-4
+                    +span_text('4','4','4')
+                .col-4
+                    +span_text('4','4','4')
+                .col-4
+                    +span_text('4','4','4')
+
             h2 Push
 
             .row
