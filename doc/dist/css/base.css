@@ -398,8 +398,15 @@ ul {
 }
 ul,
 ol {
-  margin: 0 0 1.6rem;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
   padding: 0;
+}
+ol ul,
+ol ol,
+ul ul,
+ul ol {
+  margin-bottom: 0;
 }
 ol {
   list-style: decimal;
@@ -419,22 +426,8 @@ ul.circle {
 ul.disc {
   list-style: disc outside;
 }
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 4px 0 5px 30px;
-  font-size: 90%;
-}
-ul ul li,
-ul ol li,
-ol ol li,
-ol ul li {
-  margin-bottom: 6px;
-}
 li {
-  line-height: 18px;
-  margin-bottom: 12px;
+  line-height: 1;
 }
 ul.large li {
   line-height: 21px;
@@ -2837,7 +2830,7 @@ html:not(.touch) .nav-offcanvas ul a:hover {
 }
 .subnav-pill > li > a,
 .subnav-pill > li > span {
-  padding: 3px 9px;
+  padding: 0.7rem 1rem;
   text-decoration: none;
 }
 .subnav-pill > li > a:hover,
