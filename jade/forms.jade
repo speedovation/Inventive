@@ -13,8 +13,8 @@ html
 
     include _nav
 
-    mixin select()
-      div(class=" select-style desktop-4")
+    mixin select(lclass)
+      div(class=" select-style #{lclass}")
           select
             option( value="volvo") VolvO
             option( value="saab") Saab
@@ -81,9 +81,16 @@ html
 
           .preview-box
             form.row
-              +select()
-              +select()
-              +select()
+              +select('col-4')
+              +select('col-4')
+              +select('col-4')
+
+            form.row
+              +select('col-1')
+              +select('col-2')
+              +select('col-3')
+              +select('col-4')
+              +select('col-2')
 
 
 

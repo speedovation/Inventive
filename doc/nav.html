@@ -109,271 +109,247 @@
         </div>
       </div>
     </div>
-    <div class="grid">
-      <div class="row">
-        <div class="desktop-12">
-          <h1 class="divide-section">Nav</h1>
-          <p class="info">Defines different styles for list navigations.</p>
-          <h2>Usage</h2>
-          <p>To apply this component, add the <code>.nav</code> class to an <code>&lt;ul&gt;</code> element. Use <code>&lt;a&gt;</code> elements as menu items within the list. To apply an active state to a menu item, just add the <code>.active</code> class.</p>
-          <div class="preview-box">
-            <div class="w-33">
-              <ul class="nav nav-side">
-                <li class="active"><a href="#">Active</a></li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-              </ul>
-            </div>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="divide-section">Nav</h1>
+        <p class="info">Defines different styles for list navigations.</p>
+        <h2>Usage</h2>
+        <p>To apply this component, add the <code>.nav</code> class to an <code>&lt;ul&gt;</code> element. Use <code>&lt;a&gt;</code> elements as menu items within the list. To apply an active state to a menu item, just add the <code>.active</code> class.</p>
+        <div class="preview-box">
+          <div class="width-per-33">
+            <ul class="nav nav-side">
+              <li class="active"><a href="#">Active</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
           </div>
-          <p><span class="badge badge-info">NOTE</span>By default, the nav has no styling. That's why it is important to add a 
-            modifier class to give it some styling. In our examples we used the <code>.nav-side</code> class.
-          </p>
-          <hr>
-          <h3>Nested navs</h3>
-          <p>You can easily add any number of <code>&lt;ul&gt;</code> elements to your nav.</p>
-          <table class="table rounded">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>.nav-sub</code></td>
-                <td>Add this class to the first nested <code>&lt;ul&gt;</code> for optimized spacing.</td>
-              </tr>
-              <tr>
-                <td><code>.parent</code></td>
-                <td>Add this class to indicate a parent menu item.</td>
-              </tr>
-              <tr>
-                <td><code>.nav-parent-icon</code></td>
-                <td>Add this class to the nav to add icons, indicating parent items.</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="preview-box">
-            <div class="w-33">
-              <ul class="nav nav-side nav-parent-icon">
+        </div>
+        <p><span class="badge badge-info">NOTE</span>By default, the nav has no styling. That's why it is important to add a 
+          modifier class to give it some styling. In our examples we used the <code>.nav-side</code> class.
+        </p>
+        <hr>
+        <h3>Nested navs</h3>
+        <p>You can easily add any number of <code>&lt;ul&gt;</code> elements to your nav.</p>
+        <table class="table rounded">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.nav-sub</code></td>
+              <td>Add this class to the first nested <code>&lt;ul&gt;</code> for optimized spacing.</td>
+            </tr>
+            <tr>
+              <td><code>.parent</code></td>
+              <td>Add this class to indicate a parent menu item.</td>
+            </tr>
+            <tr>
+              <td><code>.nav-parent-icon</code></td>
+              <td>Add this class to the nav to add icons, indicating parent items.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="preview-box">
+          <div class="width-per-33">
+            <ul class="nav nav-side nav-parent-icon">
+              <li class="active"><a href="">Active</a></li>
+              <li class="parent open"><a href="#">Parent</a>
+                <ul class="nav-sub">
+                  <li><a href="">Sub item</a></li>
+                  <li><a href="">Sub item</a>
+                    <ul>
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <h3>Accordion</h3>
+        <p>
+          By default child menu items are always visible. To apply the accordion effect, 
+          just add the <code>data-nav</code> attribute to the main <code>&lt;ul&gt;</code> . When clicking on a parent item, an open one will close, allowing only one 
+           open nested list at a time. To avoid this behavior, just append <code>{multiple:true}</code> to the data attribute.
+        </p>
+        <div class="preview-box">
+          <div class="row">
+            <div class="width-per-50">
+              <p><code>data-nav</code></p>
+              <ul data-nav="" class="nav nav-side nav-parent-icon w-66">
                 <li class="active"><a href="">Active</a></li>
-                <li class="parent open"><a href="#">Parent</a>
-                  <ul class="nav-sub">
-                    <li><a href="">Sub item</a></li>
-                    <li><a href="">Sub item</a>
-                      <ul>
-                        <li><a href="">Sub item</a></li>
-                        <li><a href="">Sub item</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                <li><a href="">Item</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                        <ul>
+                          <li><a href="">Sub item</a></li>
+                          <li><a href="">Sub item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-              </ul>
-            </div>
-          </div>
-          <hr>
-          <h3>Accordion</h3>
-          <p>
-            By default child menu items are always visible. To apply the accordion effect, 
-            just add the <code>data-nav</code> attribute to the main <code>&lt;ul&gt;</code> . When clicking on a parent item, an open one will close, allowing only one 
-             open nested list at a time. To avoid this behavior, just append <code>{multiple:true}</code> to the data attribute.
-          </p>
-          <div class="preview-box">
-            <div data-grid-margin="" class="grid">
-              <div class="w-50">
-                <p><code>data-nav</code></p>
-                <ul data-nav="" class="nav nav-side nav-parent-icon w-66">
-                  <li class="active"><a href="">Active</a></li>
-                  <li><a href="">Item</a></li>
-                  <li class="parent"><a href="#">Parent</a>
-                    <div style="overflow: hidden; height: 0; position: relative;">
-                      <ul class="nav-sub">
-                        <li><a href="">Sub item</a></li>
-                        <li><a href="">Sub item</a>
-                          <ul>
-                            <li><a href="">Sub item</a></li>
-                            <li><a href="">Sub item</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="parent"><a href="#">Parent</a>
-                    <div style="overflow: hidden; height: 0; position: relative;">
-                      <ul class="nav-sub">
-                        <li><a href="">Sub item</a></li>
-                        <li><a href="">Sub item</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="w-50">
-                <p><code>data-nav="{multiple:true}"</code></p>
-                <ul data-nav="{multiple:true}" class="nav nav-side nav-parent-icon w-66">
-                  <li class="active"><a href="">Active</a></li>
-                  <li><a href="">Item</a></li>
-                  <li class="parent"><a href="#">Parent</a>
-                    <div style="overflow: hidden; height: 0; position: relative;">
-                      <ul class="nav-sub">
-                        <li><a href="">Sub item</a></li>
-                        <li><a href="">Sub item</a>
-                          <ul>
-                            <li><a href="">Sub item</a></li>
-                            <li><a href="">Sub item</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="parent"><a href="#">Parent</a>
-                    <div style="overflow: hidden; height: 0; position: relative;">
-                      <ul class="nav-sub">
-                        <li><a href="">Sub item</a></li>
-                        <li><a href="">Sub item</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <hr>
-          <h3>Header and divider</h3>
-          <p>
-            Add one of the following classes to a list item to create a header 
-             or a divider between items.
-          </p>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>.nav-header</code></td>
-                <td>Add this class to a <code>&lt;li&gt;</code> element to create a header.</td>
-              </tr>
-              <tr>
-                <td><code>.nav-divider</code></td>
-                <td>Add this class to a <code>&lt;li&gt;</code> element to create a divider separating menu items.</td>
-              </tr>
-            </tbody>
-          </table>
-          <p><span class="badge">NOTE</span>You can also add subtitles to nav items. Just create a <code>&lt;div&gt;</code> element inside the <code>&lt;a&gt;</code> element within the list item.</p>
-          <div class="preview-box">
-            <div class="w-33">
-              <ul data-nav="" class="nav nav-side">
-                <li class="nav-header">Header</li>
-                <li><a href="">Item
-                    <div>Subtitle</div></a></li>
-                <li><a href="">Item</a></li>
-                <li class="nav-divider"></li>
-                <li><a href="">Item</a></li>
-              </ul>
-            </div>
-          </div>
-          <hr>
-          <h2>Style modifiers</h2>
-          <p>
-            There are several modifiers to style the nav according to the context, 
-            in which it is used.
-          </p>
-          <h3>Nav side</h3>
-          <p>Add the <code>.nav-side</code> class to place a nav inside your sidebar, panels or anywhere else in your content.</p>
-          <div class="preview-box">
-            <div class="w-33">
-              <div class="panel panel-box">
-                <h3 class="panel-title">Nav side in panel</h3>
-                <ul data-nav="" class="nav nav-side nav-parent-icon">
-                  <li class="active"><a href="">Active</a></li>
-                  <li class="parent"><a href="#">Parent</a>
-                    <div style="overflow: hidden; height: 0; position: relative;">
-                      <ul class="nav-sub">
-                        <li><a href="">Sub item</a></li>
-                        <li><a href="">Sub item</a>
-                          <ul>
-                            <li><a href="">Sub item</a></li>
-                            <li><a href="">Sub item</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="parent"><a href="#">Parent</a>
-                    <div style="overflow: hidden; height: 0; position: relative;">
-                      <ul class="nav-sub">
-                        <li><a href="">Sub item</a></li>
-                        <li><a href="">Sub item</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li><a href="">Item</a></li>
-                  <li class="nav-header">Header</li>
-                  <li class="parent"><a href=""><i class="icon-star"></i>Parent</a></li>
-                  <li><a href=""><i class="icon-twitter"></i>Item</a></li>
-                  <li class="nav-divider"></li>
-                  <li><a href=""><i class="icon-rss"></i>Item</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <hr>
-          <h3>Nav dropdown</h3>
-          <p>Add the <code>.nav-dropdown</code> class to place a nav inside a default dropdown from the<a href="dropdown.html">Dropdown component</a>.</p>
-          <div class="preview-box">
-            <div data-dropdown="" class="button-dropdown">
-              <button class="button">Dropdown<i class="icon-caret-down"></i></button>
-              <div class="dropdown dropdown-small">
-                <ul class="nav nav-dropdown">
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Another item</a></li>
-                  <li class="nav-header">Header</li>
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Another item</a></li>
-                  <li class="nav-divider"></li>
-                  <li><a href="#">Separated item</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <hr>
-          <h3>Nav navbar</h3>
-          <p>Add the <code>.nav-navbar</code> class to place the nav inside a navbar dropdown from the <a href="navbar.html">Navbar component</a>.</p>
-          <div class="preview-box"> 
-            <nav class="navbar">
-              <ul class="navbar-nav">
-                <li data-dropdown="" class="parent"><a href="">Parent</a>
-                  <div class="dropdown dropdown-navbar">
-                    <ul class="nav nav-navbar">
-                      <li><a href="#">Item</a></li>
-                      <li><a href="#">Another item</a></li>
-                      <li class="nav-header">Header</li>
-                      <li><a href="#">Item</a></li>
-                      <li><a href="#">Another item</a></li>
-                      <li class="nav-divider"></li>
-                      <li><a href="#">Separated item</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
                     </ul>
                   </div>
                 </li>
               </ul>
-            </nav>
+            </div>
+            <div class="width-per-50">
+              <p><code>data-nav="{multiple:true}"</code></p>
+              <ul data-nav="{multiple:true}" class="nav nav-side nav-parent-icon w-66">
+                <li class="active"><a href="">Active</a></li>
+                <li><a href="">Item</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                        <ul>
+                          <li><a href="">Sub item</a></li>
+                          <li><a href="">Sub item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <hr>
-          <h3>Nav search</h3>
-          <p>Add the <code>.nav-search</code> class to place the nav inside a dropdown showing search results from the<a href="search.html">Search component</a>. By default, the search JavaScript injects the nav automatically, 
-            so it doesn't need to be set manually.
-          </p>
-          <div class="preview-box">
-            <form data-search="{source:&quot;../vendor/searchresults.json&quot;}" class="search">
-              <input placeholder="search..." type="search" class="search-field">
-              <button type="reset" class="search-close"></button>
-            </form>
+        </div>
+        <hr>
+        <h3>Header and divider</h3>
+        <p>
+          Add one of the following classes to a list item to create a header 
+           or a divider between items.
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.nav-header</code></td>
+              <td>Add this class to a <code>&lt;li&gt;</code> element to create a header.</td>
+            </tr>
+            <tr>
+              <td><code>.nav-divider</code></td>
+              <td>Add this class to a <code>&lt;li&gt;</code> element to create a divider separating menu items.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><span class="badge">NOTE</span>You can also add subtitles to nav items. Just create a <code>&lt;div&gt;</code> element inside the <code>&lt;a&gt;</code> element within the list item.</p>
+        <div class="preview-box">
+          <div class="width-per-33">
+            <ul data-nav="" class="nav nav-side">
+              <li class="nav-header">Header</li>
+              <li><a href="">Item
+                  <div>Subtitle</div></a></li>
+              <li><a href="">Item</a></li>
+              <li class="nav-divider"></li>
+              <li><a href="">Item</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <h2>Style modifiers</h2>
+        <p>
+          There are several modifiers to style the nav according to the context, 
+          in which it is used.
+        </p>
+        <h3>Nav side</h3>
+        <p>Add the <code>.nav-side</code> class to place a nav inside your sidebar, panels or anywhere else in your content.</p>
+        <div class="preview-box">
+          <div class="width-per-33">
+            <div class="panel panel-box">
+              <h3 class="panel-title">Nav side in panel</h3>
+              <ul data-nav="" class="nav nav-side nav-parent-icon">
+                <li class="active"><a href="">Active</a></li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                        <ul>
+                          <li><a href="">Sub item</a></li>
+                          <li><a href="">Sub item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="parent"><a href="#">Parent</a>
+                  <div style="overflow: hidden; height: 0; position: relative;">
+                    <ul class="nav-sub">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="">Item</a></li>
+                <li class="nav-header">Header</li>
+                <li class="parent"><a href=""><i class="icon-star"></i>Parent</a></li>
+                <li><a href=""><i class="icon-twitter"></i>Item</a></li>
+                <li class="nav-divider"></li>
+                <li><a href=""><i class="icon-rss"></i>Item</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      <!-- hr
+      <!-- h3 Nav dropdown-->
+      <!-- p-->
+      <!--   | Add the-->
+      <!--   code .nav-dropdown-->
+      <!--   |  class to place a nav inside a default dropdown from the-->
+      <!--   a(href='dropdown.html') Dropdown component-->
+      <!--   | .-->
+      <!---->
+      <!-- .preview-box-->
+      <!--   .button-dropdown(data-dropdown='')-->
+      <!--     button.button-->
+      <!--       | Dropdown-->
+      <!--       i.icon-caret-down-->
+      <!--     .dropdown.dropdown-small-->
+      <!--       ul.nav.nav-dropdown-->
+      <!--         li-->
+      <!--           a(href='#') Item-->
+      <!--         li-->
+      <!--           a(href='#') Another item-->
+      <!--         li.nav-header Header-->
+      <!--         li-->
+      <!--           a(href='#') Item-->
+      <!--         li-->
+      <!--           a(href='#') Another item-->
+      <!--         li.nav-divider-->
+      <!--         li-->
+      <!--           a(href='#') Separated item-->
+      <!---->
+      -->
     </div>
   </body>
 </html>

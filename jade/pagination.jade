@@ -13,7 +13,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     .grid
       .row
 
-        div.desktop-12
+        div.col-12
 
           h1.divide-section  Pagination
           p.info Easlily create a nicely looking pagination to navigate through pages.
@@ -94,8 +94,8 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             |  class to the pagination to align it left or right.
           
           .preview-box
-            .grid(data-grid-margin='')
-              .w-50
+            .row
+              .col-6
                 ul.pagination.pagination-left
                   li
                     a(href='#') 1
@@ -115,7 +115,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                     span ...
                   li
                     a(href='#') 20
-              .w-50
+              .col-6
                 ul.pagination.pagination-right
                   li
                     a(href='#') 1
@@ -182,11 +182,17 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
               li.active
                 span
                   i.i-double-arrow-left
+              li.active
+                span
+                  i.i-arrow-down
               li.disabled
                 span
                   i.i-double-arrow-left
               li
                 span ...
+              li.disabled
+                span
+                  i.i-arrow-down
               li.disabled
                 span
                   i.i-double-arrow-right

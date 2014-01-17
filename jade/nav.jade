@@ -12,10 +12,10 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
     include _nav
 
-    .grid
-      .row
 
-        div.desktop-12
+    .row
+
+        div.col-12
 
           h1.divide-section Nav
           p.info Defines different styles for list navigations.
@@ -32,7 +32,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             |  class.
           
           .preview-box
-            .w-33
+            .width-per-33
               ul.nav.nav-side
                 li.active
                   a(href='#') Active
@@ -81,7 +81,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           
 
           .preview-box
-            .w-33
+            .width-per-33
               ul.nav.nav-side.nav-parent-icon
                 li.active
                   a(href='') Active
@@ -113,8 +113,8 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             |  to the data attribute.
 
           .preview-box
-            .grid(data-grid-margin='')
-              .w-50
+            .row
+              .width-per-50
                 p
                   code data-nav
                 ul.nav.nav-side.nav-parent-icon.w-66(data-nav='')
@@ -143,7 +143,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                           a(href='') Sub item
                         li
                           a(href='') Sub item
-              .w-50
+              .width-per-50
                 p
                   code data-nav="{multiple:true}"
                 ul.nav.nav-side.nav-parent-icon.w-66(data-nav='{multiple:true}')
@@ -209,7 +209,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             |  element within the list item.
           
           .preview-box
-            .w-33
+            .width-per-33
               ul.nav.nav-side(data-nav='')
                 li.nav-header Header
                 li
@@ -237,7 +237,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             |  class to place a nav inside your sidebar, panels or anywhere else in your content.
           
           .preview-box
-            .w-33
+            .width-per-33
               .panel.panel-box
                 h3.panel-title Nav side in panel
                 ul.nav.nav-side.nav-parent-icon(data-nav='')
@@ -282,76 +282,32 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                       | Item
           
             
-          hr
-          h3 Nav dropdown
-          p
-            | Add the 
-            code .nav-dropdown
-            |  class to place a nav inside a default dropdown from the
-            a(href='dropdown.html') Dropdown component
-            | .
-          
-          .preview-box
-            .button-dropdown(data-dropdown='')
-              button.button
-                | Dropdown
-                i.icon-caret-down
-              .dropdown.dropdown-small
-                ul.nav.nav-dropdown
-                  li
-                    a(href='#') Item
-                  li
-                    a(href='#') Another item
-                  li.nav-header Header
-                  li
-                    a(href='#') Item
-                  li
-                    a(href='#') Another item
-                  li.nav-divider
-                  li
-                    a(href='#') Separated item
-            
-          hr
-          h3 Nav navbar
-          p
-            | Add the 
-            code .nav-navbar
-            |  class to place the nav inside a navbar dropdown from the 
-            a(href='navbar.html') Navbar component
-            | .
-          .preview-box  
-            nav.navbar
-              ul.navbar-nav
-                li.parent(data-dropdown='')
-                  a(href='') Parent
-                  .dropdown.dropdown-navbar
-                    ul.nav.nav-navbar
-                      li
-                        a(href='#') Item
-                      li
-                        a(href='#') Another item
-                      li.nav-header Header
-                      li
-                        a(href='#') Item
-                      li
-                        a(href='#') Another item
-                      li.nav-divider
-                      li
-                        a(href='#') Separated item
-            
-          hr
-          
-          h3 Nav search
-          p
-            | Add the 
-            code .nav-search
-            |  class to place the nav inside a dropdown showing search results from the
-            a(href='search.html') Search component
-            | . By default, the search JavaScript injects the nav automatically, 
-            | so it doesn't need to be set manually.
-          
-          .preview-box
-            form.search(data-search='{source:"../vendor/searchresults.json"}')
-              input.search-field(placeholder='search...', type='search')
-              button.search-close(type='reset')
-            
+         // hr
+         // h3 Nav dropdown
+         // p
+         //   | Add the
+         //   code .nav-dropdown
+         //   |  class to place a nav inside a default dropdown from the
+         //   a(href='dropdown.html') Dropdown component
+         //   | .
+         //
+         // .preview-box
+         //   .button-dropdown(data-dropdown='')
+         //     button.button
+         //       | Dropdown
+         //       i.icon-caret-down
+         //     .dropdown.dropdown-small
+         //       ul.nav.nav-dropdown
+         //         li
+         //           a(href='#') Item
+         //         li
+         //           a(href='#') Another item
+         //         li.nav-header Header
+         //         li
+         //           a(href='#') Item
+         //         li
+         //           a(href='#') Another item
+         //         li.nav-divider
+         //         li
+         //           a(href='#') Separated item
+         //
