@@ -183,12 +183,12 @@ h6 a {
 h1,
 .h1,
 .alpha {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
 }
 h2,
 .h2,
 .beta {
-  font-size: 1.95rem;
+  font-size: 1.8rem;
 }
 h3,
 h3,
@@ -311,8 +311,9 @@ i {
   line-height: inherit;
 }
 strong,
-b {
-  font-weight: bold;
+b,
+.strong {
+  font-weight: 600;
   line-height: inherit;
 }
 small,
@@ -482,6 +483,10 @@ ul.link-list li a:active {
   color: #333;
   background-color: #f5f5f5;
 }
+.link-list h3,
+.link-list h2 {
+  margin-left: 1rem;
+}
 img {
   max-width: 100%;
 }
@@ -544,6 +549,9 @@ footer {
 .info {
   font-weight: 200;
 }
+.info strong {
+  font-weight: 500;
+}
 .well {
   background-color: #f7f7f7;
   border: 1px solid #ddd;
@@ -571,7 +579,7 @@ footer {
   color: #808080;
 }
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 .text-center {
   text-align: center;
@@ -632,7 +640,7 @@ footer {
   max-width: 2140px;
   *zoom: 1;
 }
-.row [class*='width-per-33'] {
+.row [class*='width-per-'] {
   float: left;
 }
 [class*='mobile-'],
@@ -973,7 +981,7 @@ footer {
 }
 .select-style select {
   padding: 5px 8px;
-  width: 130%;
+  width: 230%;
   border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -992,16 +1000,6 @@ footer {
 fieldset p {
   display: block;
   position: relative;
-}
-.input {
-  border: 1px solid #ccc;
-  padding: 3px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 0.6rem;
 }
 label + p,
 input + p {
@@ -1242,350 +1240,52 @@ form.row {
   outline: medium none;
   resize: none;
   background: #fff;
-  border: 1px solid #bbb;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.09) inset;
-  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.09) inset;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.09) inset;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
   color: #333;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.6rem;
 }
-.field input:last-child {
-  margin-right: 0 !important;
+.collapse .input:first-child {
+  -webkit-border-radius: 0.2rem 0.2rem 0 0;
+  -moz-border-radius: 0.2rem 0.2rem 0 0;
+  border-radius: 0.2rem 0.2rem 0 0;
 }
-.field .input {
-  background: none repeat scroll 0 0 #fff;
-  border: 1px solid #d8d8d8;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  font-size: 1rem;
-  padding: 5px 10px;
-  position: relative;
-}
-.field .input.search {
-  -webkit-border-radius: 1000px;
-  -moz-border-radius: 1000px;
-  border-radius: 1000px;
-  height: 36px;
-  line-height: 34px;
-  padding-right: 0;
-}
-.field .input.textarea {
-  height: auto;
-}
-.field .xnarrow {
-  width: 13.3333%;
-}
-.field .narrow {
-  width: 30.6667%;
-}
-.field .normal {
-  width: 48%;
-}
-.field .wide {
-  width: 65.3333%;
-}
-.field .xwide {
-  width: 82.6667%;
-}
-.field .xxwide {
-  width: 100%;
-}
-.field .xnarrow,
-.field .narrow,
-.field .normal,
-.field .wide,
-.field .xwide,
-.field .xxwide {
-  margin: 0;
-}
-.field .xnarrow:last-child,
-.field .narrow:last-child,
-.field .normal:last-child,
-.field .wide:last-child,
-.field .xwide:last-child,
-.field .xxwide:last-child {
-  margin-left: -4px;
-}
-.field .xnarrow:first-child,
-.field .narrow:first-child,
-.field .normal:first-child,
-.field .wide:first-child,
-.field .xwide:first-child,
-.field .xxwide:first-child {
-  margin-left: 0;
-  margin-right: 3.94%;
-}
-.field .xnarrow:first-child:last-child,
-.field .narrow:first-child:last-child,
-.field .normal:first-child:last-child,
-.field .wide:first-child:last-child,
-.field .xwide:first-child:last-child,
-.field .xxwide:first-child:last-child {
-  margin: 0;
-}
-.field label + .xnarrow:last-child,
-.field label + .narrow:last-child,
-.field label + .normal:last-child,
-.field label + .wide:last-child,
-.field label + .xwide:last-child,
-.field label + .xxwide:last-child {
-  margin-left: 0;
-}
-@media only screen and (max-width: 1120px) {
-  .field .xxwide:first-child,
-  .field .xxwide:last-child {
-    margin-right: 0;
-  }
-}
-.field.prepend,
-.field.append {
-  font-size: 0;
-  padding-bottom: 3.5px;
-  white-space: nowrap;
-}
-.field.prepend input,
-.field.prepend .input,
-.field.append input,
-.field.append .input {
-  display: inline-block;
-  max-width: 100%;
-}
-.field.prepend input,
-.field.prepend .input {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.field.append input,
-.field.append .input {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.field.prepend.append input {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.field.prepend.append input:first-child {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.field.prepend.append input:last-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  margin-left: -1px;
-}
-.field.prepend .adjoined,
-.field.append .adjoined,
-.field.prepend .btn,
-.field.append .btn {
-  display: inline-block;
+.collapse .input {
   margin-bottom: 0;
-  position: relative;
-  z-index: 99;
-}
-.field.prepend .btn a,
-.field.prepend .btn input,
-.field.prepend .btn button,
-.field.append .btn a,
-.field.append .btn input,
-.field.append .btn button {
-  padding: 0 12px;
-}
-.field.prepend .adjoined,
-.field.append .adjoined {
-  background: none repeat scroll 0 0 #f2f2f2;
-  border: 1px solid #d8d8d8;
-  color: #555;
-  font-family: "Open Sans";
-  font-size: 1rem;
-  font-weight: 600;
-  height: 36px;
-  line-height: 34px;
-  padding: 0 10px;
-}
-.field.prepend *:first-child {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.field.prepend input:first-child {
-  margin-right: 0;
-}
-.field.prepend .adjoined,
-.field.prepend .btn {
-  margin-right: -1px;
-}
-.field .adjoined:first-child {
-  margin-left: 0 !important;
-}
-.field.append .adjoined,
-.field.append .btn {
-  margin-left: -1px;
-}
-.field.append *:last-child {
+  border-bottom: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.field.append button,
-.field.prepend button {
-  display: inline-block;
+.collapse .input:last-child {
+  border-bottom: 1px solid #ccc;
+  -webkit-border-radius: 0 0 0.2rem 0.2rem;
+  -moz-border-radius: 0 0 0.2rem 0.2rem;
+  border-radius: 0 0 0.2rem 0.2rem;
 }
-.field.append input:first-child {
-  margin-right: 0;
+.button.append {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0.45rem 0.9rem;
 }
-.field.double input,
-.field.double .input {
-  width: 50% !important;
+.button.append.right {
+  border-left: 0;
+  -webkit-border-radius: 0 0.2rem 0.2rem 0;
+  -moz-border-radius: 0 0.2rem 0.2rem 0;
+  border-radius: 0 0.2rem 0.2rem 0;
 }
-.field.double input:last-child,
-.field.double .input:last-child {
-  margin-left: -1px;
-}
-.field.danger:after {
-  color: #ca3838;
-  content: "✖";
-  font-family: "entypo";
-  font-size: 16px;
-  position: absolute;
-  right: 15px;
-  top: 14%;
-  z-index: 999;
-}
-.field.danger.no-icon:after {
-  display: none;
-}
-.field.danger.append:after,
-.field.danger.prepend:after {
-  content: "";
-}
-.field.danger input,
-.field.danger .input,
-.field.danger textarea,
-.field.danger .textarea,
-.field.danger .radio span,
-.field.danger .checkbox span,
-.field.danger .picker {
-  background: none repeat scroll 0 0 #f0c5c5;
-  border-color: #ca3838;
-  color: #ca3838;
-  transition-duration: 0.2s;
-}
-.field.danger textarea {
-  color: #ca3838;
-}
-.field.danger input:-moz-placeholder,
-.field.danger textarea:-moz-placeholder {
-  color: #ca3838;
-}
-.field.warning:after {
-  color: #f6b83f;
-  content: "⚠";
-  font-family: "entypo";
-  font-size: 16px;
-  position: absolute;
-  right: 15px;
-  top: 14%;
-  z-index: 999;
-}
-.field.warning.no-icon:after {
-  display: none;
-}
-.field.warning.append:after,
-.field.warning.prepend:after {
-  content: "";
-}
-.field.warning input,
-.field.warning .input,
-.field.warning textarea,
-.field.warning .textarea,
-.field.warning .radio span,
-.field.warning .checkbox span,
-.field.warning .picker {
-  background: none repeat scroll 0 0 #fef7ea;
-  border-color: #f6b83f;
-  color: #f6b83f;
-  transition-duration: 0.2s;
-}
-.field.warning textarea {
-  color: #f6b83f;
-}
-.field.warning input:-moz-placeholder,
-.field.warning textarea:-moz-placeholder {
-  color: #f6b83f;
-}
-.field.success:after {
-  color: #58c026;
-  content: "✓";
-  font-family: "entypo";
-  font-size: 16px;
-  position: absolute;
-  right: 15px;
-  top: 14%;
-  z-index: 999;
-}
-.field.success.no-icon:after {
-  display: none;
-}
-.field.success.append:after,
-.field.success.prepend:after {
-  content: "";
-}
-.field.success input,
-.field.success .input,
-.field.success textarea,
-.field.success .textarea,
-.field.success .radio span,
-.field.success .checkbox span,
-.field.success .picker {
-  background: none repeat scroll 0 0 #c0eeaa;
-  border-color: #58c026;
-  color: #58c026;
-  transition-duration: 0.2s;
-}
-.field.success textarea {
-  color: #58c026;
-}
-.field.success input:-moz-placeholder,
-.field.success textarea:-moz-placeholder {
-  color: #58c026;
-}
-.field .picker.danger {
-  background: none repeat scroll 0 0 #f0c5c5;
-  border-color: #ca3838;
-  color: #ca3838;
-  transition-duration: 0.2s;
-}
-.field .picker.danger select,
-.field .picker.danger:after {
-  color: #ca3838;
-}
-.field .picker.warning {
-  background: none repeat scroll 0 0 #fef7ea;
-  border-color: #f6b83f;
-  color: #f6b83f;
-  transition-duration: 0.2s;
-}
-.field .picker.warning select,
-.field .picker.warning:after {
-  color: #f6b83f;
-}
-.field .picker.success {
-  background: none repeat scroll 0 0 #c0eeaa;
-  border-color: #58c026;
-  color: #58c026;
-  transition-duration: 0.2s;
-}
-.field .picker.success select,
-.field .picker.success:after {
-  color: #58c026;
+.button.append.left {
+  border-right: 0;
+  -webkit-border-radius: 0.2rem 0 0 0.2rem;
+  -moz-border-radius: 0.2rem 0 0 0.2rem;
+  border-radius: 0.2rem 0 0 0.2rem;
 }
 .button,
 button,
