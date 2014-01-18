@@ -2095,7 +2095,7 @@ table.rounded tr:last-child td:last-child {
     }
 }
 }
-nav {
+nav.nav {
   background-color: top;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#efefef));
   background-image: -webkit-linear-gradient(top, #fbfbfb, #efefef);
@@ -2111,15 +2111,15 @@ nav {
   -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.077);
   box-shadow: 0 1px 4px rgba(0,0,0,0.077);
 }
-nav.fixed {
+nav.nav.fixed {
   position: fixed;
   width: 74%;
   margin: 0;
 }
-nav.top {
+nav.nav.top {
   top: 0;
 }
-nav .field {
+nav.nav .field {
   padding: 0.5rem 1rem;
 }
 .flexnav {
@@ -2251,7 +2251,7 @@ nav .field {
   body.one-page {
     padding-top: 4.375rem;
   }
-  nav {
+  nav.nav {
     height: 3.2rem;
   }
   .flexnav {
