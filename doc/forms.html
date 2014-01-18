@@ -32,8 +32,6 @@
       
       
     </script>
-    <link rel="stylesheet" href="../css/buttons/buttons.css" type="text/css">
-    <link rel="stylesheet" href="../css/forms/form.css" type="text/css">
   </head>
   <body>
     <div class="row">
@@ -113,12 +111,12 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <h1 class="divide-section">Forms</h1>
+        <h2 class="divide-section">Forms</h2>
         <p>
           Almost no extra work for forms. Grid can be applied to form elements.
           Make form creation super easy and customizable
         </p>
-        <h2>Basic Input Element</h2>
+        <h3>Basic Input Element</h3>
         <p>
           All input elements have to be wrapped in some element (div, li, p, etc.) with
           the class<code>field</code>. The<code>&lt;input&gt;</code>tag itself needs to have the class<code>input</code>. That's all you need!
@@ -128,19 +126,38 @@
             <input type="text" placeholder="Text input" class="input col-12">
             <input type="email" placeholder="Email input" class="input col-12">
             <input type="password" placeholder="Password input" class="input col-12">
+            <textarea placeholder="Textarea" class="textarea col-12 preview-box"></textarea>
+          </form>
+        </div>
+        <h3>Collapse horizontal space</h3>
+        <p>Add <code>.collapse</code> to form</p>
+        <div class="preview-box">
+          <form class="row collapse">
+            <input type="text" placeholder="Text input" class="input col-12">
+            <input type="email" placeholder="Email input" class="input col-12">
+            <input type="password" placeholder="Password input" class="input col-12">
             <textarea placeholder="Textarea" class="textarea col-12"></textarea>
           </form>
         </div>
+        <h3>Control input size</h3>
+        <p>Use grid system to control width. Also you can use  <code>.width-per-{precentage-value}</code>.</p>
         <div class="preview-box">
           <form>
             <div class="row">
-              <input type="text" placeholder="Text input" class="input col-6">
-              <input type="text" placeholder="Text input" class="input col-6">
+              <input type="text" placeholder="Col-6" class="input col-6">
+              <input type="text" placeholder="Col-6" class="input col-6">
             </div>
             <div class="row">
-              <input type="text" placeholder="Text input" class="input col-4">
-              <input type="text" placeholder="Text input" class="input col-4">
-              <input type="text" placeholder="Text input" class="input col-4">
+              <input type="text" placeholder="Col-4" class="input col-4">
+              <input type="text" placeholder="Col-4" class="input col-4">
+              <input type="text" placeholder="Col-4" class="input col-4">
+            </div>
+            <div class="row">
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
             </div>
             <div class="row">
               <label for="text1" class="inline desktop-4">Label 1</label>
@@ -149,6 +166,24 @@
             <div class="row">
               <label for="text1" class="inline col-4">Label 2</label>
               <input type="text" placeholder="Text input" class="input col-8">
+            </div>
+          </form>
+        </div>
+        <h3>Append and Prepend buttons</h3>
+        <p>Add class <code>append</code> with position <code>left</code> and <code>right</code> to targeted button</p>
+        <div class="preview-box">
+          <form>
+            <div class="row">
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
+              <button class="width-per-5 button append right">Go</button>
+              <div class="width-per-5">&nbsp;</div>
+              <button class="width-per-5 button append left">@</button>
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
+              <div class="width-per-5">&nbsp;</div>
+              <button class="width-per-5 button append left">@</button>
+              <input type="text" placeholder="width-per-20" class="width-per-20 input">
+              <button class="width-per-5 button append right">Go</button>
+              <div class="width-per-10">&nbsp;</div>
             </div>
           </form>
         </div>

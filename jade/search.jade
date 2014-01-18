@@ -56,23 +56,24 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           .preview-box
             form.search(data-search='')
               .field
-                input.search-field.input(placeholder='search...', type='search')
-                button.search-close.i-compass(type='reset')
+                input.input.width-per-35(placeholder='search...', type='search')
+                button.button.append.right(type='reset')
+                  i.i-search
                 
             
           
-          hr
-          h2 Search in navbars
-          p
-            | A search can be used inside a Navbar from the
-            a(href='navbar.html') Navbar component
-            | .
+          //- hr
+          //- h2 Search in navbars
+          //- p
+          //-   | A search can be used inside a Navbar from the
+          //-   a(href='navbar.html') Navbar component
+          //-   | .
           
-          .preview-box
-            nav.navbar
-              .navbar-flip
-                .navbar-content
-                  form.search(data-search='{flipDropdown:true, source:"../vendor/searchresults.json"}')
-                    input.search-field(placeholder='search...', type='search')
-                    button.search-close(type='reset')
+          //- .preview-box
+          //-   nav.navbar
+          //-     .navbar-flip
+          //-       .navbar-content
+          //-         form.search(data-search='{flipDropdown:true, source:"../vendor/searchresults.json"}')
+          //-           input.search-field(placeholder='search...', type='search')
+          //-           button.search-close(type='reset')
             

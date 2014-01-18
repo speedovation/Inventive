@@ -95,6 +95,7 @@ html
                 label(for="text1" class="inline col-4") Label 2
                 input(class="input col-8" type="text" placeholder="Text input")
 
+        
         h3 Append and Prepend buttons
         p
           | Add class 
@@ -106,21 +107,22 @@ html
           |  to targeted button
 
         .preview-box
-          form.row
-            input(class="width-per-20 input" type="text" placeholder="width-per-20")
-            button(class="width-per-5 button append right") Go
+          form
+            .row
+              input(class="width-per-20 input" type="text" placeholder="width-per-20")
+              button(class="width-per-5 button append right") Go
 
-            .width-per-5 &nbsp;
+              .width-per-5 &nbsp;
 
-            button(class="width-per-5 button append left") @
-            input(class="width-per-20 input" type="text" placeholder="width-per-20")
-            .width-per-5 &nbsp;
+              button(class="width-per-5 button append left") @
+              input(class="width-per-20 input" type="text" placeholder="width-per-20")
+              .width-per-5 &nbsp;
 
-            button(class="width-per-5 button append left") @
-            input(class="width-per-20 input" type="text" placeholder="width-per-20")
-            button(class="width-per-5 button append right") Go
-            .width-per-10 &nbsp;
-
+              button(class="width-per-5 button append left") @
+              input(class="width-per-20 input" type="text" placeholder="width-per-20")
+              button(class="width-per-5 button append right") Go
+              .width-per-10 &nbsp;
+            
 
 
         .preview-box

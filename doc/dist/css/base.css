@@ -1241,9 +1241,6 @@ form.row {
   resize: none;
   background: #fff;
   border: 1px solid #ccc;
-  -webkit-border-radius: 0.1rem;
-  -moz-border-radius: 0.1rem;
-  border-radius: 0.1rem;
   color: #333;
   padding: 0.4rem 0.6rem;
   margin-bottom: 0.6rem;
@@ -1273,7 +1270,7 @@ form.row {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  padding: 0.45rem 0.9rem;
+  padding: 0.476rem 0.9rem;
 }
 .button.append.right {
   border-left: 0;
