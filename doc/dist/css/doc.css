@@ -3,7 +3,8 @@
   margin-top: 0;
 }
 .example [class*="desktop-"],
-.example [class*="col-"] {
+.example [class*="col-"],
+.example [class*='width-per-'] {
   background: none repeat scroll 0 0 #ddd;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -22,6 +23,16 @@
   -moz-transition: background-color;
   -ms-transition: background-color;
   transition: background-color;
+}
+.example [class*='width-per-'] {
+  border: 1px solid #bbb;
+  border-right: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.example [class*='width-per-']:last-child {
+  border-right: 1px solid #bbb;
 }
 .example .row .row [class*="desktop-"],
 .example .row .row [class*="col-"] {

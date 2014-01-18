@@ -298,11 +298,11 @@ sub {
   vertical-align: baseline;
 }
 sup {
-  vertical-align: super;
+  vertical-align: super !important;
   top: -0.5em;
 }
 sub {
-  vertical-align: sub;
+  vertical-align: sub !important;
   bottom: -0.25em;
 }
 em,
@@ -631,6 +631,9 @@ footer {
   margin: 0 auto;
   max-width: 2140px;
   *zoom: 1;
+}
+.row [class*='width-per-33'] {
+  float: left;
 }
 [class*='mobile-'],
 [class*='tablet-'],

@@ -35,11 +35,11 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           
           .preview-box
             
-            img.w-33.thumbnail(alt='', src='../img/demo/cow-1.jpg')
+            img.w-33.thumbnail(alt='', src='dist/img/demo/cow-1.jpg')
             a.w-33.thumbnail(href='#')
-              img(alt='', src='../img/demo/cow-2.jpg')
+              img(alt='', src='dist/img/demo/cow-2.jpg')
             figure.w-33.thumbnail
-              img(alt='', src='../img/demo/cow-3.jpg')
+              img(alt='', src='dist/img/demo/cow-3.jpg')
           
           hr
           h3 Caption
@@ -53,18 +53,18 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           .preview-box
             
             .thumbnail.w-33
-              img(alt='', src='../img/demo/cow-1.jpg')
+              img(alt='', src='dist/img/demo/cow-1.jpg')
               .caption
                 | Caption 
                 code= "<div>"
             
             a.w-33.thumbnail(href='#')
-              img(alt='', src='../img/demo/cow-2.jpg')
+              img(alt='', src='dist/img/demo/cow-2.jpg')
               .caption
                 | Caption
                 code= "<a>"
             figure.w-33.thumbnail
-              img(alt='', src='../img/demo/cow-3.jpg')
+              img(alt='', src='dist/img/demo/cow-3.jpg')
               figcaption.caption
                 | Caption 
                 code= "<figure>"
@@ -86,20 +86,20 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           
           .preview-box
             .thumbnail.thumbnail-large
-              img(alt='', src='../img/demo/cow-large.jpg')
+              img(alt='', src='dist/img/demo/cow-large.jpg')
               .caption
                 code .thumbnail-large
           
             .thumbnail.thumbnail-medium
-              img(alt='', src='../img/demo/cow-large.jpg')
+              img(alt='', src='dist/img/demo/cow-large.jpg')
               .caption
                 code .thumbnail-medium
             .thumbnail.thumbnail-small
-              img(alt='', src='../img/demo/cow-large.jpg')
+              img(alt='', src='dist/img/demo/cow-large.jpg')
               .caption
                 code .thumbnail-small
             .thumbnail.thumbnail-mini
-              img(alt='', src='../img/demo/cow-large.jpg')
+              img(alt='', src='dist/img/demo/cow-large.jpg')
               .caption
                 code .thumbnail-mini
           
@@ -111,7 +111,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
           
           .preview-box
             .thumbnail.thumbnail-expand
-              img(alt='', src='../img/demo/cow-large.jpg')
+              img(alt='', src='dist/img/demo/cow-large.jpg')
               .caption
                 code .thumbnail-expand
             
@@ -123,13 +123,13 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             | .
           
           .preview-box
-            .grid(data-grid-margin='')
-              .w-50
-                img.thumbnail(alt='', src='../img/demo/cow-1.jpg')
-              .w-50
-                .grid(data-grid-margin='')
-                  .w-50
-                    img.thumbnail(alt='', src='../img/demo/cow-4.jpg')
-                  .w-50
-                    img.thumbnail(alt='', src='../img/demo/cow-4.jpg')
+            .row
+              .col-6
+                img.thumbnail(alt='', src='dist/img/demo/cow-1.jpg')
+              .col-6
+                .row
+                  .col-6
+                    img.thumbnail(alt='', src='dist/img/demo/cow-4.jpg')
+                  .col-6
+                    img.thumbnail(alt='', src='dist/img/demo/cow-4.jpg')
             

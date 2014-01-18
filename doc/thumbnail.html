@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="dist/css/base.css" type="text/css">
     <!--link(rel='stylesheet', href='dist/css/nav/nav.css', type='text/css' )	-->
     <link rel="stylesheet" href="dist/css/doc.css" type="text/css">
-    <link rel="stylesheet" href="dist/font/rudra.css" type="text/css">
+    <link rel="stylesheet" href="dist/font/stripe.css" type="text/css">
     <script text="text/javascript" src="dist/js/jquery.js">	</script>
     <script src="dist/js/navbar.js" type="text/javascript"></script>
     <script text="text/javascript" src="dist/vendors/doc.js"></script>
@@ -116,18 +116,18 @@
           <p class="info">Create different thumbnail images, which come in various styles and sizes.</p>
           <h2>Usage</h2>
           <p>To apply this component, just add the <code>.thumbnail</code> class to an <code>&lt;img&gt;</code> , <code>&lt;a&gt;</code> or <code>&lt;figure&gt;</code> element.</p>
-          <div class="preview-box"><img alt="" src="../img/demo/cow-1.jpg" class="w-33 thumbnail"><a href="#" class="w-33 thumbnail"><img alt="" src="../img/demo/cow-2.jpg"></a>
-            <figure class="w-33 thumbnail"><img alt="" src="../img/demo/cow-3.jpg"></figure>
+          <div class="preview-box"><img alt="" src="dist/img/demo/cow-1.jpg" class="w-33 thumbnail"><a href="#" class="w-33 thumbnail"><img alt="" src="dist/img/demo/cow-2.jpg"></a>
+            <figure class="w-33 thumbnail"><img alt="" src="dist/img/demo/cow-3.jpg"></figure>
           </div>
           <hr>
           <h3>Caption</h3>
           <p>Add the  <code>.caption </code> class to a <code>&lt;div&gt;</code> element to apply a text caption under the image.</p>
           <div class="preview-box">
-            <div class="thumbnail w-33"><img alt="" src="../img/demo/cow-1.jpg">
+            <div class="thumbnail w-33"><img alt="" src="dist/img/demo/cow-1.jpg">
               <div class="caption">Caption <code>&lt;div&gt;</code></div>
-            </div><a href="#" class="w-33 thumbnail"><img alt="" src="../img/demo/cow-2.jpg">
+            </div><a href="#" class="w-33 thumbnail"><img alt="" src="dist/img/demo/cow-2.jpg">
               <div class="caption">Caption<code>&lt;a&gt;</code></div></a>
-            <figure class="w-33 thumbnail"><img alt="" src="../img/demo/cow-3.jpg">
+            <figure class="w-33 thumbnail"><img alt="" src="dist/img/demo/cow-3.jpg">
               <figcaption class="caption">Caption <code>&lt;figure&gt;</code></figcaption>
             </figure>
           </div>
@@ -135,22 +135,22 @@
           <h2>Size modifiers</h2>
           <p>Apply the <code>.thumbnail-large</code> , <code>.thumbnail-medium</code> , <code>.thumbnail-small</code> or <code>.thumbnail-mini</code> classes to resize images. The <a href="base.html">Base component</a> is required to make the images responsive by default.</p>
           <div class="preview-box">
-            <div class="thumbnail thumbnail-large"><img alt="" src="../img/demo/cow-large.jpg">
+            <div class="thumbnail thumbnail-large"><img alt="" src="dist/img/demo/cow-large.jpg">
               <div class="caption"><code>.thumbnail-large</code></div>
             </div>
-            <div class="thumbnail thumbnail-medium"><img alt="" src="../img/demo/cow-large.jpg">
+            <div class="thumbnail thumbnail-medium"><img alt="" src="dist/img/demo/cow-large.jpg">
               <div class="caption"><code>.thumbnail-medium</code></div>
             </div>
-            <div class="thumbnail thumbnail-small"><img alt="" src="../img/demo/cow-large.jpg">
+            <div class="thumbnail thumbnail-small"><img alt="" src="dist/img/demo/cow-large.jpg">
               <div class="caption"><code>.thumbnail-small</code></div>
             </div>
-            <div class="thumbnail thumbnail-mini"><img alt="" src="../img/demo/cow-large.jpg">
+            <div class="thumbnail thumbnail-mini"><img alt="" src="dist/img/demo/cow-large.jpg">
               <div class="caption"><code>.thumbnail-mini</code></div>
             </div>
           </div>
           <p>You can even scale a thumbnail beyond its proper size, so that it extends to the full width of its parent element. Just add the<code>.thumbnail-expand</code>class.</p>
           <div class="preview-box">
-            <div class="thumbnail thumbnail-expand"><img alt="" src="../img/demo/cow-large.jpg">
+            <div class="thumbnail thumbnail-expand"><img alt="" src="dist/img/demo/cow-large.jpg">
               <div class="caption"><code>.thumbnail-expand</code></div>
             </div>
           </div>
@@ -158,12 +158,12 @@
           <h2>Grid</h2>
           <p>You can easily create a grid with thumbnails by using the <a href="grid.html">Grid component</a>.</p>
           <div class="preview-box">
-            <div data-grid-margin="" class="grid">
-              <div class="w-50"><img alt="" src="../img/demo/cow-1.jpg" class="thumbnail"></div>
-              <div class="w-50">
-                <div data-grid-margin="" class="grid">
-                  <div class="w-50"><img alt="" src="../img/demo/cow-4.jpg" class="thumbnail"></div>
-                  <div class="w-50"><img alt="" src="../img/demo/cow-4.jpg" class="thumbnail"></div>
+            <div class="row">
+              <div class="col-6"><img alt="" src="dist/img/demo/cow-1.jpg" class="thumbnail"></div>
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-6"><img alt="" src="dist/img/demo/cow-4.jpg" class="thumbnail"></div>
+                  <div class="col-6"><img alt="" src="dist/img/demo/cow-4.jpg" class="thumbnail"></div>
                 </div>
               </div>
             </div>
