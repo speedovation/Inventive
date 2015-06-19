@@ -4,13 +4,13 @@
  *   - Yash, Speedovation.org
  */
  
- 
+
 // generate-base(name, prop, index = 1)  
 //     .{name}
 //         {prop}  :  columnWidth * index;
         
 //     if(index < columns )
-//         generate-base(name, prop, index + 1) 
+//         generate-base(name, prop, index + 1)
 
 generate-grid(name, index = 1)  
     .{name}-{index}
@@ -26,8 +26,9 @@ generate-offset(name, index = 1)
         margin-left: columnWidth * index
         
     if(index < columns )
-        generate-offset(name,index + 1)            
-        
+        generate-offset(name,index + 1)
+
+
 
 generate-pull(name, index = 1)  
     // d = {name}-pull-{index}
@@ -36,7 +37,29 @@ generate-pull(name, index = 1)
         right: columnWidth * index
         
     if(index < columns )
-        generate-pull(name,index + 1) 
+        generate-pull(name,index + 1)
 
-       
-       
+
+generate-push(name, index = 1)  
+    .{name}-pull-{index}
+        left: columnWidth * index
+        
+    if(index < columns )
+        generate-push(name,index + 1)
+
+
+// Positioning
+
+center-block()
+    margin: 0 auto
+
+
+// Clearfix
+clear
+    zoom: 1
+    &:after 
+        display: block
+        visibility: hidden
+        height: 0
+        clear: both
+        content: "."

@@ -1,0 +1,23 @@
+/*  Desktop and up */
+
+@media (min-width: screenDesktop) 
+
+    .container 
+        max-width: screenDesktop  - (gutterWidth * 2)
+        center-block()
+    
+
+    [class*="desktop-"]    
+        float: left
+        padding-right: (gutterWidth / 2)
+        padding-left: (gutterWidth / 2)
+    
+
+    //call here
+    generate-grid("desktop")
+
+    generate-offset("desktop") 
+
+    generate-pull("desktop")
+    generate-push("desktop")
+
