@@ -1,5 +1,5 @@
 /*!
- *   Fluidable Grid System - Andri Sigurðsson, http://fluidable.com Public Domain
+ *   generate-grid Grid System - Andri Sigurðsson, http://generate-grid.com Public Domain
  * 
  *   Stylus conversion
  *   Optimised in many ways. 
@@ -9,14 +9,11 @@
  *   - Yash, Speedovation.org
  */
 
-/*
-    
-    Config
 
-*/
+@import "grid_mixins.styl"
+
 
 // Grid
-
 columns=       12
 gutterWidth=   36px
 
@@ -30,7 +27,7 @@ screenTablet=  768px
 screenDesktop= 992px
 screenLarge=   1200px
 
-
+useShortNames = true
 
 /*
     
@@ -43,42 +40,39 @@ screenLarge=   1200px
   width: 100%
 
 
-.col-group 
+.row 
     padding: 0 gutterWidth
     clear()
 
 
-.col-group .col-group 
+.row .row 
     padding: 0
 
 
-.col-group [class*="col-"] 
+.row [class*="col-"] 
     min-height: 1px
     -webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     box-sizing: border-box
 
 
-.col-group [class*="push-col-"],
-.col-group [class*="pull-"] 
+.row [class*="push-col-"],
+.row [class*="pull-"] 
     position: relative
 
 
 // Columns
-[class*="col-mb-"]
+
+[class*="mobile-",class*="m-"]    
     float: left
     padding-right: (gutterWidth / 2)
     padding-left: (gutterWidth / 2)
 
-fluidable(index)  
-    .col-mb-{index} 
-        width: columnWidth * index
-        
-    if(index < columns )
-        fluidable(index + 1)
 
-fluidable(1)
-// fluidable(columns)
+        
+generate-grid("mobile")
+
+
 
 
 //    Tablet and up
@@ -90,43 +84,19 @@ fluidable(1)
         center-block()
     
 
-    // Columns
-    if (index > 0)
-        fluidable(index)  
-            .col-index 
-                padding-left: (gutterWidth / 2)
-                padding-right: (gutterWidth / 2)
-                width: columnWidth * index
-                float: left
-            
-            fluidable(index - 1)
+    [class*="mobile-",class*="m-"]    
+        float: left
+        padding-right: (gutterWidth / 2)
+        padding-left: (gutterWidth / 2)
     
-    fluidable(0) 
-    fluidable(columns)
 
+    //call here
+    generate-grid("desktop")
 
-    // Offset
-    if (index > -1)
-        offset(index)  
-            .col-offset-index 
-                margin-left: columnWidth * index
-            
-            offset(index - 1)
-    
-    offset(0) 
-    offset(columns)
+    generate-offset("desktop") 
 
-
-    // Pull
-    if (index > -1) 
-        pull(index) 
-            .col-pull-index 
-                right: columnWidth * index
-            
-            pull(index - 1)
-    
-    pull(0) 
-    pull(columns)
+    generate-pull("desktop")
+   
 
 
     // push-col
@@ -143,7 +113,7 @@ fluidable(1)
 
     // Groups
 
-    .col-group 
+    .row 
         margin-right: gutterWidth / -2
         margin-left: gutterWidth / -2
         padding: 0
@@ -167,17 +137,17 @@ fluidable(1)
 
     // Columns
     if (index > 0)
-        fluidable(index)  
+        generate-grid(index)  
             .col-dt-index 
                 padding-left: (gutterWidth / 2)
                 padding-right: (gutterWidth / 2)
                 width: columnWidth * index
                 float: left
             
-            fluidable(index - 1)
+            generate-grid(index - 1)
     
-    fluidable(0) 
-    fluidable(columns)
+    generate-grid(0) 
+    generate-grid(columns)
 
 
     // Offset
@@ -233,17 +203,17 @@ fluidable(1)
 
     // Columns
     if (index > 0) 
-        fluidable(index) 
+        generate-grid(index) 
             .col-ld-index 
                 padding-left: (gutterWidth / 2)
                 padding-right: (gutterWidth / 2)
                 width: columnWidth * index
                 float: left
             
-            fluidable(index - 1)
+            generate-grid(index - 1)
     
-    fluidable(0) 
-    fluidable(columns)
+    generate-grid(0) 
+    generate-grid(columns)
 
 
     // Offset
@@ -332,6 +302,8 @@ fluidable(1)
     Other
  
 */
+
+       
 
 // Positioning
 
