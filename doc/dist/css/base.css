@@ -1,4 +1,8 @@
-/* Speedovation UI framework Copyright 2013, Yash MIT license. */
+/* Inventive - Speedovation Responsive UI framework 
+   Copyright 2015, 
+   Yash Pal 
+   Apache 2.0 license. 
+ */
 /* normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,
 aside,
@@ -600,16 +604,6 @@ footer {
   position: absolute;
   top: -9999em;
 }
-/*
- *   Originaly based on fluidable gs - Andri Sigurðsson, http://fluidable.com Public Domain
- * 
- *   Stylus conversion
- *   Optimised in many ways. 
- *   Removing redundancy in values 
- *   
- *   Apache 2.0 License
- *   - Yash, Speedovation.org
- */
 *,
 *::before,
 *::after {
@@ -2061,7 +2055,7 @@ table.rounded tr:last-child td:last-child {
   -moz-border-radius: 0 0 4px 0;
   border-radius: 0 0 4px 0;
 }
-@media untilmobile {
+@media screen and (max-width: 740px) {
   .table-r:after,
   .table-r thead:after {
     visibility: hidden;
@@ -2213,12 +2207,12 @@ table.rounded tr:last-child td:last-child {
     text-align: left;
   }
 }
-@media untilmobile and (min-width: $breakpoint-alpha) {
+@media screen and (max-width: 740px) and (min-width: 480px) {
   :before {
     display: none;
   }
 }
-@media untilmobile and (min-width: $breakpoint-alpha) {
+@media screen and (max-width: 740px) and (min-width: 480px) {
   th,
   td {
     display: table-cell;

@@ -262,7 +262,7 @@ table.rounded
     // More practical CSS...
     // using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
 
-    $breakpoint-alpha: 480px; // adjust to your needs
+    breakpoint-alpha= 480px; // adjust to your needs
 
     table.rounded, 
       display block
@@ -313,7 +313,7 @@ table.rounded
           display: inline-block;
           // end options
           
-          @media (min-width: $breakpoint-alpha) 
+          @media (min-width: breakpoint-alpha) 
             display: none;
           
         
@@ -322,7 +322,7 @@ table.rounded
       th, td 
         text-align: left;
         
-        @media (min-width: $breakpoint-alpha) 
+        @media (min-width: breakpoint-alpha) 
           display: table-cell;
           padding: .25em .5em;
           
