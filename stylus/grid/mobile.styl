@@ -3,10 +3,22 @@
     Mobile and up
  
 */
+*, *::before, *::after
+    box-sizing: border-box
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+
+
+[class*="col-"], [class*="mobile-"], [class*="tablet-"],[class*="desktop-"]
+    padding-left: .95rem;
+    position: relative;
+    min-height: 1px;
+    padding-right: .95rem;
 
 [class*="col-fixed-"] 
   float: left
   width: 100%
+  
 
 
 .row 
