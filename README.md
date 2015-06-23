@@ -4,7 +4,7 @@
 ## Inventive - Responsive Front-end Framework 
 Alpha is now released. Features are not fixed yet. Stay tuned.
 
-##Features list supported
+##Framework Features
 
 ###CSS Components
 
