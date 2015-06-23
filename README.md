@@ -4,8 +4,56 @@
 ## Inventive - Responsive Front-end Framework 
 Alpha is now released. Features are not fixed yet. Stay tuned.
 
-#Features list supported:
-TODO..adding here
+##Features list supported
+
+###CSS Components
+
+* Grid
+* Tables
+* Forms
+* Buttons
+* Tooltips
+* Messages
+* Badges
+* Thumbnail
+* Navbar
+* List Group
+* Nav
+* Subnav
+* Panel
+* Breadcrumb
+* Pagination
+* Progress
+* Search
+
+### Js Components
+
+* Tabs & Accordions(Under dev)
+* Hero Tabs & Sliders
+* Sliders
+* SideMenu (Under dev)
+* ColorPicker
+* Modal (Under dev)
+* DateTime Picker
+
+
+##TODO/Working
+
+* Update 
+ * Icons - Stripe web fonts
+ * Modal Js Component
+ * Create new responsive offcanvas side menu like Dash
+ * Flat style buttons with optional 3d(shadow) option
+ * Update navbar and add support of mega menu
+* Add docs
+ * Grid
+ * Buttons
+ * Almost all Js components
+ * Support few Js components only
+* Remove cart web icons 
+* Bugs
+ * Responsive tabs doc page not working properly.
+* Planning to use Formstone components what we don't support.
 
 ### Install
     bower install inventive
