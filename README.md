@@ -7,6 +7,8 @@ No release yet. Stay tuned.
 #Features list supported:
 TODO..adding here
 
+### Install
+    bower install inventive
 
 
 ### License
