@@ -13,6 +13,12 @@
     "framework"
   ],
   "license": "Apache 2.0 License",
+  "devDependencies": {
+    "inventive-font": "~1.2.0",
+    "jquery": "~2.1.4",
+    "holderjs": "~2.8.0",
+    "prism": "~1.0.0"
+  },
   "ignore": [
     "**/.*",
     "node_modules",

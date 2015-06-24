@@ -54,7 +54,7 @@ gulp.task('jade', function () {
         )
         .pipe(cached('build'))
         //.pipe(filter)
-        .pipe(jade())
+        .pipe(jade({pretty:true}))
         //.pipe(filter.restore())
         //.pipe(concat('base.css'))
         .pipe(gulp.dest('./build/html'));
