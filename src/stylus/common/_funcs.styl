@@ -1,0 +1,77 @@
+﻿ // Colored button mixin 
+ // * 
+ // * Apply this with the color of your choice
+ // * to get a consistent styling of buttons.
+ 
+mybutton(hval, val= 0) 
+
+    color = hsl(hval, 100, 15)
+
+    
+    if val >= 0  
+        color= lighten(color, val) 
+    else  
+        color= darken(color, val * -1) 
+    
+    border: 1px solid hsl(hval, 50, 39)
+    text-shadow: 0 1px hsl(hval, 100, 90)
+    
+    top= hsl(hval, 70, 76)
+    if val >= 0  
+        top= lighten(top, val) 
+    else  
+        top= darken(top, val * -1) 
+    
+    bottom= hsl(hval, 60, 67)
+    if val >= 0  
+        bottom= lighten(bottom, val) 
+    else  
+        bottom= darken(bottom, val * -1) 
+    
+    grad(top, bottom)
+    
+    shadow= hsl(hval, 100, 90)
+    if val >= 0  
+        shadow= lighten(shadow, val) 
+    else  
+        shadow= darken(shadow, val * -1) 
+    
+    //box-shadow(inset 0 1px 0 shadow)
+box-shadow(props) 
+    -webkit-box-shadow: props
+    -moz-box-shadow: props
+    box-shadow: props
+
+
+border-radius(radius) 
+    -webkit-border-radius: radius
+    -moz-border-radius: radius
+    border-radius: radius
+
+grad(topcolor, bottomcolor= darken(topcolor, 10%)) 
+    background-color: top
+    background-image: -webkit-gradient(linear,left top,left bottom,from(topcolor),to(bottomcolor)) // chrome, safari
+    background-image: -webkit-linear-gradient(top, topcolor, bottomcolor)
+    background-image:    -moz-linear-gradient(top, topcolor, bottomcolor) // firefox
+    background-image:     -ms-linear-gradient(top, topcolor, bottomcolor)
+    background-image:      -o-linear-gradient(top, topcolor, bottomcolor) 
+    background-image:         linear-gradient(top, topcolor, bottomcolor) // standard
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')" // ie6+
+
+transition(props)
+    -o-transition: props
+    -webkit-transition: props
+    -moz-transition: props
+    -ms-transition: props
+    transition: props
+
+//pass base as
+//  rem or px
+// usage  convert-size(16,'px')  will produce 1rem
+// if pass rem as second parameter nothing will happen it will return as it is
+convert-size(size,base="rem")
+    
+    if(base == "px")
+        return (size/16)rem
+
+    return (size)rem    

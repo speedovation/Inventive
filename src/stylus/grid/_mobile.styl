@@ -1,0 +1,54 @@
+/*
+    
+    Mobile and up
+ 
+*/
+*, *::before, *::after
+    box-sizing: border-box
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+
+
+[class*="col-"], [class*="mobile-"], [class*="tablet-"],[class*="desktop-"]
+    padding-left: .95rem;
+    position: relative;
+    min-height: 1px;
+    padding-right: .95rem;
+
+[class*="col-fixed-"] 
+  float: left
+  width: 100%
+  
+
+
+.row 
+    padding: 0 gutterWidth
+    clear()
+
+
+.row .row 
+    padding: 0
+
+
+.row [class*="col-"] 
+    min-height: 1px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+
+.row [class*="push-col-"],
+.row [class*="pull-"] 
+    position: relative
+
+
+// Columns
+
+[class*="mobile-",class*="m-"]    
+    float: left
+    padding-right: (gutterWidth / 2)
+    padding-left: (gutterWidth / 2)
+
+
+        
+generate-grid("mobile")

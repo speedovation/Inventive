@@ -1,0 +1,380 @@
+@import "../common/_funcs"
+@import "_variables"
+
+
+table(border-color = false)
+    background: #fff
+    width: 90%
+    border-collapse: collapse
+    text-align: left
+    
+    if border-color
+        border: 1px solid border-color
+
+
+th(padding = false)
+    font-size: 14px
+    font-weight: normal
+    if padding
+     padding: padding
+    color: th-color
+
+#hor-minimalist-a
+    table()
+   
+#hor-minimalist-a th
+    th(10px 8px)
+    border-bottom: 2px solid th-border-color
+
+#hor-minimalist-a td
+
+    color: td-color
+    padding: 9px 8px 0px 8px
+
+#hor-minimalist-a tbody tr:hover td
+    color: td-hover-color
+
+
+
+#hor-minimalist-b
+    table()
+
+#hor-minimalist-b th    
+    th(10px 8px)
+    border-bottom: 2px solid th-border-color
+
+#hor-minimalist-b td
+    border-bottom: 1px solid #ccc
+    color: td-color
+    padding: 6px 8px
+
+#hor-minimalist-b tbody tr:hover td
+    color: td-hover-color
+
+
+
+#ver-minimalist
+    table()
+
+#ver-minimalist th
+    th(8px 2px)   
+    border-bottom: 2px solid th-border-color
+    border-right: 30px solid #fff
+    border-left: 30px solid #fff
+   
+
+#ver-minimalist td
+    padding: 12px 2px 0px 2px
+    border-right: 30px solid #fff
+    border-left: 30px solid #fff
+    color: td-color
+
+
+
+#box-table-a
+    table()
+
+#box-table-a th
+    th(8px)
+    background: th-bg-color
+    border-top: 4px solid th-border-color
+    border-bottom: 1px solid #fff
+    
+
+#box-table-a td
+    padding: 8px
+    background: bg-color 
+    border-bottom: 1px solid #fff
+    color: td-color
+    border-top: 1px solid transparent
+
+#box-table-a tr:hover td
+    background: #d0dafd
+    color: #339
+
+
+
+#box-table-b
+    table()
+    text-align: center
+    border-top: 7px solid th-border-color
+    border-bottom: 7px solid th-border-color
+
+#box-table-b th
+    th(8px)
+    background: bg-color
+    border-right: 1px solid th-border-color
+    border-left: 1px solid th-border-color
+    
+
+#box-table-b td
+    padding: 8px
+    background: bg-color 
+    border-right: 1px solid th-border-color
+    border-left: 1px solid th-border-color
+    color: td-color
+
+
+
+#hor-zebra
+    table()
+
+#hor-zebra th
+    th(10px 8px)
+
+#hor-zebra td
+    padding: 8px
+    color: td-color
+
+#hor-zebra tbody tr:nth-child(odd)
+   background-color: #ccc;
+    
+
+#hor-zebra .odd
+    background: bg-color 
+
+
+#ver-zebra
+    table()
+
+#ver-zebra th
+    th(12px 15px)
+    border-right: 1px solid #fff
+    border-left: 1px solid #fff
+    
+    
+
+#ver-zebra td
+
+    padding: 8px 15px
+    border-right: 1px solid #fff
+    border-left: 1px solid #fff
+    color: td-color
+
+.vzebra-odd
+    background: #eff2ff
+
+.vzebra-even
+    background: bg-color
+
+#ver-zebra #vzebra-adventure, #ver-zebra #vzebra-children
+    background: #d0dafd
+    border-bottom: 1px solid th-border-color
+
+#ver-zebra #vzebra-comedy, #ver-zebra #vzebra-action
+    background: #dce4ff
+    border-bottom: 1px solid th-border-color
+
+
+
+#one-column-emphasis
+    table()
+
+#one-column-emphasis th
+    th(12px 15px)
+
+#one-column-emphasis td
+    padding: 10px 15px
+    color: td-color
+    border-top: 1px solid bg-color
+
+.oce-first
+    background: #d0dafd
+    border-right: 10px solid transparent
+    border-left: 10px solid transparent
+
+#one-column-emphasis tr:hover td
+    color: #339
+    background: #eff2ff
+
+
+
+#newspaper-a
+    table(border-color: th-border-color)
+    
+
+#newspaper-a th
+    th(12px 17px 12px 17px)    
+    border-bottom: 1px dashed th-border-color
+
+#newspaper-a td
+    padding: 7px 17px 7px 17px
+    color: td-color
+
+#newspaper-a tbody tr:hover td
+    color: #339
+    background: #d0dafd
+
+
+
+#newspaper-b
+    table(border-color: th-border-color)
+
+
+#newspaper-b th
+    th(15px 10px 10px 10px)
+    
+
+#newspaper-b tbody
+    background: bg-color
+
+#newspaper-b td
+    padding: 10px
+    color: td-color
+    border-top: 1px dashed #fff
+
+#newspaper-b tbody tr:hover td
+    color: #339
+    background: #d0dafd
+
+
+
+#newspaper-c
+    table(border-color: th-border-color)
+
+
+#newspaper-c th
+    th(20px)    
+    text-transform: uppercase
+    border-right: 1px solid th-border-color
+    border-top: 1px solid th-border-color
+    border-left: 1px solid th-border-color
+    border-bottom: 1px solid #fff
+
+#newspaper-c td
+    padding: 10px 20px
+    color: td-color
+    border-right: 1px dashed th-border-color
+
+
+
+#rounded-corner
+    table()
+
+#rounded-corner thead th.rounded-company
+    background: th-bg-color url('table-images/left.png') left -1px no-repeat
+
+#rounded-corner thead th.rounded-q4
+    background: th-bg-color url('table-images/right.png') right -1px no-repeat
+
+#rounded-corner th
+    th(8px)
+    background: th-bg-color
+
+#rounded-corner td
+    padding: 8px
+    background: bg-color
+    border-top: 1px solid #fff
+    color: td-color
+
+#rounded-corner tfoot td.rounded-foot-left
+    background: bg-color url('table-images/botleft.png') left bottom no-repeat
+
+#rounded-corner tfoot td.rounded-foot-right
+    background: bg-color url('table-images/botright.png') right bottom no-repeat
+
+#rounded-corner tbody tr:hover td
+    background: #d0dafd
+
+#background-image
+    table()
+    background: url('table-images/blurry.jpg') 330px 59px no-repeat
+
+#background-image th
+    th(8px)
+    color: #339
+
+#background-image td
+    padding: 9px 12px
+    color: td-color
+    border-top: 1px solid #fff
+
+#background-image tfoot td
+    font-size: 11px
+
+#background-image tbody td
+    background: url('table-images/back.png')
+
+//IE 6 only
+* html #background-image tbody td
+    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='table-images/back.png',sizingMethod='crop')"
+    background: none
+   
+#background-image tbody tr:hover td
+    color: #339
+    background: none
+
+
+
+#linear-gradientient-style
+    table()
+
+#linear-gradientient-style th
+    th(8px)
+    background: th-bg-color url('table-images/linear-gradienthead.png') repeat-x
+    border-top: 2px solid th-border-color
+    border-bottom: 1px solid th-border-color
+    
+
+#linear-gradientient-style td
+    padding: 8px 
+    border-bottom: 1px solid #fff
+    color: td-color
+    border-top: 1px solid #fff
+    background: bg-color url('table-images/linear-gradientback.png') repeat-x
+
+#linear-gradientient-style tfoot tr td
+    background: bg-color
+    font-size: 12px
+    color: #99c
+
+#linear-gradientient-style tbody tr:hover td
+    background: #d0dafd url('table-images/linear-gradienthover.png') repeat-x
+    color: #339
+
+
+
+#pattern-style-a
+    table()
+    background: url('table-images/pattern.png')
+
+#pattern-style-a thead tr
+    background: url('table-images/pattern-head.png')
+
+#pattern-style-a th
+    th(8px)
+    border-bottom: 1px solid #fff
+    
+
+#pattern-style-a td
+    padding: 8px 
+    border-bottom: 1px solid #fff
+    color: td-color
+    border-top: 1px solid transparent
+
+#pattern-style-a tbody tr:hover td
+    color: #339
+    background: #fff
+
+
+#pattern-style-b
+    table()
+    background: url('table-images/patternb.png')
+
+#pattern-style-b thead tr
+    background: url('table-images/patternb-head.png')
+
+#pattern-style-b th
+    th(8px)
+    border-bottom: 1px solid #fff
+    
+
+#pattern-style-b td
+    padding: 8px 
+    border-bottom: 1px solid #fff
+    color: td-color
+    border-top: 1px solid transparent
+
+#pattern-style-b tbody tr:hover td
+    color: #339
+    background: #cdcdee
