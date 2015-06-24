@@ -17,9 +17,10 @@ var autoprefixer = require('autoprefixer-stylus');
 // define the default task and add the watch task to it
 gulp.task('default', ['watch'], function()
 {
-    gulp.run("stylus");
-    gulp.run("jade");
-    gulp.run("coffee");
+    gulp.start("stylus");
+    gulp.start("jade");
+    gulp.start("coffee");
+    gulp.start("coffee-seperate");
 });
 
 
@@ -59,6 +60,19 @@ gulp.task('jade', function () {
         .pipe(gulp.dest('./build/html'));
 });
 
+
+gulp.task('coffee-seperate', function () {
+    return gulp.src(
+        [   
+            './src/coffeescript/*.coffee',
+            '!./src/coffeescript/_*.coffee'
+        ], { base: 'src/coffeescript' }
+        )
+            .pipe(coffee())
+            .pipe(gulp.dest('./build/js/components'));
+
+});
+
 gulp.task('coffee', function () {
 
     //var filter = Filter('**/*.styl');
@@ -69,12 +83,14 @@ gulp.task('coffee', function () {
             '!./src/coffeescript/_*.coffee'
         ], { base: 'src/coffeescript' }
         )
-        .pipe(cached('build'))
-        //.pipe(filter)
-        .pipe(coffee())
-        //.pipe(filter.restore())
-        .pipe(concat('inventive.js'))
-        .pipe(gulp.dest('./build/js'));
+            .pipe(cached('build'))
+            //.pipe(filter)
+            .pipe(coffee())
+            //.pipe(filter.restore())
+            .pipe(concat('inventive.js'))
+            .pipe(gulp.dest('./build/js'))
+            
+        
 });
 
 
@@ -84,7 +100,7 @@ gulp.task('coffee', function () {
 gulp.task('watch', function() {
   gulp.watch('src/stylus/**/*.styl', ['stylus']);
   gulp.watch('src/jade/**/*.jade', ['jade']);
-  gulp.watch('src/coffee/**/*.coffee', ['coffee']);
+  gulp.watch('src/coffee/**/*.coffee', ['coffee','coffee-seperate']);
 });
 
 
