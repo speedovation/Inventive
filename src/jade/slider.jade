@@ -9,42 +9,40 @@ html
     script(type='text/javascript', src='dist/js/components/slider.js')
     link(href='dist/css/components/slider.css', rel='stylesheet', type='text/css')
     
-    style().
-      
-   
+    style(type="text/css").   
       .main {
-      float: left;
-      width: 100%;
-      margin: 0 auto;
-      background: #161923;
+        float: left;
+        width: 100%;
+        margin: 0 auto;
+        background: #161923;
       }
    
       .clear {
-      width: auto;
+        width: auto;
       }
       
  
       
       .page_container {
-      max-width: 960px;
-      margin: 50px auto;
+        max-width: 960px;
+        margin: 50px auto;
       }
 
       .immersive_slider .is-slide .content h2{
-      line-height: 140%;
-      font-weight: 100;
-      color: white;
-      font-weight: 100;
+        line-height: 140%;
+        font-weight: 100;
+        color: white;
+        font-weight: 100;
       }
       .immersive_slider .is-slide .content a {
-      color: white;
+        color: white;
       }
       .immersive_slider .is-slide .content p{
-      float: left;
-      font-weight: 100;
-      width: 100%;
-      font-size: 17px;
-      margin-top: 5px;
+        float: left;
+        font-weight: 100;
+        width: 100%;
+        font-size: 17px;
+        margin-top: 5px;
       }
   body
     include _nav
@@ -92,7 +90,7 @@ html
         
 
 
-        script(type='text/javascript')
+        script(type='text/javascript').
           $(document).ready( function() {
             $("#immersive_slider").immersive_slider({
                 container: ".main"
