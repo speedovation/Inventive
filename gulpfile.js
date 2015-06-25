@@ -112,13 +112,14 @@ gulp.task('watch', function() {
 
 
 // Static Server + watching stylus/html files
-gulp.task('serve', ['stylus'], function() {
+gulp.task('serve', ['stylus','jade','coffee','coffee-seperate'], function() {
 
     browserSync.init({
         server: "./"
     });
 
     
+    gulp.watch("build/css/**/*.css").on('change', browserSync.reload);
     gulp.watch("build/html/*.html").on('change', browserSync.reload);
 });
 
