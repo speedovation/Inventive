@@ -8,6 +8,7 @@ var lr = require('gulp-livereload');
 var gif = require('gulp-if');
 var cached = require('gulp-cached');
 var uglify = require('gulp-uglify');
+var util = require('gulp-util');
 var nib = require('nib');
 var autoprefixer = require('autoprefixer-stylus');
 
@@ -20,7 +21,7 @@ gulp.task('default', ['watch','serve'], function()
     gulp.watch("stylus");
     gulp.watch("jade");
     gulp.watch("coffee");
-    gulp.watch("coffee-seperate");
+    //gulp.watch("serve");
 });
 
 
@@ -65,23 +66,8 @@ gulp.task('jade', function () {
 });
 
 
-gulp.task('coffee-seperate', function () {
-    return gulp.src(
-        [   
-            './src/coffeescript/*.coffee',
-            '!./src/coffeescript/_*.coffee'
-        ], { base: 'src/coffeescript' }
-        )
-            .pipe(coffee())
-            .pipe(gulp.dest('./build/js/components'));
-
-});
-
 gulp.task('coffee', function () {
-
-    //var filter = Filter('**/*.styl');
-
-    return gulp.src(
+   gulp.src(
         [   
             './src/coffeescript/*.coffee',
             '!./src/coffeescript/_*.coffee'
@@ -89,10 +75,26 @@ gulp.task('coffee', function () {
         )
             .pipe(cached('build'))
             //.pipe(filter)
-            .pipe(coffee())
+            .pipe(coffee({bare: true}).on('error', swallowError))
             //.pipe(filter.restore())
             .pipe(concat('inventive.js'))
             .pipe(gulp.dest('./build/js'))
+            .pipe(browserSync.stream())
+            ;
+            
+   
+   gulp.src(
+        [   
+            './src/coffeescript/*.coffee',
+            '!./src/coffeescript/_*.coffee'
+        ], { base: 'src/coffeescript' }
+        )
+            .pipe(coffee({bare: true}).on('error', swallowError))
+            .pipe(gulp.dest('./build/js/components'))
+            .pipe(browserSync.stream())
+            ;
+
+    
             
         
 });
@@ -102,9 +104,11 @@ gulp.task('coffee', function () {
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
+    
   gulp.watch('src/stylus/**/*.styl', ['stylus']);
   gulp.watch('src/jade/*.jade', ['jade']);
-  gulp.watch('src/coffee/*.coffee', ['coffee','coffee-seperate']);
+  gulp.watch('src/coffeescript/*.coffee', ['coffee']);
+  
 });
 
 
@@ -112,7 +116,7 @@ gulp.task('watch', function() {
 
 
 // Static Server + watching stylus/html files
-gulp.task('serve', ['stylus','jade','coffee','coffee-seperate'], function() {
+gulp.task('serve', ['stylus','jade','coffee'], function() {
 
     browserSync.init({
         server: "./"
@@ -121,13 +125,21 @@ gulp.task('serve', ['stylus','jade','coffee','coffee-seperate'], function() {
     
     gulp.watch("build/css/**/*.css").on('change', browserSync.reload);
     gulp.watch("build/html/*.html").on('change', browserSync.reload);
+    gulp.watch("build/js/*.js").on('change', browserSync.reload);
+    
 });
 
 
 
 
 
+function swallowError (error) {
 
+    //If you want details of the error in the console
+    console.log(error.toString());
+
+    this.emit('end');
+}
 
 
 
