@@ -4,23 +4,23 @@ var jade = require('gulp-jade');
 var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var Filter = require('gulp-filter');
-
 var lr = require('gulp-livereload');
 var gif = require('gulp-if');
-var lr = require('gulp-livereload');
 var cached = require('gulp-cached');
 var uglify = require('gulp-uglify');
 var nib = require('nib');
 var autoprefixer = require('autoprefixer-stylus');
 
+//Broswer reloading
+var browserSync = require('browser-sync').create();
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch'], function()
+gulp.task('default', ['watch','serve'], function()
 {
-    gulp.start("stylus");
-    gulp.start("jade");
-    gulp.start("coffee");
-    gulp.start("coffee-seperate");
+    gulp.watch("stylus");
+    gulp.watch("jade");
+    gulp.watch("coffee");
+    gulp.watch("coffee-seperate");
 });
 
 
@@ -39,7 +39,9 @@ gulp.task('stylus', function () {
         .pipe(stylus())
         //.pipe(filter.restore())
         //.pipe(concat('base.css'))
-        .pipe(gulp.dest('./build/css'));
+        .pipe(gulp.dest('./build/css'))
+        .pipe(browserSync.stream())
+        ;
 });
 
 gulp.task('jade', function () {
@@ -57,7 +59,9 @@ gulp.task('jade', function () {
         .pipe(jade({pretty:true}))
         //.pipe(filter.restore())
         //.pipe(concat('base.css'))
-        .pipe(gulp.dest('./build/html'));
+        .pipe(gulp.dest('./build/html'))
+        .pipe(browserSync.stream())
+        ;
 });
 
 
@@ -99,9 +103,36 @@ gulp.task('coffee', function () {
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
   gulp.watch('src/stylus/**/*.styl', ['stylus']);
-  gulp.watch('src/jade/**/*.jade', ['jade']);
-  gulp.watch('src/coffee/**/*.coffee', ['coffee','coffee-seperate']);
+  gulp.watch('src/jade/*.jade', ['jade']);
+  gulp.watch('src/coffee/*.coffee', ['coffee','coffee-seperate']);
 });
+
+
+
+
+
+// Static Server + watching stylus/html files
+gulp.task('serve', ['stylus'], function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    
+    gulp.watch("build/html/*.html").on('change', browserSync.reload);
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //SAMPLE for learning Gulp ;)

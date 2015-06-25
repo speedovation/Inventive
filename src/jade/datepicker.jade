@@ -6,7 +6,7 @@ html(lang='en')
     
     include header
 
-    link(href='dist/css/components/datepicker.css', rel='stylesheet')
+    link(href='../../static/css/components/datepicker.css', rel='stylesheet')
     
     block styles
       style(type="text/css").
@@ -173,7 +173,7 @@ html(lang='en')
                       td This event is fired when a day is rendered inside the datepicker. Should return a string. Return 'disabled' to disable the day from being selected.
 
         block scripts
-          script(src='dist/js/datepicker.js')
+          script(src='../../static/js/datepicker.js')
         
         script(type="text/javascript").           
           if (top.location != location) {
