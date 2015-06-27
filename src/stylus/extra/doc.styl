@@ -1,4 +1,5 @@
 @import "../common/_funcs"
+@import "../components/sitehelpers"
 
 body
   font-family: Lato, sans-serif;    
@@ -90,19 +91,25 @@ body
     position: absolute;
     top: -1px;
     max-height 24px 
+    
+    max-width: 100px;
+    left: -1px;
+    top -25px
+    font-weight 300
+    font-size: 0.8rem
 
 .preview    
     padding 3.5rem 2rem 2rem
-    border 1px solid #ddd
+    border 0px solid #ddd
     background-color #FEFEFE
     min-height 200px
     //color: #CC470D;
 
     &:after
         content "PREVIEW"
-        max-width: 64px;
+        max-width: 100px;
         left: -1px;
-        top -1px
+        top -25px
         font-weight 300
         font-size: 0.8rem
 
@@ -110,6 +117,17 @@ body
 .preview-tab 
     position relative
     margin-bottom 2rem !important
+    
+    code[class*="language-"], pre[class*="language-"]
+        color: #000;
+        text-shadow: 0px 1px #FFF;
+        font-family: Consolas,Monaco,"Andale Mono",monospace;
+        direction: ltr;
+        text-align: left;
+        white-space: pre-wrap
+        margin 0
+        padding 0
+        border 0
     
     &:after
         background-color: #F7F7F7;
