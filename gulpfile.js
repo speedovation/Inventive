@@ -31,13 +31,15 @@ gulp.task('stylus', function () {
 
     return gulp.src(
         [   
-            './src/stylus/**/*.styl',
-            '!./src/stylus/**/_*.styl'
+            './src/stylus/inventive.styl',
+            //'./src/stylus/*.styl',
+            //'./src/stylus/**/*.styl',
+            //'!./src/stylus/**/_*.styl'
         ], { base: 'src/stylus' }
         )
-        .pipe(cached('build'))
+        //.pipe(cached('build'))
         //.pipe(filter)
-        .pipe(stylus())
+        .pipe(stylus({error: true, use: [nib()]}))
         //.pipe(filter.restore())
         //.pipe(concat('base.css'))
         .pipe(gulp.dest('./build/css'))
@@ -73,13 +75,13 @@ gulp.task('coffee', function () {
             '!./src/coffeescript/_*.coffee'
         ], { base: 'src/coffeescript' }
         )
-            .pipe(cached('build'))
+            //.pipe(cached('build'))
             //.pipe(filter)
-            .pipe(coffee({bare: true}).on('error', swallowError))
+            .pipe(coffee().on('error', swallowError))
             //.pipe(filter.restore())
             .pipe(concat('inventive.js'))
             .pipe(gulp.dest('./build/js'))
-            .pipe(browserSync.stream())
+/*            .pipe(browserSync.stream())*/
             ;
             
    
@@ -105,7 +107,7 @@ gulp.task('coffee', function () {
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
     
-  gulp.watch('src/stylus/**/*.styl', ['stylus']);
+  gulp.watch(['src/stylus/**/*.styl','build/css/**/*.css'], ['stylus']);
   gulp.watch('src/jade/*.jade', ['jade']);
   gulp.watch('src/coffeescript/*.coffee', ['coffee']);
   

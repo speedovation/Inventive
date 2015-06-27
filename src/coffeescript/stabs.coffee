@@ -161,4 +161,3 @@ $.fn.extend
         $respTabs.find(".resp-accordion-closed").removeAttr "style"
 
 
-
