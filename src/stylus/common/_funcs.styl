@@ -6,15 +6,15 @@
 mybutton(hval, val= 0) 
 
     color = hsl(hval, 100, 15)
-
+    
     
     if val >= 0  
         color= lighten(color, val) 
     else  
         color= darken(color, val * -1) 
     
-    border: 1px solid hsl(hval, 50, 39)
-    text-shadow: 0 1px hsl(hval, 100, 90)
+    border: 1px solid hsl(hval, 50, 45)
+    //text-shadow: 0 1px hsl(hval, 100, 90)
     
     top= hsl(hval, 60, 66)
     if val >= 0  
@@ -22,7 +22,7 @@ mybutton(hval, val= 0)
     else  
         top= darken(top, val * -1) 
     
-    bottom= hsl(hval, 60, 67)
+    bottom= hsl(hval, 60, 65)
     if val >= 0  
         bottom= lighten(bottom, val) 
     else  

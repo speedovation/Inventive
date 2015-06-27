@@ -21,7 +21,24 @@ gulp.task('default', ['watch','serve'], function()
     gulp.watch("stylus");
     gulp.watch("jade");
     gulp.watch("coffee");
+    
+    gulp.start('stylus-all')
     //gulp.watch("serve");
+});
+
+
+gulp.task('stylus-all', function () {
+
+    return gulp.src(
+        [   
+            './src/stylus/*.styl',
+            './src/stylus/**/*.styl',
+            '!./src/stylus/**/_*.styl'
+        ], { base: 'src/stylus' }
+        )
+        .pipe(stylus({error: true, use: [nib()]}))
+        .pipe(gulp.dest('./build/css'))
+        ;
 });
 
 
@@ -32,6 +49,7 @@ gulp.task('stylus', function () {
     return gulp.src(
         [   
             './src/stylus/inventive.styl',
+            './src/stylus/extra/doc.styl',
             //'./src/stylus/*.styl',
             //'./src/stylus/**/*.styl',
             //'!./src/stylus/**/_*.styl'
@@ -107,7 +125,7 @@ gulp.task('coffee', function () {
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
     
-  gulp.watch(['src/stylus/**/*.styl','build/css/**/*.css'], ['stylus']);
+  gulp.watch('src/stylus/**/*.styl', ['stylus']);
   gulp.watch('src/jade/*.jade', ['jade']);
   gulp.watch('src/coffeescript/*.coffee', ['coffee']);
   
