@@ -42,13 +42,13 @@ html
         .preview-box
           form.row
 
-            input(class="input col-12" type="text" placeholder="Text input")
+            input(class="input width-per-100" type="text" placeholder="Text input")
 
-            input( class="input col-12" type="email" placeholder="Email input")
+            input( class="input width-per-100" type="email" placeholder="Email input")
 
-            input( class="input col-12" type="password" placeholder="Password input")
+            input( class="input width-per-100" type="password" placeholder="Password input")
 
-            textarea( class="textarea col-12" placeholder="Textarea").preview-box
+            textarea( class="textarea width-per-100" placeholder="Textarea").preview-box
 
         h3 Collapse horizontal space
         p Add <code>.collapse</code> to form
@@ -56,13 +56,13 @@ html
         .preview-box
            form.row.collapse
 
-            input(class="input col-12" type="text" placeholder="Text input")
+            input(class="input width-per-100" type="text" placeholder="Text input")
 
-            input( class="input col-12" type="email" placeholder="Email input")
+            input( class="input width-per-100" type="email" placeholder="Email input")
 
-            input( class="input col-12" type="password" placeholder="Password input")
+            input( class="input width-per-100" type="password" placeholder="Password input")
 
-            textarea( class="textarea col-12" placeholder="Textarea")
+            textarea( class="textarea width-per-100" placeholder="Textarea")
 
         
         h3 Control input size
@@ -72,13 +72,13 @@ html
           form
 
             .row
-                input(class="input col-6" type="text" placeholder="Col-6")
-                input(class="input col-6" type="text" placeholder="Col-6")
+                input(class="input width-per-50" type="text" placeholder="width-per-50")
+                input(class="input width-per-50" type="text" placeholder="width-per-50")
 
             .row
-                input(class="input col-4" type="text" placeholder="Col-4")
-                input(class="input col-4" type="text" placeholder="Col-4")
-                input(class="input col-4" type="text" placeholder="Col-4")
+                input(class="input width-per-33" type="text" placeholder="width-per-33")
+                input(class="input width-per-33" type="text" placeholder="width-per-33")
+                input(class="input width-per-33" type="text" placeholder="width-per-33")
 
             .row
                 input(class="width-per-20 input" type="text" placeholder="width-per-20")
@@ -88,12 +88,12 @@ html
                 input(class="width-per-20 input" type="text" placeholder="width-per-20")
 
             .row
-                label(for="text1" class="inline desktop-4") Label 1
-                input(class="input col-8" type="text" placeholder="Text input")
+                label(for="text1" class="inline width-per-25") Label 1
+                input(class="input width-per-75" type="text" placeholder="Text input")
 
             .row
-                label(for="text1" class="inline col-4") Label 2
-                input(class="input col-8" type="text" placeholder="Text input")
+                label(for="text1" class="inline width-per-25") Label 2
+                input(class="input width-per-75" type="text" placeholder="Text input")
 
         
         h3 Append and Prepend buttons
@@ -127,16 +127,16 @@ html
 
         .preview-box
           form.row
-            +select('col-4')
-            +select('col-4')
-            +select('col-4')
+            +select('width-per-25')
+            +select('width-per-25')
+            +select('width-per-25')
 
           form.row
-            +select('col-1')
-            +select('col-2')
-            +select('col-3')
-            +select('col-4')
-            +select('col-2')
+            +select('width-per-10')
+            +select('width-per-20')
+            +select('width-per-30')
+            +select('width-per-25')
+            +select('width-per-15')
 
 
 

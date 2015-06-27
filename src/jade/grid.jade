@@ -11,9 +11,9 @@ html
    
 
     .row.example
-        h1.welcome Welcome in Superactive . Relax , We've already done it for you
+        h1.welcome Relax , We've already done it for you
 
-          
+        hr  
 
         //demo 1
 
@@ -25,66 +25,78 @@ html
 
 
         h2 Asymmetrical
-        .row
-          .large-4.desktop-3.tablet-6.mobile-8
-            +span_text('4','3','6','8')
+        .preview-box
+            .row
+              .large-4.desktop-3.tablet-6.mobile-8
+                +span_text('4','3','6','8')
+    
+              .large-8.desktop-9.tablet-6.mobile-4
+                +span_text('8','9','6','4')
+    
+            .row
+                .large-4.desktop-3.tablet-12.mobile-12
+                    +span_text('4','3','12','12')
+    
+                .large-8.desktop-9.tablet-12.mobile-12
+                    +span_text('8','9','12','12')
 
-          .large-8.desktop-9.tablet-6.mobile-4
-            +span_text('8','9','6','4')
-
-        .row
-            .large-4.desktop-3.tablet-12.mobile-12
-                +span_text('4','3','12','12')
-
-            .large-8.desktop-9.tablet-12.mobile-12
-                +span_text('8','9','12','12')
-
+        hr
+        
         h2 Symmetrical
-        .row
-          .large-3.desktop-3.tablet-3.mobile-3
-            +span_text('3','3','3','3')
+        .preview-box
+            .row
+              .large-3.desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3','3')
+    
+              .large-3.desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3','3')
+    
+              .large-3.desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3','3')
+    
+              .large-3.desktop-3.tablet-3.mobile-3
+                +span_text('3','3','3','3')
 
-          .large-3.desktop-3.tablet-3.mobile-3
-            +span_text('3','3','3','3')
-
-          .large-3.desktop-3.tablet-3.mobile-3
-            +span_text('3','3','3','3')
-
-          .large-3.desktop-3.tablet-3.mobile-3
-            +span_text('3','3','3','3')
-
+        hr
+        
         h2 Column
+        .preview-box
+            .row
+              .large-4.desktop-4.tablet-4.mobile-4
+                  +span_text('4','4','4','4')
+              .large-4.desktop-4.tablet-4.mobile-4
+                  +span_text('4','4','4','4')
+              .large-4.desktop-4.tablet-4.mobile-4
+                  +span_text('4','4','4','4')
 
-        .row
-          .large-4.desktop-4.tablet-4.mobile-4
-              +span_text('4','4','4','4')
-          .large-4.desktop-4.tablet-4.mobile-4
-              +span_text('4','4','4','4')
-          .large-4.desktop-4.tablet-4.mobile-4
-              +span_text('4','4','4','4')
-
+        hr
+        
         h2 Universal responsive class
         p Just use .col if you want
 
-        .row
-            .col-4
-                +span_text('4','4','4','4')
-            .col-4
-                +span_text('4','4','4','4')
-            .col-4
-                +span_text('4','4','4','4')
+        .preview-box
+            .row
+                .col-4
+                    +span_text('4','4','4','4')
+                .col-4
+                    +span_text('4','4','4','4')
+                .col-4
+                    +span_text('4','4','4','4')
 
+        hr
+        
         h2 Collapse row
         p No margin between columns . Add <code>.width-per-*</code> where * is width in percentage.
         p Its universal and responsive.
 
-        .row
-            .width-per-33
-                +span_text('4','4','4','4')
-            .width-per-33
-                +span_text('4','4','4','4')
-            .width-per-33
-                +span_text('4','4','4','4')
+        .preview-box
+            .row
+                .width-per-33
+                    +span_text('4','4','4','4')
+                .width-per-33
+                    +span_text('4','4','4','4')
+                .width-per-33
+                    +span_text('4','4','4','4')
 
   //      h2 Push
   //

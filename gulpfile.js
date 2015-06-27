@@ -11,6 +11,7 @@ var uglify = require('gulp-uglify');
 var util = require('gulp-util');
 var nib = require('nib');
 var autoprefixer = require('autoprefixer-stylus');
+var plumber = require('gulp-plumber');
 
 //Broswer reloading
 var browserSync = require('browser-sync').create();
@@ -36,6 +37,15 @@ gulp.task('stylus-all', function () {
             '!./src/stylus/**/_*.styl'
         ], { base: 'src/stylus' }
         )
+        .pipe(plumber(
+        {
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }
+        
+        ))
         .pipe(stylus({error: true, use: [nib()]}))
         .pipe(gulp.dest('./build/css'))
         ;
