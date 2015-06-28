@@ -47,31 +47,42 @@ html(lang='en')
             // Place this tag after the last +1 button tag.
             
         .desktop-9
+                
                 h2 Example
+                
                 p Attached to a field with the format specified via options.
                 .well.field
                   input#dp1.input(type='text', value='02-16-2012')
+                
+                
                 p Attachet to a field with the format specified via data tag.
-                .well.field
+                .well
                   input#dp2.input(type='text', value='02/16/12', data-date-format='mm/dd/yy')
+                
+                
                 p As component.
-                .well.field
+                .well
                   #dp3.input-append.date(data-date='12-02-2012', data-date-format='dd-mm-yyyy')
-                    input.input(size='16', type='text', value='12-02-2012', readonly='readonly')
-                    span.add-on
+                    input.input(size='16', type='text', value='12-02-2012', class="width-per-20 input", readonly='readonly')
+                    span.width-per-5.button.append.right.add-on
                       i.icon-calendar
+                  .clear-both 
+                      
                 p Start with years viewMode.
                 .well
                   #dpYears.input-append.date(data-date='12-02-2012', data-date-format='dd-mm-yyyy', data-date-viewmode='years')
-                    input.span2(size='16', type='text', value='12-02-2012', readonly='readonly')
-                    span.add-on
+                    input.span2(size='16', type='text', value='12-02-2012',class="width-per-20 input",  readonly='readonly')
+                    span.width-per-5.button.append.right.add-on
                       i.icon-calendar
+                  .clear-both 
+                  
                 p Limit the view mode to months
                 .well
                   #dpMonths.input-append.date(data-date='102/2012', data-date-format='mm/yyyy', data-date-viewmode='years', data-date-minviewmode='months')
-                    input.span2(size='16', type='text', value='02/2012', readonly='readonly')
-                    span.add-on
+                    input.span2(size='16', type='text', value='02/2012', class="width-per-20 input", readonly='readonly')
+                    span.width-per-5.button.append.right.add-on
                       i.icon-calendar
+                  .clear-both
                 p
                   | Attached to other elment then field and using events to work with the date values.
                 .well
@@ -81,10 +92,10 @@ html(lang='en')
                     thead
                       tr
                         th
-                          | Start date
+                          | Start date 
                           a#dp4.button(href='#', data-date-format='yyyy-mm-dd', data-date='2012-02-20') Change
                         th
-                          | End date
+                          | End date 
                           a#dp5.button(href='#', data-date-format='yyyy-mm-dd', data-date='2012-02-25') Change
                     tbody
                       tr
