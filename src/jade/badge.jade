@@ -5,17 +5,16 @@ block title
 
 block leftcontent
  h3 &nbsp; 
- - var items = [ "Usage, "Modifiers" ]
- +top_left(vals)
+ - var items = [ "Usage", "Modifiers"]
+ +top_left(items)
+ 
 
 block content
 
   h1.divide-section Badges
-  
   p.info Easlily create nicely looking badges to label and highlight your content.
   
   h2#Usage.divide-section Usage
-  
   p
     | To create a badge, just add the 
     code .badge
@@ -27,6 +26,7 @@ block content
 
   
   .preview-box 
+    p
       ="\n" 
       span.badge Info
       | 
@@ -39,14 +39,11 @@ block content
     
 
   h2#Modifiers.divide-section Modifiers
-  
   p
       | To display badges in a different style, just add modifier classes to the
       code .badge
       | class. These modifiers can be combined with each other.
-  
   h3 Round
-  
   p
       | Add the
       code .badge-round
@@ -55,6 +52,7 @@ block content
 
 
   .preview-box
+    p
       span.badge.badge-round 1
       | 
       span.badge.badge-round 2

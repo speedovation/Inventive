@@ -1,135 +1,129 @@
-doctype html
-html(lang="en")
-  head
+extends ./layout.jade
+
+block title
+  title Badges 
+
+block leftcontent
+ h3 &nbsp; 
+ - var items = [ "Usage", "Caption","Size modifiers","Grid"]
+ +top_left(items)
+ 
+
+block content
+
+  h1.divide-section Thumbnail
+
+  p.info Create different thumbnail images, which come in various styles and sizes.
+  
+  h2#Usage Usage
+  p
+    | To apply this component, just add the 
+    code .thumbnail
+    |  class to an 
+    code= "<img>" 
+    |  , 
+    code= "<a>"
+    |  or 
+    code= "<figure>"
+    |  element.
+  
+  .preview-box
     
-    title Thumbnail
-
-    include header
-
-
-
-  body
-
-    include _nav
-
-    .grid
-      .row
-
-        div.desktop-12
-
-          h1.divide-section Thumbnail
-          
-          p.info Create different thumbnail images, which come in various styles and sizes.
-          
-          h2 Usage
-          p
-            | To apply this component, just add the 
-            code .thumbnail
-            |  class to an 
-            code= "<img>" 
-            |  , 
-            code= "<a>"
-            |  or 
-            code= "<figure>"
-            |  element.
-          
-          .preview-box
-            
-            img.w-33.thumbnail(alt='', src='../../static/img/demo/cow-1.jpg')
-            a.w-33.thumbnail(href='#')
-              img(alt='', src='../../static/img/demo/cow-2.jpg')
-            figure.w-33.thumbnail
-              img(alt='', src='../../static/img/demo/cow-3.jpg')
-          
-          hr
-          h3 Caption
-          p
-            | Add the  
-            code .caption 
-            |  class to a 
-            code= "<div>"
-            |  element to apply a text caption under the image.
-          
-          .preview-box
-            
-            .thumbnail.w-33
-              img(alt='', src='../../static/img/demo/cow-1.jpg')
-              .caption
-                | Caption 
-                code= "<div>"
-            
-            a.w-33.thumbnail(href='#')
-              img(alt='', src='../../static/img/demo/cow-2.jpg')
-              .caption
-                | Caption
-                code= "<a>"
-            figure.w-33.thumbnail
-              img(alt='', src='../../static/img/demo/cow-3.jpg')
-              figcaption.caption
-                | Caption 
-                code= "<figure>"
-          
-          hr
-          h2 Size modifiers
-          p
-            | Apply the 
-            code .thumbnail-large
-            |  , 
-            code .thumbnail-medium
-            |  , 
-            code .thumbnail-small
-            |  or 
-            code .thumbnail-mini
-            |  classes to resize images. The 
-            a(href='base.html') Base component
-            |  is required to make the images responsive by default.
-          
-          .preview-box
-            .thumbnail.thumbnail-large
-              img(alt='', src='../../static/img/demo/cow-large.jpg')
-              .caption
-                code .thumbnail-large
-          
-            .thumbnail.thumbnail-medium
-              img(alt='', src='../../static/img/demo/cow-large.jpg')
-              .caption
-                code .thumbnail-medium
-            .thumbnail.thumbnail-small
-              img(alt='', src='../../static/img/demo/cow-large.jpg')
-              .caption
-                code .thumbnail-small
-            .thumbnail.thumbnail-mini
-              img(alt='', src='../../static/img/demo/cow-large.jpg')
-              .caption
-                code .thumbnail-mini
-          
-            
-          p
-            | You can even scale a thumbnail beyond its proper size, so that it extends to the full width of its parent element. Just add the
-            code .thumbnail-expand
-            | class.
-          
-          .preview-box
-            .thumbnail.thumbnail-expand
-              img(alt='', src='../../static/img/demo/cow-large.jpg')
-              .caption
-                code .thumbnail-expand
-            
-          hr
-          h2 Grid
-          p
-            | You can easily create a grid with thumbnails by using the 
-            a(href='grid.html') Grid component
-            | .
-          
-          .preview-box
-            .row
-              .col-6
-                img.thumbnail(alt='', src='../../static/img/demo/cow-1.jpg')
-              .col-6
-                .row
-                  .col-6
-                    img.thumbnail(alt='', src='../../static/img/demo/cow-4.jpg')
-                  .col-6
-                    img.thumbnail(alt='', src='../../static/img/demo/cow-4.jpg')
-            
+    img.w-33.thumbnail(alt='', src='../../static/img/demo/cow-1.jpg')
+    a.w-33.thumbnail(href='#')
+      img(alt='', src='../../static/img/demo/cow-2.jpg')
+    figure.w-33.thumbnail
+      img(alt='', src='../../static/img/demo/cow-3.jpg')
+  
+  hr
+  h3#Caption Caption
+  p
+    | Add the  
+    code .caption 
+    |  class to a 
+    code= "<div>"
+    |  element to apply a text caption under the image.
+  
+  .preview-box
+    
+    .thumbnail.w-33
+      img(alt='', src='../../static/img/demo/cow-1.jpg')
+      .caption
+        | Caption 
+        code= "<div>"
+    
+    a.w-33.thumbnail(href='#')
+      img(alt='', src='../../static/img/demo/cow-2.jpg')
+      .caption
+        | Caption
+        code= "<a>"
+    figure.w-33.thumbnail
+      img(alt='', src='../../static/img/demo/cow-3.jpg')
+      figcaption.caption
+        | Caption 
+        code= "<figure>"
+  
+  hr
+  h2#SizeModifiers Size Modifiers
+  p
+    | Apply the 
+    code .thumbnail-large
+    |  , 
+    code .thumbnail-medium
+    |  , 
+    code .thumbnail-small
+    |  or 
+    code .thumbnail-mini
+    |  classes to resize images. The 
+    a(href='base.html') Base component
+    |  is required to make the images responsive by default.
+  
+  .preview-box
+    .thumbnail.thumbnail-large
+      img(alt='', src='../../static/img/demo/cow-large.jpg')
+      .caption
+        code .thumbnail-large
+  
+    .thumbnail.thumbnail-medium
+      img(alt='', src='../../static/img/demo/cow-large.jpg')
+      .caption
+        code .thumbnail-medium
+    .thumbnail.thumbnail-small
+      img(alt='', src='../../static/img/demo/cow-large.jpg')
+      .caption
+        code .thumbnail-small
+    .thumbnail.thumbnail-mini
+      img(alt='', src='../../static/img/demo/cow-large.jpg')
+      .caption
+        code .thumbnail-mini
+  
+    
+  p
+    | You can even scale a thumbnail beyond its proper size, so that it extends to the full width of its parent element. Just add the
+    code .thumbnail-expand
+    | class.
+  
+  .preview-box
+    .thumbnail.thumbnail-expand
+      img(alt='', src='../../static/img/demo/cow-large.jpg')
+      .caption
+        code .thumbnail-expand
+    
+  hr
+  h2#grid Grid
+  p
+    | You can easily create a grid with thumbnails by using the 
+    a(href='grid.html') Grid component
+    | .
+  
+  .preview-box
+    .row
+      .col-6
+        img.thumbnail(alt='', src='../../static/img/demo/cow-1.jpg')
+      .col-6
+        .row
+          .col-6
+            img.thumbnail(alt='', src='../../static/img/demo/cow-4.jpg')
+          .col-6
+            img.thumbnail(alt='', src='../../static/img/demo/cow-4.jpg')
+    
