@@ -1,118 +1,112 @@
 extends ./layout.jade
 
 block title
-  title Messages ( messages)
+  title Messages or Alerts
+
+block leftcontent
+ h3 Messages 
+ ul.link-list.active-list
+    li
+      a(href='#example') Example
+    li
+      a(href='#colormodifiers') Color modifiers
+    li
+      a(href='#sizemodifiers') Size modifier
 
 block content
-    .grid
-      .row
 
-        .mobile-12.tablet-12.desktop-3.large-3
-          ul.link-list
-            li
-              a(href='#') Item
-            li
-              a(href='#') Item
-            li
-              span Disabled
-            li
-              a(href='#') Item
-        
-        
-        .mobile-12.tablet-12.desktop-9.large-9
-
-          h1.divide-section Messages 
-          p.info Defines styles for info, success, warning and error messages. 
-          
-          h2 Usage
-          p
-            | To apply this component, add the 
-            code .message
-            |  class to a block element.
-          
-          hr
-          h3 Close button
-          p
-            | To apply a close button, add the 
-            code .message-close
-            |  class to a 
-            code= "<button>"
-            |  or 
-            code= "<a>"
-            |   element inside the message box. To enable the JavaScript for the close button, just add the 
-            code data-message
-            |   attribute to the message box. We recommend adding the 
-            code .close
-            |  class from the 
-            a(href='close.html') Close component
-            |  to give the button a proper styling, though you can also use text or an image.
-            
-        
-        
-          .preview-box
-            h3 Example
-            .message
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+  h1.divide-section Messages or Alerts
+  p.info Defines styles for info, success, warning and error messages. 
+  
+  h2 Usage
+  p
+    | To apply this component, add the 
+    code .message
+    |  class to a block element.
+  
+  hr
+  h3 Close button
+  p
+    | To apply a close button, add the 
+    code .message-close
+    |  class to a 
+    code= "<button>"
+    |  or 
+    code= "<a>"
+    |   element inside the message box. To enable the JavaScript for the close button, just add the 
+    code data-message
+    |   attribute to the message box. We recommend adding the 
+    code .close
+    |  class from the 
+    a(href='close.html') Close component
+    |  to give the button a proper styling, though you can also use text or an image.
+    
 
 
-          .preview-box    
-            h3 Example
-            .message(data-message='')
-              a.message-close.close(href='')
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
-          
-          h2 Color modifiers
-          p
-            | There are several color modifiers available. Just add one of the following classes to apply a different look.
-            
-          h3 Example
-          .preview-box
-            
-            
-            .message.message-info(data-message='')
-              a.message-close.close(href='')
-              p
-                | To indicate info message add the 
-                code .message-info
-                |  class.
-            
-
-            .message.message-success(data-message='')
-              a.message-close.close(href='')
-              p
-                | To indicate success or a positive message add the 
-                code .message-success
-                |  class.
-
-            .message.message-warning(data-message='')
-              a.message-close.close(href='')
-              p
-                | To indicate a message containing a warning add the 
-                code .message-warning
-                |  class.
-            .message.message-danger(data-message='')
-              a.message-close.close(href='')
-              p
-                | To indicate an important message add the 
-                code .message-danger
-                |  class.
-            
-          
+  .preview-box#example
+    h3 Example
+    .message
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
 
 
-          h2 Size modifier
-          p
-            | Add the 
-            code .message-large
-            |  class to increase the spacing in an message box. This can be useful, if you want to use richer typography.
-            
-            h3 Example
-          .preview-box           
-            
-            .message.message-large(data-message='')
-              a.message-close.close(href='')
-              h2 Today's headline
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              
-            
+  .preview-box    
+    h3 Example with close button
+    .message(data-message='')
+      a.message-close.close(href='')
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+  
+  h2#colormodifiers Color modifiers
+  p
+    | There are several color modifiers available. Just add one of the following classes to apply a different look.
+    
+  h3 Example
+  .preview-box
+    
+    
+    .message.message-info(data-message='')
+      a.message-close.close(href='')
+      p
+        | To indicate info message add the 
+        code .message-info
+        |  class.
+    
+
+    .message.message-success(data-message='')
+      a.message-close.close(href='')
+      p
+        | To indicate success or a positive message add the 
+        code .message-success
+        |  class.
+
+    .message.message-warning(data-message='')
+      a.message-close.close(href='')
+      p
+        | To indicate a message containing a warning add the 
+        code .message-warning
+        |  class.
+    .message.message-danger(data-message='')
+      a.message-close.close(href='')
+      p
+        | To indicate an important message add the 
+        code .message-danger
+        |  class.
+    
+  
+
+
+  h2#sizemodifiers Size modifier
+  p
+    | Add the 
+    code .message-large
+    |  class to increase the spacing in an message box. This can be useful, if you want to use richer typography.
+    
+    h3 Example
+  .preview-box           
+    
+    .message.message-large(data-message='')
+      a.message-close.close(href='')
+      h2 Today's headline
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      
+    
