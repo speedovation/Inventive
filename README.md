@@ -10,17 +10,12 @@ Alpha is now released. Features are not fixed yet. Stay tuned.
  * Icons - Stripe web fonts
  * Modal Js Component
  * Create new responsive offcanvas side menu like Dash
- * Flat style buttons with optional 3d(shadow) option
  * Update navbar and add support of mega menu
  * Broken links on doc site
 
 * Add/Update docs
- * Tables 
- * Grid
- * Buttons
  * Almost all Js components
  * Support few Js components only
-* Remove cart web icons 
 * Bugs
  * Responsive tabs doc page not working properly.
 
