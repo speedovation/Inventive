@@ -1,18 +1,40 @@
-doctype html
-html
-  head
-    title Typography
+extends ./layout.jade
 
-    include header
-    
+block title
+  title Messages ( messages)
 
-  body
-
-    include _nav
-   
+block content
     .grid
       .row  
-        .col-12.example
+        .desktop-3.large-3
+          ul.link-list
+            li
+              a(href='#') Item
+            li
+              a(href='#') Item
+            li
+              span Disabled
+            li
+              a(href='#') Item
+        
+
+
+          #nav-anchor
+          nav
+            ul
+              li
+                a(href="#home") Home
+              li
+                a(href="#about") About
+              li
+                a(href="#services") Services
+              li
+                a(href="#blog") Blog
+              li
+                  a(href="#contact") Contact
+        
+        
+        .desktop-9.large-9.example
           
           h2.divide-section Typography
           p Uses relative sizing (rems and pixels as fallback) for everything.
@@ -326,14 +348,15 @@ html
           
           h3 Screen Readers
           
-          p
+          p#FUN.fight
             | If you have text that you don't want displayed on screen, but that should still be in the markup for screen readers 
             | (for example, a search form label), simply apply the 
             code .screen-reader
             |  class. This will shift content off-screen, but screen readers can still read it.
     
       
-  
+      script().
+        $('.fight').stickynav()
     
          
 

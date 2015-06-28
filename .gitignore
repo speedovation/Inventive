@@ -1,3 +1,5 @@
 /node_modules/*
 /build/*
 /bower_components/*
+/src/stylus/components/datepickerold.styl
+/src/jade/Untitled Document

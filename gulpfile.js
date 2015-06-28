@@ -67,6 +67,12 @@ gulp.task('stylus', function () {
         )
         //.pipe(cached('build'))
         //.pipe(filter)
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(stylus({error: true, use: [nib()]}))
         //.pipe(filter.restore())
         //.pipe(concat('base.css'))

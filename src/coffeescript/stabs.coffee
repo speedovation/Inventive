@@ -120,21 +120,25 @@ $.fn.extend
         $currentTab.click ->
           $currentTab = $(this)
           $tabAria = $currentTab.attr("aria-controls")
+          $respTopItems = $currentTab.parent('.resp-tabs-list')
+          $respTabs = $currentTab.parent('.resp-tabs-list').next('.resp-tabs-container')
+          #alert($respTopItems.text())
+          #alert($respTabs.html())
           if $currentTab.hasClass("resp-accordion") and $currentTab.hasClass("resp-tab-active")
-            $respTabs.find(".resp-tab-content-active").slideUp "", ->
+            $respTopItems.find(".resp-tab-content-active").slideUp "", ->
               $(this).addClass "resp-accordion-closed"
 
             $currentTab.removeClass "resp-tab-active"
             return false
           if not $currentTab.hasClass("resp-tab-active") and $currentTab.hasClass("resp-accordion")
-            $respTabs.find(".resp-tab-active").removeClass "resp-tab-active"
+            $respTopItems.find(".resp-tab-active").removeClass "resp-tab-active"
             $respTabs.find(".resp-tab-content-active").slideUp().removeClass "resp-tab-content-active resp-accordion-closed"
-            $respTabs.find("[aria-controls=" + $tabAria + "]").addClass "resp-tab-active"
+            $respTopItems.find("[aria-controls=" + $tabAria + "]").addClass "resp-tab-active"
             $respTabs.find(".resp-tab-content[aria-labelledby = " + $tabAria + "]").slideDown().addClass "resp-tab-content-active"
           else
-            $respTabs.find(".resp-tab-active").removeClass "resp-tab-active"
+            $respTopItems.find(".resp-tab-active").removeClass "resp-tab-active"
             $respTabs.find(".resp-tab-content-active").removeAttr("style").removeClass("resp-tab-content-active").removeClass "resp-accordion-closed"
-            $respTabs.find("[aria-controls=" + $tabAria + "]").addClass "resp-tab-active"
+            $respTopItems.find("[aria-controls=" + $tabAria + "]").addClass "resp-tab-active"
             $respTabs.find(".resp-tab-content[aria-labelledby = " + $tabAria + "]").addClass("resp-tab-content-active").attr "style", "display:block"
           
           #Trigger tab activation event

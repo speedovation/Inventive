@@ -6,8 +6,9 @@ html(lang='en')
     
     include header
 
-    link(href='../../static/css/components/datepicker.css', rel='stylesheet')
-    
+    //link(href='../../static/css/components/datepicker.css', rel='stylesheet')
+    //block scripts
+    //      script(src='../../static/js/datepicker.js')
     block styles
       style(type="text/css").
         .container {
@@ -172,8 +173,7 @@ html(lang='en')
                       td onRender
                       td This event is fired when a day is rendered inside the datepicker. Should return a string. Return 'disabled' to disable the day from being selected.
 
-        block scripts
-          script(src='../../static/js/datepicker.js')
+        
         
         script(type="text/javascript").           
           if (top.location != location) {
@@ -239,5 +239,5 @@ html(lang='en')
                 }).on('changeDate', function(ev) {
                 checkout.hide();
             }).data('datepicker');
-        });
+          });
 

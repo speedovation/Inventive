@@ -1,21 +1,25 @@
-doctype html
-html(lang="en")
-  head
-    
-    title Messages ( messages)
+extends ./layout.jade
 
-    include header
+block title
+  title Messages ( messages)
 
-
-
-  body
-
-    include _nav
-
+block content
     .grid
       .row
 
-        div.desktop-12
+        .mobile-12.tablet-12.desktop-3.large-3
+          ul.link-list
+            li
+              a(href='#') Item
+            li
+              a(href='#') Item
+            li
+              span Disabled
+            li
+              a(href='#') Item
+        
+        
+        .mobile-12.tablet-12.desktop-9.large-9
 
           h1.divide-section Messages 
           p.info Defines styles for info, success, warning and error messages. 
