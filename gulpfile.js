@@ -92,6 +92,15 @@ gulp.task('jade', function () {
         ], { base: 'src/jade' }
         )
         .pipe(cached('build'))
+        .pipe(plumber(
+        {
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }
+        
+        ))
         //.pipe(filter)
         .pipe(jade({pretty:true}))
         //.pipe(filter.restore())
@@ -111,6 +120,15 @@ gulp.task('coffee', function () {
         )
             //.pipe(cached('build'))
             //.pipe(filter)
+            .pipe(plumber(
+            {
+                errorHandler: function (err) {
+                    console.log(err);
+                    this.emit('end');
+                }
+            }
+            
+            ))
             .pipe(coffee().on('error', swallowError))
             //.pipe(filter.restore())
             .pipe(concat('inventive.js'))

@@ -1,231 +1,225 @@
-doctype html
-html
-  head
-    title Buttons Demo
+extends ./layout.jade
 
-    include header
+block title
+  title Buttons
 
-    
+block leftcontent
+ h3 &nbsp; 
+ - var items = [ "Look", "Size Modifiers" ,"Icons","Button Groups" ]
+ +top_left(vals)
+
+block content
+
+  h1#Look.divide-section Buttons
+  
+  p.info  Really cool and simple CSS3 buttons to give your application a smooth feel.
+
+  table.bordered
+    thead
+      tr
+        th(style="width:200px") Button
+        th Class
+        th Description
+    tbody
+      tr
+        td
+          button(href="#" ,class="button") Default Button
+        td
+         code button
+        td Standard gray button with gradient
       
-  body
+      tr
+        td
+         button(href="#" ,class="button primary") Primary Button
+        td
+         code button primary
+        td Provides extra visual weight and identifies the primary action in a set of buttons
+      
+      tr
+        td
+         button(href="#" ,class="button info") Info Button
+        td
+         code button info
+        td Used as an alternative to the default styles
+      
+      tr
+        td
+         button(href="#" ,class="button positive") Positive Button
+        td
+         code button positive
+        td Indicates a positive action
 
-    include _nav
+      tr
+        td
+         button(href="#" ,class="button success") Success Button
+        td
+         code button success
+        td Indicates a successful action  
+      
+      tr
+        td
+         button(href="#" ,class="button warning") Warning Button
+        td
+         code button warning
+        td Indicates caution should be taken with this action
+      
+      tr
+        td
+         button(href="#" ,class="button negative") Danger Button
+        td
+         code button negative
+        td Indicates a dangerous or potentially negative action
+      
+      tr
+        td
+         button(href="#" ,class="button dark") Dark Button
+        td
+         code button dark
+        td Alternate dark gray button, not tied to a semantic action or use
+      tr
+        td
+         button(href="#" ,class="button disabled") Disabled Button
+        td
+         code button disabled
+        td Describe a disabled button  
+      tr
+        td
+         button(href="#" ,class="button pill") Disabled Button
+        td
+         code button pill
+        td Creates pill button   
+      
+
+  h2#SizeModifiers Size Modifiers
+  p
+    | Add the 
+    code .button-mini
+    |  , 
+    code .button-small
+    |  or 
+    code .button-large
+    |  class to a button to make it smaller or larger.
+  
+  .preview-box
+    p
+      button.button.mini(type='button') Mini button
+      button.button.mini.primary(type='button') Primary Mini button
+    p
+      button.button.small(type='button') Small button
+      button.button.small.primary(type='button') Primary Small button
+    p
+      button.button(type='button',class="button") 
+        | Default button
+        
+      button.button.primary(type='button')
+        | Primary button
+        
+    p
+      button.button.large(type='button') Large button
+      button.button.large.primary(type='button') Primary Large button
+
+    p
+      button.button.massive(type='button') Massive button
+      button.button.massive.primary(type='button') Primary Massive button 
+  
+  h2#Icons Icons 
+  p
+    | Add the 
+    code .button-mini
+    |  , 
+    code .button-small
+    |  or 
+    code .button-large
+    |  class to a button to make it smaller or larger.
+  
+  .preview-box
+    h3 Add icon to button
+    p 
+      | Add i tag as 
+      code= "<i class='icon-name'></i> e.g. <i class='i-bull-horn'></i>"
+
+    p
+      button.button(type='button')
+        | Default button
+        i.i-Bull-horn    
+      button.button.primary(type='button')
+        | Primary button
+        i.i-Bull-horn 
+    h3 Add icon as box  
+    p 
+      | Add icon in box 
+      code= "<button class='button box'> Default Button <i class='i-bull-horn'></i></button>"
+
+    p
+      button.button(type='button',class="button box") 
+        | Default button
+        i.i-Bull-horn 
+      button.button.primary(type='button',class="button box") 
+        | Primary button
+        i.i-Bull-horn   
+
+    h3 Change icon direction with box  
+    p 
+      | There are two option left and right. default is right so we don't need to mention it.
+
+    p
+      button.button.primary(type='button',class="button box") 
+        | Primary button
+        i.i-Bull-horn  
+    p 
+      | To change box direction to left side. Just add <code>left</code> class as following code  
+    p  
+      code= "<button class='button box left'> Default Button <i class='i-bull-horn'></i></button>"
+    p
+      button.button.primary.left(type='button',class="button box") 
+        | Primary button
+        i.i-Bull-horn
+
+  h2#ButtonGroups Button Groups
+  p 
+    | You can create button groups in two ways 
+  
     
+  h3 
+    | Wrap inside a container 
+    span.text-small.text-muted Easy way
+  
+  p 
+    | Just wrap inside 
+    code buttons-group
+    |  and add 
+    code button
+    |  to every button inside stack.
 
-    .row
-        .col-12
-          
-          
-          h1.divide-section Buttons
+  .preview-box
+    p.buttons-group
+      a(href="#",class="button ") Left button
+      a(href="#",class="button ") Middle button
+      a(href="#",class="button ") Middle button
+      a(href="#",class="button ") Right button 
 
-          p  Really cool and simple CSS3 buttons to give your application a smooth feel.
+  h3 Use classes 
+  p 
+    | Mention classes  
+    code group-left
+    |  for leftmost button and 
+    code group-middle 
+    |  for all Middle buttons and finish with 
+    code group-right 
 
-          table.bordered
-            thead
-              tr
-                th Button
-                th Class
-                th Description
-            tbody
-              tr
-                td
-                  button(href="#" ,class="button") Default Button
-                td
-                 code button
-                td Standard gray button with gradient
-              
-              tr
-                td
-                 button(href="#" ,class="button primary") Primary Button
-                td
-                 code button primary
-                td Provides extra visual weight and identifies the primary action in a set of buttons
-              
-              tr
-                td
-                 button(href="#" ,class="button info") Info Button
-                td
-                 code button info
-                td Used as an alternative to the default styles
-              
-              tr
-                td
-                 button(href="#" ,class="button positive") Positive Button
-                td
-                 code button positive
-                td Indicates a positive action
+  .preview-box
+    p
+      a(href="#",class="button group-left") Left button
+      a(href="#",class="button group-middle") Middle button
+      a(href="#",class="button group-right") Right button        
 
-              tr
-                td
-                 button(href="#" ,class="button success") Success Button
-                td
-                 code button success
-                td Indicates a successful action  
-              
-              tr
-                td
-                 button(href="#" ,class="button warning") Warning Button
-                td
-                 code button warning
-                td Indicates caution should be taken with this action
-              
-              tr
-                td
-                 button(href="#" ,class="button negative") Danger Button
-                td
-                 code button negative
-                td Indicates a dangerous or potentially negative action
-              
-              tr
-                td
-                 button(href="#" ,class="button dark") Dark Button
-                td
-                 code button dark
-                td Alternate dark gray button, not tied to a semantic action or use
-              tr
-                td
-                 button(href="#" ,class="button disabled") Disabled Button
-                td
-                 code button disabled
-                td Describe a disabled button  
-              tr
-                td
-                 button(href="#" ,class="button pill") Disabled Button
-                td
-                 code button pill
-                td Creates pill button   
-              
+    p
+      a(href="#",class="button group-left") Left button
+      a(href="#",class="button group-middle") Middle button
+      a(href="#",class="button group-middle") Middle button
+      a(href="#",class="button group-right") Right button  
 
-          h2 Size modifiers
-          p
-            | Add the 
-            code .button-mini
-            |  , 
-            code .button-small
-            |  or 
-            code .button-large
-            |  class to a button to make it smaller or larger.
-          
-          .preview-box
-            p
-              button.button.mini(type='button') Mini button
-              button.button.mini.primary(type='button') Primary Mini button
-            p
-              button.button.small(type='button') Small button
-              button.button.small.primary(type='button') Primary Small button
-            p
-              button.button(type='button',class="button") 
-                | Default button
-                
-              button.button.primary(type='button')
-                | Primary button
-                
-            p
-              button.button.large(type='button') Large button
-              button.button.large.primary(type='button') Primary Large button
-
-            p
-              button.button.massive(type='button') Massive button
-              button.button.massive.primary(type='button') Primary Massive button 
-          
-          h2 Icons 
-          p
-            | Add the 
-            code .button-mini
-            |  , 
-            code .button-small
-            |  or 
-            code .button-large
-            |  class to a button to make it smaller or larger.
-          
-          .preview-box
-            h3 Add icon to button
-            p 
-              | Add i tag as 
-              code= "<i class='icon-name'></i> e.g. <i class='i-bull-horn'></i>"
-
-            p
-              button.button(type='button')
-                | Default button
-                i.i-Bull-horn    
-              button.button.primary(type='button')
-                | Primary button
-                i.i-Bull-horn 
-            h3 Add icon as box  
-            p 
-              | Add icon in box 
-              code= "<button class='button box'> Default Button <i class='i-bull-horn'></i></button>"
-
-            p
-              button.button(type='button',class="button box") 
-                | Default button
-                i.i-Bull-horn 
-              button.button.primary(type='button',class="button box") 
-                | Primary button
-                i.i-Bull-horn   
-
-            h3 Change icon direction with box  
-            p 
-              | There are two option left and right. default is right so we don't need to mention it.
-
-            p
-              button.button.primary(type='button',class="button box") 
-                | Primary button
-                i.i-Bull-horn  
-            p 
-              | To change box direction to left side. Just add <code>left</code> class as following code  
-            p  
-              code= "<button class='button box left'> Default Button <i class='i-bull-horn'></i></button>"
-            p
-              button.button.primary.left(type='button',class="button box") 
-                | Primary button
-                i.i-Bull-horn
-
-          h2 Button Groups
-          p 
-            | You can create button groups in two ways 
-          
             
-          h3 
-            | Wrap inside a container 
-            span.text-small.text-muted Easy way
-          
-          p 
-            | Just wrap inside 
-            code buttons-group
-            |  and add 
-            code button
-            |  to every button inside stack.
-
-          .preview-box
-            p.buttons-group
-              a(href="#",class="button ") Left button
-              a(href="#",class="button ") Middle button
-              a(href="#",class="button ") Middle button
-              a(href="#",class="button ") Right button 
-
-          h3 Use classes 
-          p 
-            | Mention classes  
-            code group-left
-            |  for leftmost button and 
-            code group-middle 
-            |  for all Middle buttons and finish with 
-            code group-right 
-
-          .preview-box
-            p
-              a(href="#",class="button group-left") Left button
-              a(href="#",class="button group-middle") Middle button
-              a(href="#",class="button group-right") Right button        
-
-            p
-              a(href="#",class="button group-left") Left button
-              a(href="#",class="button group-middle") Middle button
-              a(href="#",class="button group-middle") Middle button
-              a(href="#",class="button group-right") Right button  
-
-                    
 
 //-     hr
       

@@ -1,364 +1,337 @@
 extends ./layout.jade
 
 block title
-  title Messages ( messages)
+  title Typography
 
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Floats", "Screen Readers", "Spacing" ,"Text Basic","Definition List","Alignments", "Headings","Bonus Headings","Paragraphs","Blockquote", "Sub and Sup" ]
+  +top_left(vals)
+   
 block content
-    .grid
-      .row  
-        .desktop-3.large-3
-          ul.link-list
-            li
-              a(href='#') Item
-            li
-              a(href='#') Item
-            li
-              span Disabled
-            li
-              a(href='#') Item
-        
+  h2.divide-section Typography
+  p Uses relative sizing (rems and pixels as fallback) for everything.
 
-
-          #nav-anchor
-          nav
-            ul
-              li
-                a(href="#home") Home
-              li
-                a(href="#about") About
-              li
-                a(href="#services") Services
-              li
-                a(href="#blog") Blog
-              li
-                  a(href="#contact") Contact
-        
-        
-        .desktop-9.large-9.example
-          
-          h2.divide-section Typography
-          p Uses relative sizing (rems and pixels as fallback) for everything.
-
-          p 
-            | The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. 
-            | All other sizes are in rems. Changing the code font-size on the <code>body</code> element will adjust the typographical 
-            | scale for the entire site.
-          
-            //- p
-            //-   span.label  New to relative sizing? 
-            //-   a(href='http://gomakethings.com/working-with-relative-sizing/') Learn more.
-          
-          p
-            | The 
-            code font-family
-            |   on the 
-            code body
-            |  is 
-            code "Open Sans","Helvetica Neue", Arial, sans-serif
-            |  . This sets the typeface for the entire site. Adjust as needed.
-          
-          h2.divide-section Text Basic
-          
-          table.table.bordered
-            tr
-              th(colspan=2).
-                Text
-
-            tr              
-              td.half Default Text 
-              td 
-            tr 
-              td 
-                span.text-muted Muted text. 
-              td
-                code .text-muted
-            tr 
-              td 
-                span.text-small Small text. 
-              td
-                code .text-small  
-            tr 
-              td 
-                span.text-tall Tall text. 
-              td
-                code .text-tall  
-            tr 
-              td 
-                a(href='#') Hyperlinks. 
-              td                  
-            tr 
-              td 
-                strong Bold
-              td                 
-            tr 
-              td 
-                em italics
-              td 
-            
-
-
-          h2.divide-section Headings
-
-          table.table.bordered
-            tr
-              th(colspan=2).
-                Heading elements
-
-            tr              
-              td.half 
-                h1 h1. Heading 1
-              td
-                code .h1, .alpha
-
-            tr              
-              td 
-                h2 h2. Heading 2
-              td
-                code .h2, .beta  
-            tr              
-              td 
-                h3 h3. Heading 3
-              td
-                code .h3, .gamma  
-            tr              
-              td 
-                h4 h4. Heading 4
-              td
-                code .h4, .delta 
-            tr              
-              td 
-                h5 h5. Heading 5
-              td
-                code .h5, .epsilon  
-            tr              
-              td 
-                h6 h6. Heading 6        
-              td
-                code .h6, .zeta
-          
-          //- h2.divide-section 
-          table.table.bordered
-            tr
-              th(colspan=2) Bonus Headings    
-            tr
-              td.half
-                span.giga Giga Heading
-              td
-                code .giga
-            tr
-              td
-                span.mega Mega Heading
-              td
-                code .mega
-            tr
-              td
-                span.kilo Kilo Heading
-              td
-                code .kilo                  
-
-          h2.divide-section Paragraphs
-
-          p Dummy Text
-
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.
-
-          p Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.
-
-          p Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  
-
-          h2.divide-section Blockquote
-
-          blockquote
-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-             cite Elit Gamma
-
-          h2.divide-section Sup and Sub
-          p You can also include superscripts<sup>sup example</sup> and subscripts<sub>sub example</sub>.
-
-          h2.divide-section Code
-
-          //- p Here's some code that's within a sentence: the <code>.js</code> file is very important
-
-          p Here's some preformatted javascript code:
-          pre
-              code.language-javascript(type="text/javascript"). 
-                = ".js {\n"
-                = "      color: #272727;\n"
-                = "      background: #ffffff;\n"
-                = "   } "
-          
-          h2.divide-section Lines
-
-          p= "Add lines to your markup using the <hr> element."
-
-          <hr>
+  p 
+    | The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. 
+    | All other sizes are in rems. Changing the code font-size on the <code>body</code> element will adjust the typographical 
+    | scale for the entire site.
   
+    //- p
+    //-   span.label  New to relative sizing? 
+    //-   a(href='http://gomakethings.com/working-with-relative-sizing/') Learn more.
+  
+  p
+    | The 
+    code font-family
+    |   on the 
+    code body
+    |  is 
+    code "Open Sans","Helvetica Neue", Arial, sans-serif
+    |  . This sets the typeface for the entire site. Adjust as needed.
+  
+  h2.divide-section#TextBasic Text Basic
+  
+  table.table.bordered
+    tr
+      th(colspan=2).
+        Text
 
-          h2.divide-section Lists
+    tr              
+      td.half Default Text 
+      td 
+    tr 
+      td 
+        span.text-muted Muted text. 
+      td
+        code .text-muted
+    tr 
+      td 
+        span.text-small Small text. 
+      td
+        code .text-small  
+    tr 
+      td 
+        span.text-tall Tall text. 
+      td
+        code .text-tall  
+    tr 
+      td 
+        a(href='#') Hyperlinks. 
+      td                  
+    tr 
+      td 
+        strong Bold
+      td                 
+    tr 
+      td 
+        em italics
+      td 
+    
 
-          
-          .preview-box
-            h3 Ordered
-            ol
-              li Item 1
-              li Item 2
-              li Item 3
 
-                
-          .preview-box
-            h3 Unordered Simple
-            ul
-              li Item 1
-              li Item 2
-              li Item 3
+  h2.divide-section#Headings Headings
 
-          
-          .preview-box
-            h3 Unordered Disc
-            ul.disc
-              li Item 1
-              li Item 2
-              li Item 3
+  table.table.bordered
+    tr
+      th(colspan=2).
+        Heading elements
 
-         
-          .preview-box
-            h3 Unordered Circle
-            ul.circle
-              li Item 1
-              li Item 2
-              li Item 3
-         
-          .preview-box
-            h3 Unordered Square
-            ul.square
-              li Item 1
-              li Item 2
-              li Item 3
-          
-          h2.divide-section Definition List
+    tr              
+      td.half 
+        h1 h1. Heading 1
+      td
+        code .h1, .alpha
+
+    tr              
+      td 
+        h2 h2. Heading 2
+      td
+        code .h2, .beta  
+    tr              
+      td 
+        h3 h3. Heading 3
+      td
+        code .h3, .gamma  
+    tr              
+      td 
+        h4 h4. Heading 4
+      td
+        code .h4, .delta 
+    tr              
+      td 
+        h5 h5. Heading 5
+      td
+        code .h5, .epsilon  
+    tr              
+      td 
+        h6 h6. Heading 6        
+      td
+        code .h6, .zeta
+  
+  //- h2.divide-section 
+  table.table.bordered#BonusHeadings 
+    tr
+      th(colspan=2) Bonus Headings    
+    tr
+      td.half
+        span.giga Giga Heading
+      td
+        code .giga
+    tr
+      td
+        span.mega Mega Heading
+      td
+        code .mega
+    tr
+      td
+        span.kilo Kilo Heading
+      td
+        code .kilo                  
+
+  h2.divide-section#Paragraphs Paragraphs
+
+  p Dummy Text
+
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod quidem iam fit etiam in Academia. Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim. Iam in altera philosophiae parte.
+
+  p Isto modo ne improbos quidem, si essent boni viri. Duo Reges: constructio interrete. Hanc ergo intuens debet institutum illud quasi signum absolvere. Apparet statim, quae sint officia, quae actiones. Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Non risu potius quam oratione eiciendum? Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.
+
+  p Nam ista vestra: Si gravis, brevis; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quod non faceret, si in voluptate summum bonum poneret. Cum id quoque, ut cupiebat, audivisset, evelli iussit eam, qua erat transfixus, hastam. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Hoc non est positum in nostra actione. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant.  
+
+  h2.divide-section Blockquote
+
+  blockquote
+     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+     cite Elit Gamma
+
+  h2.divide-section#SubandSup Sup and Sub
+  p You can also include superscripts<sup>sup example</sup> and subscripts<sub>sub example</sub>.
+
+  h2.divide-section Code
+
+  //- p Here's some code that's within a sentence: the <code>.js</code> file is very important
+
+  p Here's some preformatted javascript code:
+  pre
+      code.language-javascript(type="text/javascript"). 
+        = ".js {\n"
+        = "      color: #272727;\n"
+        = "      background: #ffffff;\n"
+        = "   } "
+  
+  h2.divide-section Lines
+
+  p= "Add lines to your markup using the <hr> element."
+
+  <hr>
+
+
+  h2.divide-section#Lists Lists
+
+  
+  .preview-box
+    h3 Ordered
+    ol
+      li Item 1
+      li Item 2
+      li Item 3
 
         
-          .preview-box
-            h3 Unordered Square
-            dl
-              dt Definition List
-              dd.
-                 Encloses a list of pairs of terms and descriptions.
-              dt Definition List
-              dd.
-                 Encloses a list of pairs of terms and descriptions.
-              dt Definition List
-              dd.
-                 Encloses a list of pairs of terms and descriptions.
+  .preview-box
+    h3 Unordered Simple
+    ul
+      li Item 1
+      li Item 2
+      li Item 3
+
+  
+  .preview-box
+    h3 Unordered Disc
+    ul.disc
+      li Item 1
+      li Item 2
+      li Item 3
+
+ 
+  .preview-box
+    h3 Unordered Circle
+    ul.circle
+      li Item 1
+      li Item 2
+      li Item 3
+ 
+  .preview-box
+    h3 Unordered Square
+    ul.square
+      li Item 1
+      li Item 2
+      li Item 3
+  
+  h2.divide-section#DefinitionList Definition List
 
 
-        
-          h2.divide-section Alignment, Spacing & Visibility
-          
-          p You can adjust text alignment and spacing using a few simple CSS classes.
-          
-          h3 Text Alignment
-          
-          table.table.bordered.rounded
-            thead
-              tr
-                th Alignment
-                th Class
-            tbody
-              tr
-                td.half Left
-                td
-                  code .text-left
-              tr
-                td Centered
-                td
-                  code .text-center
-              tr
-                td Right
-                td
-                  code .text-right
-          
-          h3 Floats
-          
-          table.table.bordered.rounded
-            thead
-              tr
-                th Float
-                th Class
-            tbody
-              tr
-                td.half Left
-                td
-                  code .float-left
-              //- tr
-              //-   td Centered
-              //-   td
-              //-     code .float-center
-              tr
-                td Right
-                td
-                  code .float-right
-          p
-            span.badge.badge-info Pro Tip
-            |  Clear floats by wrapping floated content in a 
-            code= "<div>"
-            |  with the 
-            code .group
-            |  class.
-          
-            
-          h3 Spacing
-          table.table.bordered.rounded
-            thead
-              tr
-                th Top
-                th Bottom
-                th Class
-            tbody
-              tr
-                td 0
-                td 0
-                td
-                  code .no-space
-              tr
-                td Default
-                td 0
-                td
-                  code .no-space-bottom
-              tr
-                td 0
-                td Default
-                td
-                  code .no-space-top
-              tr
-                td Default
-                td 2em
-                td
-                  code .space-bottom
-              tr
-                td Default
-                td .5em
-                td
-                  code .space-bottom-small
-              tr
-                td .8125em
-                td Default
-                td
-                  code .space-top
-          
-          h3 Screen Readers
-          
-          p#FUN.fight
-            | If you have text that you don't want displayed on screen, but that should still be in the markup for screen readers 
-            | (for example, a search form label), simply apply the 
-            code .screen-reader
-            |  class. This will shift content off-screen, but screen readers can still read it.
+  .preview-box
+    h3 Unordered Square
+    dl
+      dt Definition List
+      dd.
+         Encloses a list of pairs of terms and descriptions.
+      dt Definition List
+      dd.
+         Encloses a list of pairs of terms and descriptions.
+      dt Definition List
+      dd.
+         Encloses a list of pairs of terms and descriptions.
+
+
+
+  h2.divide-section Alignment, Spacing & Visibility
+  
+  p You can adjust text alignment and spacing using a few simple CSS classes.
+  
+  h3 Text Alignment
+  
+  table.table.bordered.rounded
+    thead
+      tr
+        th Alignment
+        th Class
+    tbody
+      tr
+        td.half Left
+        td
+          code .text-left
+      tr
+        td Centered
+        td
+          code .text-center
+      tr
+        td Right
+        td
+          code .text-right
+  
+  h3#Floats Floats
+  
+  table.table.bordered.rounded
+    thead
+      tr
+        th Float
+        th Class
+    tbody
+      tr
+        td.half Left
+        td
+          code .float-left
+      //- tr
+      //-   td Centered
+      //-   td
+      //-     code .float-center
+      tr
+        td Right
+        td
+          code .float-right
+  p
+    span.badge.badge-info Pro Tip
+    |  Clear floats by wrapping floated content in a 
+    code= "<div>"
+    |  with the 
+    code .group
+    |  class.
+  
     
-      
-      script().
-        $('.fight').stickynav()
-    
-         
+  h3#Spacing Spacing
+  table.table.bordered.rounded
+    thead
+      tr
+        th Top
+        th Bottom
+        th Class
+    tbody
+      tr
+        td 0
+        td 0
+        td
+          code .no-space
+      tr
+        td Default
+        td 0
+        td
+          code .no-space-bottom
+      tr
+        td 0
+        td Default
+        td
+          code .no-space-top
+      tr
+        td Default
+        td 2em
+        td
+          code .space-bottom
+      tr
+        td Default
+        td .5em
+        td
+          code .space-bottom-small
+      tr
+        td .8125em
+        td Default
+        td
+          code .space-top
+  
+  h3#ScreenReaders Screen Readers
+  
+  p
+    | If you have text that you don't want displayed on screen, but that should still be in the markup for screen readers 
+    | (for example, a search form label), simply apply the 
+    code .screen-reader
+    |  class. This will shift content off-screen, but screen readers can still read it.
+
+
+script().
+$('.fight').stickynav()
+
+ 
 
     
     

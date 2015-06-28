@@ -1,141 +1,138 @@
-doctype html
-html
-  head
-    title Grids - Speedovation Responsive framework
+extends ./layout.jade
 
-    include header
+block title
+  title Typography
 
-  body
-
-    include _nav
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Asymmetrical", "Symmetrical" ,"Column","Universal responsive class","Collapse row" ]
+  +top_left(vals)
    
-
-    .row
-      .col-12.example
-        h1.welcome Relax , We've already done it for you
-
-        hr  
-
-        //demo 1
-
-        mixin span_text(l,d,t,m)
-          span.span_l large #{d}
-          span.span_d desktop #{d}
-          span.span_t tablet #{t}
-          span.span_m mobile #{m}
-
-
-        h2 Asymmetrical
-        .preview-box
-            .row
-              .large-4.desktop-3.tablet-6.mobile-8
-                +span_text('4','3','6','8')
+block content
+  .example  
+    h2.divide-section Mobile First Responsive Grid System
     
-              .large-8.desktop-9.tablet-6.mobile-4
-                +span_text('8','9','6','4')
     
-            .row
-                .large-4.desktop-3.tablet-12.mobile-12
-                    +span_text('4','3','12','12')
+    //demo 1
     
-                .large-8.desktop-9.tablet-12.mobile-12
-                    +span_text('8','9','12','12')
-
-        hr
-        
-        h2 Symmetrical
-        .preview-box
-            .row
-              .large-3.desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3','3')
+    mixin span_text(l,d,t,m)
+      span.span_l large #{d}
+      span.span_d desktop #{d}
+      span.span_t tablet #{t}
+      span.span_m mobile #{m}
     
-              .large-3.desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3','3')
     
-              .large-3.desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3','3')
+    h2#Asymmetrical Asymmetrical
+    .preview-box
+        .row
+          .large-4.desktop-3.tablet-6.mobile-8
+            +span_text('4','3','6','8')
     
-              .large-3.desktop-3.tablet-3.mobile-3
-                +span_text('3','3','3','3')
-
-        hr
-        
-        h2 Column
-        .preview-box
-            .row
-              .large-4.desktop-4.tablet-4.mobile-4
-                  +span_text('4','4','4','4')
-              .large-4.desktop-4.tablet-4.mobile-4
-                  +span_text('4','4','4','4')
-              .large-4.desktop-4.tablet-4.mobile-4
-                  +span_text('4','4','4','4')
-
-        hr
-        
-        h2 Universal responsive class
-        p Just use .col if you want
-
-        .preview-box
-            .row
-                .col-4
-                    +span_text('4','4','4','4')
-                .col-4
-                    +span_text('4','4','4','4')
-                .col-4
-                    +span_text('4','4','4','4')
-
-        hr
-        
-        h2 Collapse row
-        p No margin between columns . Add <code>.width-per-*</code> where * is width in percentage.
-        p Its universal and responsive.
-
-        .preview-box
-            .row
-                .width-per-33
-                    +span_text('4','4','4','4')
-                .width-per-33
-                    +span_text('4','4','4','4')
-                .width-per-33
-                    +span_text('4','4','4','4')
-
-  //      h2 Push
-  //
-  //      .row
-  //        .desktop-4.desktop-push-4.tablet-2.tablet-push-2.mobile-2.mobile-push-1
-  //          +span_text('push 4','push 2','push 1')
-  //
-  //      .row
-  //        .desktop-4.desktop-push-2.tablet-2.tablet-push-1.mobile-1
-  //          +span_text('push 2','push 1','1')
-  //
-  //        .desktop-4.tablet-2.mobile-1
-  //          +span_text('4','2','1')
-  //
-  //      .row
-  //        .desktop-12.tablet-6.mobile-3
-  //          +span_text('12','6','3')
-  //
-  //
-  //      h2 Padded
-  //
-  //      .row
-  //        .desktop-4.tablet-2.mobile-1.padded(style="background:#f6f6f6")
-  //          +span_text('4','2','1')
-  //
-  //        .desktop-8.tablet-4.mobile-2.padded
-  //          +span_text('8','4','2')
-  //
-  //      h2 Contained
-  //
-  //      .row
-  //        .desktop-4.tablet-2.mobile-1.contained(style="background:#f6f6f6")
-  //          +span_text('4','2','1')
-  //
-  //        .desktop-8.tablet-4.mobile-2.contained
-  //          +span_text('8','4','2')
-  //
-  //
-  //
-  //
-  //
+          .large-8.desktop-9.tablet-6.mobile-4
+            +span_text('8','9','6','4')
+    
+        .row
+            .large-4.desktop-3.tablet-12.mobile-12
+                +span_text('4','3','12','12')
+    
+            .large-8.desktop-9.tablet-12.mobile-12
+                +span_text('8','9','12','12')
+    
+    hr
+    
+    h2#Symmetrical Symmetrical
+    .preview-box
+        .row
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
+    
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
+    
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
+    
+          .large-3.desktop-3.tablet-3.mobile-3
+            +span_text('3','3','3','3')
+    
+    hr
+    
+    h2#Column Column
+    .preview-box
+        .row
+          .large-4.desktop-4.tablet-4.mobile-4
+              +span_text('4','4','4','4')
+          .large-4.desktop-4.tablet-4.mobile-4
+              +span_text('4','4','4','4')
+          .large-4.desktop-4.tablet-4.mobile-4
+              +span_text('4','4','4','4')
+    
+    hr
+    
+    h2#Universalresponsiveclass Universal responsive class
+    p Just use .col if you want
+    
+    .preview-box
+        .row
+            .col-4
+                +span_text('4','4','4','4')
+            .col-4
+                +span_text('4','4','4','4')
+            .col-4
+                +span_text('4','4','4','4')
+    
+    hr
+    
+    h2#Collapserow Collapse row
+    p No margin between columns . Add <code>.width-per-*</code> where * is width in percentage.
+    p Its universal and responsive.
+    
+    .preview-box
+        .row
+            .width-per-33
+                +span_text('4','4','4','4')
+            .width-per-33
+                +span_text('4','4','4','4')
+            .width-per-33
+                +span_text('4','4','4','4')
+    
+    //      h2 Push
+    //
+    //      .row
+    //        .desktop-4.desktop-push-4.tablet-2.tablet-push-2.mobile-2.mobile-push-1
+    //          +span_text('push 4','push 2','push 1')
+    //
+    //      .row
+    //        .desktop-4.desktop-push-2.tablet-2.tablet-push-1.mobile-1
+    //          +span_text('push 2','push 1','1')
+    //
+    //        .desktop-4.tablet-2.mobile-1
+    //          +span_text('4','2','1')
+    //
+    //      .row
+    //        .desktop-12.tablet-6.mobile-3
+    //          +span_text('12','6','3')
+    //
+    //
+    //      h2 Padded
+    //
+    //      .row
+    //        .desktop-4.tablet-2.mobile-1.padded(style="background:#f6f6f6")
+    //          +span_text('4','2','1')
+    //
+    //        .desktop-8.tablet-4.mobile-2.padded
+    //          +span_text('8','4','2')
+    //
+    //      h2 Contained
+    //
+    //      .row
+    //        .desktop-4.tablet-2.mobile-1.contained(style="background:#f6f6f6")
+    //          +span_text('4','2','1')
+    //
+    //        .desktop-8.tablet-4.mobile-2.contained
+    //          +span_text('8','4','2')
+    //
+    //
+    //
+    //
+    //

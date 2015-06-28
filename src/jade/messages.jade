@@ -4,18 +4,14 @@ block title
   title Messages or Alerts
 
 block leftcontent
- h3 Messages 
- ul.link-list.active-list
-    li
-      a(href='#example') Example
-    li
-      a(href='#colormodifiers') Color modifiers
-    li
-      a(href='#sizemodifiers') Size modifier
+ h3 &nbsp; 
+ - var items = [ "Example", "Color Modifiers" ,"Size Modifier" ]
+ +top_left(vals)
 
 block content
 
-  h1.divide-section Messages or Alerts
+  h2.divide-section Messages or Alerts
+  
   p.info Defines styles for info, success, warning and error messages. 
   
   h2 Usage
@@ -43,7 +39,7 @@ block content
     
 
 
-  .preview-box#example
+  .preview-box#Example
     h3 Example
     .message
       | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
@@ -56,7 +52,7 @@ block content
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
   
-  h2#colormodifiers Color modifiers
+  h2#ColorModifiers Color Modifiers
   p
     | There are several color modifiers available. Just add one of the following classes to apply a different look.
     
@@ -95,7 +91,7 @@ block content
   
 
 
-  h2#sizemodifiers Size modifier
+  h2#SizeModifier Size Modifier
   p
     | Add the 
     code .message-large

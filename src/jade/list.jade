@@ -1,58 +1,57 @@
-doctype html
-html(lang="en")
-  head
-    
-    title List Group
-    include header
+extends ./layout.jade
 
-  body
-    include _nav
+block title
+  title Lists
 
-    .grid
-      .row
+block leftcontent
+ h3 &nbsp; 
+ - var items = [ "Simple List Group", "Simple Link List Group" ,"Link List with headers" ]
+ +top_left(vals)
 
-        h1.divide-section List Group
+block content
 
-        h2 Simple List Group
-        .preview-box
-          ul.link-list.w-33
-            li.active
-              span  KineticWing IDE
-            li
-              span  MVC Logic
-            li
-              span  Dreamhost
-            li
-              span  Rudra Icons   
+    h1.divide-section List Group
+
+    h2#SimpleListGroup Simple List Group
+    .preview-box
+      ul.link-list.w-33
+        li.active
+          span  KineticWing IDE
+        li
+          span  MVC Logic
+        li
+          span  Dreamhost
+        li
+          span  Rudra Icons   
 
 
-        h2 Simple Link List Group
-        .preview-box
-          ul.link-list.w-33
-            li
-              a(title='KineticWing IDE', href='http://kineticwing.com') KineticWing IDE
-            li
-              a.active(title='MVC Logic', href='http://mvclogic.com') MVC Logic
-            li
-              a(title='Jals', href='http://www.jals.in/') Jals
-            li
-              a(title='Rudra Icons', href='http://speedovation.com/') Rudra Icons
+    h2#SimpleLinkListGroup Simple Link List Group
+    .preview-box
+      ul.link-list.w-33
+        li
+          a(title='KineticWing IDE', href='http://kineticwing.com') KineticWing IDE
+        li
+          a.active(title='MVC Logic', href='http://mvclogic.com') MVC Logic
+        li
+          a(title='Jals', href='http://www.jals.in/') Jals
+        li
+          a(title='Rudra Icons', href='http://speedovation.com/') Rudra Icons
 
-        h2 Link List with headers
-        .preview-box
-          ul.link-list.w-33
-            li
-              a(title='Site Templates', href='http://kineticwing.com') 
-                h4 List group heading
-                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+    h2#LinkListwithheaders Link List with headers
+    .preview-box
+      ul.link-list.w-33
+        li
+          a(title='Site Templates', href='http://kineticwing.com') 
+            h4 List group heading
+            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
 
-            li
-              a.active(title='Website Templates', href='http://kineticwing.com')
-                h4 List group heading
-                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-            li
-              a(title='Website Templates', href='http://kineticwing.com')
-                h4 List group heading
-                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-       
-      
+        li
+          a.active(title='Website Templates', href='http://kineticwing.com')
+            h4 List group heading
+            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        li
+          a(title='Website Templates', href='http://kineticwing.com')
+            h4 List group heading
+            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+   
+  
