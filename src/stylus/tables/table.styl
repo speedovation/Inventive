@@ -314,7 +314,8 @@ table.rounded
           // end options
           
           @media (min-width: breakpoint-alpha) 
-            display: none;
+            td 
+                display: none;
           
         
       
@@ -326,13 +327,12 @@ table.rounded
           display: table-cell;
           padding: .25em .5em;
           
-          &:first-child 
-            padding-left: 0;
+          th:first-child,td:first-child
+            padding-left: 0
           
           
-          &:last-child 
-            padding-right: 0;
-          
+          td:last-child, th:last-child 
+            padding-right: 0
         
         
 @import "_tables"

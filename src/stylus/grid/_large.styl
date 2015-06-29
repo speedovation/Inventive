@@ -12,8 +12,10 @@
     
     [class*="large-"]    
         float: left
-        padding: 0 (gutterWidth / 2)
+        padding-right: (gutterWidth / 2)
     
+    [class*="large-"]:last-child
+        padding-right 0
 
     //call here
     generate-grid("large")

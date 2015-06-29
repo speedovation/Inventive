@@ -1,5 +1,8 @@
-.row [class*="col-"]
-    padding:  0 (gutterWidth / 2)
+[class*="col-"]
+    padding-right: (gutterWidth / 2)
     float: left
+
+[class*="col-"]:last-child
+    padding-right 0    
 	
 generate-grid("col")

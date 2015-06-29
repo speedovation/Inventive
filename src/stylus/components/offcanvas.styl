@@ -1,0 +1,27 @@
+@import "../grid/_variables"
+
+
+a.side-menu-link
+  //float: left;
+  display: block;
+  width 20px
+  margin-bottom 1rem
+  
+  &.active
+    color red
+
+    
+@media screen and (max-width: screenTablet)
+ 
+  .oc-hidden, .oc-nav
+    display none
+    
+  
+  .oc-nav-show
+    display block
+  
+
+@media screen and (min-width: screenTablet)
+
+  a.side-menu-link
+    display: none;

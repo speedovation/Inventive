@@ -6,7 +6,7 @@
     -moz-box-sizing: border-box
 
 .row 
-    padding: 0 gutterWidth
+    padding: 0 gutterWidth/2
     clear()
 
 
@@ -24,8 +24,10 @@
 [class*="mobile-"]
     position: relative
     min-height: 1px
-    padding:  0 (gutterWidth / 2)
+    padding-right: (gutterWidth / 2)
     float: left
 
+[class*="mobile-"]:last-child
+        padding-right 0
 
 generate-grid("mobile")

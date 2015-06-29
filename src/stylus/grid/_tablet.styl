@@ -2,15 +2,17 @@
 
 @media (min-width: screenTablet) 
 
-    .container 
+    .row 
         max-width: ( screenTablet - (gutterWidth * 2) )
         center-block()
     
 
     [class*="tablet-",class*="m-"]    
         float: left
-        padding: 0 (gutterWidth / 2)
+        padding-right:(gutterWidth / 2)
     
+    [class*="tablet-"]:last-child
+        padding-right 0
 
     //call here
     generate-grid("tablet")

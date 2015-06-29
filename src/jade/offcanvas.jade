@@ -1,0 +1,74 @@
+extends ./layout.jade
+
+block title
+  title Responsive Offcanvas
+
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Floats", "Screen Readers", "Spacing" ,"Text Basic","Definition List","Alignments", "Headings","Bonus Headings","Paragraphs","Blockquote", "Sub and Sup" ]
+  +top_left(vals)
+   
+block content
+  h2.divide-section Responsive Offcanvas - Responsive Dashboard Navbar 
+  p.info Fully Customizable Responsive Inventive Dashboard Navbar 
+
+
+  
+  .row(style="margin-bottom: 10px;")
+    a.side-menu-link.button.small(href="#menu", title="Click for sub-menu")
+       i.icon-th
+    
+  
+    
+    .mobile-12.tablet-4.desktop-3.large-3
+      // Sidebar content
+      aside#side-menu.well.oc-nav(role="navigation")
+        ul.nav.nav-list
+          li.nav-header Title 1
+          li
+            a(href="#") Sube Menu Link
+          li
+            a(href="#") Sube Menu Link
+          li
+            a(href="#") Sube Menu Link
+          li.nav-header Title 2
+          li
+            a(href="#") Sube Menu Link
+          li
+            a(href="#") Sube Menu Link
+          li.nav-header Title 3
+          li
+            a(href="#") Sube Menu Link
+          li
+            a(href="#") Sube Menu Link
+          li.nav-header Title 4
+          li
+            a(href="#") Sube Menu Link
+          li.nav-header Title 5
+          li
+            a(href="#") Sube Menu Link
+          li.nav-header Title 6
+          li
+            a(href="#") Sube Menu Link
+          li
+            a(href="#") Sube Menu Link
+          li
+            a(href="#") Sube Menu Link
+    
+    // Body content
+    .mobile-12.tablet-8.desktop-9.large-9
+        section.well.oc-content
+          h2 Offcanvas Menu
+          p "Off Canvas" patterns are different ways to approach layout where content on the web isn't just laid out in a vertical column. For instance, navigation could be positioned hidden off the left edge of the "canvas" (visible browser window) and slid in on demand. Anthony Colangelo created jPanelMenu to do just that. Hakim El Hattab's Meny is fancier but similar in what it accomplishes.
+
+          p We created using Javascript and CSS3
+      
+          h3 What is Off-Canvas Navigation?
+
+          p Off-canvas navigation is used mostly on mobile and touch devices. It has a UI component which is an effective way of presenting menus on small screens and can be easily implemented using some simple JavaScript and CSS.
+          
+          p This one is bit different. Normally on larger devices it will work like menu and on smaller devices it hides by default and by activating button we can toggle it.
+          
+          p This is much like DASH
+          
+          p It’s easy to use and customised.
