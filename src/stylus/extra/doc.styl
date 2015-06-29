@@ -10,14 +10,13 @@ body
   margin-bottom: 30px;
   margin-top: 0;
 
-  [class*="desktop-"] ,[class*="col-"] , [class*='width-per-']
-    background: none repeat scroll 0 0 #ddd;
+  [class*="large-"] ,[class*="desktop-"] ,[class*="tablet-"] ,[class*="mobile-"] ,[class*="col-"] , [class*='width-per-']
+    //background: none repeat scroll 0 0 #ddd;
     border-radius: 3px;
     color: #555;
     margin-bottom: 1.8%;
     overflow: hidden;
-    padding-bottom: 40px;
-    padding-top: 40px;
+   
     text-align: center;
     -webkit-transition: background-color 2s ease-out;
     -moz-transition: background-color 2s ease-out;
@@ -25,32 +24,27 @@ body
     transition: background-color 2s ease-out;
 
   [class*='width-per-']
-    border 1px solid #bbb
     border-right 0
     border-radius 0
 
-  [class*='width-per-']:last-child
-    border-right  1px solid #bbb
+  //[class*='width-per-']:last-child
+    //border-right  1px solid #bbb
 
 
-  .row .row [class*="desktop-"],.row .row [class*="col-"]
-    background: none repeat scroll 0 0 rgba(255,255,255,0.25);
-    margin-bottom: 0;
 
-  .row:hover [class*="desktop-"],.row:hover [class*="col-"]
-    background: none repeat scroll 0 0 #aaa;
-
-  .row:hover [class*="desktop-"] [class*="desktop-"],.row:hover [class*="col-"] [class*="col-"]
-    background: none repeat scroll 0 0 rgba(255,255,255,0.25);
-    margin-bottom: 0;
-
-  .span_l
-    display: block;
-
+  .span_c,
   .span_d,
   .span_t,
-  .span_m
-   display: none;
+  .span_m,
+  .span_l
+    border 1px solid #bbb
+    padding-bottom: 40px;
+    padding-top: 40px;
+    display: none;
+
+  .span_l,
+  .span_c
+    display: block;
 
 @media screen and (max-width: 1200px)
   .example .span_l
