@@ -1,0 +1,333 @@
+extends ./layout.jade
+
+block title
+  title Mega menu
+
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Floats", "Screen Readers", "Spacing" ,"Text Basic","Definition List","Alignments", "Headings","Bonus Headings","Paragraphs","Blockquote", "Sub and Sup" ]
+  +top_left(vals)
+   
+block content
+  h2.divide-section Responsive Inventive Megamenu 
+  p.info Fully Customizable Responsive Inventive Megamenu 
+
+  .preview-box
+    .megamenu_wrapper.megamenu_light_theme
+      // BEGIN MENU WRAPPER
+      .megamenu_container.navbar.navbar-default(role="navigation")
+        // BEGIN MENU CONTAINER
+        ul.megamenu
+          // BEGIN MENU
+          li.megamenu_button
+            a(href="#_") Mega Menu
+          li
+            a.menuitem_drop(href="/") Home
+            // Begin Home Item
+            .dropdown_2columns
+              // Begin columns container
+              .col_full.firstcolumn
+                h2 Welcome !
+                p
+                  | Hi and welcome here ! This is a showcase of the possibilities of this awesome Mega Drop Down Menu.
+                p
+                  | This item comes with a large range of prepared typographic stylings such as headings, lists,
+                  a(href="http://codecanyon.net/user/Pixelworkshop/portfolio") links
+                  | etc.
+                h2.pusher Cross Browser Support
+                img(src="img/browsers.png", alt="")
+                p This mega menu has been tested in all major browsers.
+                h2.pusher Compatible Browsers
+                .col_half.firstcolumn
+                  ul.plus
+                    li Internet Explorer
+                    li Firefox
+                    li Opera
+                .col_half
+                  ul.plus
+                    li Chrome
+                    li Safari
+                    li What else ?
+            // End columns container
+          // End Home Item
+          li
+            a.menuitem_drop(href="#_") Featured Products
+            .dropdown_3columns
+              h3 Today"s Hot offers
+              .row
+                .width-per-50
+                  ul.link-list
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                .width-per-50
+                  ul.link-list
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+              h3 Best Selling Products
+              .row
+                .width-per-50
+                  ul.link-list
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                .width-per-50
+                  ul.link-list
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+                    li
+                      a(href="") Product 1
+          li
+            a.menuitem_drop(href="http://cart.po/products") Products
+            // Begin Elements Item
+            .dropdown_3columns
+              // Begin columns container
+              .row
+                h2 Products
+                .width-per-50
+                  ul.link-list
+                    li
+                      a(href="http://cart.po/products") All Products
+                    li
+                      a(href="http://cart.po/products/category/soluta--1") soluta
+                    li
+                      a(href="http://cart.po/products/category/sed--2") sed
+                    li
+                      a(href="http://cart.po/products/category/amet--3") amet
+                    li
+                      a(href="http://cart.po/products/category/possimus--4") possimus
+                    
+                .width-per-50
+                  ul.link-list
+                    li
+                      a(href="#") ThemeForest
+                    li
+                      a(href="#") GraphicRiver
+                    li
+                      a(href="#") ActiveDen
+                    li
+                      a(href="#") VideoHive
+                    li
+                      a(href="#") 3DOcean
+              .row
+                h3 Random Featured Products
+                img.width-per-25(data-holder-rendered="true", src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2275%22%20height%3D%2275%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F75x75%0ACreated%20with%20Holder.js%202.8.0.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_14e40961560%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_14e40961560%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23EEEEEE%22%2F%3E%3Cg%3E%3Ctext%20x%3D%2219.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E", style="width: 75px; height: 75px;", alt="75x75", data-src="holder.js/75x75")
+                p.width-per-75
+                  | Maecenas eros lorem, nec eget eros lorem, nec vulputate, lorem sem condimentum.
+                  br
+                  a(href="#") Read more...
+                p.width-per-75
+                  | Aliquam t nec nisi. Aliquam pretium mollis fringilla. Vestibulum tempor facilisis
+                  | malesuada.
+                  br
+                  a(href="#") Read more...
+                img.width-per-25(data-holder-rendered="true", src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2275%22%20height%3D%2275%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F75x75%0ACreated%20with%20Holder.js%202.8.0.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_14e40960d27%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_14e40960d27%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23EEEEEE%22%2F%3E%3Cg%3E%3Ctext%20x%3D%2219.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E", style="width: 75px; height: 75px;", alt="75x75", data-src="holder.js/75x75")
+            // End columns container
+          // End Elements Item
+          // Begin Lists Item
+          li.menuitem_nodrop
+            a(href="http://cart.po/cart")
+              i.i-shoping-cart
+              | Cart
+          // No Drop Down Item
+          li.menuitem_right
+            a.menuitem_drop(href="#_") About
+            // Begin Lists Item
+            .row.dropdown_4columns.dropdown_right
+              
+                .width-per-33
+                  h3 Service
+                  ul.nav.nav-side
+                    li
+                      a(rel="nofollow", title="About", href="/about") About
+                    li
+                      a(rel="nofollow", title="Contact", href="/contact") Contact
+                    li
+                      a(rel="nofollow", title="Terms and Conditions", href="/terms_and_conditions") Terms and Conditions
+                    li
+                      a(rel="nofollow", title="Privacy Policy", href="/privacy_policy") Privacy Policy
+                    li
+                      a(rel="nofollow", title="Affiliate Programme", href="/affiliate") Affiliate Program
+                    li
+                      a(rel="nofollow", title="Gift Cards", href="/customer/credits/gift_cards") Gift Cards
+                    li
+                      a(rel="nofollow", title="Sell On Jabong", href="/sellonjabong") Sell On Jabong
+                .width-per-33
+                  h3 Our Policies
+                  ul.nav.nav-side
+                    li
+                      a(rel="nofollow", title="Cancellations and Returns", href="/support/faq#Returns") Cancellations and Returns
+                    li
+                      a(rel="nofollow", title="Shipping", href="/support/faq#Shipping") Shipping
+                    li
+                      a(rel="nofollow", title="Payments", href="/support/faq#Payments") Payments
+                    li
+                      a(rel="nofollow", title="Ordering and Tracking", href="/support/faq#Ordering") Ordering and Tracking
+                .width-per-33
+                  h3 Join us on
+                  ul.nav.nav-side
+                    li
+                      a(rel="nofollow", title="Facebook", target="_blank", href="http://www.facebook.com/myjabong")
+                        font.facebook.common-sprite
+                        | Facebook
+                    li
+                      a(rel="nofollow", title="Twitter", target="_blank", href="http://twitter.com/jabongindia")
+                        font.twitter.common-sprite
+                        | Twitter
+                    li
+                      a(rel="nofollow", title="Google+", target="_blank", href="https://plus.google.com/b/104086444878156182654")
+                        font.gplus.common-sprite
+                        | Google+
+                    li
+                      a(rel="nofollow", title="Fashion & Trends", target="_blank", href="/blog/")
+                        font.fashiontrends.common-sprite
+                        | Fashion &#38; Trends
+                .width-per-100
+                  h3 We Accept Payment Methods
+                  img(data-holder-rendered="true", src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%2250%22%20viewBox%3D%220%200%20400%2050%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x50%0ACreated%20with%20Holder.js%202.8.0.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_14e4095f375%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_14e4095f375%22%3E%3Crect%20width%3D%22400%22%20height%3D%2250%22%20fill%3D%22%23EEEEEE%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22155%22%20y%3D%2234.3%22%3E400x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E", style="width: 400px; height: 50px;", data-src="holder.js/400x50", alt="400x50")
+                  h3 Our Shipping Partner
+                  img(data-holder-rendered="true", src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%2250%22%20viewBox%3D%220%200%20300%2050%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F300x50%0ACreated%20with%20Holder.js%202.8.0.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_14e4095dd1d%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A15pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_14e4095dd1d%22%3E%3Crect%20width%3D%22300%22%20height%3D%2250%22%20fill%3D%22%23EEEEEE%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22117%22%20y%3D%2232.2%22%3E300x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E", style="width: 300px; height: 50px;", data-src="holder.js/300x50", alt="300x50")
+          li.menuitem_right
+            a.menuitem_drop(href="#_") Contact
+            // Begin Contact Item
+            .dropdown_3columns.dropdown_right
+              // Begin right aligned columns container
+              h2 Contact Us
+              ul.link-list.fk-font-12.fk-text-center
+                li
+                  a(href="/contact") 24x7 Customer Care
+                li
+                  a Track Order
+                li
+                  a(href="/account/") Signup
+                li
+                  a.no-border.login-required(href="/login/") Login
+              //
+                        <p>Please fill in the following form to contact us</p>
+                        <div class="contact_form">
+                            <div class="message">
+                                <div id="alert"></div>
+                            </div>
+                            <form method="post" action="js/sendmail.php" id="contactForm">
+                                <label for="name">Name<span class="required"> *</span></label>
+                                <input name="name" type="text" id="name"/>
+                                <br/>
+                                <label for="email">Email<span class="required"> *</span></label>
+                                <input name="email" type="text" id="email"/>
+                                <br/>
+                                <label for="message">Message<span class="required"> *</span></label>
+                                <textarea name="message" cols="40" rows="5" id="message"></textarea>
+                                <p class="special"><label for="last">Don't fill this in :</label><input type="text" name="last" value=""
+                                                                                                        id="last"/></p>
+                                <div class="form_buttons">
+                                    <input type="submit" class="button" id="submit" value="Submit"/>
+                                    <input type="reset" class="button" id="reset" value="Reset"/>
+                                </div>
+                            </form>
+                        </div>
+              h2 Find us on social networks
+              ul.social
+                li
+                  a(href="#")
+                    img.xxyazuvozoqqyzidxlwm(src="img/twitter.png", alt="")
+                    span Twitter
+                li
+                  a(href="#")
+                    img.xxyazuvozoqqyzidxlwm(src="img/facebook.png", alt="")
+                    span Facebook
+                li
+                  a(href="#")
+                    img(src="img/flickr.png", alt="")
+                    span Flickr
+                li
+                  a(href="#")
+                    img(src="img/rss.png", alt="")
+                    span RSS Feed
+                li
+                  a(href="#")
+                    img.xxyazuvozoqqyzidxlwm(src="img/technorati.png", alt="")
+                    span Technorati
+                li
+                  a(href="#")
+                    img.xxyazuvozoqqyzidxlwm(src="img/delicious.png", alt="")
+                    span Delicious
+            // End right aligned columns container
+          // End Contact Item
+          li.menuitem_right
+            a.menuitem_drop(href="#_") Profile
+            // Begin Lists Item
+            .row.dropdown_3columns.dropdown_right
+              // Begin columns container
+              .width-per-50
+                h3 Profile
+                ul
+                  li
+                    a(href="http://cart.po/auth/register") Register
+                  li
+                    a(href="http://cart.po/auth/login") Login
+              .width-per-50
+                h3 Useful Links
+                ul
+                  li
+                    a(href="#") NetTuts
+                  li
+                    a(href="#") VectorTuts
+                  li
+                    a(href="#") PsdTuts
+                  li
+                    a(href="#") PhotoTuts
+                  li
+                    a(href="#") ActiveTuts
+              .width-per-50
+                h3 Other Stuff
+                ul
+                  li
+                    a(href="#") FreelanceSwitch
+                  li
+                    a(href="#") Creattica
+                  li
+                    a(href="#") WorkAwesome
+                  li
+                    a(href="#") Mac Apps
+                  li
+                    a(href="#") Web Apps
+              .width-per-50
+                h3 Misc
+                ul
+                  li
+                    a(href="#") Design
+                  li
+                    a(href="#") Logo
+                  li
+                    a(href="#") Flash
+                  li
+                    a(href="#") Illustration
+                  li
+                    a(href="#") More...
+            // End columns container
+        // END MENU
+      // END MENU CONTAINER
+  
+    p(style="height:400px") &nbsp;
+    
+    
