@@ -1,0 +1,265 @@
+extends ./layout.jade
+
+block title
+  title Responsive Utilities
+
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Floats", "Screen Readers", "Spacing" ,"Text Basic","Definition List","Alignments", "Headings","Bonus Headings","Paragraphs","Blockquote", "Sub and Sup" ]
+  +top_left(vals)
+   
+block content
+  h2.divide-section Responsive Utilities
+  p Responsive utilities can show and hide content based on devices. Print utility also included.
+
+   
+  h2 Responsive classes
+    
+  p Use a single or combination of the available classes for toggling content across viewport breakpoints.
+    
+  .table-responsive
+    table.table.bordered.zebra.responsive-utilities
+      thead
+        tr
+          th
+          th Mobiles (&#60;768px)
+          th Tablets (&#8805;768px)
+          th Desktops (&#8805;992px)
+          th Large (&#8805;1200px)
+      tbody
+        tr
+          td(scope="row")
+            code .visible-mobile-*
+          td.is-visible Visible
+          td.is-hidden Hidden
+          td.is-hidden Hidden
+          td.is-hidden Hidden
+        tr
+          td(scope="row")
+            code .visible-tablet-*
+          td.is-hidden Hidden
+          td.is-visible Visible
+          td.is-hidden Hidden
+          td.is-hidden Hidden
+        tr
+          td(scope="row")
+            code .visible-desktop-*
+          td.is-hidden Hidden
+          td.is-hidden Hidden
+          td.is-visible Visible
+          td.is-hidden Hidden
+        tr
+          td(scope="row")
+            code .visible-large-*
+          td.is-hidden Hidden
+          td.is-hidden Hidden
+          td.is-hidden Hidden
+          td.is-visible Visible
+      tbody
+        tr
+          td(scope="row")
+            code .hidden-mobile
+          td.is-hidden Hidden
+          td.is-visible Visible
+          td.is-visible Visible
+          td.is-visible Visible
+        tr
+          td(scope="row")
+            code .hidden-tablet
+          td.is-visible Visible
+          td.is-hidden Hidden
+          td.is-visible Visible
+          td.is-visible Visible
+        tr
+          td(scope="row")
+            code .hidden-desktop
+          td.is-visible Visible
+          td.is-visible Visible
+          td.is-hidden Hidden
+          td.is-visible Visible
+        tr
+          td(scope="row")
+            code .hidden-large
+          td.is-visible Visible
+          td.is-visible Visible
+          td.is-visible Visible
+          td.is-hidden Hidden
+  p    
+    code .visible-*-*
+    |  classes for each breakpoint come in three variations, one for each CSS 
+    code display
+    |   property value listed below.
+    
+  .table-responsive
+    table.table.bordered.zebra
+      thead
+        tr
+          th Group of classes
+          th
+            | CSS
+            code display
+      tbody
+        tr
+          td(scope="row")
+            code .visible-*-block
+          td
+            code display: block;
+        tr
+          td(scope="row")
+            code .visible-*-inline
+          td
+            code display: inline;
+        tr
+          td(scope="row")
+            code .visible-*-inline-block
+          td
+            code display: inline-block;
+    p
+      | So, for mobiles (  
+      code mobile
+      |  ) screens 
+    p For example, the available 
+      code .visible-*-*
+      |  classes are:
+      ul.large
+        li
+          code .visible-mobile-block 
+        li
+          code .visible-mobile-inline 
+        li
+          code .visible-mobile-inline-block 
+   
+    h2 Print classes
+    p Show and hide content for print.
+    
+    .table-responsive
+      table.table.bordered.zebra.responsive-utilities
+        thead
+          tr
+            th Classes
+            th Browser
+            th Print
+        tbody
+          tr
+            td(scope="row")
+              code .visible-print-block
+              br
+              code .visible-print-inline
+              br
+              code .visible-print-inline-block
+            td.is-hidden Hidden
+            td.is-visible Visible
+          tr
+            td(scope="row")
+              code .hidden-print
+            td.is-visible Visible
+            td.is-hidden Hidden
+   
+    h2 Live Preview
+    p Play with different resolutions and devices
+    
+    
+    
+    h3 Visible on...
+    p
+      | Red checkmarks indicate the element 
+      strong is visible
+      |  in your current viewport.
+    
+    .row.responsive-utilities-test.visible-on
+     
+      .mobile-6.tablet-3.desktop-3.large-3
+        span.hidden-mobile Hidden on Mobile
+        span.visible-mobile-block &#10004; Visible on Mobile
+      
+      .mobile-6.tablet-3.desktop-3.large-3
+        span.hidden-tablet Hidden on Tablet
+        span.visible-tablet-block &#10004; Visible on Tablet
+      
+      .mobile-6.tablet-3.desktop-3.large-3
+        span.hidden-desktop Hidden on Desktop
+        span.visible-desktop-block &#10004; Visible on Desktop
+      
+      .mobile-6.tablet-3.desktop-3.large-3
+        span.hidden-large Hidden on Large
+        span.visible-large-block &#10004; Visible on Large
+    
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-mobile.hidden-tablet Hidden on Mobile &amp; Tablet
+        span.visible-mobile-block.visible-tablet-block &#10004; Visible on Mobile &amp; Tablet
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-desktop.hidden-large Hidden on Desktop &amp; Large
+        span.visible-desktop-block.visible-large-block &#10004; Visible on Desktop &amp; Large
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-mobile.hidden-desktop Hiddeb on Mobile &amp; Desktop
+        span.visible-mobile-block.visible-desktop-block &#10004; Visible on Mobile &amp; Desktop
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-tablet.hidden-large Hidden on Tablet &amp; Large
+        span.visible-tablet-block.visible-large-block &#10004; Visible on Tablet &amp; Large
+
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-mobile.hidden-large Hidden on Mobile &amp; Large
+        span.visible-mobile-block.visible-large-block &#10004; Visible on Mobile &amp; Large
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-tablet.hidden-desktop Hidden on Tablet &amp; Large
+        span.visible-tablet-block.visible-desktop-block &#10004; Visible on Tablet &amp; Large
+    
+    
+    h3 Hidden on...
+    p
+      | Here, green checkmarks also indicate the element 
+      strong is hidden
+      |  in your current viewport.
+    
+    
+    .row.responsive-utilities-test.hidden-on
+      
+      .mobile-6.tablet-6.desktop-3.large-3
+        span.hidden-mobile Hidden on tablet
+        span.visible-mobile-block &#10004; Visible on mobile
+      
+      .mobile-6.tablet-6.desktop-3.large-3
+        span.hidden-tablet Hidden tablet
+        span.visible-tablet-block &#10004; Visible on tablet
+      
+      
+      .mobile-6.tablet-6.desktop-3.large-3
+        span.hidden-desktop Hidden on Medium
+        span.visible-desktop-block &#10004; Visible on medium
+    
+      .mobile-6.tablet-6.desktop-3.large-3
+        span.hidden-large Hidden on Large
+        span.visible-large-block &#10004; Visible on large
+    
+    .row.responsive-utilities-test.hidden-on
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-mobile.hidden-tablet Hidden on mobile &amp; tablet
+        span.visible-mobile-block.visible-tablet-block &#10004; Visible on Mobile &amp; Tablet
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-desktop.hidden-large Hidden on Desktop &amp; Large
+        span.visible-desktop-block.visible-large-block &#10004; Visible on Desktop &amp; Large
+      
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-mobile.hidden-desktop Hidden on Mobile &amp; Desktop
+        span.visible-mobile-block.visible-desktop-block &#10004; Visible on Mobile &amp; Desktop
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-tablet.hidden-large Hidden on Tablet &amp; Large
+        span.visible-tablet-block.visible-large-block &#10004; Visible on Tablet &amp; Large
+      
+      
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-mobile.hidden-large Hidden on Mobile &amp; Large
+        span.visible-mobile-block.visible-large-block &#10004; Visible on Mobile &amp; Large
+
+      .mobile-6.tablet-4.desktop-4.large-4
+        span.hidden-tablet.hidden-desktop Hidden on Tablet &amp; Desktop
+        span.visible-tablet-block.visible-desktop-block &#10004; Visible on tablet &amp; medium
+  

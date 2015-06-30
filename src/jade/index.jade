@@ -1,22 +1,25 @@
 doctype html
 html
   head
-    title Getting Started - Speedovation Responsive framework
+    title Inventive Responsive framework : Powered by Stylus, Jade, CoffeeScript and Gulp
 
     include header
 
   body
 
-    include _nav
+    .wrap-intro
+      include _nav
    
-
-    .row
+    .wrap-intro
+      .row
         .col-12
-
-          .header.panel-box-secondary.text-center
-            h1.giga Inventive UI  
-              sup.badge.badge-round.badge-danger towards 1.0
-            h2 Responsive Framework
+          .header.text-center
+            h1.giga Inventive Responsive Framework
+              sup.badge.badge-round.badge-danger Beta 1.0
+            
+            h4 A design focused front-end framework using 
+              span.message.message-success Stylus, Jade, CoffeeScript and Gulp
+              
             p
              img(src="../../static/img/responsive.png")
             
@@ -33,7 +36,7 @@ html
                     frameborder="0"
                     style="border:none; overflow:hidden; height:35px;"
                     allowTransparency="true")
-
+  
                 iframe(
                    src='http://giikers.com/share-widget?url=http%3A%2F%2Ficonmart.in%2F&count=true&count_direction=top'
                    scrolling='no'
@@ -43,112 +46,150 @@ html
 
 
 
-          h2.divide-section Introduction
-
-          .row
-            .mobile-12.tablet-6.desktop-3.large-3
-              h2 Getting started
-              p Basic download links for production and development versions
-
-            .mobile-12.tablet-6.desktop-3.large-3
-              h2 Engineered
-              p We engineered world's best lightweight responsive framework
-
-            .mobile-12.tablet-6.desktop-3.large-3
-              h2 Download
-                sup.badge.badge-warning.badge-round no version
-              p There are no downloads available yet. You can access source code 
-              p
-                a(href="https://github.com/speedovation/wall/" class="button success")
-                  i.i-github-alt 
-                  |  Fork us on Github
-              p We are highly active and working hard to bring stable release.
-
-            .mobile-12.tablet-6.desktop-3.large-3
-              h2 Icons
-              p
-                | We are having more than &nbsp;
-    
-                a(href="icons.html")
-                  
-                  strong Stripe Icons set (509 + 24 icons)
-                |  and growing daily. Stay tuned.
-                | This will be one of our core feature.
-
-          .row 
-            h2.divide-section.space-bottom Examples
-            //.mobile-12.tablet-6.desktop-4.large-4
+      
+    .row
+        h2.divide-section Introduction
+        
+        .mobile-12.tablet-6.desktop-4.large-4
+          //i.i-info.size-32
+          h3 What is Inventive?
+          p.text-lead Inventive is an open source project created by Speedovation
+          p Inventive is a complete Front-end framework using Stylus, CoffeeScript and Jade. 
             
-            p
-             | These are live sites and live demos of respective owners.
-             | We've used here for demo purpose only. Only html part is picked and modified 
-             | as per our responsive framework.
-  
-  
-  
-            p
-              span.badge.badge-danger Hot
-              |  We are showcasing all examples for faster learning and real implementation.
-              | We've tried not to use any extra css possible while cloning any template to show
-              | the real power of framework, although you may find very few external css also.
-              | This will show the power of new promising framework.
+        .mobile-12.tablet-6.desktop-4.large-4
+          //icon &#57409;
+          h3 Simple style
+          p.details-b The framework is designed to create a uniform and unified styled interface.
+          p Each component follows a generic and pleasant style, resulting in a lightweight and user-friendly web interface.
+        
+        .mobile-12.tablet-6.desktop-4.large-4
+          //icon &#57394;
+          h3 Stylus based
+          p.text-lead Stylus is robust, expressive, and feature-rich CSS superset
+          p Stylus is a revolutionary new language, providing an efficient, dynamic, and expressive way to generate CSS. Supporting both an indented syntax and regular CSS style.
 
-
-            .mobile-12.tablet-6.desktop-6.large-6  
-              ul.link-list
-                  li
-  
-                    a(href='../examples/layouts/cms.html',target="_blank")
-                      h4 Live Site Clone Demo
-                      | CMS
-                  li
-                    a(href='../examples/layouts/marketing.html',target="_blank")
-                      h4 Pure CSS Template Clone
-                      | Marketing Template
-  
-                  li
-                    a(href='../examples/layouts/theme.html',target="_blank")
-                      h4 Bootstrap Theme Template Clone
-                      | Theme Template
-  
-  
-  
-  
-            .mobile-12.tablet-6.desktop-6.large-6 
-              ul.link-list
-                li
-                  a(href='../examples/layouts/simple.html',target="_blank")
-                    h4 Bootstrap Example Clone
-                    | Simple Site Template
-
-                li
-                  a(href='../examples/layouts/sliders.html',target="_blank")
-                    h4 Using Sliders
-                    | Sliders Template
-
-                li
-                  a(href='../examples/layouts/yepnopejs.html',target="_blank")
-                      h4 YepNopejs Clone
-                      | Yepnopejs template
-
+      
+      .row
+      
+        .mobile-12.tablet-6.desktop-4.large-4
+          //icon &#57481;
+          h3 Features
+          p.text-lead Inventive is a modular and scalable framework.
+          p  Stylus also helps make readable code and easily customizable.
+        
+        
+        .mobile-12.tablet-6.desktop-4.large-4
+          //icon &#57493;
+          h3 Modular
+          p.text-lead Inventive is built based on the modularity provided by CSS3 and enhanced by Stylus.
+          p Inventive composed of modules. Css components and Js components. Easily add in add in projects. Keep overall project lightweight.
+        
+        .mobile-12.tablet-6.desktop-4.large-4
+          //icon &#57431;
+          h3 Contribute
+          p.text-lead Inventive invites every powerful mind who thinks alike.
+          p Make a fork of the project on Github and contribute to this young project.
+      
+      .row
+        .mobile-12.tablet-6.desktop-4.large-4
+          //icon chrome
+          //icon ie
+          //icon firefox
+          //icon opera
+          //icon safari
+          h3 Browser Support
+          p.text-lead Inventive Framework is tested and supported in major modern browser
+          p Chrome, Firefox, Opera, Safari and Internet Explorer.
+        
+        .mobile-12.tablet-6.desktop-4.large-4
+          //icon &#57404;
+          h3 Light weight
+          p.details-b The compiled and minified file: 84kb!
           p
-              span.badge Note  
-              |  Examples can used for educational purpose only.
-              | Everything else is under MIT license. Stripe Icons and Fonts are under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>
+            | Optionally you can extend the framework with the awesome set of typographic icons.
+          p
+        .mobile-12.tablet-6.desktop-4.large-4
+          i.i-mobile
+          h3 Responsive
+          p.details-b And as one would expect for a HTML5 framework is full responsive!
+          p Try it yourself!
 
+    
+    .wrap-intro
+      .row 
+        h2.divide-section.space-bottom Examples
+        //.mobile-12.tablet-6.desktop-4.large-4
+        
+        p
+         | These are live sites and live demos of respective owners.
+         | We've used here for demo purpose only. Only html part is picked and modified 
+         | as per our responsive framework.
+  
+  
+  
+        p
+          span.badge.badge-danger Hot
+          |  We are showcasing all examples for faster learning and real implementation.
+          | We've tried not to use any extra css possible while cloning any template to show
+          | the real power of framework, although you may find very few external css also.
+          | This will show the power of new promising framework.
+  
+  
+        .mobile-12.tablet-6.desktop-6.large-6  
+          ul.link-list
+              li
+  
+                a(href='../examples/layouts/cms.html',target="_blank")
+                  h4 Live Site Clone Demo
+                  | CMS
+              li
+                a(href='../examples/layouts/marketing.html',target="_blank")
+                  h4 Pure CSS Template Clone
+                  | Marketing Template
+  
+              li
+                a(href='../examples/layouts/theme.html',target="_blank")
+                  h4 Bootstrap Theme Template Clone
+                  | Theme Template
+  
+  
+  
+  
+        .mobile-12.tablet-6.desktop-6.large-6 
+          ul.link-list
+            li
+              a(href='../examples/layouts/simple.html',target="_blank")
+                h4 Bootstrap Example Clone
+                | Simple Site Template
+  
+            li
+              a(href='../examples/layouts/sliders.html',target="_blank")
+                h4 Using Sliders
+                | Sliders Template
+  
+            li
+              a(href='../examples/layouts/yepnopejs.html',target="_blank")
+                  h4 YepNopejs Clone
+                  | Yepnopejs template
+  
+        p
+          span.badge Note  
+          |  Examples can used for educational purpose only.
+          | Everything else is under MIT license. Stripe Icons and Fonts are under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>
+  
+        .row
           h2.divide-section Live Showcases
           p Live websites using our framework.
-            .row
-              ul.link-list.col-4
-                li
-                  a(href='http://iconmart.in',target="_blank")
-                    h4 IconMart
-                    | Web Icon Font
-                li
-                  a(href='http://speedovation.com',target="_blank")
-                    h4 Speedovation
-                    | Innovation Lab
-                li
-                  a(href='http://Sarabit.com',target="_blank")
-                    h4 Sarabit
-                    | Your tech partner
+          ul.link-list.col-4
+            li
+              a(href='http://iconmart.in',target="_blank")
+                h4 IconMart
+                | Web Icon Font
+            li
+              a(href='http://speedovation.com',target="_blank")
+                h4 Speedovation
+                | Innovation Lab
+            li
+              a(href='http://Sarabit.com',target="_blank")
+                h4 Sarabit
+                | Your tech partner

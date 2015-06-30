@@ -195,3 +195,38 @@ body
     background: #fbfbfb
     margin-bottom: 4rem
 
+.wrap-intro
+    //background-color: #f2f5fd;
+    background-color: #FCFCFC
+    //border: 1px solid #c6d4f3;
+    //color 
+
+nav.nav 
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+
+//Responsive utilities section
+.is-hidden
+    color: #747272
+    background-color: #E0E0E0
+    
+.is-visible
+    color: #144D61
+    background-color: #98E1F9
+
+
+.responsive-utilities-test 
+    span
+        padding 5px 10px
+        border 1px solid #aaa
+        margin 1rem 0
+        display block
+    
+    [class*="visible-"]
+        @extend .is-visible
+    
+    [class*="hidden-"]
+        @extend .is-hidden
+
+//End here

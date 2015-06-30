@@ -1,0 +1,144 @@
+@import "_variables"
+
+
+@viewport
+   width: device-width
+
+@-ms-viewport
+   width: device-width
+
+show() 
+  display: block !important;
+  
+  table&
+    display: table !important; 
+  
+  tr&
+    display: table-row !important; 
+  th&,
+  td&
+    display: table-cell !important; 
+
+hide() 
+  display: none !important;
+
+.visible-mobile-block,
+.visible-mobile-inline,
+.visible-mobile-inline-block,
+.visible-tablet-block,
+.visible-tablet-inline,
+.visible-tablet-inline-block,
+.visible-desktop-block,
+.visible-desktop-inline,
+.visible-desktop-inline-block,
+.visible-large-block,
+.visible-large-inline,
+.visible-large-inline-block
+  display: none !important;
+
+
+@media only screen and (max-width: $screen-mobile-max)
+  
+  //@viewport
+  // width: 640px
+  
+  .visible-mobile
+    show();
+
+  .visible-mobile-block
+    display: block !important;
+
+  .visible-mobile-inline
+    display: inline !important;
+
+  .visible-mobile-inline-block
+    display: inline-block !important;
+    
+  .hidden-mobile 
+    hide();  
+
+
+@media (min-width: $screen-tablet-min) and (max-width: $screen-tablet-max)
+  .visible-tablet
+    show();
+
+  .visible-tablet-block
+    display: block !important;
+
+  .visible-tablet-inline
+    display: inline !important;
+  
+  .visible-tablet-inline-block
+    display: inline-block !important;
+    
+  .hidden-tablet 
+    hide();  
+
+
+@media (min-width:$screen-desktop-min) and (max-width:$screen-desktop-max)
+  .visible-desktop
+    show();
+  
+  .visible-desktop-block
+    display: block !important;
+  
+  .visible-desktop-inline
+    display: inline !important;
+
+  .visible-desktop-inline-block 
+    display: inline-block !important;
+
+  .hidden-desktop
+    hide(); 
+
+
+@media (min-width: $screen-large-min) 
+  .visible-large 
+    show();
+  
+  .visible-large-block 
+    display: block !important;
+  
+  .visible-large-inline 
+    display: inline !important;
+  
+  .visible-large-inline-block 
+    display: inline-block !important;
+  
+  .hidden-large 
+    hide();
+  
+
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+
+
+.visible-print-block 
+  display: none !important;
+
+  @media print 
+    display: block !important;
+  
+
+.visible-print-inline 
+  display: none !important;
+
+  @media print 
+    display: inline !important;
+  
+
+.visible-print-inline-block 
+  display: none !important;
+
+  @media print 
+    display: inline-block !important;
+  
+
+.hidden-print 
+  @media print 
+    hide();
+  
+
+
