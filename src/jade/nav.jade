@@ -1,315 +1,308 @@
-doctype html
-html(lang="en")
-  head
+extends ./layout.jade
+
+block title
+  title Responsive Navbar
+
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Usage", "Nested navs", "Accordion","Header and divider","Style modifiers" ]
+  +top_left(vals)
+   
+block content
+
+  h2.divide-section Nav
+  p.info Defines different styles for list navigations.
+  h2#Usage Usage
+  p
+    | To apply this component, add the 
+    code .nav
+    |  class to an 
+    code= "<ul>"
+    |  element. Use 
+    code= "<a>"
+    |  elements as menu items within the list. To apply an active state to a menu item, just add the 
+    code .active
+    |  class.
+  
+  .preview-box
+    .width-per-33
+      ul.nav.nav-side
+        li.active
+          a(href='#') Active
+        li
+          a(href='#') Item
+        li
+          a(href='#') Item
+  
+  p
+    span.badge.badge-info NOTE
+    | By default, the nav has no styling. That's why it is important to add a 
+    | modifier class to give it some styling. In our examples we used the 
+    code .nav-side
+    |  class.
+  
     
-    title Nav
+  hr
+  
+  h3#Nestednavs Nested navs
+  p
+    | You can easily add any number of 
+    code= "<ul>"
+    |  elements to your nav.
+  
+  table.table.rounded
+    thead
+      tr
+        th Class
+        th Description
+    tbody
+      tr
+        td
+          code .nav-sub
+        td
+          | Add this class to the first nested 
+          code= "<ul>"
+          |  for optimized spacing.
+      tr
+        td
+          code .parent
+        td Add this class to indicate a parent menu item.
+      tr
+        td
+          code .nav-parent-icon
+        td Add this class to the nav to add icons, indicating parent items.
+  
 
-    include header
+  .preview-box
+    .width-per-33
+      ul.nav.nav-side.nav-parent-icon
+        li.active
+          a(href='') Active
+        li
+          a(href='#') 
+             i.i-arrow-up
+             | Parent
+          ul.nav-sub
+            li
+              a(href='') Sub item
+            li
+              a(href='') Sub item
+              ul
+                li
+                  a(href='') Sub item
+                li
+                  a(href='') Sub item
+  
+  hr
 
+  h3#Accordion Accordion
+  p
+    | By default child menu items are always visible. To apply the accordion effect, 
+    | just add the 
+    code data-nav
+    |  attribute to the main 
+    code= "<ul>"
+    |  . When clicking on a parent item, an open one will close, allowing only one 
+    |  open nested list at a time. To avoid this behavior, just append 
+    code {multiple:true}
+    |  to the data attribute.
 
-
-  body
-
-    include _nav
-
-
+  .preview-box
     .row
-
-        div.col-12
-
-          h1.divide-section Nav
-          p.info Defines different styles for list navigations.
-          h2 Usage
-          p
-            | To apply this component, add the 
-            code .nav
-            |  class to an 
-            code= "<ul>"
-            |  element. Use 
-            code= "<a>"
-            |  elements as menu items within the list. To apply an active state to a menu item, just add the 
-            code .active
-            |  class.
-          
-          .preview-box
-            .width-per-33
-              ul.nav.nav-side
-                li.active
-                  a(href='#') Active
+      .width-per-50
+        p
+          code data-nav
+        ul.nav.nav-side.nav-parent-icon.w-66(data-nav='')
+          li.active
+            a(href='') Active
+          li
+            a(href='') Item
+          li.parent
+            a(href='#') Parent
+            div(style='overflow: hidden; height: 0; position: relative;')
+              ul.nav-sub
                 li
-                  a(href='#') Item
+                  a(href='') Sub item
                 li
-                  a(href='#') Item
-          
-          p
-            span.badge.badge-info NOTE
-            | By default, the nav has no styling. That's why it is important to add a 
-            | modifier class to give it some styling. In our examples we used the 
-            code .nav-side
-            |  class.
-          
-            
-          hr
-          
-          h3 Nested navs
-          p
-            | You can easily add any number of 
-            code= "<ul>"
-            |  elements to your nav.
-          
-          table.table.rounded
-            thead
-              tr
-                th Class
-                th Description
-            tbody
-              tr
-                td
-                  code .nav-sub
-                td
-                  | Add this class to the first nested 
-                  code= "<ul>"
-                  |  for optimized spacing.
-              tr
-                td
-                  code .parent
-                td Add this class to indicate a parent menu item.
-              tr
-                td
-                  code .nav-parent-icon
-                td Add this class to the nav to add icons, indicating parent items.
-          
-
-          .preview-box
-            .width-per-33
-              ul.nav.nav-side.nav-parent-icon
-                li.active
-                  a(href='') Active
-                li
-                  a(href='#') 
-                     i.i-arrow-up
-                     | Parent
-                  ul.nav-sub
+                  a(href='') Sub item
+                  ul
                     li
                       a(href='') Sub item
                     li
                       a(href='') Sub item
-                      ul
-                        li
-                          a(href='') Sub item
-                        li
-                          a(href='') Sub item
-          
-          hr
-
-          h3 Accordion
-          p
-            | By default child menu items are always visible. To apply the accordion effect, 
-            | just add the 
-            code data-nav
-            |  attribute to the main 
-            code= "<ul>"
-            |  . When clicking on a parent item, an open one will close, allowing only one 
-            |  open nested list at a time. To avoid this behavior, just append 
-            code {multiple:true}
-            |  to the data attribute.
-
-          .preview-box
-            .row
-              .width-per-50
-                p
-                  code data-nav
-                ul.nav.nav-side.nav-parent-icon.w-66(data-nav='')
-                  li.active
-                    a(href='') Active
-                  li
-                    a(href='') Item
-                  li.parent
-                    a(href='#') Parent
-                    div(style='overflow: hidden; height: 0; position: relative;')
-                      ul.nav-sub
-                        li
-                          a(href='') Sub item
-                        li
-                          a(href='') Sub item
-                          ul
-                            li
-                              a(href='') Sub item
-                            li
-                              a(href='') Sub item
-                  li.parent
-                    a(href='#') Parent
-                    div(style='overflow: hidden; height: 0; position: relative;')
-                      ul.nav-sub
-                        li
-                          a(href='') Sub item
-                        li
-                          a(href='') Sub item
-              .width-per-50
-                p
-                  code data-nav="{multiple:true}"
-                ul.nav.nav-side.nav-parent-icon.w-66(data-nav='{multiple:true}')
-                  li.active
-                    a(href='') Active
-                  li
-                    a(href='') Item
-                  li.parent
-                    a(href='#') Parent
-                    div(style='overflow: hidden; height: 0; position: relative;')
-                      ul.nav-sub
-                        li
-                          a(href='') Sub item
-                        li
-                          a(href='') Sub item
-                          ul
-                            li
-                              a(href='') Sub item
-                            li
-                              a(href='') Sub item
-                  li.parent
-                    a(href='#') Parent
-                    div(style='overflow: hidden; height: 0; position: relative;')
-                      ul.nav-sub
-                        li
-                          a(href='') Sub item
-                        li
-                          a(href='') Sub item
-          
-                
-          hr
-          
-          h3 Header and divider
-          p
-            | Add one of the following classes to a list item to create a header 
-            |  or a divider between items.
-          table.table
-            thead
-              tr
-                th Class
-                th Description
-            tbody
-              tr
-                td
-                  code .nav-header
-                td
-                  | Add this class to a 
-                  code= "<li>"
-                  |  element to create a header.
-              tr
-                td
-                  code .nav-divider
-                td
-                  | Add this class to a 
-                  code= "<li>"
-                  |  element to create a divider separating menu items.
-          p
-            span.badge NOTE
-            | You can also add subtitles to nav items. Just create a 
-            code= "<div>"
-            |  element inside the 
-            code= "<a>"
-            |  element within the list item.
-          
-          .preview-box
-            .width-per-33
-              ul.nav.nav-side(data-nav='')
-                li.nav-header Header
+          li.parent
+            a(href='#') Parent
+            div(style='overflow: hidden; height: 0; position: relative;')
+              ul.nav-sub
                 li
-                  a(href='')
-                    | Item
-                    div Subtitle
+                  a(href='') Sub item
                 li
-                  a(href='') Item
-                li.nav-divider
+                  a(href='') Sub item
+      .width-per-50
+        p
+          code data-nav="{multiple:true}"
+        ul.nav.nav-side.nav-parent-icon.w-66(data-nav='{multiple:true}')
+          li.active
+            a(href='') Active
+          li
+            a(href='') Item
+          li.parent
+            a(href='#') Parent
+            div(style='overflow: hidden; height: 0; position: relative;')
+              ul.nav-sub
                 li
-                  a(href='') Item
-          
-          hr
-          
-          h2 Style modifiers
-          p
-            | There are several modifiers to style the nav according to the context, 
-            | in which it is used.
+                  a(href='') Sub item
+                li
+                  a(href='') Sub item
+                  ul
+                    li
+                      a(href='') Sub item
+                    li
+                      a(href='') Sub item
+          li.parent
+            a(href='#') Parent
+            div(style='overflow: hidden; height: 0; position: relative;')
+              ul.nav-sub
+                li
+                  a(href='') Sub item
+                li
+                  a(href='') Sub item
+  
+        
+  hr
+  
+  h3#Headeranddivider Header and divider
+  p
+    | Add one of the following classes to a list item to create a header 
+    |  or a divider between items.
+  table.table
+    thead
+      tr
+        th Class
+        th Description
+    tbody
+      tr
+        td
+          code .nav-header
+        td
+          | Add this class to a 
+          code= "<li>"
+          |  element to create a header.
+      tr
+        td
+          code .nav-divider
+        td
+          | Add this class to a 
+          code= "<li>"
+          |  element to create a divider separating menu items.
+  p
+    span.badge NOTE
+    | You can also add subtitles to nav items. Just create a 
+    code= "<div>"
+    |  element inside the 
+    code= "<a>"
+    |  element within the list item.
+  
+  .preview-box
+    .width-per-33
+      ul.nav.nav-side(data-nav='')
+        li.nav-header Header
+        li
+          a(href='')
+            | Item
+            div Subtitle
+        li
+          a(href='') Item
+        li.nav-divider
+        li
+          a(href='') Item
+  
+  hr
+  
+  h2#Stylemodifiers Style modifiers
+  p
+    | There are several modifiers to style the nav according to the context, 
+    | in which it is used.
 
-          h3 Nav side
+  h3 Nav side
 
-          p
-            | Add the 
-            code .nav-side
-            |  class to place a nav inside your sidebar, panels or anywhere else in your content.
-          
-          .preview-box
-            .width-per-33
-              .panel.panel-box
-                h3.panel-title Nav side in panel
-                ul.nav.nav-side.nav-parent-icon(data-nav='')
-                  li.active
-                    a(href='') Active
-                  li.parent
-                    a(href='#') Parent
-                    div(style='overflow: hidden; height: 0; position: relative;')
-                      ul.nav-sub
-                        li
-                          a(href='') Sub item
-                        li
-                          a(href='') Sub item
-                          ul
-                            li
-                              a(href='') Sub item
-                            li
-                              a(href='') Sub item
-                  li.parent
-                    a(href='#') Parent
-                    div(style='overflow: hidden; height: 0; position: relative;')
-                      ul.nav-sub
-                        li
-                          a(href='') Sub item
-                        li
-                          a(href='') Sub item
-                  li
-                    a(href='') Item
-                  li.nav-header Header
-                  li.parent
-                    a(href='')
-                      i.i-star
-                      | Parent
-                  li
-                    a(href='')
-                      i.i-twitter
-                      | Item
-                  li.nav-divider
-                  li
-                    a(href='')
-                      i.i-rss
-                      | Item
-          
-            
-         // hr
-         // h3 Nav dropdown
-         // p
-         //   | Add the
-         //   code .nav-dropdown
-         //   |  class to place a nav inside a default dropdown from the
-         //   a(href='dropdown.html') Dropdown component
-         //   | .
-         //
-         // .preview-box
-         //   .button-dropdown(data-dropdown='')
-         //     button.button
-         //       | Dropdown
-         //       i.i-caret-down
-         //     .dropdown.dropdown-small
-         //       ul.nav.nav-dropdown
-         //         li
-         //           a(href='#') Item
-         //         li
-         //           a(href='#') Another item
-         //         li.nav-header Header
-         //         li
-         //           a(href='#') Item
-         //         li
-         //           a(href='#') Another item
-         //         li.nav-divider
-         //         li
-         //           a(href='#') Separated item
-         //
+  p
+    | Add the 
+    code .nav-side
+    |  class to place a nav inside your sidebar, panels or anywhere else in your content.
+  
+  .preview-box
+    .width-per-33
+      .panel.panel-box
+        h3.panel-title Nav side in panel
+        ul.nav.nav-side.nav-parent-icon(data-nav='')
+          li.active
+            a(href='') Active
+          li.parent
+            a(href='#') Parent
+            div(style='overflow: hidden; height: 0; position: relative;')
+              ul.nav-sub
+                li
+                  a(href='') Sub item
+                li
+                  a(href='') Sub item
+                  ul
+                    li
+                      a(href='') Sub item
+                    li
+                      a(href='') Sub item
+          li.parent
+            a(href='#') Parent
+            div(style='overflow: hidden; height: 0; position: relative;')
+              ul.nav-sub
+                li
+                  a(href='') Sub item
+                li
+                  a(href='') Sub item
+          li
+            a(href='') Item
+          li.nav-header Header
+          li.parent
+            a(href='')
+              i.i-star
+              | Parent
+          li
+            a(href='')
+              i.i-twitter
+              | Item
+          li.nav-divider
+          li
+            a(href='')
+              i.i-rss
+              | Item
+  
+    
+ // hr
+ // h3 Nav dropdown
+ // p
+ //   | Add the
+ //   code .nav-dropdown
+ //   |  class to place a nav inside a default dropdown from the
+ //   a(href='dropdown.html') Dropdown component
+ //   | .
+ //
+ // .preview-box
+ //   .button-dropdown(data-dropdown='')
+ //     button.button
+ //       | Dropdown
+ //       i.i-caret-down
+ //     .dropdown.dropdown-small
+ //       ul.nav.nav-dropdown
+ //         li
+ //           a(href='#') Item
+ //         li
+ //           a(href='#') Another item
+ //         li.nav-header Header
+ //         li
+ //           a(href='#') Item
+ //         li
+ //           a(href='#') Another item
+ //         li.nav-divider
+ //         li
+ //           a(href='#') Separated item
+ //

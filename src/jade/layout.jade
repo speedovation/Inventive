@@ -3,12 +3,11 @@ html
   head
     block title
       title Default title
-      
-      
+     
+ 
     include header
-    
-    
 
+   
   body
   
     include _nav
@@ -25,49 +24,15 @@ html
         
          block leftcontent
         
-         h3 Css Components 
-         ul.link-list
-           li
-             a(href='typography.html') Typography
-           li
-             a(href='grid.html') Grid
-           li
-             a(href='tables.html') Tables
-           li
-             a(href='forms.html') Forms
-           li
-             a(href='buttons.html') Buttons
-      
-      
-           li
-             a(href='tooltips.html') Tooltips
-           li
-             a(href='messages.html') Messages
-           li
-             a(href='badge.html') Badges
-           li
-             a(href='thumbnail.html') Thumbnail
-      
-           li
-             a(href='navbar.html') Navbar
-           li
-             a(href='list.html') List  Group
-           li
-             a(href='nav.html') Nav
-           li
-             a(href='subnav.html') Subnav
-           li
-             a(href='panel.html') Panel
-           li
-             a(href='breadcrumb.html') Breadcrumb
-           li
-             a(href='pagination.html') Pagination
-           li
-             a(href='progress.html') Progress
-           li
-             a(href='search.html') Search
-
-      
-      
+         h3 Css Components
+        
+         - var links = ['Typography','Grid' ,'Tables', 'Forms' , 'Buttons', 'Tooltips' ,'Messages', 'Badges', 'Thumbnail','Navbar','Lists','Nav','Subnav','Panel','Breadcrumb','Pagination','Progress','Search'] 
+         ul.link-list.left-navigations
+          each val in links
+            - var l = val.replace(/ /g,"-").toLowerCase()   
+            li(class="m-#{l}")
+              a(href='#{l}.html') #{val}
+            
+          
        .mobile-12.tablet-9.desktop-9.large-9.desktop-pull-1.large-pull-1
          block content

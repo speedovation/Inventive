@@ -1,121 +1,117 @@
-doctype html
-html(lang="en")
-  head
+extends ./layout.jade
+
+block title
+  title Responsive Navbar
+
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Usage", "Nested navs", "Accordion","Header and divider","Style modifiers" ]
+  +top_left(vals)
+   
+block content
+
+  h2.divide-section Subav
+  
+  p.info Defines different styles for a sub navigation.
+  
+  h2 Usage
+  p
+    | To apply this component, add the 
+    code .subnav
+    |  class to an 
+    code= "<ul>"
+    |  element and nest 
+    code= "<a>"
+    |  elements within the list. Use a 
+    code= "<span>"
+    |  element instead to disable the item. 
+
+  
+  .preview-box
+    ul.subnav
+      li
+        a(href='#') Item
+      li
+        a(href='#') Item
+      li
+        span Disabled
+      li
+        a(href='#') Item
     
-    title Messages ( messages)
+  hr
+  
+  h2 Modifiers
+  
+  h3 Subnav line
+  p
+    | Add the 
+    code .subnav-line
+    |  class to separate menu items with lines.
+  
+  .preview-box
+    ul.subnav.subnav-line
+      li
+        a(href='#') Item
+      li
+        a(href='#') Item
+      li
+        span Disabled
+      li
+        a(href='#') Item
+    
+  hr
+  
+  h3 Subnav pill
+  p
+    | Add the 
+    code .subnav-pill
+    |  class to highlight the active menu item with a background. 
+    |  To apply an active state to a menu item, just add the 
+    code .active
+    |  class.
+  
+  .preview-box
+    ul.subnav.subnav-pill
+      li.active
+        a(href='#') Active
+      li
+        a(href='#') Item
+      li
+        span Disabled
+      li
+        a(href='#') Item
+    
+  hr
+  h2 Subnav with dropdowns
+  p
+    | This is an example of how to use a subnav with the 
+    a(href='dropdown.html') Dropdown component
+    | .
 
-    include header
-
-
-
-  body
-
-    include _nav
-
-    .grid
-      .row
-
-        div.desktop-12
-
-          h1.divide-section Subnav
-          p.info Defines different styles for a sub navigation.
-          
-          h2 Usage
-          p
-            | To apply this component, add the 
-            code .subnav
-            |  class to an 
-            code= "<ul>"
-            |  element and nest 
-            code= "<a>"
-            |  elements within the list. Use a 
-            code= "<span>"
-            |  element instead to disable the item. 
-
-          
-          .preview-box
-            ul.subnav
-              li
-                a(href='#') Item
-              li
-                a(href='#') Item
-              li
-                span Disabled
-              li
-                a(href='#') Item
-            
-          hr
-          
-          h2 Modifiers
-          h3 Subnav line
-          p
-            | Add the 
-            code .subnav-line
-            |  class to separate menu items with lines.
-          
-          .preview-box
-            ul.subnav.subnav-line
-              li
-                a(href='#') Item
-              li
-                a(href='#') Item
-              li
-                span Disabled
-              li
-                a(href='#') Item
-            
-          hr
-          h3 Subnav pill
-          p
-            | Add the 
-            code .subnav-pill
-            |  class to highlight the active menu item with a background. 
-            |  To apply an active state to a menu item, just add the 
-            code .active
-            |  class.
-          
-          .preview-box
-            ul.subnav.subnav-pill
-              li.active
-                a(href='#') Active
-              li
-                a(href='#') Item
-              li
-                span Disabled
-              li
-                a(href='#') Item
-            
-          hr
-          h2 Subnav with dropdowns
-          p
-            | This is an example of how to use a subnav with the 
-            a(href='dropdown.html') Dropdown component
-            | .
-
-          .preview-box  
-            ul.subnav.subnav-pill
-              li.active
-                a(href='#') Active
-              li
-                a(href='#') Item
-              li
-                span Disabled
-              li(data-dropdown='{mode:"click"}')
-                a(href='#')
-                  | More
-                  i.i-caret-down
-                .dropdown.dropdown-small(style='')
-                  ul.nav.nav-dropdown
-                    li
-                      a(href='#') Item
-                    li
-                      a(href='#') Another item
-                    li.nav-header Header
-                    li
-                      a(href='#') Item
-                    li
-                      a(href='#') Another item
-                    li.nav-divider
-                    li
-                      a(href='#') Separated item
-            
+  .preview-box  
+    ul.subnav.subnav-pill
+      li.active
+        a(href='#') Active
+      li
+        a(href='#') Item
+      li
+        span Disabled
+      li(data-dropdown='{mode:"click"}')
+        a(href='#')
+          | More
+          i.i-caret-down
+        .dropdown.dropdown-small(style='')
+          ul.nav.nav-dropdown
+            li
+              a(href='#') Item
+            li
+              a(href='#') Another item
+            li.nav-header Header
+            li
+              a(href='#') Item
+            li
+              a(href='#') Another item
+            li.nav-divider
+            li
+              a(href='#') Separated item
+    

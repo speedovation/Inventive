@@ -1,210 +1,203 @@
-doctype html
-html(lang="en")
-  head
-    
-    title Nav
+extends ./layout.jade
 
-    include header
+block title
+  title Responsive Navbar
 
-    
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Simple Navbar", "Navbar with dropdowns", "Navbar with right side" ]
+  +top_left(vals)
+   
+block content
+  h2.divide-section Responsive Navbar
+  
+  p.info Simple yet effective navbar
+  
+  h2 Important helpers
+  p We can add class <code>.fixed</code> to make it fix in current position.
+  p 
+  | Also we can add class <code> .top</code> to make it fix at top. 
+  | This class won't work without <code>.fixed</code> class.
+  p Always add <code>.fixed</code> and <code>.top</code> class to <code>nav</code> element only.
+  
+  h2 Javascript 
+  p We need to initialize nav. No support for data attributes in this version.
 
-  body
+  pre 
+    code
+      $(".flexnav").flexNav();
 
-    include _nav
-
-    .row
-        .col-12
-    
-
-          h1.divide-section Navbar
+  
+  h2#SimpleNavbar Simple Navbar
+  .preview-box
+    p
+      nav.nav
+        .menu-button  
+          i.i-bars1
+        
+        .flexnav.opacity.lg-screen(data-breakpoint='800')
+          h4 Site Name
+      
+  h2#Navbarwithdropdowns Navbar with dropdowns
+  .preview-box
+    p 
+      nav.nav
+        .menu-button  
+          i.i-bars1
+        
+        .flexnav.opacity.lg-screen(data-breakpoint='800')
+          h4 Site Name
           
-          p.info Simple yet effective navbar
-          
-          h2 Important helpers
-          p We can add class <code>.fixed</code> to make it fix in current position.
-          p 
-          | Also we can add class <code> .top</code> to make it fix at top. 
-          | This class won't work without <code>.fixed</code> class.
-          p Always add <code>.fixed</code> and <code>.top</code> class to <code>nav</code> element only.
-          
-          h2 Javascript 
-          p We need to initialize nav. No support for data attributes in this version.
-
-          pre 
-            code
-              $(".flexnav").flexNav();
-
-          
-          h2 Simple Navbar
-          .preview-box
-            p
-              nav.nav
-                .menu-button  
-                  i.i-bars1
-                
-                .flexnav.opacity.lg-screen(data-breakpoint='800')
-                  h4 Site Name
+          ul
+            li.item-with-ul
+              a(href='') Item 1
+                i.i-chevron-down
+              ul
+                li
+                  a(href='#content') Sub 1 Item 1
+                li
+                  a(href='/') Sub 1 Item 2
+                li
+                  a(href='/') Sub 1 Item 3
+                li
+                  a(href='/') Sub 1 Item 4
               
-          h2 Navbar with dropdowns
-          .preview-box
-            p 
-              nav.nav
-                .menu-button  
-                  i.i-bars1
+            li.item-with-ul
+              a(href='/') Item 2
+                i.i-chevron-down
+              
+              ul
+                li
+                  a(href='/') Sub 1 Item 1
                 
-                .flexnav.opacity.lg-screen(data-breakpoint='800')
-                  h4 Site Name
+                li.item-with-ul
+                  a(href='/') Sub 1 Item 2
+                    i.i-chevron-right
+                  ul
+                    li
+                      a(href='/') Sub 2 Item 1
+                    li
+                      a(href='#') Sub 2 Item 2
+                    li
+                      a(href='#') Sub 2 Item 3
                   
+                li.item-with-ul
+                  a(href='#') Sub 1 Item 3
+                    i.i-chevron-right
                   ul
-                    li.item-with-ul
-                      a(href='') Item 1
-                        i.i-chevron-down
-                      ul
-                        li
-                          a(href='#content') Sub 1 Item 1
-                        li
-                          a(href='/') Sub 1 Item 2
-                        li
-                          a(href='/') Sub 1 Item 3
-                        li
-                          a(href='/') Sub 1 Item 4
-                      
-                    li.item-with-ul
-                      a(href='/') Item 2
-                        i.i-chevron-down
-                      
-                      ul
-                        li
-                          a(href='/') Sub 1 Item 1
-                        
-                        li.item-with-ul
-                          a(href='/') Sub 1 Item 2
-                            i.i-chevron-right
-                          ul
-                            li
-                              a(href='/') Sub 2 Item 1
-                            li
-                              a(href='#') Sub 2 Item 2
-                            li
-                              a(href='#') Sub 2 Item 3
-                          
-                        li.item-with-ul
-                          a(href='#') Sub 1 Item 3
-                            i.i-chevron-right
-                          ul
-                            li
-                              a(href='#') Sub 2 Item 1
-                            li.item-with-ul
-                              a(href='#') Sub 2 Item 2
-                                i.i-chevron-right
-                              ul
-                                li
-                                  a(href='#') Sub 3 Item 1
-                                li
-                                  a(href='#') Sub 3 Item 2
-                                li
-                                  a(href='#') Sub 3 Item 3
-  
-                      
-                    li.item-with-ul
-                      a(href='#') Item 3
-                        i.i-chevron-down
-                      ul
-                        li
-                          a(href='#') Sub 1 Item 1
-                        li
-                          a(href='#') Sub 1 Item 2
-                        li
-                          a(href='#') Sub 1 Item 3
-                      
-                    li.item-with-ul
-                      a(href='') Item 4
-                        i.i-chevron-down
-                      ul
-                        li
-                          a(href='#') Sub 1 Item 1
-                        li
-                          a(href='#') Sub 1 Item 2
-                        li
-                          a(href='#') Sub 1 Item 3
-                      
-                    li.item-with-ul
-                      a(href='#') Item 5
-                        i.i-chevron-down
-                      ul
-                        li
-                          a(href='#') Sub 1 Item 1
-                        li
-                          a(href='#') Sub 1 Item 2
-                        li
-                          a(href='#') Sub 1 Item 3
-                    
-                      
-          h2 Navbar with right side options
-
-          .preview-box
-            p 
-              nav.nav
-                .menu-button
-                    i.i-bars1
-                
-                .flexnav.opacity.lg-screen(data-breakpoint='800')
-                  h4 Site Name
-                  ul
-                    li.item-with-ul
-                      a(href='') 
-                        | Item 1
-                        i.i-chevron-down  
-  
-                      ul
-                        li
-                          a(href='#content') Sub 1 Item 1
-                        li
-                          a(href='/') Sub 1 Item 2
-                        li
-                          a(href='/') Sub 1 Item 3
-                        li
-                          a(href='/') Sub 1 Item 4
-                      
                     li
-                      a(href='/') 
-                        | Item 2
-                        i.i-chevron-down  
-                      
-                      ul(style='display: none;')
+                      a(href='#') Sub 2 Item 1
+                    li.item-with-ul
+                      a(href='#') Sub 2 Item 2
+                        i.i-chevron-right
+                      ul
                         li
-                          a(href='/') Sub 1 Item 1
-                        li.item-with-ul
-                          a(href='/') 
-                            | Sub 1 Item 2
-                            i.i-chevron-right  
-                          ul(style='display: none;')
-                            li
-                              a(href='/') Sub 2 Item 1
-                            li
-                              a(href='#') Sub 2 Item 2
-                            li
-                              a(href='#') Sub 2 Item 3
-                      
-                    li
-                      a(href='#') Item 3
-                    
-                      
-                    
-                      
-                  div
-                    ul
-                      li
-                        a(href='#content') item
-                      li
-                        a(href='#content') item  
-  
-                  div
-                    .field
-                      input.input(placeholder="Search") 
-                      button.button.positive Go
-             
+                          a(href='#') Sub 3 Item 1
+                        li
+                          a(href='#') Sub 3 Item 2
+                        li
+                          a(href='#') Sub 3 Item 3
 
-         
               
-                
+            li.item-with-ul
+              a(href='#') Item 3
+                i.i-chevron-down
+              ul
+                li
+                  a(href='#') Sub 1 Item 1
+                li
+                  a(href='#') Sub 1 Item 2
+                li
+                  a(href='#') Sub 1 Item 3
+              
+            li.item-with-ul
+              a(href='') Item 4
+                i.i-chevron-down
+              ul
+                li
+                  a(href='#') Sub 1 Item 1
+                li
+                  a(href='#') Sub 1 Item 2
+                li
+                  a(href='#') Sub 1 Item 3
+              
+            li.item-with-ul
+              a(href='#') Item 5
+                i.i-chevron-down
+              ul
+                li
+                  a(href='#') Sub 1 Item 1
+                li
+                  a(href='#') Sub 1 Item 2
+                li
+                  a(href='#') Sub 1 Item 3
+            
+              
+  h2#Navbarwithrightside Navbar with right side options
+
+  .preview-box
+    p 
+      nav.nav
+        .menu-button
+            i.i-bars1
+        
+        .flexnav.opacity.lg-screen(data-breakpoint='800')
+          h4 Site Name
+          ul
+            li.item-with-ul
+              a(href='') 
+                | Item 1
+                i.i-chevron-down  
+
+              ul
+                li
+                  a(href='#content') Sub 1 Item 1
+                li
+                  a(href='/') Sub 1 Item 2
+                li
+                  a(href='/') Sub 1 Item 3
+                li
+                  a(href='/') Sub 1 Item 4
+              
+            li
+              a(href='/') 
+                | Item 2
+                i.i-chevron-down  
+              
+              ul(style='display: none;')
+                li
+                  a(href='/') Sub 1 Item 1
+                li.item-with-ul
+                  a(href='/') 
+                    | Sub 1 Item 2
+                    i.i-chevron-right  
+                  ul(style='display: none;')
+                    li
+                      a(href='/') Sub 2 Item 1
+                    li
+                      a(href='#') Sub 2 Item 2
+                    li
+                      a(href='#') Sub 2 Item 3
+              
+            li
+              a(href='#') Item 3
+            
+              
+            
+              
+          div
+            ul
+              li
+                a(href='#content') item
+              li
+                a(href='#content') item  
+
+          div
+            .field
+              input.input(placeholder="Search") 
+              button.button.positive Go
+     
+
+ 
+      
+        

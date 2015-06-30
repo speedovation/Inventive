@@ -42,6 +42,13 @@ $(function() {
 
     //initiliase all navs
     $(".flexnav").flexNav();
+    var url      = window.location.href;  
+    a = url.split("/")[5].replace(".html","");
+    
+    //$('.left-navigations').find('a').removeClass('active')
+
+    $('.m-' + a).find('a').addClass('active')
+    
    
 
 });
