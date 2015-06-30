@@ -1,79 +1,75 @@
-doctype html
-html(lang="en")
-  head
+extends ./layout.jade
+
+block title
+  title Responsive Breadcrumb
+
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Usage"]
+  +top_left(vals)
+   
+block content
+
+  h2.divide-section Breadcrumb
+
+  p.info Create breadcrumbs to show users their location within a website.
+  h2 Usage
+  p
+    | The Breadcrumb component consists of links which are aligned side by side and separated by a divider.
+  
+  table.table.rounded.zebra.bordered
+    thead
+      tr
+        th Class
+        th Description
+    tbody
+      tr
+        td
+          code .breadcrumb
+        td
+          | Add this class to a 
+          code= "<ul>"
+          |  element to define the Breadcrumb component. Use 
+          code= "<a>"
+          |  elements as breadcrumb items within the list.
+      tr
+        td
+          code .active
+        td
+          | Add this class to a list item to apply an active state and use a 
+          code= "<span>"
+          |  instead of an 
+          code= "<a>"
+          |  element.
+  p
+    | Use a 
+    code= "<span>"
+    |  instead of an 
+    code= "<a>"
+    |  element to disable a breadcrumb item.
+  
+  //-h3.tm-article-subtitle Example
+  
+  
+  //- .preview-tab 
+  //-   ul.resp-tabs-list
+  //-     li Preview
+  //-     li Html Code
+  //-   .resp-tabs-container
+  //-     div
+  .preview-box
+    ul.breadcrumb
+      li
+        a(href='#') Home
+      li
+        a(href='#') Blog
+      li
+        span Category
+      li.active
+        span Post
+      div
+  //- pre.markup
+  //-   code.language-markup
+  
+
     
-    title Messages ( messages)
-
-    include header
-
-
-
-  body
-
-    include _nav
-
-    .row
-
-        div.col-12
-
-          h1.divide-section  Breadcrumb
-          p.info Create breadcrumbs to show users their location within a website.
-          h2 Usage
-          p
-            | The Breadcrumb component consists of links which are aligned side by side and separated by a divider.
-          table.table
-            thead
-              tr
-                th Class
-                th Description
-            tbody
-              tr
-                td
-                  code .breadcrumb
-                td
-                  | Add this class to a 
-                  code= "<ul>"
-                  |  element to define the Breadcrumb component. Use 
-                  code= "<a>"
-                  |  elements as breadcrumb items within the list.
-              tr
-                td
-                  code .active
-                td
-                  | Add this class to a list item to apply an active state and use a 
-                  code= "<span>"
-                  |  instead of an 
-                  code= "<a>"
-                  |  element.
-          p
-            | Use a 
-            code= "<span>"
-            |  instead of an 
-            code= "<a>"
-            |  element to disable a breadcrumb item.
-          
-          //-h3.tm-article-subtitle Example
-          
-          
-          //- .preview-tab 
-          //-   ul.resp-tabs-list
-          //-     li Preview
-          //-     li Html Code
-          //-   .resp-tabs-container
-          //-     div
-          .preview-box
-            ul.breadcrumb
-              li
-                a(href='#') Home
-              li
-                a(href='#') Blog
-              li
-                span Category
-              li.active
-                span Post
-              div
-          //- pre.markup
-          //-   code.language-markup
-          
-
-            

@@ -1,119 +1,115 @@
-doctype html
-html(lang="en")
-  head
-    
-    title Messages ( messages)
+extends ./layout.jade
 
-    include header
+block title
+  title Progress
 
+block leftcontent
+  h3 &nbsp; 
+  - var items = [ "Usage", "Size modifiers", "Color modifiers", "Striped", "Combinable"]
+  +top_left(vals)
+   
+block content
 
+  h2.divide-section Progress
 
-  body
-
-    include _nav
-
-    .grid
-      .row
-
-        div.desktop-12
-
-          h1.divide-section Progress
-          p.info Defines different styles for progress bars.
-          h2 Usage
-          p
-            | The progress bar consists of a background bar and the progress bar itself, indicating the increase.
-          table.table
-            thead
-              tr
-                th Class
-                th Description
-            tbody
-              tr
-                td
-                  code .progress
-                td
-                  | This class is used on the parent container to create the background of the progress bar.
-              tr
-                td
-                  code .progress-bar
-                td
-                  | This class needs to be added to the child element to create the actual progress bar.
-          
-          .preview-box
-            .progress
-              .progress-bar(style='width: 40%;') 40%
-          
+  p.info Defines different styles for progress bars.
   
-          hr
-          
-          h2 Size modifiers
-          p
-            | Add the 
-            code .progress-mini
-            |  or 
-            code .progress-small
-            |  class to change the size of the bar.
-          
+  h2#Usage Usage
+  
+  p The progress bar consists of a background bar and the progress bar itself, indicating the increase.
 
-          
-          .preview-box
-            .progress.progress-mini
-              .progress-bar(style='width: 50%;')
-            .progress.progress-small
-              .progress-bar(style='width: 55%;')
-            .progress
-              .progress-bar(style='width: 60%;')
-          
+  table.table.rounded.zebra.bordered
+    thead
+      tr
+        th Class
+        th Description
+    tbody
+      tr
+        td
+          code .progress
+        td
+          | This class is used on the parent container to create the background of the progress bar.
+      tr
+        td
+          code .progress-bar
+        td
+          | This class needs to be added to the child element to create the actual progress bar.
+  
+  .preview-box
+    .progress
+      .progress-bar(style='width: 40%;') 40%
+  
 
-          hr
-          
-          h2 Color modifiers
-          p
-            | To apply different colors to your progress bars, just add the 
-            code .progress-success
-            |  , 
-            code .progress-warning
-            |  or 
-            code .progress-danger
-            |  class.
-          
-          .preview-box
-            .progress.progress-success
-              .progress-bar(style='width: 75%;')
-            .progress.progress-warning
-              .progress-bar(style='width: 55%;')
-            .progress.progress-danger
-              .progress-bar(style='width: 35%;')
-              
-          hr
-          
-          h3 Striped
-          p
-            | To create a striped progress bar, use the 
-            code .striped
-            |  class.
-          
-         
-          .preview-box
-            .progress.progress-striped
-              .progress-bar(style='width: 65%;')
-            
-          p
-            | You can even animate the striped bar. To do so, just add the 
-            code .active
-            |  class.
-          
-         
-          .preview-box
-            .progress.progress-striped.active
-              .progress-bar(style='width: 85%;')
-            
-          hr
-          
-          h3 Combinable
-          p All modifiers of the Progress component can be combined with each other.
-          
-          .preview-box
-            .progress.progress-small.progress-danger.progress-striped.active
-              .progress-bar(style='width: 55%;')
-            
+  hr
+  
+  h2#Sizemodifiers Size modifiers
+  p
+    | Add the 
+    code .progress-mini
+    |  or 
+    code .progress-small
+    |  class to change the size of the bar.
+  
+
+  
+  .preview-box
+    .progress.progress-mini
+      .progress-bar(style='width: 50%;')
+    .progress.progress-small
+      .progress-bar(style='width: 55%;')
+    .progress
+      .progress-bar(style='width: 60%;')
+  
+
+  hr
+  
+  h2#Colormodifiers Color modifiers
+  p
+    | To apply different colors to your progress bars, just add the 
+    code .progress-success
+    |  , 
+    code .progress-warning
+    |  or 
+    code .progress-danger
+    |  class.
+  
+  .preview-box
+    .progress.progress-success
+      .progress-bar(style='width: 75%;')
+    .progress.progress-warning
+      .progress-bar(style='width: 55%;')
+    .progress.progress-danger
+      .progress-bar(style='width: 35%;')
+      
+  hr
+  
+  h3#Striped Striped
+  p
+    | To create a striped progress bar, use the 
+    code .striped
+    |  class.
+  
+ 
+  .preview-box
+    .progress.progress-striped
+      .progress-bar(style='width: 65%;')
+    
+  p
+    | You can even animate the striped bar. To do so, just add the 
+    code .active
+    |  class.
+  
+ 
+  .preview-box
+    .progress.progress-striped.active
+      .progress-bar(style='width: 85%;')
+    
+  hr
+  
+  h3#Combinable Combinable
+  p All modifiers of the Progress component can be combined with each other.
+  
+  .preview-box
+    .progress.progress-small.progress-danger.progress-striped.active
+      .progress-bar(style='width: 55%;')
+    

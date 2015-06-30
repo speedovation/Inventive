@@ -5,15 +5,81 @@ block title
 
 block leftcontent
   h3 &nbsp; 
-  - var items = [ "Asymmetrical", "Symmetrical" ,"Column","Universal responsive class","Collapse row" ]
+  - var items = [ "Asymmetrical", "Symmetrical" ,"Column","Pull and Push","Universal responsive class","Collapse row" ]
   +top_left(vals)
    
 block content
-  .example  
     h2.divide-section Mobile First Responsive Grid System
     
     
-    //demo 1
+    h3 Default Media Queries
+    p 
+      | When using Responsive Grids, you can control how the grid behaves at specific breakpoints by adding class names. 
+      | Default responsive grids comes with the following class names and media query breakpoints.
+    
+    .table-responsive
+      table.table.bordered.zebra.rounded
+        thead
+          tr
+            th Key
+            th CSS Media Query
+            th Applies
+            th Classname
+        tbody
+          
+          tr
+            td
+              b
+                code mobile
+            td
+              code @media screen and (min-width: 480px)
+            td
+              | &#8805;
+              b 480px
+            td
+              code .mobile-
+                
+          tr
+            td
+              b
+                code tablet
+            td
+              code @media screen and (min-width: 768px)
+            td
+              | &#8805;
+              b 768px
+            td
+              code .tablet-
+                
+          tr
+            td.highlight
+              b
+                code desktop
+            td
+              code @media screen and (min-width: 992px)
+            td
+              | &#8805;
+              b 992px
+            td
+              code .desktop-
+                
+                
+          tr
+            td
+              b
+                code large
+            td
+              code @media screen and (min-width: 1200px)
+            td
+              | &#8805;
+              b 1200px
+            td
+              code .large-
+                
+   
+
+    
+        
     
     mixin span_text(l,d,t,m)
       span.span_l large #{d}
@@ -67,6 +133,84 @@ block content
           .large-4.desktop-4.tablet-4.mobile-4
               +span_text('4','4','4','4')
     
+    hr
+    
+    h2#PullandPush Pull and Push - SourceOrdering
+    p
+      |  You can change the display order of the columns to keep a specific column order 
+      |  in the source code. Add one of the 
+      code .*-push-*
+      |  classes to move the column to the right and add one of the 
+      code .*-pull-*
+      |  classes to move a column to the left. This allows you for example to flip 
+      |  the columns" display order for wider viewports. The classes can also be used to 
+      |  offset columns, creating additional space between them.
+    p
+      |  Source ordering is useful for SEO and responsive design, because in narrow 
+      |  viewports the grid will be displayed according to the source order of the markup.
+    p
+      span NOTE 
+      |  This feature only works in combination with one of the 
+      code .**-push-* 
+      |  where ** can be 
+      code mobile, tablet, desktop, large or col
+      |  classes.
+    
+    h3 Example
+    .preview-box
+      .row.text-center
+        .col-3.col-push-5
+          +span_text('Push 5','Push 5','Push 5','Push 5')  
+        .col-3.col-pull-3
+          +span_text('Pull 2','Pull 2','Pull 2','Pull 2')
+      
+    .preview-box
+      .row.text-center
+        .col-2.col-push-4
+          +span_text('Push 4','Push 4','Push 4','Push 4')  
+        .col-2.col-pull-1
+          +span_text('Pull 1','Pull 1','Pull 1','Pull 1') 
+    
+    hr
+    
+    h2 Offset
+
+    p 
+      code .offset-x
+      |  and 
+      code .offset-dt-x
+      |  are set of classes to push a column using its left margin. This is good to 
+      |  use instead of creating empty columns. Use 
+      strong .offset-0
+      |  for no offset.
+      
+      
+    .preview-box
+      .row.text-center
+        .col-2.col-offset-4
+          +span_text('Offset 4','Offset 4','Offset 4','Offset 4')  
+        .col-2.col-offset-1
+          +span_text('Offset 1','Offset 1','Offset 1','Offset 1')   
+
+    hr
+
+    h2 Fixed aspect ratio
+    
+    p
+      code .col-fixed-hd
+      |  , 
+      code .col-fixed-landscape
+      |  , 
+      code .col-fixed-square
+      |  , 
+      code .col-portrait
+      |  Fix the hight of a column to a specific aspect ratio. For this to work, 
+      | wrap the content of the column in an element with the class 
+      strong .col-content
+      |  . This is great for displaying grid views where all the item should be the 
+      |  same height.
+
+
     hr
     
     h2#Universalresponsiveclass Universal responsive class

@@ -29,6 +29,35 @@ block content
     |  is 
     code "Open Sans","Helvetica Neue", Arial, sans-serif
     |  . This sets the typeface for the entire site. Adjust as needed.
+    
+    
+  h3 Using Relative Units for Widths
+  p
+    | You may have noticed that we use 
+    code rem
+    |  for our default CSS widths instead of 
+    code px
+    |  . This was a conscious decision since it allows to respond appropriately when people zoom the webpage.
+
+  p
+    | If you do want to use units other than 
+    code rem
+    |  , you can always modify the default widths. Converting from 
+    code rem
+    |  to 
+    code px
+    |  should be pretty simple.
+    
+  p
+    small
+      | * The 
+      code rem
+      |  to 
+      code px
+      |  conversion is based on the browser"s default font size, which is generally 
+      code 16px
+      | , but can be overridden by a user in their browser settings.
+
   
   h2.divide-section#TextBasic Text Basic
   
