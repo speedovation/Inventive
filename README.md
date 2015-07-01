@@ -9,13 +9,19 @@ Beta is now released. Stay tuned.
 * Make a list of required Js Components
 
 ## Usage
-   bower install inventive
-   
-   or
-   
-   git clone git@github.com:speedovation/Inventive.git 
-   npm install
-   bower install
+
+Step 1.
+    bower install inventive
+    or
+    git clone git@github.com:speedovation/Inventive.git 
+
+Step 2.
+    npm install
+    bower install
+    gulp 
+
+Step 3.
+    That's it. Start development
 
 ## Framework Features
 
