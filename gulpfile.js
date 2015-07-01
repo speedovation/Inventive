@@ -109,7 +109,7 @@ gulp.task('jade', function () {
         .pipe(jade({pretty:true}))
         //.pipe(filter.restore())
         //.pipe(concat('base.css'))
-        .pipe(gulp.dest('./build/html'))
+        .pipe(gulp.dest('./build/docs'))
         .pipe(browserSync.stream())
         ;
 });
@@ -235,7 +235,7 @@ gulp.task('serve', ['stylus','jade','coffee'], function() {
 
     
     gulp.watch("build/css/**/*.css").on('change', browserSync.reload);
-    gulp.watch("build/html/*.html").on('change', browserSync.reload);
+    gulp.watch("build/docs/*.html").on('change', browserSync.reload);
     gulp.watch("build/js/*.js").on('change', browserSync.reload);
     
 });

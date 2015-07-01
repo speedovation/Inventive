@@ -1,16 +1,25 @@
-[![](https://img.shields.io/badge/GitterChat-Online-brightgreen.svg?style=flat-square)](https://gitter.im/speedovation/General) [![](https://img.shields.io/badge/HipChat-Online-brightgreen.svg?style=flat-square)](https://www.hipchat.com/ggaNhaRfU) [![]( http://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square)]( http://opensource.org/licenses/Apache-2.0) [![](https://img.shields.io/badge/Beta-Release-E44B23.svg?style=flat-square)](http://speedovation.com) 
+[![](https://img.shields.io/badge/GitterChat-Online-brightgreen.svg?style=flat-square)](https://gitter.im/speedovation/General) [![](https://img.shields.io/badge/HipChat-Online-brightgreen.svg?style=flat-square)](https://www.hipchat.com/ggaNhaRfU) [![]( http://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square)]( http://opensource.org/licenses/Apache-2.0) [![](https://img.shields.io/badge/Alpha-Release-E44B23.svg?style=flat-square)](http://speedovation.com) [![](https://img.shields.io/badge/Laravel-5-brightgreen.svg?style=flat-square)](http://speedovation.org)
+
 
 ## Inventive - Stylus Responsive Front-end Framework 
 Beta is now released. Stay tuned.
 
-##TODO/Working
+## TODO/Working
 * Modal Js Component
 * Make a list of required Js Components
 
+## Usage
+   bower install inventive
+   
+   or
+   
+   git clone git@github.com:speedovation/Inventive.git 
+   npm install
+   bower install
 
-##Framework Features
+## Framework Features
 
-###CSS Components
+### CSS Components
 
 * Grid
 * Tables
