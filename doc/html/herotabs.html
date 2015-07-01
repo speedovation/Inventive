@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hero Tabs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/inventive.css" type="text/css">
+    <link href="../css/vendors.css" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,700" rel="stylesheet" type="text/css">
+    <script src="../js/vendors.js"></script>
+    <script src="../js/inventive.js"></script>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-4109923-4', 'speedovation.org');
+      ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" type="text/css" href="../static/css/components/herotab.css">
+    <script text="text/javascript" src="../static/js/herotabs.js"> </script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="mobile-12 tablet-12 desktop-12 large-12">
+        <nav class="nav">
+          <div class="menu-button"><i class="i-bars1"></i></div>
+          <div data-breakpoint="768" class="flexnav opacity lg-screen">
+            <h4>Inventive Responsive framework</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="item-with-ul"><a href="javascript://;"> Design<i class="i-chevron-down"></i></a>
+                <ul>
+                  <li><a href="typography.html">Typography</a></li>
+                  <li><a href="responsive-utilities.html">Responsive Utilities</a></li>
+                  <li><a href="icons.html">Web Icons</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript://;">UI Components<i class="i-chevron-down"></i></a>
+                <ul>
+                  <li><a href="grid.html">Grid</a></li>
+                  <li><a href="tables.html">Tables</a></li>
+                  <li><a href="forms.html">Forms</a></li>
+                  <li><a href="buttons.html">Buttons</a></li>
+                  <li><a href="tooltips.html">Tooltips</a></li>
+                  <li><a href="messages.html">Messages</a></li>
+                  <li><a href="badge.html">Badges</a></li>
+                  <li><a href="thumbnail.html">Thumbnail</a></li>
+                  <li><a href="navbar.html">Responsive Navbar</a></li>
+                  <li><a href="megamenu.html">Responsive Megemenu</a></li>
+                  <li><a href="list.html">List  Group</a></li>
+                  <li><a href="nav.html">Nav</a></li>
+                  <li><a href="subnav.html">Subnav</a></li>
+                  <li><a href="panel.html">Panel</a></li>
+                  <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                  <li><a href="pagination.html">Pagination</a></li>
+                  <li><a href="progress.html">Progress</a></li>
+                  <li><a href="search.html">Search</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript://;">Js Components<i class="i-chevron-down"></i></a>
+                <ul>
+                  <li><a href="offcanvas.html">Responsive Offcanvas</a></li>
+                  <li><a href="datepicker.html">DateTime Picker</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/speedovation/inventive/">Github</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="hidden preview-template preview-wrap"> 
+      <ul class="resp-tabs-list">
+        <li>Example Preview</li>
+        <li>Html Code</li>
+      </ul>
+      <div class="resp-tabs-container">
+        <div>
+          <div class="preview"></div>
+        </div>
+        <div>
+          <pre class="markup"><code class="language-markup"></code></pre>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <h2 class="divide-section">Herotabs</h2>
+          <h3>Example 1</h3>
+          <p>Uses a delay and fade effect. Will pause tab cycling whilst hovered or focused.</p>
+          <div class="tabs tabs-horiz">
+            <ul class="tab-nav js-nav">
+              <li class="tab-nav-item js-nav-item"><a href="#ex1-tab1">First tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex1-tab2">Second tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex1-tab3">Third tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex1-tab4">Fourth tab</a></li>
+            </ul>
+            <div id="ex1-tab1" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/sports/2" alt="">
+              <div class="tab-info">
+                <p>Some info about this item.<a href="#">A link to focus</a></p>
+              </div>
+            </div>
+            <div id="ex1-tab2" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/fashion/2" alt=""></div>
+            <div id="ex1-tab3" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/transport/1" alt="">
+              <div class="tab-info">
+                <p>Some info about this item<a href="#">A link to focus</a></p>
+              </div>
+            </div>
+            <div id="ex1-tab4" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/nature/2" alt=""></div>
+          </div>
+          <hr>
+          <h3>Example 2</h3>
+          <p>Uses hover to switch tabs</p>
+          <div class="tabs tabs-vert">
+            <ul class="tab-nav js-nav">
+              <li class="tab-nav-item js-nav-item"><a href="#ex2-tab1">First tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex2-tab2">Second tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex2-tab3">Third tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex2-tab4">Fourth tab</a></li>
+            </ul>
+            <div id="ex2-tab1" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/sports/2" alt="">
+              <div class="tab-info">
+                <p>Some info about this item.<a href="#">A link</a></p>
+              </div>
+            </div>
+            <div id="ex2-tab2" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/fashion/2" alt="">
+              <div class="tab-info">
+                <p>Some info about this item<a href="#">A link</a></p>
+              </div>
+            </div>
+            <div id="ex2-tab3" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/transport/1" alt="">
+              <div class="tab-info">
+                <p>Some info about this item</p>
+              </div>
+            </div>
+            <div id="ex2-tab4" class="tab-pane js-tab"><img src="http://lorempixel.com/600/250/nature/2" alt=""></div>
+          </div>
+          <hr>
+          <h3>Example 3</h3>
+          <p>A more traditional tabbed navigation between content items</p>
+          <div class="tabs tabs-standard">
+            <ul class="tab-nav js-nav">
+              <li class="tab-nav-item js-nav-item"><a href="#ex3-tab1">First tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex3-tab2">Second tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex3-tab3">Third tab</a></li>
+              <li class="tab-nav-item js-nav-item"><a href="#ex3-tab4">Fourth tab</a></li>
+            </ul>
+            <div>
+              <div id="ex3-tab1" class="tab-pane js-tab">
+                <p>Nullam faucibus rutrum nibh, nec lobortis ligula suscipit ac.<a href="#">Aliquam sagittis odio pharetra</a>dolor pulvinar varius. Nunc nisi justo, ornare non congue in, vulputate sed turpis.
+                  Integer placerat bibendum libero vel varius. Aenean pellentesque blandit magna ut tempor. Sed eleifend viverra nunc. Vestibulum metus velit, gravida at feugiat eu,
+                  pretium id mauris. Fusce ullamcorper nisi<a href="#">id purus laoreet nec consectetur leo</a>condimentum. Vestibulum tempor lobortis hendrerit. Nam porta tincidunt
+                  nisi non fringilla. Aenean quis massa eu diam accumsan aliquet.
+                </p>
+              </div>
+            </div>
+            <div id="ex3-tab2" class="tab-pane js-tab">
+              <p>Sed elit velit, pharetra vel sodales nec,<a href="#">vehicula sit amet arcu</a>. Vestibulum consequat consectetur tincidunt. Fusce eget erat sit amet odio rhoncus commodo a eu purus</p>
+            </div>
+            <div id="ex3-tab3" class="tab-pane js-tab">
+              <p>Vivamus consequat euismod ante ut semper.<a href="#">Pellentesque fringilla faucibus</a>ipsum ullamcorper dapibus. Aliquam tempor vulputate aliquet. Quisque sed commodo dolor. Curabitur ut orci at dolor lobortis faucibus
+                quis eu augue. Aenean laoreet<a href="#">suscipit erat ac vehicula.</a>Proin bibendum porttitor ante, ut accumsan turpis tempus nec.
+              </p>
+            </div>
+            <div id="ex3-tab4" class="tab-pane js-tab">
+              <p>Vivamus consequat euismod ante ut semper.<a href="#">Pellentesque fringilla faucibus</a>ipsum ullamcorper dapibus. Aliquam tempor vulputate aliquet. Quisque sed commodo dolor. Curabitur ut orci at dolor lobortis faucibus
+                quis eu augue. Aenean laoreet<a href="#">suscipit erat ac vehicula.</a>Proin bibendum porttitor ante, ut accumsan turpis tempus nec.
+              </p>
+              <p>Vivamus consequat euismod ante ut semper.<a href="#">Pellentesque fringilla faucibus</a>ipsum ullamcorper dapibus. Aliquam tempor vulputate aliquet. Quisque sed commodo dolor. Curabitur ut orci at dolor lobortis faucibus
+                quis eu augue. Aenean laoreet<a href="#">suscipit erat ac vehicula.</a>Proin bibendum porttitor ante, ut accumsan turpis tempus nec.
+              </p>
+            </div>
+          </div>
+          <p>some content</p>
+          <script>
+            $('.tabs-horiz').herotabs({
+              duration: 400,
+              delay: 3000
+            });
+            
+            $('.tabs-vert').herotabs({
+              interactEvent: 'hover'
+            });
+            
+            $('.tabs-standard').herotabs();
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

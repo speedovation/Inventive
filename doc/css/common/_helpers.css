@@ -1,0 +1,83 @@
+.hidden {
+  display: none;
+}
+.half {
+  width: 50%;
+}
+.info {
+  font-weight: 200;
+}
+.info strong {
+  font-weight: 500;
+}
+.well {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  min-height: 22px;
+  padding: 19px 22px;
+}
+.text-small {
+  font-size: 0.9375rem;
+  color: #777;
+}
+.text-lead {
+  font-size: 1.3275rem;
+  line-height: 1.3;
+  color: #666;
+}
+.text-large {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.text-muted {
+  color: #808080;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.float-left {
+  float: left;
+}
+.float-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.float-right {
+  float: right;
+}
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+.no-space-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.no-space-top {
+  margin-top: 0;
+  padding-top: 0;
+}
+.space-bottom {
+  margin-bottom: 2rem;
+}
+.space-bottom-small {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+}
+.space-top {
+  padding-top: 0.8125rem;
+}
+.screen-reader {
+  left: -9999em;
+  position: absolute;
+  top: -9999em;
+}

@@ -1,0 +1,47 @@
+.close {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: inline-block;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: inherit;
+  opacity: 0.3;
+  padding: 0;
+  border: 0;
+  -webkit-appearance: none;
+  background: transparent;
+  float: right;
+  font-weight: bold;
+}
+.close:after {
+  display: block;
+  content: "x";
+}
+.close:hover,
+.close:focus {
+  opacity: 0.5;
+  outline: none;
+}
+a.close:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close-alt {
+  padding: 2px;
+  border-radius: 100%;
+  background: #eee;
+  opacity: 1;
+}
+.close-alt:hover,
+.close-alt:focus {
+  opacity: 1;
+}
+.close-alt:after {
+  opacity: 0.5;
+}
+.close-alt:hover:after,
+.close-alt:focus:after {
+  opacity: 0.8;
+}

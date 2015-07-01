@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sticky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/inventive.css" type="text/css">
+    <link href="../css/vendors.css" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,700" rel="stylesheet" type="text/css">
+    <script src="../js/vendors.js"></script>
+    <script src="../js/inventive.js"></script>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-4109923-4', 'speedovation.org');
+      ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="../static/js/sticky.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+        
+        $("#header").sticky({ topSpacing: 0 });
+        $("#sticker").sticky({ topSpacing: 0, center:true, className:"hey" });
+        $("#stickerright").sticky({ topSpacing: 50 });
+      
+      
+      });
+      
+    </script>
+    <style type="text/css">
+      body {
+        height: 10000px;
+        padding: 0;
+        margin: 0;
+      }
+      #header {
+        background: #bada55;
+        color: white;
+        //- font-family: Droid Sans;
+        //- font-size: 18px;
+        //- line-height: 1.6em;
+        //- font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        width:400px;
+        box-sizing:border-box;
+      }
+      
+      #sticker {
+        background: #bada55;
+        color: white;
+        width: 300px;
+        //- font-family: Droid Sans;
+        //- font-size: 40px;
+        //- line-height: 1.6em;
+        //- font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        border-radius: 50px;
+      }
+      
+      #stickerright {
+          background: #bada55;
+          color: white;
+          width: 300px;
+          //font-family: Droid Sans;
+          //font-size: 40px;
+          //line-height: 1.6em;
+          //font-weight: bold;
+          text-align: center;
+          padding: 20px;
+          text-shadow: 0 1px 1px rgba(0,0,0,.2);
+          border-radius: 50px;
+          float:right;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="mobile-12 tablet-12 desktop-12 large-12">
+        <nav class="nav">
+          <div class="menu-button"><i class="i-bars1"></i></div>
+          <div data-breakpoint="768" class="flexnav opacity lg-screen">
+            <h4>Inventive Responsive framework</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="item-with-ul"><a href="javascript://;"> Design<i class="i-chevron-down"></i></a>
+                <ul>
+                  <li><a href="typography.html">Typography</a></li>
+                  <li><a href="responsive-utilities.html">Responsive Utilities</a></li>
+                  <li><a href="icons.html">Web Icons</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript://;">UI Components<i class="i-chevron-down"></i></a>
+                <ul>
+                  <li><a href="grid.html">Grid</a></li>
+                  <li><a href="tables.html">Tables</a></li>
+                  <li><a href="forms.html">Forms</a></li>
+                  <li><a href="buttons.html">Buttons</a></li>
+                  <li><a href="tooltips.html">Tooltips</a></li>
+                  <li><a href="messages.html">Messages</a></li>
+                  <li><a href="badge.html">Badges</a></li>
+                  <li><a href="thumbnail.html">Thumbnail</a></li>
+                  <li><a href="navbar.html">Responsive Navbar</a></li>
+                  <li><a href="megamenu.html">Responsive Megemenu</a></li>
+                  <li><a href="list.html">List  Group</a></li>
+                  <li><a href="nav.html">Nav</a></li>
+                  <li><a href="subnav.html">Subnav</a></li>
+                  <li><a href="panel.html">Panel</a></li>
+                  <li><a href="breadcrumb.html">Breadcrumb</a></li>
+                  <li><a href="pagination.html">Pagination</a></li>
+                  <li><a href="progress.html">Progress</a></li>
+                  <li><a href="search.html">Search</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript://;">Js Components<i class="i-chevron-down"></i></a>
+                <ul>
+                  <li><a href="offcanvas.html">Responsive Offcanvas</a></li>
+                  <li><a href="datepicker.html">DateTime Picker</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/speedovation/inventive/">Github</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="hidden preview-template preview-wrap"> 
+      <ul class="resp-tabs-list">
+        <li>Example Preview</li>
+        <li>Html Code</li>
+      </ul>
+      <div class="resp-tabs-container">
+        <div>
+          <div class="preview"></div>
+        </div>
+        <div>
+          <pre class="markup"><code class="language-markup"></code></pre>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3">
+          <p>This is test this is text this is text at the top.</p>
+          <div id="header">
+            <p>This is the sticky thingy that is really cool.</p>
+          </div>
+          <div id="sticker">
+            <p>This is the sticky thingy that is really cool </p>
+          </div>
+          <div id="stickerright">
+            <p>This is the sticky with top space of 50 that is really cool    </p>
+          </div>
+          <p>This is test this is text this is text at the bottom.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

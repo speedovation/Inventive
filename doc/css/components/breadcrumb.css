@@ -1,0 +1,25 @@
+.breadcrumb {
+/* 1 */
+  padding: 0;
+  list-style: none;
+/* 2 */
+  letter-spacing: -0.31em;
+}
+.breadcrumb > li {
+  letter-spacing: normal;
+}
+.breadcrumb > li,
+.breadcrumb > li > a,
+.breadcrumb > li > span {
+  display: inline-block;
+}
+.breadcrumb > li:nth-child(n+2):before {
+  content: "/";
+  display: inline-block;
+  margin: 0 8px;
+  vertical-align: top;
+/* 2 */
+}
+.breadcrumb > li:not(.active) > span {
+  color: #999;
+}
