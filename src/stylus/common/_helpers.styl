@@ -114,7 +114,17 @@
 //   margin-bottom: 20px !important
 
 
-.clear-both
+
+.clearfix:before,
+.clearfix:after
+    content: " "
+    display: table
+    clear both
+
+.clearfix:after
+    clear: both
+
+.clear
   clear: both
 
 for num in 16 24 32 48 64 128

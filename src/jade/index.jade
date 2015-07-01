@@ -21,7 +21,7 @@ html
               span.message.message-success Stylus, Jade, CoffeeScript and Gulp
               
             p
-             img(src="../../static/img/responsive.png")
+             img(src="../img/responsive.png")
             
             p.info
                 | Welcome in our responsive world!
@@ -47,9 +47,11 @@ html
 
 
       
-    .row
-        h2.divide-section Introduction
+    #features.row
         
+      h2.divide-section Introduction
+        
+      .row
         .mobile-12.tablet-6.desktop-4.large-4
           //i.i-info.size-32
           h3 What is Inventive?
@@ -92,22 +94,27 @@ html
       
       .row
         .mobile-12.tablet-6.desktop-4.large-4
+          //i.i-laptop.size-32
           h3 Browser Support
           p.text-lead Inventive Framework is tested and supported in major modern browser
           p Chrome, Firefox, Opera, Safari and Internet Explorer.
         
         .mobile-12.tablet-6.desktop-4.large-4
-          //icon &#57404;
+          //i.i-level-2.size-32
           h3 Powerful grid
           p.text-lead Mobile first and fully responsive
+          p Now invest less time in development. This saves lots of development time and hence cost.
            
-
           
         .mobile-12.tablet-6.desktop-4.large-4
-          i.i-mobile
+          //i.i-box-alt.size-32
           h3 Icons
-          p.details-b And as one would expect for a HTML5 framework is full responsive!
-          p Try it yourself!
+          p.text-lead Massive 524+ icons
+         
+          p We are having more than &nbsp;
+            a(href="icons.html")
+              strong Stripe Icons set 524+ icons
+            |  and growing daily. Stay tuned. 
 
       
         
@@ -127,10 +134,10 @@ html
   
   
   
-        p
+        p.text-lead
           span.badge.badge-danger Hot
           |  We are showcasing all examples for faster learning and real implementation.
-          | We've tried not to use any extra css possible while cloning any template to show
+          | We've tried not to use any extra css if possible while cloning any template to show
           | the real power of framework, although you may find very few external css also.
           | This will show the power of new promising framework.
   
@@ -172,7 +179,7 @@ html
                   h4 YepNopejs Clone
                   | Yepnopejs template
   
-        p
+        p.clearfix
           span.badge Note  
           |  Examples can used for educational purpose only.
           | Everything else is under MIT license. Stripe Icons and Fonts are under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>

@@ -1,35 +1,39 @@
-doctype html
-html
-  head
-    title Cutting Deals
+extends ./layout.jade
+
+block title
+  title Tooltips 
+
+block leftcontent
+ h3 &nbsp; 
+ - var items = [ "Usage"]
+ +top_left(items)
+ 
+
+block content
+
+  h1.divide-section Tooltips
+
+  p.info Basic Tooltips
+  
+
+  h2#Usage Usage
+
+
+  .row
+    .preview-box
+   
+      .desktop-12.tablet-6.mobile-3
+  
+        a.tooltip
+          |Link tooltip
+          span 
+            |Link tooltip and for you  
     
-    include header
-
-    style(type="text/css").
-      :hover {background:#ffffff; text-decoration:none;} /*BG color is a must for IE6*/
-      .tooltip span {display:none; padding:2px 3px; margin-left:8px; width:130px;}
-      .tooltip:hover span{display:inline; position:absolute; background:#ffffff; border:1px solid #cccccc; color:#6c6c6c;} 
-      .row { height:65px}
-    
-  body
-
-    include _nav
-
-    .grid
-      .row
-        .desktop-12.tablet-6.mobile-3
-
-          a.tooltip
-            |Link tooltip
-            span 
-              |Link tooltip and for you  
-      
-      .row
-        .desktop-12.tablet-6.mobile-3
-
-          div.tooltip
-            |Div Tooltip
-            span 
-              |Div tooltip and for you  
-
-    
+      .desktop-12.tablet-6.mobile-3
+  
+        div.tooltip
+          |Div Tooltip
+          span 
+            |Div tooltip and for you  
+  
+  

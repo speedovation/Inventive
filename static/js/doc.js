@@ -42,7 +42,7 @@ $(function() {
     //initiliase all navs
     $(".flexnav").flexNav();
     var url      = window.location.href;  
-    a = url.split("/")[5].split(".")[0];
+    a = url.split("/")[4].split(".")[0];
     //$('.left-navigations').find('a').removeClass('active')
 
     $('.m-' + a).find('a').addClass('active')
