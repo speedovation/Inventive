@@ -11,11 +11,13 @@ Beta is now released. Stay tuned.
 ## Usage
 
 Step 1.
+
     bower install inventive
     or
     git clone git@github.com:speedovation/Inventive.git 
 
 Step 2.
+
     npm install
     bower install
     gulp 
