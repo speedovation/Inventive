@@ -14,10 +14,9 @@
   ],
   "license": "Apache 2.0 License",
   "devDependencies": {
-    "inventive-font": "~1.2.0",
-    "jquery": "~2.1.4",
     "holderjs": "~2.8.0",
     "prism": "~1.0.0"
+     
   },
   "ignore": [
     "**/.*",
@@ -25,5 +24,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+   "inventive-font": "~1.2.0",
+    "jquery": "~2.1.4",
+    "slick.js": "~1.5.5"
+    
+  }
 }
