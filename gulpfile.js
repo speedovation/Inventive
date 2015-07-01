@@ -12,6 +12,8 @@ var util = require('gulp-util');
 var nib = require('nib');
 var autoprefixer = require('autoprefixer-stylus');
 var plumber = require('gulp-plumber');
+var minifyCss = require('gulp-minify-css');
+
 
 //Broswer reloading
 var browserSync = require('browser-sync').create();
@@ -117,7 +119,9 @@ gulp.task('coffee', function () {
    gulp.src(
         [   
             './src/coffeescript/*.coffee',
-            '!./src/coffeescript/_*.coffee'
+            '!./src/coffeescript/_*.coffee',
+            '!./src/coffeescript/doc.coffee',
+            
         ], { base: 'src/coffeescript' }
         )
             //.pipe(cached('build'))
@@ -160,7 +164,7 @@ gulp.task('vendors', function () {
       gulp.src(
         [   
             "bower_components/jquery/dist/jquery.js",
-            "static/js/doc.js",
+            "build/js/components/doc.js",
             "bower_components/prism/prism.js"
         ]
         )
@@ -171,9 +175,9 @@ gulp.task('vendors', function () {
                 this.emit('end');
             }
         }
-        
         ))
-        .pipe(concat('vendors.js'))
+		.pipe(concat('vendors.js'))
+		.pipe(uglify())
         .pipe(gulp.dest('./build/js/'))
         ;
         
@@ -194,6 +198,7 @@ gulp.task('vendors', function () {
         }
         ))
         .pipe(concat('vendors.css'))
+		.pipe(minifyCss())
         .pipe(gulp.dest('./build/css/'))
         ;
 });
@@ -203,7 +208,7 @@ gulp.task('copyfonts', function() {
    gulp.src('bower_components/inventive-font/fonts/*.{ttf,woff,eof,svg}')
    .pipe(gulp.dest('./build/fonts'));
    
-    gulp.src('static/img/**/*')
+    gulp.src('src/img/**/*')
    .pipe(gulp.dest('./build/img'));
    
 });
@@ -221,7 +226,7 @@ gulp.task('watch', function() {
 
 
 
-// Static Server + watching stylus/html files
+// doc Server + watching stylus/html files
 gulp.task('serve', ['stylus','jade','coffee'], function() {
 
     browserSync.init({
