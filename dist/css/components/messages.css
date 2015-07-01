@@ -1,0 +1,52 @@
+.message {
+  background: none repeat scroll 0 0 #efefef;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 15px;
+  padding: 1px 5px;
+  text-shadow: 0 1px 0 #fff;
+}
+.message > *:last-child {
+  margin: 0;
+}
+.message h1,
+.message h2,
+.message h3,
+.message h4,
+.message h5,
+.message h6 {
+  color: inherit;
+}
+.message > .uk-close:first-child {
+  float: right;
+}
+.message > .uk-close:first-child + * {
+  margin: 0;
+}
+.message-info {
+  background: none repeat scroll 0 0 #ebf7fd;
+  border-color: rgba(45,112,145,0.3);
+  color: #2d7091;
+}
+.message-success {
+  background: none repeat scroll 0 0 #f2fae3;
+  border-color: rgba(101,159,19,0.3);
+  color: #659f13;
+}
+.message-warning {
+  background: none repeat scroll 0 0 #fffceb;
+  border-color: rgba(226,131,39,0.3);
+  color: #e28327;
+}
+.message-danger {
+  background: none repeat scroll 0 0 #fff1f0;
+  border-color: rgba(216,80,48,0.3);
+  color: #d85030;
+}
+.message-large {
+  padding: 20px;
+}
+.message-large > .uk-close:first-child {
+  margin: -10px -10px 0 0;
+}

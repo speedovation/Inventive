@@ -4,10 +4,8 @@
 */
 .panel {
   position: fixed;
-  left: -15.625em;
-/*or width of your navigation panel*/
-  width: 15.625em;
-/*should match the above value*/
+  left: -15.625em; /*or width of your navigation panel*/
+  width: 15.625em; /*should match the above value*/
 }
 /*  
     Demo Specific Styles

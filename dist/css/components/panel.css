@@ -1,0 +1,129 @@
+/* ========================================================================
+Component: Panel
+========================================================================== */
+/*
+* Create position context for badges
+*/
+.panel {
+  position: relative;
+}
+/*
+* Micro clearfix to make panels more robust
+*/
+.panel:before,
+.panel:after {
+  content: " ";
+  display: table;
+}
+.panel:after {
+  clear: both;
+}
+/*
+* Remove margin from the last-child if not `widget-title`
+*/
+.panel > :not(.panel-title):last-child {
+  margin-bottom: 0;
+}
+/* Sub-object: `panel-title`
+========================================================================== */
+.panel-title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: none;
+  color: #444;
+}
+/* Sub-object: `panel-badge`
+========================================================================== */
+.panel-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+/*
+* Remove margin from adjacent element
+*/
+.panel-badge + * {
+  margin-top: 0;
+}
+/* Modifier: `panel-box`
+========================================================================== */
+.panel-box {
+  padding: 15px;
+  background: #f5f5f5;
+  color: #444;
+}
+.panel-box .panel-title {
+  color: #444;
+}
+.panel-box .panel-badge {
+  top: 10px;
+  right: 10px;
+}
+/*
+* Nav in panel
+*/
+.panel-box > .nav-side {
+  margin: 0 -15px;
+}
+/*
+* Sub-modifier: `panel-box-primary`
+*/
+.panel-box-primary {
+  background-color: #ebf7fd;
+  color: #2d7091;
+}
+.panel-box-primary .panel-title {
+  color: #2d7091;
+}
+/*
+* Sub-modifier: `panel-box-secondary`
+*/
+.panel-box-secondary {
+  background-color: #eee;
+  color: #444;
+}
+.panel-box-secondary .panel-title {
+  color: #444;
+}
+/* Modifier: `panel-header`
+========================================================================== */
+.panel-header .panel-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #444;
+}
+/* Modifier: `panel-space`
+========================================================================== */
+.panel-space {
+  padding: 30px;
+}
+.panel-space .panel-badge {
+  top: 30px;
+  right: 30px;
+}
+/* Modifier: `panel-divider`
+========================================================================== */
+.panel + .panel-divider {
+  margin-top: 50px !important;
+}
+.panel + .panel-divider:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #ddd;
+}
+/* Only large screens */
+@media (min-width: 1220px) {
+  .panel + .panel-divider {
+    margin-top: 70px !important;
+  }
+  .panel + .panel-divider:before {
+    top: -35px;
+  }
+}
