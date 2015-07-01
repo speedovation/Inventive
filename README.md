@@ -23,7 +23,12 @@ Step 2.
     gulp 
 
 Step 3.
-    That's it. Start development
+    That's it. Start development.
+    
+## Online doc
+
+[Inventive Online Documentation](http://inventiveui.com/docs)
+
 
 ## Framework Features
 
