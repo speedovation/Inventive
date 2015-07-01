@@ -24,6 +24,8 @@ gulp.task('default', ['watch','serve'], function()
     gulp.watch("coffee");
     
     gulp.start('stylus-all')
+    gulp.start('vendors')
+    gulp.start('copyfonts')
     //gulp.watch("serve");
 });
 
@@ -153,8 +155,58 @@ gulp.task('coffee', function () {
         
 });
 
+gulp.task('vendors', function () {
 
+      gulp.src(
+        [   
+            "bower_components/jquery/dist/jquery.js",
+            "static/js/doc.js",
+            "bower_components/prism/prism.js"
+        ]
+        )
+        .pipe(plumber(
+        {
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }
+        
+        ))
+        .pipe(concat('vendors.js'))
+        .pipe(gulp.dest('./build/js/'))
+        ;
+        
+        gulp.src(
+        [   
+            "bower_components/prism/themes/prism.css",
+            'build/css/extra/doc.css',
+            'bower_components/inventive-font/fonts/stripe-font.css'
 
+        ]
+        )
+        .pipe(plumber(
+        {
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }
+        ))
+        .pipe(concat('vendors.css'))
+        .pipe(gulp.dest('./build/css/'))
+        ;
+});
+
+gulp.task('copyfonts', function() {
+   
+   gulp.src('bower_components/inventive-font/fonts/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('./build/fonts'));
+   
+    gulp.src('static/img/**/*')
+   .pipe(gulp.dest('./build/img'));
+   
+});
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
@@ -173,7 +225,7 @@ gulp.task('watch', function() {
 gulp.task('serve', ['stylus','jade','coffee'], function() {
 
     browserSync.init({
-        server: "./"
+        server: "./build/"
     });
 
     
