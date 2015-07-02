@@ -8,10 +8,12 @@ Beta is now released. Stay tuned.
 * Modal Js Component
 * Make a list of required Js Components
 
-## Usage
+## Install
 
 Step 1.
 
+    npm install inventive
+    or
     bower install inventive
     or
     git clone git@github.com:speedovation/Inventive.git 
@@ -23,6 +25,7 @@ Step 2.
     gulp 
 
 Step 3.
+    
     That's it. Start development.
     
 ## Online doc
@@ -65,9 +68,6 @@ Step 3.
 * Responsive Navbar - Offcanvas alike
 
 
-
-### Install
-    bower install inventive
 
 
 ### License

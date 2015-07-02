@@ -170,29 +170,39 @@ gulp.task('serve', ['stylus','jade','coffee'], function() {
 gulp.task('build', ['stylus','jade','coffee', 'vendors']);
 
 gulp.task('bump', ['build'], function(){
+    console.log('In Bump')
   gulp.src(['./bower.json', './package.json'])
-  .pipe(bump({version:'0.9.3'}))
+  .pipe(bump({version:'0.9.6'}))
   .pipe(gulp.dest('./'));
 });
 
 gulp.task('tag', ['bump'], function () {
   var pkg = require('./package.json');
-  var v = 'v' + pkg.version;
+  var v = pkg.version;
   var message = 'Release ' + v;
 
-  return gulp.src('./')
+   gulp.src('./')
     .pipe(git.commit(message))
-    .pipe(git.tag(v, message))
-    .pipe(git.push('origin', 'master', '--tags'))
     .pipe(gulp.dest('./'));
+    
+    git.tag(v, message, function (err) {
+        if (err) throw err;
+    });
+    
+
+    git.push('origin', 'master',{args: '--tags'} , function (err) {
+        if (err) throw err;
+    });
+
 });
 
-gulp.task('npm', ['tag'], function (done) {
+gulp.task('npm', ['tag'],function (done) {
   require('child_process').spawn('npm', ['publish'], { stdio: 'inherit' })
     .on('close', done);
 });
 
 gulp.task('release', ['npm']);
+
 gulp.task('ci', ['build']);
 
 function swallowError (error) {
