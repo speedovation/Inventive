@@ -172,7 +172,7 @@ gulp.task('build', ['stylus','jade','coffee', 'vendors']);
 gulp.task('bump', ['build'], function(){
     console.log('In Bump')
   gulp.src(['./bower.json', './package.json'])
-  .pipe(bump({version:'0.9.6'}))
+  .pipe(bump({version:'0.9.7'}))
   .pipe(gulp.dest('./'));
 });
 
