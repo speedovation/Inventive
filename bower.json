@@ -5,7 +5,7 @@
   "authors": [
     "Yash <yash@speedovation.com>"
   ],
-  "description": "Responsive front-end framework",
+  "description": "The only stylus front-end framework for developing responsive, mobile first projects on the web",
   "main": "dist/css/base.css",
   "keywords": [
     "responsive",
