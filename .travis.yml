@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+- 0.11
+
+before_script:
+- npm install -g gulp
+
+install:
+- npm install
+- bower install
+
+script: gulp ci
