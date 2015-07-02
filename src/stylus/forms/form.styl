@@ -7,13 +7,10 @@ form
 
   label 
     cursor: pointer
-    //display: block
-    //font-size: 1rem
     line-height: 2.235rem
-    //margin: 0 0 0 9px !important
 
   label.inline 
-    //display: inline-block
+    display: inline-block
     //padding-right: 20px
 
   dt 
@@ -27,12 +24,7 @@ form
     margin-left: 0
 
   fieldset 
-    //border-color: #D8D8D8
-    //border-style: solid
-    //border-width: 0.0625em
-    //margin: 18px 0
     padding 0 1.5625rem 1.5625rem
-    //border: 1px solid #c0c0c0;
     margin 0 2px;
     //padding .5 em 0.625em 0.75em;
     border 1px solid #DDDDDD
@@ -57,27 +49,16 @@ form
   border-radius: 0
 
 .input, .textarea
-  //border: medium none
-  //box-shadow: none
-  //font-family: "Open Sans"
   font-size: 1rem
   font-weight: 300
-  //margin: 0 24px 0 0 !important
-  //margin 0
   max-width: 100%
   outline: medium none
-  //padding: 0
   resize: none
-  //width: 100%
   background: #FFFFFF;
   border: 1px solid #ccc;
-  //border-radius(0rem)
-  //box-shadow(0 1px 1px rgba(0, 0, 0, 0.07) inset)
   color: #333333;
   padding: 0.4rem 0.6rem
   margin-bottom .6rem
-  //height: 36px;
-  //padding: 0 10px;
 
 .collapse .input:first-child
   border-radius(.2rem .2rem 0 0)
@@ -85,333 +66,21 @@ form
 .collapse .input
   margin-bottom 0
   border-bottom  0
-  border-radius(0)
+  border-radius : 0
 
 .collapse .input:last-child
   border-bottom   1px solid #ccc
-  border-radius(0 0 .2rem .2rem)
+  border-radius : 0 0 .2rem .2rem
 
 .button.append
-  box-shadow(none)
-  border-radius(0)
+  box-shadow : none
+  border-radius: 0
   padding 0.476rem 0.9rem
 
 .button.append.right
    border-left 0
-   border-radius(0 .2rem .2rem 0)
+   border-radius: 0 .2rem .2rem 0
 
 .button.append.left
    border-right 0
    border-radius(.2rem 0 0 .2rem)
-
-
-
-
-
-// .field .input 
-//     background: none repeat scroll 0 0 #FFFFFF
-//     border: 1px solid #D8D8D8
-//     border-radius: 4px
-//     font-size: 1rem
-//     //height: 36px
-//     //line-height: 34px
-//     padding: 5px 10px
-//     position: relative
-
-// .field .input.search 
-//     border-radius: 1000px
-//     height: 36px
-//     line-height: 34px
-//     padding-right: 0
-
-
-
-
-// .field .input.textarea 
-//     height: auto
-
-// .field .xnarrow 
-//     width: 13.3333%
-
-// .field .narrow 
-//     width: 30.6667%
-
-// .field .normal 
-//     width: 48%
-
-// .field .wide 
-//     width: 65.3333%
-
-// .field .xwide 
-//     width: 82.6667%
-
-// .field .xxwide 
-//     width: 100%
-
-// .field .xnarrow, .field .narrow, .field .normal, .field .wide, .field .xwide, .field .xxwide 
-//     margin: 0
-
-// .field .xnarrow:last-child, .field .narrow:last-child, .field .normal:last-child, .field .wide:last-child, .field .xwide:last-child, .field .xxwide:last-child 
-//     margin-left: -4px
-
-// .field .xnarrow:first-child, .field .narrow:first-child, .field .normal:first-child, .field .wide:first-child, .field .xwide:first-child, .field .xxwide:first-child 
-//     margin-left: 0
-//     margin-right: 3.94%
-
-// .field .xnarrow:first-child:last-child, .field .narrow:first-child:last-child, .field .normal:first-child:last-child, .field .wide:first-child:last-child, .field .xwide:first-child:last-child, .field .xxwide:first-child:last-child 
-//     margin: 0
-
-// .field label + .xnarrow:last-child, .field label + .narrow:last-child, .field label + .normal:last-child, .field label + .wide:last-child, .field label + .xwide:last-child, .field label + .xxwide:last-child 
-//     margin-left: 0
-
-// @media only screen and (max-width: 1120px) 
-//     .field .xxwide:first-child, .field .xxwide:last-child 
-//         margin-right: 0
-
-
-// .field.prepend, .field.append 
-//     font-size: 0
-//     padding-bottom: 3.5px
-//     white-space: nowrap
-
-// .field.prepend input, .field.prepend .input, .field.append input, .field.append .input 
-//     display: inline-block
-//     max-width: 100%
-
-// .field.prepend input, .field.prepend .input 
-//     border-radius: 0 4px 4px 0
-
-// .field.append input, .field.append .input 
-//     border-radius: 4px 0 0 4px
-
-// .field.prepend.append input 
-//     border-radius: 0
-
-// .field.prepend.append input:first-child 
-//     border-radius: 4px 0 0 4px
-
-// .field.prepend.append input:last-child 
-//     border-radius: 0 4px 4px 0
-//     margin-left: -1px
-
-// .field.prepend .adjoined, .field.append .adjoined, .field.prepend .btn, .field.append .btn 
-//     display: inline-block
-//     margin-bottom: 0
-//     position: relative
-//     z-index: 99
-
-// .field.prepend .btn a, .field.prepend .btn input, .field.prepend .btn button, .field.append .btn a, .field.append .btn input, .field.append .btn button 
-//     padding: 0 12px
-
-// .field.prepend .adjoined, .field.append .adjoined 
-//     background: none repeat scroll 0 0 #F2F2F2
-//     border: 1px solid #D8D8D8
-//     color: #555555
-//     font-family: "Open Sans"
-//     font-size: 1rem
-//     font-weight: 600
-//     height: 36px
-//     line-height: 34px
-//     padding: 0 10px
-
-// .field.prepend *:first-child 
-//     border-radius: 4px 0 0 4px
-
-// .field.prepend input:first-child 
-//     margin-right: 0
-
-// .field.prepend .adjoined, .field.prepend .btn 
-//     margin-right: -1px
-
-// .field .adjoined:first-child 
-//     margin-left: 0 !important
-
-// .field.append .adjoined, .field.append .btn 
-//     margin-left: -1px
-
-// .field.append *:last-child 
-//     border-radius: 0 4px 4px 0
-
-// .field.append button, .field.prepend button 
-//     display: inline-block
-
-// .field.append input:first-child 
-//     margin-right: 0
-
-// .field.double input, .field.double .input 
-//     width: 50% !important
-
-// .field.double input:last-child, .field.double .input:last-child 
-//     margin-left: -1px
-
-// .field.danger:after 
-//     color: #CA3838
-//     content: "✖"
-//     font-family: "entypo"
-//     font-size: 16px
-//     position: absolute
-//     right: 15px
-//     top: 14%
-//     z-index: 999
-
-// .field.danger.no-icon:after 
-//     display: none
-
-// .field.danger.append:after, .field.danger.prepend:after 
-//     content: ""
-
-// .field.danger input, .field.danger .input, .field.danger textarea, .field.danger .textarea, .field.danger .radio span, .field.danger .checkbox span, .field.danger .picker 
-//     background: none repeat scroll 0 0 #F0C5C5
-//     border-color: #CA3838
-//     color: #CA3838
-//     transition-duration: 0.2s
-
-// .field.danger textarea 
-//     color: #CA3838
-
-// .field.danger input:-moz-placeholder, .field.danger textarea:-moz-placeholder 
-//     color: #CA3838
-
-// .field.warning:after 
-//     color: #F6B83F
-//     content: "⚠"
-//     font-family: "entypo"
-//     font-size: 16px
-//     position: absolute
-//     right: 15px
-//     top: 14%
-//     z-index: 999
-
-// .field.warning.no-icon:after 
-//     display: none
-
-// .field.warning.append:after, .field.warning.prepend:after 
-//     content: ""
-
-// .field.warning input, .field.warning .input, .field.warning textarea, .field.warning .textarea, .field.warning .radio span, .field.warning .checkbox span, .field.warning .picker 
-//     background: none repeat scroll 0 0 #FEF7EA
-//     border-color: #F6B83F
-//     color: #F6B83F
-//     transition-duration: 0.2s
-
-// .field.warning textarea 
-//     color: #F6B83F
-
-// .field.warning input:-moz-placeholder, .field.warning textarea:-moz-placeholder 
-//     color: #F6B83F
-
-// .field.success:after 
-//     color: #58C026
-//     content: "✓"
-//     font-family: "entypo"
-//     font-size: 16px
-//     position: absolute
-//     right: 15px
-//     top: 14%
-//     z-index: 999
-
-// .field.success.no-icon:after 
-//     display: none
-
-// .field.success.append:after, .field.success.prepend:after 
-//     content: ""
-
-// .field.success input, .field.success .input, .field.success textarea, .field.success .textarea, .field.success .radio span, .field.success .checkbox span, .field.success .picker 
-//     background: none repeat scroll 0 0 #C0EEAA
-//     border-color: #58C026
-//     color: #58C026
-//     transition-duration: 0.2s
-
-// .field.success textarea 
-//     color: #58C026
-
-// .field.success input:-moz-placeholder, .field.success textarea:-moz-placeholder 
-//     color: #58C026
-
-// .field .picker.danger 
-//     background: none repeat scroll 0 0 #F0C5C5
-//     border-color: #CA3838
-//     color: #CA3838
-//     transition-duration: 0.2s
-
-// .field .picker.danger select, .field .picker.danger:after 
-//     color: #CA3838
-
-// .field .picker.warning 
-//     background: none repeat scroll 0 0 #FEF7EA
-//     border-color: #F6B83F
-//     color: #F6B83F
-//     transition-duration: 0.2s
-
-// .field .picker.warning select, .field .picker.warning:after 
-//     color: #F6B83F
-
-// .field .picker.success 
-//     background: none repeat scroll 0 0 #C0EEAA
-//     border-color: #58C026
-//     color: #58C026
-//     transition-duration: 0.2s
-
-// .field .picker.success select, .field .picker.success:after 
-//     color: #58C026
-
-
-
-
-
-//custom radio and checkboxes
-// input[type="checkbox"] {
-//     display:none;
-// }
-
-// input[type="checkbox"] + label {
-//     color:#f2f2f2;
-//     font-family:Arial, sans-serif;
-//     font-size:14px;
-// }
-
-// input[type="checkbox"] + label span {
-//     display:inline-block;
-//     width:19px;
-//     height:19px;
-//     margin:-1px 4px 0 0;
-//     vertical-align:middle;
-//     background:url(check_radio_sheet.png) left top no-repeat;
-//     cursor:pointer;
-// }
-
-// input[type="checkbox"]:checked + label span {
-//     background:url(check_radio_sheet.png) -19px top no-repeat;
-// }
-
-// input[type="radio"] {
-//     //display:none;
-//     float: left;
-//     width: 0px;
-//     opacity: 0;
-//     height: 0px;
-// }
-
-// input[type="radio"] + label {
-//     color:#f2f2f2;
-//     font-family:Arial, sans-serif;
-//     font-size:14px;
-// }
-
-// input[type="radio"] + label span {
-//     display:inline-block;
-//     width:19px;
-//     height:19px;
-//     margin:-1px 4px 0 0;
-//     vertical-align:middle;
-//     background:url(check_radio_sheet.png) -38px top no-repeat;
-//     cursor:pointer;
-// }
-
-// input[type="radio"]:checked + label span {
-//     background:url(check_radio_sheet.png) -57px top no-repeat;
-// }
-
-
-
-// //.field .text input[type="search"] 

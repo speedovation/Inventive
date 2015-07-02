@@ -24,10 +24,8 @@ h1, h2, h3, h4, h5, h6
   font-style: normal
   text-rendering: optimizeLegibility
   margin: 0.5rem 0
-  //text-transform: uppercase
   line-height 1.5 
   letter-spacing 0.04rem
-  //color #DA0108
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small 
   font-size: 60%
@@ -93,18 +91,11 @@ pre
   word-break: break-all /* webkit */
   word-wrap: break-word
   white-space: pre
-  white-space: -moz-pre-wrap /* fennec */
   white-space: pre-wrap
-  white-space: pre\9 /* IE7+ */
-  white-space: -pre-wrap 
-  white-space: -o-pre-wrap 
 
 code, pre, kbd, samp 
   font-family: Consolas, 'Liberation Mono', Monaco, Courier, monospace
-  //font-weight: bold
-  //color: #bb240d   
   border-radius 3px
-  //color: #1486cc;
   color #CC470D  
   font-size 0.8rem
   font-weight 300
@@ -119,9 +110,6 @@ pre code
 
 del 
   opacity: .75;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 
 ins
@@ -132,8 +120,6 @@ ins
 kbd 
   color: #4d4d4d;
   background-color: #e9e9e9;
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#e9e9e9),color-stop(100%,white));
-  background-image: -webkit-linear-gradient(top,#e9e9e9,white);
   background-image: linear-gradient(to bottom,#e9e9e9,white);
   border: 1px solid #a5a5a5;
   border-radius: 3px;
@@ -146,10 +132,12 @@ sup, sub
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+  
 sup     
   vertical-align: super !important
   top: -0.5em;
-sub     
+
+sub
   vertical-align: sub !important
   bottom: -0.25em;
 
@@ -202,7 +190,6 @@ img.responsive
   max-width: 100%
   height: auto
 
-
 .divide-section
   //border-bottom: 4px double #BFBFBF;
   border-bottom: 1px dotted #BFBFBF;
@@ -213,7 +200,6 @@ img.responsive
 a, a:visited
   color: #647CA4
   text-decoration: none
-  
 
 a:hover, a:focus
   color: #000
@@ -222,7 +208,6 @@ a:hover, a:focus
 a:focus 
   outline: thin dotted;
  
-
 
 // Prevents border/background on linked image hover.
 // Adds slight opacity.

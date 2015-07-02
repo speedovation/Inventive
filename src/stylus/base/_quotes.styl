@@ -1,18 +1,15 @@
-/*------------------------------------*\
-    $QUOTES
-\*------------------------------------*/
-/**
- * If English quotes are set in `_vars.scss`, define them here.
- */
+// QUOTES
+
+
+// If English quotes are set in `_vars.scss`, define them here.
+
 if $english-quotes == true
   $open-quote = \201C
   $close-quote = \201D
-/**
- * Big up @boblet: html5doctor.com/blockquote-q-cite
- */
-/**
- * Inline quotes.
- */
+
+//Big up @boblet: html5doctor.com/blockquote-q-cite
+
+// Inline quotes.
 q
   quotes: "\2018" "\2019" $open-quote $close-quote
   &:before
@@ -27,7 +24,6 @@ q
   q:after
     content: "\201D"
     content: close-quote
-
 
 blockquote
   quotes: $open-quote $close-quote
@@ -46,22 +42,19 @@ blockquote
   q:after
     content: "\2019"
     content: close-quote
-/**
- *
-   <blockquote>
-       <p>Insanity: doing the same thing over and over again and expecting
-       different results.</p>
-       <b class=source>Albert Einstein</b>
-   </blockquote>
- *
- */
+
+//   <blockquote>
+//       <p>Insanity: doing the same thing over and over again and expecting
+//       different results.</p>
+//       <b class=source>Albert Einstein</b>
+//   </blockquote>
+
 blockquote
-  /**
-   * .4em is roughly equal to the width of the opening “ that we wish to hang.
-   */
+   // .4em is roughly equal to the width of the opening “ that we wish to hang.
   text-indent: -0.41em
   p:last-of-type
     margin-bottom: 0
+
 .source
   display: block
   text-indent: 0

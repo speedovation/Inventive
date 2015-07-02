@@ -1,6 +1,4 @@
-
 //Credit : Kraken v3.1  by Chris Ferdinandi on http://gomakethings.com under MIT License.
-
 //NOT USING THIS
 
 /* Mobile Screen Resizing */
@@ -29,7 +27,7 @@
   zoom: 1.0
 
 
-/* Remove browser defaults */
+// Remove browser defaults
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,63 +50,62 @@ time, mark, audio, video
   vertical-align: baseline
 
 
-/* Set display type for HTML5 semantic elements */
+// Set display type for HTML5 semantic elements
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section 
   display: block
 
 
-/* Force scrollbar display to prevent jumping on pages.
-* Fix text resize bug on mobile devices. */
+// Force scrollbar display to prevent jumping on pages.
+// Fix text resize bug on mobile devices.
 html 
   overflow-y: scroll
-  -webkit-text-size-adjust: 100%
-  -ms-text-size-adjust: 100%
+  text-size-adjust: 100%
 
 
-/* Display audio, canvas, and video elements as inline block elements. */
+// Display audio, canvas, and video elements as inline block elements.
 audio,
 canvas,
 video 
   display: inline-block
 
 
-/* Prevent modern browsers from displaying audio without controls. */
+// Prevent modern browsers from displaying audio without controls.
 audio:not([controls]) 
   display: none
   height: 0
 
 
-/* Prevent img and video elements from spilling
-* outside of the page on smaller screens. */
+// Prevent img and video elements from spilling
+// outside of the page on smaller screens.
 img,
 video 
   max-width: 100%
   height: auto
 
 
-/* Prevent iframe, object, and embed elements from
-* spilling outside of the page on smaller screens. */
+// Prevent iframe, object, and embed elements from
+// spilling outside of the page on smaller screens.
 iframe,
 object,
 embed 
   max-width: 100%
 
 
-/* Address [hidden] styling not present in IE 8/9.
-* Hide the template element in IE, Safari, and Firefox < 22. */
+//Address [hidden] styling not present in IE 8/9.
+//Hide the template element in IE, Safari, and Firefox < 22.
 [hidden],
 template 
   display: none
   visibility: hidden
 
 
-/* Prevents IE from making scaled images look like crap */
+// Prevents IE from making scaled images look like crap
 img 
   -ms-interpolation-mode: bicubic
 
 
-/* Address outline inconsistency between Chrome and other browsers. */
+// Address outline inconsistency between Chrome and other browsers.
 a:focus,
 button:focus 
   outline: thin dotted
@@ -116,7 +113,7 @@ button:focus
   outline-offset: -0.15625em
 
 
-/* Improve readability when focused and also mouse hovered in all browsers. */
+// Improve readability when focused and also mouse hovered in all browsers.
 a:hover,
 a:active 
   outline: 0
