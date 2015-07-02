@@ -29,7 +29,7 @@ var bump = require('gulp-bump');
 var browserSync = require('browser-sync').create();
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch','serve', 'stylus','jade','coffee', 'vendors']);
+gulp.task('default', ['watch','serve', 'build']);
 
 
 gulp.task('stylus', function () {
@@ -167,7 +167,7 @@ gulp.task('serve', ['stylus','jade','coffee'], function() {
 
 //Related to release and publish build
 
-gulp.task('build', ['default']);
+gulp.task('build', ['stylus','jade','coffee', 'vendors']);
 
 gulp.task('bump', ['build'], function(){
   gulp.src(['./bower.json', './package.json'])
