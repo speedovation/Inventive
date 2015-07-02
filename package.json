@@ -46,7 +46,10 @@
   "keywords": [
     "responsive",
     "front-end",
-    "framework"
+    "framework",
+    "stylus",
+    "jade",
+    "coffeescript"
   ],
   "author": "Yash <yash@speedovation.com>",
   "license": "Apache 2.0 License",

@@ -10,7 +10,10 @@
   "keywords": [
     "responsive",
     "frontend",
-    "framework"
+    "framework",
+    "stylus",
+    "jade",
+    "coffeescript"
   ],
   "license": "Apache 2.0 License",
   "devDependencies": {
