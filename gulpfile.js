@@ -45,7 +45,7 @@ gulp.task('stylus', function () {
         ], { base: 'src/stylus' }
         )
         //.pipe(cached('build'))
-        .pipe(plumber({swallowError))
+        .pipe(plumber(swallowError))
         .pipe(stylus())
         .pipe(postcss(processors))
         .pipe(gulp.dest('./build/css'))
