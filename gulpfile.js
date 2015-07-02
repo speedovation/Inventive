@@ -20,6 +20,8 @@ var mqpacker = require('css-mqpacker');
 var csswring = require('csswring');
 var sourcemaps = require('gulp-sourcemaps');
 
+var bump = require('gulp-bump');
+
 //var autoprefixer = require('gulp-autoprefixer');
 
 
@@ -36,6 +38,7 @@ gulp.task('default', ['watch','serve'], function()
     gulp.start('stylus-all')
     gulp.start('vendors')
     gulp.start('copyfonts')
+    gulp.start('bump')
     //gulp.watch("serve");
 });
 
@@ -266,6 +269,11 @@ gulp.task('serve', ['stylus','jade','coffee'], function() {
 });
 
 
+gulp.task('bump', function(){
+  gulp.src(['./bower.json', './package.json'])
+  .pipe(bump({version:'0.9.3'}))
+  .pipe(gulp.dest('./'));
+});
 
 
 
