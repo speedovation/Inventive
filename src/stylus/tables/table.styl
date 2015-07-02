@@ -85,8 +85,8 @@ table.default
         border-top: 1px solid #ffffff
         border-bottom:1px solid #e0e0e0
         border-left: 1px solid #e0e0e0
-        
-        grad(#fbfbfb,#fafafa)
+        background: linear-gradient(#fbfbfb, #fafafa); 
+  
 
 
     // tr.even td 
@@ -96,13 +96,9 @@ table.default
         border-bottom:0
 
     tr:last-child td:first-child 
-        -moz-border-radius-bottomleft:3px
-        -webkit-border-bottom-left-radius:3px
         border-bottom-left-radius:3px
 
     tr:last-child td:last-child 
-        -moz-border-radius-bottomright:3px
-        -webkit-border-bottom-right-radius:3px
         border-bottom-right-radius:3px
 
 
@@ -117,9 +113,6 @@ table
 
 table.bordered 
     border: solid #ddd 1px
-    
-    -webkit-box-shadow: 0 1px 1px #eee 
-    -moz-box-shadow: 0 1px 1px #eee 
     box-shadow: 0 1px 1px #eee 
 
     td:first-child,    th:first-child 
@@ -181,19 +174,19 @@ table.rounded
     border-radius: radius
 
     th:first-child 
-        border-radius(radius 0 0 0)
+        border-radius: radius 0 0 0
 
     th:last-child 
-        border-radius(0 radius 0 0)
+        border-radius: 0 radius 0 0
 
     th:only-child
-        border-radius(radius radius 0 0)
+        border-radius: radius radius 0 0
 
     tr:last-child td:first-child 
-        border-radius(0 0 0 radius)
+        border-radius: 0 0 0 radius
 
     tr:last-child td:last-child 
-        border-radius(0 0 radius 0)
+        border-radius: 0 0 radius 0
 
 
 @media untilmobile 

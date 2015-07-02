@@ -14,6 +14,14 @@ var autoprefixer = require('autoprefixer-stylus');
 var plumber = require('gulp-plumber');
 var minifyCss = require('gulp-minify-css');
 
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer-core');
+var mqpacker = require('css-mqpacker');
+var csswring = require('csswring');
+var sourcemaps = require('gulp-sourcemaps');
+
+//var autoprefixer = require('gulp-autoprefixer');
+
 
 //Broswer reloading
 var browserSync = require('browser-sync').create();
@@ -25,7 +33,7 @@ gulp.task('default', ['watch','serve'], function()
     gulp.watch("jade");
     gulp.watch("coffee");
     
-    gulp.start('stylus-all')
+    //gulp.start('stylus-all')
     gulp.start('vendors')
     gulp.start('copyfonts')
     //gulp.watch("serve");
@@ -59,8 +67,13 @@ gulp.task('stylus-all', function () {
 gulp.task('stylus', function () {
 
     //var filter = Filter('**/*.styl');
+   
+   var processors = [
+        autoprefixer({browsers: ['last 1 version']})
+    ];
+   
 
-    return gulp.src(
+     gulp.src(
         [   
             './src/stylus/inventive.styl',
             './src/stylus/extra/doc.styl',
@@ -77,12 +90,24 @@ gulp.task('stylus', function () {
                 this.emit('end');
             }
         }))
-        .pipe(stylus({error: true, use: [nib()]}))
-        //.pipe(filter.restore())
+        
+         .pipe(stylus())
+        //.pipe(filter.restore()) //,  {use: [nib()]}
         //.pipe(concat('base.css'))
-        .pipe(gulp.dest('./build/css'))
-        .pipe(browserSync.stream())
+         .pipe(postcss(processors))
+         
+         .pipe(gulp.dest('./build/css'))
+         .pipe(browserSync.stream())
         ;
+      
+//         gulp.src('./build/css/inventive.css')
+//         .pipe(sourcemaps.init())
+         //.pipe(autoprefixer())
+  //       .pipe(sourcemaps.write('.'))
+//         .pipe(gulp.dest('./build/css/'));
+      
+      
+      
 });
 
 gulp.task('jade', function () {

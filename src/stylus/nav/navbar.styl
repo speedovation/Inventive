@@ -42,9 +42,7 @@ nav.nav
 
 .flexnav 
   
-  -webkit-transition: none
-  -moz-transition: none
-  -ms-transition: none
+
   transition: none
   -webkit-transform-style: preserve-3d // stop webkit flicker
   overflow: hidden
@@ -69,10 +67,7 @@ nav.nav
   &.flexnav-show 
     max-height: 2000px
     opacity: 1
-    -webkit-transition: all .5s ease-in-out
-    -moz-transition: all .5s ease-in-out
-    -ms-transition: all .5s ease-in-out
-    transition: all .5s ease-in-out
+   transition: all .5s ease-in-out
   
   &.one-page 
     position: fixed
@@ -108,11 +103,11 @@ nav.nav
         padding 0.8rem 0
         outline 0
         background-color nav_bg_bottom
-        border: 1px solid border-color;
+        border 1px solid border-color
         border-left-color transparent
         //border-radius(0 0 4px 4px)
-        width: 130%;
-        box-shadow(0px 2px 2px rgba(0, 0, 0, 0.05))
+        width 130%
+        box-shadow  0px 2px 2px rgba(0, 0, 0, 0.05)
         z-index 4
 
         li 

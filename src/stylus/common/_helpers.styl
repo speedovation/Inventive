@@ -131,3 +131,31 @@ for num in 16 24 32 48 64 128
     .size-{num}
       font-size: num px
 
+
+.collapsing
+    height: 0
+    overflow: hidden
+    position: relative
+    transition: all 250ms ease;
+    transition-property: height, visibility;
+    
+
+.fade 
+  opacity: 0;
+  display: flex;
+  transition: opacity 120ms linear
+  &.in
+    opacity: 1;
+  
+
+.collapse 
+  display: none;
+
+  &.in
+    display: block; 
+  
+  tr&.in
+    display: table-row; 
+  
+  tbody&.in
+    display: table-row-group; 

@@ -39,16 +39,7 @@ mybutton(hval, val= 0)
         shadow= darken(shadow, val * -1) 
     
     //box-shadow(inset 0 1px 0 shadow)
-box-shadow(props) 
-    -webkit-box-shadow: props
-    -moz-box-shadow: props
-    box-shadow: props
 
-
-border-radius(radius) 
-    -webkit-border-radius: radius
-    -moz-border-radius: radius
-    border-radius: radius
 
 grad(topcolor, bottomcolor= darken(topcolor, 10%)) 
     background-color: top
@@ -59,13 +50,6 @@ grad(topcolor, bottomcolor= darken(topcolor, 10%))
     background-image:      -o-linear-gradient(top, topcolor, bottomcolor) 
     background-image:         linear-gradient(top, topcolor, bottomcolor) // standard
     filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')" // ie6+
-
-transition(props)
-    -o-transition: props
-    -webkit-transition: props
-    -moz-transition: props
-    -ms-transition: props
-    transition: props
 
 //pass base as
 //  rem or px
