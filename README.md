@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/speedovation/Inventive.svg?branch=master)](https://travis-ci.org/speedovation/Inventive)[![](https://img.shields.io/badge/GitterChat-Online-brightgreen.svg?style=flat-square)](https://gitter.im/speedovation/General) [![](https://img.shields.io/badge/HipChat-Online-brightgreen.svg?style=flat-square)](https://www.hipchat.com/ggaNhaRfU) [![]( http://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square)]( http://opensource.org/licenses/Apache-2.0) [![](https://img.shields.io/badge/0.9.7-Release-orange.svg?style=flat-square)](http://speedovation.com) [![](https://img.shields.io/badge/Laravel-5-brightgreen.svg?style=flat-square)](http://speedovation.org)
+[![Build Status](https://travis-ci.org/speedovation/Inventive.svg?branch=master)](https://travis-ci.org/speedovation/Inventive) [![devDependency Status](https://david-dm.org/speedovation/inventive/dev-status.svg)](https://david-dm.org/speedovation/inventive#info=devDependencies)
+
+[![](https://img.shields.io/badge/HipChat-Online-brightgreen.svg?style=flat-square)](https://www.hipchat.com/ggaNhaRfU) [![]( http://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square)]( http://opensource.org/licenses/Apache-2.0)  [![](https://img.shields.io/badge/0.9.7-Release-orange.svg?style=flat-square)](http://inventiveui.com/docs) 
 
 
 ## Inventive - Stylus Responsive Front-end Framework 
