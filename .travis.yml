@@ -3,14 +3,12 @@ language: node_js
 node_js:
   - 0.11
 
-before_script:
-  - npm install -g gulp
-  - npm install -g bower
-  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - bower install -f
-
 install:
+  - npm install -g gulp
+  - npm install -g bower	
   - npm install
-  - bower install
 
+before_script:
+  - bower install
+  
 script: gulp ci
