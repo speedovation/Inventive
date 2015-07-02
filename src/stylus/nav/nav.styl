@@ -1,18 +1,10 @@
 @import "../common/_funcs"
-
 //http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
-
 #nav
   width 100%
   margin 0
   padding 0
 
-  //font-family 'Open Sans', sans-serif
-  //font-weight 400
-  //position absolute
-  //top 25%
-  //left 50%
-  //margin-left -30em
   & > a
     display none
   li
@@ -31,14 +23,6 @@
     &:after
       width 0
       height 0
-      // border 0.313em solid transparent
-      // border-bottom none
-      // bordercolor #efa585
-      // content ''
-      // vertical-align middle
-      // display inline-block
-      // position relative
-      // right -0.313em
 
       top 45%
       right 3%
@@ -51,9 +35,6 @@
       border-top-color #efa585
       border-width 9px
       margin-left -30px
-
-
-
 
   //First level
   & > ul
@@ -83,9 +64,7 @@
     background-color: #cc470d;
 
 
-
   //Second level 
-
   li
     ul
       background-color #cc470d
@@ -123,16 +102,16 @@
 
 
 
-@media only screen and ( max-width: 62.5em ) /* 1000 */
+@media only screen and ( max-width: 62.5em ) 
   #nav
     width: 100%;
     position: static;
     margin: 0;
 
 
-@media only screen and ( max-width: 40em ) /* 640 */
+@media only screen and ( max-width: 40em )
   html
-    font-size: 75%; /* 12 */
+    font-size: 75%;
 
 
   #nav
@@ -166,8 +145,7 @@
 
 
 
-  /* first level */
-
+  // first level
   #nav
     & > ul
       height auto
@@ -190,9 +168,6 @@
     border-right: none;
     border-bottom: 1px solid #cc470d;
 
-
-
-  /* second level */
 
   #nav
     li

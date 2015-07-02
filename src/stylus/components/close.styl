@@ -1,20 +1,11 @@
-// taken from https://github.com/uikit/uikit/blob/master/dist/css/uikit.css
-// Ui : Close
-
-// * 1. Required for `button` elements and makes
-// * close button more robust against different box-sizing use
-// * 2. Required for `button` elements
-
 .close 
   box-sizing: content-box
-  // 1 */
   display: inline-block
   width: 20px
   line-height: 20px
   text-align: center
   color: inherit
   opacity: 0.3
-  // 2. */
   padding: 0
   border: 0
   -webkit-appearance: none
@@ -22,43 +13,32 @@
   float right
   font-weight bold
 
-// Icon 
 .close:after 
   display: block
   content: "x"
   font-family: Stripe //TODO find close icon code
 
 
-// * Hover
-// * 1. Apply hover style also to focus state
-// * 2. Remove default focus style
-
 .close:hover,
 .close:focus 
-  // 1 
   opacity: 0.5
   outline: none
-  // 2 
 
-// Required for `a` elements
 a.close:hover 
   color: inherit
   text-decoration: none
   cursor: pointer
 
-// Modifier
 .close-alt 
   padding: 2px
   border-radius: 100%
   background: #eeeeee
   opacity: 1
 
-// Hover
 .close-alt:hover,
 .close-alt:focus 
   opacity: 1
 
-// Icon 
 .close-alt:after 
   opacity: 0.5
 
