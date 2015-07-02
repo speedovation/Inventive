@@ -6,9 +6,7 @@
 ## Inventive - Stylus Responsive Front-end Framework 
 Beta is now released. Stay tuned.
 
-## TODO/Working
-* Modal Js Component
-* Make a list of required Js Components
+
 
 ## Install
 
@@ -69,7 +67,9 @@ Step 3.
 * DateTime Picker
 * Responsive Navbar - Offcanvas alike
 
-
+## TODO/Working
+* Modal Js Component
+* Make a list of required Js Components
 
 
 ### License
