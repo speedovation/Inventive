@@ -13,7 +13,7 @@ var nib = require('nib');
 var autoprefixer = require('autoprefixer-stylus');
 var plumber = require('gulp-plumber');
 var minifyCss = require('gulp-minify-css');
-
+var git = require('gulp-git');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer-core');
 var mqpacker = require('css-mqpacker');
@@ -29,93 +29,52 @@ var bump = require('gulp-bump');
 var browserSync = require('browser-sync').create();
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch','serve'], function()
-{
-    gulp.watch("stylus");
-    gulp.watch("jade");
-    gulp.watch("coffee");
-    
-    gulp.start('stylus-all')
-    gulp.start('vendors')
-    gulp.start('copyfonts')
-    gulp.start('bump')
-    //gulp.watch("serve");
-});
-
-
-gulp.task('stylus-all', function () {
-
-    return gulp.src(
-        [   
-            './src/stylus/*.styl',
-            './src/stylus/**/*.styl',
-            '!./src/stylus/**/_*.styl'
-        ], { base: 'src/stylus' }
-        )
-        .pipe(plumber(
-        {
-            errorHandler: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }
-        
-        ))
-        .pipe(stylus({error: true, use: [nib()]}))
-        .pipe(gulp.dest('./build/css'))
-        ;
-});
+gulp.task('default', ['watch','serve', 'stylus','jade','coffee', 'vendors']);
 
 
 gulp.task('stylus', function () {
 
-    //var filter = Filter('**/*.styl');
-   
    var processors = [
         autoprefixer({browsers: ['last 2 version']})
     ];
-   
 
      gulp.src(
         [   
             './src/stylus/inventive.styl',
             './src/stylus/extra/doc.styl',
-            //'./src/stylus/*.styl',
-            //'./src/stylus/**/*.styl',
-            //'!./src/stylus/**/_*.styl'
         ], { base: 'src/stylus' }
         )
         //.pipe(cached('build'))
-        //.pipe(filter)
-        .pipe(plumber({
-            errorHandler: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }))
-        
-         .pipe(stylus())
-        //.pipe(filter.restore()) //,  {use: [nib()]}
-        //.pipe(concat('base.css'))
-         .pipe(postcss(processors))
-         
-         .pipe(gulp.dest('./build/css'))
-         .pipe(browserSync.stream())
+        .pipe(plumber({swallowError))
+        .pipe(stylus())
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./build/css'))
+        .pipe(browserSync.stream())
         ;
-      
-//         gulp.src('./build/css/inventive.css')
-//         .pipe(sourcemaps.init())
-         //.pipe(autoprefixer())
-  //       .pipe(sourcemaps.write('.'))
-//         .pipe(gulp.dest('./build/css/'));
+        
+    gulp.src([   
+            './src/stylus/*.styl',
+            './src/stylus/**/*.styl',
+            '!./src/stylus/**/_*.styl'
+        ], { base: 'src/stylus' })
+        .pipe(plumber(swallowError))
+        .pipe(stylus()) //{error: true, use: [nib()]}}
+        .pipe(postcss(processors) ) 
+        .pipe(gulp.dest('./build/css'))
+        ;
+        
+        
+    //TODO start using sourcemaps
+     //.pipe(sourcemaps.init())
+     //.pipe(autoprefixer())
+     //.pipe(sourcemaps.write('.'))
+     //.pipe(gulp.dest('./build/css/'));
       
       
       
 });
 
 gulp.task('jade', function () {
-
-    //var filter = Filter('**/*.styl');
 
     return gulp.src(
         [   
@@ -124,19 +83,8 @@ gulp.task('jade', function () {
         ], { base: 'src/jade' }
         )
         .pipe(cached('build'))
-        .pipe(plumber(
-        {
-            errorHandler: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }
-        
-        ))
-        //.pipe(filter)
+        .pipe(plumber(swallowError))
         .pipe(jade({pretty:true}))
-        //.pipe(filter.restore())
-        //.pipe(concat('base.css'))
         .pipe(gulp.dest('./build/docs'))
         .pipe(browserSync.stream())
         ;
@@ -144,100 +92,52 @@ gulp.task('jade', function () {
 
 
 gulp.task('coffee', function () {
-   gulp.src(
-        [   
+   
+   return gulp.src([   
             './src/coffeescript/*.coffee',
             '!./src/coffeescript/_*.coffee',
-            '!./src/coffeescript/doc.coffee',
-            
-        ], { base: 'src/coffeescript' }
-        )
-            //.pipe(cached('build'))
-            //.pipe(filter)
-            .pipe(plumber(
-            {
-                errorHandler: function (err) {
-                    console.log(err);
-                    this.emit('end');
-                }
-            }
-            
-            ))
-            .pipe(coffee().on('error', swallowError))
-            //.pipe(filter.restore())
+            '!./src/coffeescript/doc.coffee'
+            ], { base: 'src/coffeescript' }
+           )
+            .pipe(plumber(swallowError))
+            .pipe(coffee({bare: true}))
+            .pipe(gulp.dest('./build/js/components'))
             .pipe(concat('inventive.js'))
             .pipe(gulp.dest('./build/js'))
-/*            .pipe(browserSync.stream())*/
-            ;
-            
-   
-   gulp.src(
-        [   
-            './src/coffeescript/*.coffee',
-            '!./src/coffeescript/_*.coffee'
-        ], { base: 'src/coffeescript' }
-        )
-            .pipe(coffee({bare: true}).on('error', swallowError))
-            .pipe(gulp.dest('./build/js/components'))
             .pipe(browserSync.stream())
             ;
-
-    
-            
         
 });
 
 gulp.task('vendors', function () {
 
-      gulp.src(
-        [   
-            "bower_components/jquery/dist/jquery.js",
-            "build/js/components/doc.js",
-            "bower_components/prism/prism.js"
-        ]
-        )
-        .pipe(plumber(
-        {
-            errorHandler: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }
-        ))
-		.pipe(concat('vendors.js'))
-		.pipe(uglify())
-        .pipe(gulp.dest('./build/js/'))
-        ;
-        
-        gulp.src(
-        [   
-            "bower_components/prism/themes/prism.css",
-            'build/css/extra/doc.css',
-            'bower_components/inventive-font/fonts/stripe-font.css'
+    gulp.src([   
+        "bower_components/jquery/dist/jquery.js",
+        "build/js/components/doc.js",
+        "bower_components/prism/prism.js"
+    ])
+    .pipe(plumber(swallowError))
+    .pipe(concat('vendors.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js/'))
+    ;
+    
+    gulp.src([   
+        "bower_components/prism/themes/prism.css",
+        'build/css/extra/doc.css',
+        'bower_components/inventive-font/fonts/stripe-font.css'
+    ])
+    .pipe(plumber(swallowError))
+    .pipe(concat('vendors.css'))
+    .pipe(minifyCss())
+    .pipe(gulp.dest('./build/css/'))
+    ;
 
-        ]
-        )
-        .pipe(plumber(
-        {
-            errorHandler: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }
-        ))
-        .pipe(concat('vendors.css'))
-		.pipe(minifyCss())
-        .pipe(gulp.dest('./build/css/'))
-        ;
-});
+    gulp.src('bower_components/inventive-font/fonts/*.{ttf,woff,eof,svg}')
+    .pipe(gulp.dest('./build/fonts'));
 
-gulp.task('copyfonts', function() {
-   
-   gulp.src('bower_components/inventive-font/fonts/*.{ttf,woff,eof,svg}')
-   .pipe(gulp.dest('./build/fonts'));
-   
     gulp.src('src/img/**/*')
-   .pipe(gulp.dest('./build/img'));
+    .pipe(gulp.dest('./build/img'));
    
 });
 
@@ -251,16 +151,12 @@ gulp.task('watch', function() {
 });
 
 
-
-
-
 // doc Server + watching stylus/html files
 gulp.task('serve', ['stylus','jade','coffee'], function() {
 
     browserSync.init({
         server: "./build/"
     });
-
     
     gulp.watch("build/css/**/*.css").on('change', browserSync.reload);
     gulp.watch("build/docs/*.html").on('change', browserSync.reload);
@@ -269,13 +165,35 @@ gulp.task('serve', ['stylus','jade','coffee'], function() {
 });
 
 
-gulp.task('bump', function(){
+//Related to release and publish build
+
+gulp.task('build', ['default']);
+
+gulp.task('bump', ['build'], function(){
   gulp.src(['./bower.json', './package.json'])
   .pipe(bump({version:'0.9.3'}))
   .pipe(gulp.dest('./'));
 });
 
+gulp.task('tag', ['bump'], function () {
+  var pkg = require('./package.json');
+  var v = 'v' + pkg.version;
+  var message = 'Release ' + v;
 
+  return gulp.src('./')
+    .pipe(git.commit(message))
+    .pipe(git.tag(v, message))
+    .pipe(git.push('origin', 'master', '--tags'))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('npm', ['tag'], function (done) {
+  require('child_process').spawn('npm', ['publish'], { stdio: 'inherit' })
+    .on('close', done);
+});
+
+gulp.task('release', ['npm']);
+gulp.task('ci', ['build']);
 
 function swallowError (error) {
 
@@ -284,9 +202,6 @@ function swallowError (error) {
 
     this.emit('end');
 }
-
-
-
 
 
 

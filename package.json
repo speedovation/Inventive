@@ -26,7 +26,8 @@
     "csswring": "~3.0.5",
     "gulp-sourcemaps": "~1.5.2",
     "gulp-autoprefixer": "~2.3.1",
-    "gulp-bump": "~0.3.1"
+    "gulp-bump": "~0.3.1",
+    "gulp-git": "~1.2.4"
   },
   "description": "[![](https://img.shields.io/badge/GitterChat-Online-brightgreen.svg?style=flat-square)](https://gitter.im/speedovation/General) [![](https://img.shields.io/badge/HipChat-Online-brightgreen.svg?style=flat-square)](https://www.hipchat.com/ggaNhaRfU) [![]( http://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square)]( http://opensource.org/licenses/Apache-2.0) [![](https://img.shields.io/badge/Alpha-Release-E44B23.svg?style=flat-square)](http://speedovation.com) [![](https://img.shields.io/badge/Laravel-5-brightgreen.svg?style=flat-square)](http://speedovation.org)",
   "version": "0.9.3",
