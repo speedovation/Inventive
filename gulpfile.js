@@ -33,7 +33,7 @@ gulp.task('default', ['watch','serve'], function()
     gulp.watch("jade");
     gulp.watch("coffee");
     
-    //gulp.start('stylus-all')
+    gulp.start('stylus-all')
     gulp.start('vendors')
     gulp.start('copyfonts')
     //gulp.watch("serve");
