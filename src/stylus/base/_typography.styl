@@ -6,8 +6,12 @@ body
   font-size: 100%
   font-family: "Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif
   //color: #444
-  -webkit-font-smoothing: antialiased/* Fix for webkit rendering */
-  -webkit-text-size-adjust: 100%
+  
+  //Not Supported by Auto Prefixer so adding manually
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  text-size-adjust: 100%
   text-rendering: optimizeLegibility
   line-height: 1.5
   color: #272727

@@ -69,7 +69,7 @@ gulp.task('stylus', function () {
     //var filter = Filter('**/*.styl');
    
    var processors = [
-        autoprefixer({browsers: ['last 1 version']})
+        autoprefixer({browsers: ['last 2 version']})
     ];
    
 

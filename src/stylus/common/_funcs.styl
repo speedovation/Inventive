@@ -30,7 +30,7 @@ mybutton(hval, val= 0)
     else  
         bottom= darken(bottom, val * -1) 
     
-    grad(top, bottom)
+    background-image: linear-gradient(top, bottom)
     
     shadow= hsl(hval, 100, 90)
     if val >= 0  
@@ -40,16 +40,6 @@ mybutton(hval, val= 0)
     
     //box-shadow(inset 0 1px 0 shadow)
 
-
-grad(topcolor, bottomcolor= darken(topcolor, 10%)) 
-    background-color: top
-    background-image: -webkit-gradient(linear,left top,left bottom,from(topcolor),to(bottomcolor)) // chrome, safari
-    background-image: -webkit-linear-gradient(top, topcolor, bottomcolor)
-    background-image:    -moz-linear-gradient(top, topcolor, bottomcolor) // firefox
-    background-image:     -ms-linear-gradient(top, topcolor, bottomcolor)
-    background-image:      -o-linear-gradient(top, topcolor, bottomcolor) 
-    background-image:         linear-gradient(top, topcolor, bottomcolor) // standard
-    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')" // ie6+
 
 //pass base as
 //  rem or px
