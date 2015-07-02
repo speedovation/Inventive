@@ -1,54 +1,30 @@
-/* ========================================================================
-Component: Progress
-========================================================================== */
-/*
-* 1. Clearing
-* 2. Vertical alignment if text is used
-*/
 .progress {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 20px;
   margin-bottom: 15px;
   background: #eee;
   overflow: hidden;
-/* 1 */
   line-height: 20px;
-/* 2 */
 }
-/*
-* Add margin if adjacent element
-*/
 * + .progress {
   margin-top: 15px;
 }
-/* Sub-object: `progress-bar`
-========================================================================== */
 .progress-bar {
   width: 0;
   height: 100%;
   background: #00a8e6;
   float: left;
-/* Transition */
-  -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
-/* Allow text */
   font-size: 12px;
   color: #fff;
   text-align: center;
 }
-/* Size modifiers
-========================================================================== */
-/* Mini */
 .progress-mini {
   height: 6px;
 }
-/* Small */
 .progress-small {
   height: 12px;
 }
-/* Color modifiers
-========================================================================== */
 .progress-success .progress-bar {
   background-color: #8cc14c;
 }
@@ -58,27 +34,12 @@ Component: Progress
 .progress-danger .progress-bar {
   background-color: #da314b;
 }
-/* Modifier: `progress-striped`
-========================================================================== */
 .progress-striped .progress-bar {
-  background-image: -webkit-linear-gradient(-45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
   background-size: 30px 30px;
 }
-/*
-* Animation
-*/
 .progress-striped.active .progress-bar {
-  -webkit-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
-}
-@-webkit-keyframes progress-bar-stripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 30px 0;
-  }
 }
 @-moz-keyframes progress-bar-stripes {
   0% {

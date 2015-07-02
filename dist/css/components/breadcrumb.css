@@ -1,8 +1,6 @@
 .breadcrumb {
-/* 1 */
   padding: 0;
   list-style: none;
-/* 2 */
   letter-spacing: -0.31em;
 }
 .breadcrumb > li {
@@ -18,7 +16,6 @@
   display: inline-block;
   margin: 0 8px;
   vertical-align: top;
-/* 2 */
 }
 .breadcrumb > li:not(.active) > span {
   color: #999;

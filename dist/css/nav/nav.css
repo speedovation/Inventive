@@ -40,9 +40,6 @@
   padding-left: 1%;
   height: 3.75em;
   background-color: #e15a1f;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 #nav > ul > li {
   width: 24.67%;
@@ -70,9 +67,6 @@
   top: 100%;
   margin: 0;
   padding: 0;
-  -webkit-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
   z-index: 1000;
 }
 #nav li ul a {
@@ -93,11 +87,6 @@
 #nav li:not(:first-child):hover ul {
   left: -1px;
 }
-#nav li ul li:last-child a:hover {
-  -webkit-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
-}
 @media only screen and (max-width: 62.5em) {
   #nav {
     width: 100%;
@@ -107,7 +96,7 @@
 }
 @media only screen and (max-width: 40em) {
   html {
-    font-size: 75%; /* 12 */
+    font-size: 75%;
   }
   #nav {
     position: relative;

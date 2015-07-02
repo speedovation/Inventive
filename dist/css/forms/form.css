@@ -2,8 +2,6 @@
   padding: 0;
   margin-bottom: 0.6rem;
   border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   overflow: hidden;
   background-color: #fff;
@@ -13,8 +11,6 @@
   padding: 5px 8px;
   width: 230%;
   border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
   background-color: transparent;
   background-image: none;
@@ -218,6 +214,9 @@ form label {
   cursor: pointer;
   line-height: 2.235rem;
 }
+form label.inline {
+  display: inline-block;
+}
 form dt {
   margin: 0;
 }
@@ -233,8 +232,6 @@ form fieldset {
   padding: 0 1.5625rem 1.5625rem;
   margin: 0 2px;
   border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   color: #666;
 }
@@ -254,8 +251,6 @@ form.row {
 }
 .field.metro,
 .field .metro {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .input,
@@ -271,42 +266,24 @@ form.row {
   padding: 0.4rem 0.6rem;
   margin-bottom: 0.6rem;
 }
-.collapse .input:first-child {
-  -webkit-border-radius: 0.2rem 0.2rem 0 0;
-  -moz-border-radius: 0.2rem 0.2rem 0 0;
-  border-radius: 0.2rem 0.2rem 0 0;
-}
 .collapse .input {
   margin-bottom: 0;
   border-bottom: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .collapse .input:last-child {
   border-bottom: 1px solid #ccc;
-  -webkit-border-radius: 0 0 0.2rem 0.2rem;
-  -moz-border-radius: 0 0 0.2rem 0.2rem;
   border-radius: 0 0 0.2rem 0.2rem;
 }
 .button.append {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   padding: 0.476rem 0.9rem;
 }
 .button.append.right {
   border-left: 0;
-  -webkit-border-radius: 0 0.2rem 0.2rem 0;
-  -moz-border-radius: 0 0.2rem 0.2rem 0;
   border-radius: 0 0.2rem 0.2rem 0;
 }
 .button.append.left {
   border-right: 0;
-  -webkit-border-radius: 0.2rem 0 0 0.2rem;
-  -moz-border-radius: 0.2rem 0 0 0.2rem;
-  border-radius: 0.2rem 0 0 0.2rem;
 }

@@ -10,18 +10,10 @@
 .message > *:last-child {
   margin: 0;
 }
-.message h1,
-.message h2,
-.message h3,
-.message h4,
-.message h5,
-.message h6 {
-  color: inherit;
-}
-.message > .uk-close:first-child {
+.message > .close:first-child {
   float: right;
 }
-.message > .uk-close:first-child + * {
+.message > .close:first-child + * {
   margin: 0;
 }
 .message-info {
@@ -47,6 +39,6 @@
 .message-large {
   padding: 20px;
 }
-.message-large > .uk-close:first-child {
+.message-large > .close:first-child {
   margin: -10px -10px 0 0;
 }

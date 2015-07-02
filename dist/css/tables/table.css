@@ -4,8 +4,6 @@ table.default {
   text-shadow: 1px 1px 0px #fff;
   background: #eaebec;
   border: #ccc 1px solid;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 table.default a:link {
@@ -26,19 +24,10 @@ table.default a:hover {
   text-shadow: 1px 1px 0px #fff;
   background: #eaebec;
   border: #ccc 1px solid;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 table.default tr:nth-child(2n) td {
-  background-color: top;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
-  background-image: -webkit-linear-gradient(top, #f8f8f8, #f6f6f6);
-  background-image: -moz-linear-gradient(top, #f8f8f8, #f6f6f6);
-  background-image: -ms-linear-gradient(top, #f8f8f8, #f6f6f6);
-  background-image: -o-linear-gradient(top, #f8f8f8, #f6f6f6);
-  background-image: linear-gradient(top, #f8f8f8, #f6f6f6);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+  background-image: linear-gradient(#f8f8f8, #f6f6f6);
 }
 table.default th {
   padding: 7px 0;
@@ -47,26 +36,15 @@ table.default th {
   text-align: left;
   padding-left: 20px;
   border-left: 1px solid #e0e0e0;
-  background-color: top;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-  background-image: -webkit-linear-gradient(top, #ededed, #ebebeb);
-  background-image: -moz-linear-gradient(top, #ededed, #ebebeb);
-  background-image: -ms-linear-gradient(top, #ededed, #ebebeb);
-  background-image: -o-linear-gradient(top, #ededed, #ebebeb);
-  background-image: linear-gradient(top, #ededed, #ebebeb);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+  background-image: linear-gradient(#ededed, #ebebeb);
 }
 table.default th:first-child {
   border-left: 0px solid #e0e0e0;
 }
 table.default tr:first-child th:first-child {
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
 }
 table.default tr:first-child th:last-child {
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
 table.default td:first-child {
@@ -79,26 +57,15 @@ table.default td {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #e0e0e0;
   border-left: 1px solid #e0e0e0;
-  background-color: top;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-  background-image: -webkit-linear-gradient(top, #fbfbfb, #fafafa);
-  background-image: -moz-linear-gradient(top, #fbfbfb, #fafafa);
-  background-image: -ms-linear-gradient(top, #fbfbfb, #fafafa);
-  background-image: -o-linear-gradient(top, #fbfbfb, #fafafa);
-  background-image: linear-gradient(top, #fbfbfb, #fafafa);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
+  background-image: linear-gradient(#fbfbfb, #fafafa);
 }
 table.default tr:last-child td {
   border-bottom: 0;
 }
 table.default tr:last-child td:first-child {
-  -moz-border-radius-bottomleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 table.default tr:last-child td:last-child {
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 table {
@@ -110,11 +77,7 @@ table {
 }
 table.bordered {
   border: solid #ddd 1px;
-  -webkit-box-shadow: 0 1px 1px #eee;
-  -moz-box-shadow: 0 1px 1px #eee;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0;
+  box-shadow: 0 1px 1px #eee;
 }
 table.bordered td:first-child,
 table.bordered th:first-child {
@@ -129,27 +92,14 @@ table.bordered th {
   text-align: left;
 }
 table.bordered th {
-  background-color: top;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#f7f7f7));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #f7f7f7);
-  background-image: -moz-linear-gradient(top, #f7f7f7, #f7f7f7);
-  background-image: -ms-linear-gradient(top, #f7f7f7, #f7f7f7);
-  background-image: -o-linear-gradient(top, #f7f7f7, #f7f7f7);
-  background-image: linear-gradient(top, #f7f7f7, #f7f7f7);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#topcolor', EndColorStr='#bottomcolor')";
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0;
+  background-image: linear-gradient(#f7f7f7, #f7f7f7);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
   border-top: none;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
 table.hover tr:hover {
   background: #fafafa !important;
-  -o-transition: all;
-  -webkit-transition: all;
-  -moz-transition: all;
-  -ms-transition: all;
-  transition: all;
+  transition: all 0.1s ease-in-out;
 }
 .table {
   overflow-x: scroll;
@@ -174,38 +124,24 @@ table.zebra th {
 }
 table.zebra tbody tr:nth-child(even) {
   background: #fafafa;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
 }
 table.rounded {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 table.rounded th:first-child {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
 }
 table.rounded th:last-child {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
 }
 table.rounded th:only-child {
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
 table.rounded tr:last-child td:first-child {
-  -webkit-border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
 }
 table.rounded tr:last-child td:last-child {
-  -webkit-border-radius: 0 0 4px 0;
-  -moz-border-radius: 0 0 4px 0;
   border-radius: 0 0 4px 0;
 }
 @media screen and (max-width: 740px) {

@@ -1,32 +1,15 @@
-/* ========================================================================
-Component: Subnav
-========================================================================== */
-/*
-* 1. Remove default list style
-* 2. Remove whitespace between child elements when using `inline-block`
-*/
 .subnav .active {
   background-color: #f2f2f2;
   color: #444;
 }
 .subnav {
-/* 1 */
   padding: 0;
   list-style: none;
-/* 2 */
   letter-spacing: -0.31em;
 }
-/* Items
-========================================================================== */
-/*
-* 1. Create position context for dropdowns
-* 2. Reset whitespace hack
-*/
 .subnav > li {
   position: relative;
-/* 1 */
   letter-spacing: normal;
-/* 2 */
 }
 .subnav > li,
 .subnav > li > a,
@@ -36,23 +19,15 @@ Component: Subnav
 .subnav > li:nth-child(n+2) {
   margin-left: 10px;
 }
-/*
-* Items
-*/
 .subnav > li > a {
   color: #07d;
 }
 .subnav > li > a:hover {
   color: #059;
 }
-/*
-* Disabled
-*/
 .subnav > li > span {
   color: #999;
 }
-/* Modifier: 'subnav-line'
-========================================================================== */
 .subnav-line > li:nth-child(n+2):before {
   content: "";
   display: inline-block;
@@ -60,30 +35,17 @@ Component: Subnav
   margin-right: 10px;
   border-left: 1px solid #ddd;
 }
-/* Modifier: 'subnav-pill'
-========================================================================== */
 .subnav-pill > li > a,
 .subnav-pill > li > span {
   padding: 0.7rem 1rem;
   text-decoration: none;
 }
-/*
-* Hover
-* 1. Apply hover style also to focus state
-* 2. Remove default focus style
-*/
 .subnav-pill > li > a:hover,
 .subnav-pill > li > a:focus {
-/* 1 */
   background: #eee;
   color: #444;
   outline: none;
-/* 2 */
 }
-/*
-* Active
-* `li` needed for higher specificity to override hover
-*/
 .subnav-pill > li.active > a {
   background: #00a8e6;
   color: #fff;

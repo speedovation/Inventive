@@ -51,10 +51,6 @@
 .megamenu li.megamenu_button_active {
   background: #000 !important;
 }
-/*  _______________________________________
-    02 DROP DOWN MENU
-   _______________________________________  */
-/* Drop Downs Containers */
 .megamenu .dropdown_1column,
 .megamenu .dropdown_2columns,
 .megamenu .dropdown_3columns,
@@ -66,11 +62,8 @@
   position: absolute;
   top: 41px;
   left: -1px;
-  -webkit-border-radius: 0 0 5px 5px;
-  -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
-/* Drop Downs Sizes */
 .megamenu .dropdown_1column {
   width: 135px;
   padding: 15px 14px 15px 15px;
@@ -96,8 +89,6 @@
   padding: 15px 0 15px 15px;
   top: 42px;
   left: 10px;
-  -webkit-border-radius: 0 0 5px 5px;
-  -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
 .megamenu_wrapper .dropdown_right {
@@ -108,7 +99,6 @@
   left: auto;
   right: 8px;
 }
-/* Showing Drop Down on Mouse Hover */
 .megamenu li:hover > div {
   display: block;
 }
@@ -164,16 +154,10 @@
 .megamenu .col_full {
   width: 98%;
 }
-/* IMPORTANT */
-/* Use the firstcolumn class for the first element of a new row of content */
 .megamenu .firstcolumn {
   margin-left: 0;
   clear: left;
 }
-/*  _______________________________________
-
-    03 CONTENT STYLING
-    _______________________________________  */
 .megamenu p,
 .megamenu ul,
 .megamenu li,
@@ -199,10 +183,6 @@
 .megamenu .pusher {
   margin-top: 18px;
 }
-/*  _______________________________________
-
-    06 LIGHT THEME
-    _______________________________________  */
 .megamenu_light_theme .megamenu_container > ul > li:hover,
 .megamenu_light_theme .megamenu_container .megamenu > li.active,
 .megamenu_light_theme .megamenu_container > ul > li.menuitem_nodrop:hover {
@@ -211,11 +191,9 @@
 .megamenu_light_theme .megamenu_container > ul > li > a,
 .megamenu_light_theme .megamenu_container .megamenu > li.noactive a {
   color: #444;
-/*text-shadow: 1px 1px 1px #000000*/
 }
 .megamenu_light_theme .megamenu_container > ul > li:hover > a {
   color: #161616;
-/*text-shadow: 1px 1px 1px #fff*/
 }
 .megamenu_light_theme ul li .menuitem_drop,
 .megamenu_light_theme .megamenu li.noactive .menuitem_drop {
@@ -237,12 +215,6 @@
   background: #fefefe;
   border: 1px solid #888;
   border-top: 3px solid #888;
-/*background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#BBBBBB))*/
-/*background: -webkit-linear-gradient(top, #EEEEEE, #BBBBBB)*/
-/*background: -moz-linear-gradient(top, #EEEEEE, #ddd)*/
-/*background: -o-linear-gradient(top, #EEEEEE, #BBBBBB)*/
-/*background: -ms-linear-gradient(top, #EEEEEE, #BBBBBB)*/
-/*background: linear-gradient(top, #EEEEEE, #ddd)*/
 }
 .megamenu_light_theme ul .imgshadow_dark {
   background: #fff;
@@ -260,27 +232,19 @@
 }
 .megamenu_light_theme ul li .black_box {
   color: #fff;
-/*text-shadow:1px 1px 1px #000000*/
   background-color: #333;
-  -webkit-box-shadow: inset 0 0 3px #000;
-  -moz-box-shadow: inset 0 0 3px #000;
   box-shadow: inset 0 0 3px #000;
 }
 .megamenu_light_theme ul li .dark_grey_box {
   color: #fff;
-/*text-shadow:1px 1px 1px #000000*/
   background-color: #555;
-  -webkit-box-shadow: inset 0 0 3px #111;
-  -moz-box-shadow: inset 0 0 3px #111;
   box-shadow: inset 0 0 3px #111;
 }
 .megamenu_light_theme ul li .greybox li {
   background: #f4f4f4;
-/*border:1px solid #bbbbbb*/
 }
 .megamenu_light_theme ul li .greybox li:hover {
   background: #fff;
-/*border:1px solid #aaaaaa*/
 }
 .megamenu_light_theme ul li .plus li {
   background: url("../img/plus.png") left 6px no-repeat;
@@ -295,7 +259,6 @@
 }
 .megamenu_light_theme ul .contact_form input.button {
   background-color: #1e1e1e;
-/*border:1px solid #0A0A0A*/
   color: #ccc;
 }
 .megamenu_light_theme ul .contact_form input.button:hover {
@@ -303,10 +266,6 @@
   background-color: #222;
 /*border:1px solid #000000*/
 }
-/*  _______________________________________
-
-    09 MOBILE DEVICES
-    _______________________________________  */
 .megamenu_dark_theme .megamenu_container .megamenu > li.noactive,
 .megamenu_light_theme .megamenu_container .megamenu > li.noactive {
   background-color: transparent;
@@ -351,8 +310,6 @@
     border-top: none;
     padding: 2%;
     margin: -1px 0 0 -1px;
-    -webkit-border-radius: 0 0 5px 5px;
-    -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
   }
   .megamenu .dropdown_1column {
@@ -406,8 +363,6 @@
     float: none;
   }
   .megamenu_wrapper .megamenu_container {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
   }
   .megamenu_wrapper .megamenu_container .megamenu {
@@ -481,8 +436,6 @@
     top: auto;
     margin: 0;
     padding: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     left: auto;
     border: none;

@@ -1,5 +1,4 @@
 .close {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   display: inline-block;
   width: 20px;
@@ -17,6 +16,7 @@
 .close:after {
   display: block;
   content: "x";
+  font-family: Stripe;
 }
 .close:hover,
 .close:focus {
