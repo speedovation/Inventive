@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/speedovation/Inventive.svg?branch=master)](https://travis-ci.org/speedovation/Inventive) [![devDependency Status](https://david-dm.org/speedovation/inventive/dev-status.svg)](https://david-dm.org/speedovation/inventive#info=devDependencies)
+[![Build Status](https://travis-ci.org/speedovation/Inventive.svg?branch=master)](https://travis-ci.org/speedovation/Inventive) [![devDependency Status](https://david-dm.org/speedovation/inventive/dev-status.svg)](https://david-dm.org/speedovation/inventive#info=devDependencies)[![Coverage Status](https://coveralls.io/repos/speedovation/Inventive/badge.svg)](https://coveralls.io/r/speedovation/Inventive)
 
 [![](https://img.shields.io/badge/HipChat-Online-brightgreen.svg?style=flat-square)](https://www.hipchat.com/ggaNhaRfU) [![]( http://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square)]( http://opensource.org/licenses/Apache-2.0)  [![](https://img.shields.io/badge/0.9.7-Release-orange.svg?style=flat-square)](http://inventiveui.com/docs) 
 
