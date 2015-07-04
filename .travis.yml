@@ -3,6 +3,9 @@ language: node_js
 node_js:
   - 0.11
 
+before_install:
+  pip install codecov
+  
 install:
   - npm install -g gulp
   - npm install -g bower	
@@ -12,3 +15,6 @@ before_script:
   - bower install
   
 script: gulp ci
+
+after_success:
+  codecov
